@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-14T18:07:47.189Z",
+  "generatedAt": "2026-07-14T18:20:03.602Z",
   "source": "FantasyFootballCalculator Half-PPR consensus (mock-draft aggregate), 2026-07-14; stat lines modeled",
-  "count": 146,
+  "count": 166,
   "players": [
     {
       "id": "jahmyr-gibbs-det-rb",
@@ -2484,22 +2484,49 @@
       }
     },
     {
-      "id": "makai-lemon-phi-wr",
-      "name": "Makai Lemon",
+      "id": "travis-hunter-jax-wr",
+      "name": "Travis Hunter",
       "pos": "WR",
-      "team": "PHI",
+      "team": "JAX",
       "bye": null,
       "adp": 93,
       "posRankConsensus": 51,
       "yahooRank": 93,
       "aliases": [
-        "Lemon",
-        "M. Lemon"
+        "Hunter",
+        "T. Hunter"
       ],
       "stats": {
         "rec": 38,
         "recYds": 445,
         "recTD": 3,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "makai-lemon-phi-wr",
+      "name": "Makai Lemon",
+      "pos": "WR",
+      "team": "PHI",
+      "bye": null,
+      "adp": 94,
+      "posRankConsensus": 52,
+      "yahooRank": 94,
+      "aliases": [
+        "Lemon",
+        "M. Lemon"
+      ],
+      "stats": {
+        "rec": 36,
+        "recYds": 425,
+        "recTD": 2.9,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 640,
@@ -2516,9 +2543,9 @@
       "pos": "QB",
       "team": "LAC",
       "bye": null,
-      "adp": 94,
+      "adp": 95,
       "posRankConsensus": 7,
-      "yahooRank": 94,
+      "yahooRank": 95,
       "aliases": [
         "Herbert",
         "J. Herbert"
@@ -2542,9 +2569,9 @@
       "pos": "QB",
       "team": "JAX",
       "bye": null,
-      "adp": 95,
+      "adp": 96,
       "posRankConsensus": 8,
-      "yahooRank": 95,
+      "yahooRank": 96,
       "aliases": [
         "Lawrence",
         "T. Lawrence"
@@ -2568,39 +2595,12 @@
       "pos": "WR",
       "team": "CAR",
       "bye": null,
-      "adp": 96,
-      "posRankConsensus": 52,
-      "yahooRank": 96,
-      "aliases": [
-        "Coker",
-        "J. Coker"
-      ],
-      "stats": {
-        "rec": 36,
-        "recYds": 425,
-        "recTD": 2.9,
-        "rushYds": 0,
-        "rushTD": 0,
-        "returnYds": 0,
-        "fumblesLost": 1
-      },
-      "provenance": {
-        "adp": "FFC-half-ppr-2026-07-14",
-        "stats": "modeled-2026"
-      }
-    },
-    {
-      "id": "matthew-golden-gb-wr",
-      "name": "Matthew Golden",
-      "pos": "WR",
-      "team": "GB",
-      "bye": null,
       "adp": 97,
       "posRankConsensus": 53,
       "yahooRank": 97,
       "aliases": [
-        "Golden",
-        "M. Golden"
+        "Coker",
+        "J. Coker"
       ],
       "stats": {
         "rec": 35,
@@ -2617,14 +2617,41 @@
       }
     },
     {
+      "id": "matthew-golden-gb-wr",
+      "name": "Matthew Golden",
+      "pos": "WR",
+      "team": "GB",
+      "bye": null,
+      "adp": 98,
+      "posRankConsensus": 54,
+      "yahooRank": 98,
+      "aliases": [
+        "Golden",
+        "M. Golden"
+      ],
+      "stats": {
+        "rec": 33,
+        "recYds": 384,
+        "recTD": 2.6,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
       "id": "j-k-dobbins-den-rb",
       "name": "J.K. Dobbins",
       "pos": "RB",
       "team": "DEN",
       "bye": null,
-      "adp": 98,
+      "adp": 99,
       "posRankConsensus": 32,
-      "yahooRank": 98,
+      "yahooRank": 99,
       "aliases": [
         "Dobbins",
         "J. Dobbins"
@@ -2649,9 +2676,9 @@
       "pos": "QB",
       "team": "WAS",
       "bye": null,
-      "adp": 99,
+      "adp": 100,
       "posRankConsensus": 9,
-      "yahooRank": 99,
+      "yahooRank": 100,
       "aliases": [
         "Daniels",
         "J. Daniels"
@@ -2675,21 +2702,46 @@
       "pos": "WR",
       "team": "HOU",
       "bye": null,
-      "adp": 100,
-      "posRankConsensus": 54,
-      "yahooRank": 100,
+      "adp": 101,
+      "posRankConsensus": 55,
+      "yahooRank": 101,
       "aliases": [
         "Higgins",
         "J. Higgins"
       ],
       "stats": {
-        "rec": 33,
-        "recYds": 384,
-        "recTD": 2.6,
+        "rec": 32,
+        "recYds": 363,
+        "recTD": 2.5,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
         "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "mark-andrews-bal-te",
+      "name": "Mark Andrews",
+      "pos": "TE",
+      "team": "BAL",
+      "bye": null,
+      "adp": 102,
+      "posRankConsensus": 5,
+      "yahooRank": 102,
+      "aliases": [
+        "Andrews",
+        "M. Andrews"
+      ],
+      "stats": {
+        "rec": 68,
+        "recYds": 806,
+        "recTD": 5.9,
+        "returnYds": 0,
+        "fumblesLost": 0
       },
       "provenance": {
         "adp": "FFC-half-ppr-2026-07-14",
@@ -2702,9 +2754,9 @@
       "pos": "QB",
       "team": "DET",
       "bye": null,
-      "adp": 101,
+      "adp": 103,
       "posRankConsensus": 10,
-      "yahooRank": 101,
+      "yahooRank": 103,
       "aliases": [
         "Goff",
         "J. Goff"
@@ -2728,17 +2780,17 @@
       "pos": "WR",
       "team": "CLE",
       "bye": null,
-      "adp": 102,
-      "posRankConsensus": 55,
-      "yahooRank": 102,
+      "adp": 104,
+      "posRankConsensus": 56,
+      "yahooRank": 104,
       "aliases": [
         "Concepcion",
         "K. Concepcion"
       ],
       "stats": {
-        "rec": 32,
-        "recYds": 363,
-        "recTD": 2.5,
+        "rec": 31,
+        "recYds": 343,
+        "recTD": 2.4,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 700,
@@ -2755,9 +2807,9 @@
       "pos": "DEF",
       "team": "DEN",
       "bye": null,
-      "adp": 103,
+      "adp": 105,
       "posRankConsensus": 2,
-      "yahooRank": 103,
+      "yahooRank": 105,
       "aliases": [
         "Denver D/ST",
         "Denver Defense"
@@ -2784,38 +2836,12 @@
       "pos": "TE",
       "team": "GB",
       "bye": null,
-      "adp": 104,
-      "posRankConsensus": 5,
-      "yahooRank": 104,
+      "adp": 106,
+      "posRankConsensus": 6,
+      "yahooRank": 106,
       "aliases": [
         "Kraft",
         "T. Kraft"
-      ],
-      "stats": {
-        "rec": 68,
-        "recYds": 806,
-        "recTD": 5.9,
-        "returnYds": 0,
-        "fumblesLost": 0
-      },
-      "provenance": {
-        "adp": "FFC-half-ppr-2026-07-14",
-        "stats": "modeled-2026"
-      }
-    },
-    {
-      "id": "harold-fannin-jr-cle-te",
-      "name": "Harold Fannin Jr.",
-      "pos": "TE",
-      "team": "CLE",
-      "bye": null,
-      "adp": 105,
-      "posRankConsensus": 6,
-      "yahooRank": 105,
-      "aliases": [
-        "Harold Fannin",
-        "Fannin",
-        "H. Fannin"
       ],
       "stats": {
         "rec": 66,
@@ -2830,17 +2856,18 @@
       }
     },
     {
-      "id": "sam-laporta-det-te",
-      "name": "Sam LaPorta",
+      "id": "harold-fannin-jr-cle-te",
+      "name": "Harold Fannin Jr.",
       "pos": "TE",
-      "team": "DET",
+      "team": "CLE",
       "bye": null,
-      "adp": 106,
+      "adp": 107,
       "posRankConsensus": 7,
-      "yahooRank": 106,
+      "yahooRank": 107,
       "aliases": [
-        "LaPorta",
-        "S. LaPorta"
+        "Harold Fannin",
+        "Fannin",
+        "H. Fannin"
       ],
       "stats": {
         "rec": 63,
@@ -2855,14 +2882,39 @@
       }
     },
     {
+      "id": "sam-laporta-det-te",
+      "name": "Sam LaPorta",
+      "pos": "TE",
+      "team": "DET",
+      "bye": null,
+      "adp": 108,
+      "posRankConsensus": 8,
+      "yahooRank": 108,
+      "aliases": [
+        "LaPorta",
+        "S. LaPorta"
+      ],
+      "stats": {
+        "rec": 60,
+        "recYds": 698,
+        "recTD": 5,
+        "returnYds": 0,
+        "fumblesLost": 0
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
       "id": "jalen-hurts-phi-qb",
       "name": "Jalen Hurts",
       "pos": "QB",
       "team": "PHI",
       "bye": null,
-      "adp": 107,
+      "adp": 109,
       "posRankConsensus": 11,
-      "yahooRank": 107,
+      "yahooRank": 109,
       "aliases": [
         "Hurts",
         "J. Hurts"
@@ -2886,9 +2938,9 @@
       "pos": "QB",
       "team": "SF",
       "bye": null,
-      "adp": 108,
+      "adp": 110,
       "posRankConsensus": 12,
-      "yahooRank": 108,
+      "yahooRank": 110,
       "aliases": [
         "Purdy",
         "B. Purdy"
@@ -2912,9 +2964,9 @@
       "pos": "QB",
       "team": "LAR",
       "bye": null,
-      "adp": 109,
+      "adp": 111,
       "posRankConsensus": 13,
-      "yahooRank": 109,
+      "yahooRank": 111,
       "aliases": [
         "Stafford",
         "M. Stafford"
@@ -2938,9 +2990,9 @@
       "pos": "QB",
       "team": "CHI",
       "bye": null,
-      "adp": 110,
+      "adp": 112,
       "posRankConsensus": 14,
-      "yahooRank": 110,
+      "yahooRank": 112,
       "aliases": [
         "Williams",
         "C. Williams"
@@ -2959,14 +3011,40 @@
       }
     },
     {
+      "id": "kyler-murray-ari-qb",
+      "name": "Kyler Murray",
+      "pos": "QB",
+      "team": "ARI",
+      "bye": null,
+      "adp": 113,
+      "posRankConsensus": 15,
+      "yahooRank": 113,
+      "aliases": [
+        "Murray",
+        "K. Murray"
+      ],
+      "stats": {
+        "passYds": 3692,
+        "passTD": 23.2,
+        "interceptions": 11.1,
+        "rushYds": 500,
+        "rushTD": 5,
+        "fumblesLost": 3
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
       "id": "aaron-jones-sr-min-rb",
       "name": "Aaron Jones Sr.",
       "pos": "RB",
       "team": "MIN",
       "bye": null,
-      "adp": 111,
+      "adp": 114,
       "posRankConsensus": 33,
-      "yahooRank": 111,
+      "yahooRank": 114,
       "aliases": [
         "Aaron Jones",
         "Jones",
@@ -2992,9 +3070,9 @@
       "pos": "RB",
       "team": "DEN",
       "bye": null,
-      "adp": 112,
+      "adp": 115,
       "posRankConsensus": 34,
-      "yahooRank": 112,
+      "yahooRank": 115,
       "aliases": [
         "Harvey",
         "R. Harvey"
@@ -3019,9 +3097,9 @@
       "pos": "DEF",
       "team": "LAR",
       "bye": null,
-      "adp": 113,
+      "adp": 116,
       "posRankConsensus": 3,
-      "yahooRank": 113,
+      "yahooRank": 116,
       "aliases": [
         "Rams",
         "L. Rams",
@@ -3050,17 +3128,17 @@
       "pos": "WR",
       "team": "SEA",
       "bye": null,
-      "adp": 114,
-      "posRankConsensus": 56,
-      "yahooRank": 114,
+      "adp": 117,
+      "posRankConsensus": 57,
+      "yahooRank": 117,
       "aliases": [
         "Shaheed",
         "R. Shaheed"
       ],
       "stats": {
-        "rec": 31,
-        "recYds": 343,
-        "recTD": 2.4,
+        "rec": 29,
+        "recYds": 322,
+        "recTD": 2.3,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 540,
@@ -3077,9 +3155,9 @@
       "pos": "DEF",
       "team": "HOU",
       "bye": null,
-      "adp": 115,
+      "adp": 118,
       "posRankConsensus": 4,
-      "yahooRank": 115,
+      "yahooRank": 118,
       "aliases": [
         "Houston D/ST",
         "Houston Defense"
@@ -3101,22 +3179,49 @@
       }
     },
     {
+      "id": "kaleb-johnson-pit-rb",
+      "name": "Kaleb Johnson",
+      "pos": "RB",
+      "team": "PIT",
+      "bye": null,
+      "adp": 119,
+      "posRankConsensus": 35,
+      "yahooRank": 119,
+      "aliases": [
+        "Johnson",
+        "K. Johnson"
+      ],
+      "stats": {
+        "rushYds": 210,
+        "rushTD": 1,
+        "rec": 24,
+        "recYds": 202,
+        "recTD": 0.9,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
       "id": "jauan-jennings-min-wr",
       "name": "Jauan Jennings",
       "pos": "WR",
       "team": "MIN",
       "bye": null,
-      "adp": 116,
-      "posRankConsensus": 57,
-      "yahooRank": 116,
+      "adp": 120,
+      "posRankConsensus": 58,
+      "yahooRank": 120,
       "aliases": [
         "Jennings",
         "J. Jennings"
       ],
       "stats": {
-        "rec": 29,
-        "recYds": 322,
-        "recTD": 2.3,
+        "rec": 28,
+        "recYds": 302,
+        "recTD": 2.2,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -3133,9 +3238,9 @@
       "pos": "DEF",
       "team": "NE",
       "bye": null,
-      "adp": 117,
+      "adp": 121,
       "posRankConsensus": 5,
-      "yahooRank": 117,
+      "yahooRank": 121,
       "aliases": [
         "England",
         "N. England",
@@ -3164,9 +3269,9 @@
       "pos": "RB",
       "team": "CHI",
       "bye": null,
-      "adp": 118,
-      "posRankConsensus": 35,
-      "yahooRank": 118,
+      "adp": 122,
+      "posRankConsensus": 36,
+      "yahooRank": 122,
       "aliases": [
         "Monangai",
         "K. Monangai"
@@ -3174,11 +3279,36 @@
       "stats": {
         "rushYds": 210,
         "rushTD": 1,
-        "rec": 8,
-        "recYds": 70,
+        "rec": 7,
+        "recYds": 61,
         "recTD": 0.9,
         "returnYds": 0,
         "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "jake-ferguson-dal-te",
+      "name": "Jake Ferguson",
+      "pos": "TE",
+      "team": "DAL",
+      "bye": null,
+      "adp": 123,
+      "posRankConsensus": 9,
+      "yahooRank": 123,
+      "aliases": [
+        "Ferguson",
+        "J. Ferguson"
+      ],
+      "stats": {
+        "rec": 57,
+        "recYds": 662,
+        "recTD": 4.8,
+        "returnYds": 0,
+        "fumblesLost": 0
       },
       "provenance": {
         "adp": "FFC-half-ppr-2026-07-14",
@@ -3191,18 +3321,18 @@
       "pos": "WR",
       "team": "NYJ",
       "bye": null,
-      "adp": 119,
-      "posRankConsensus": 58,
-      "yahooRank": 119,
+      "adp": 124,
+      "posRankConsensus": 59,
+      "yahooRank": 124,
       "aliases": [
         "Omar Cooper",
         "Cooper",
         "O. Cooper"
       ],
       "stats": {
-        "rec": 28,
-        "recYds": 302,
-        "recTD": 2.2,
+        "rec": 27,
+        "recYds": 300,
+        "recTD": 2,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 540,
@@ -3219,20 +3349,47 @@
       "pos": "TE",
       "team": "ATL",
       "bye": null,
-      "adp": 120,
-      "posRankConsensus": 8,
-      "yahooRank": 120,
+      "adp": 125,
+      "posRankConsensus": 10,
+      "yahooRank": 125,
       "aliases": [
         "Kyle Pitts",
         "Pitts",
         "K. Pitts"
       ],
       "stats": {
-        "rec": 60,
-        "recYds": 698,
-        "recTD": 5,
+        "rec": 54,
+        "recYds": 626,
+        "recTD": 4.5,
         "returnYds": 0,
         "fumblesLost": 0
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "jonathon-brooks-car-rb",
+      "name": "Jonathon Brooks",
+      "pos": "RB",
+      "team": "CAR",
+      "bye": null,
+      "adp": 126,
+      "posRankConsensus": 37,
+      "yahooRank": 126,
+      "aliases": [
+        "Brooks",
+        "J. Brooks"
+      ],
+      "stats": {
+        "rushYds": 210,
+        "rushTD": 1,
+        "rec": 44,
+        "recYds": 370,
+        "recTD": 0.8,
+        "returnYds": 0,
+        "fumblesLost": 2
       },
       "provenance": {
         "adp": "FFC-half-ppr-2026-07-14",
@@ -3245,17 +3402,17 @@
       "pos": "TE",
       "team": "KC",
       "bye": null,
-      "adp": 121,
-      "posRankConsensus": 9,
-      "yahooRank": 121,
+      "adp": 127,
+      "posRankConsensus": 11,
+      "yahooRank": 127,
       "aliases": [
         "Kelce",
         "T. Kelce"
       ],
       "stats": {
-        "rec": 57,
-        "recYds": 662,
-        "recTD": 4.8,
+        "rec": 51,
+        "recYds": 590,
+        "recTD": 4.2,
         "returnYds": 0,
         "fumblesLost": 0
       },
@@ -3270,17 +3427,17 @@
       "pos": "QB",
       "team": "DEN",
       "bye": null,
-      "adp": 122,
-      "posRankConsensus": 15,
-      "yahooRank": 122,
+      "adp": 128,
+      "posRankConsensus": 16,
+      "yahooRank": 128,
       "aliases": [
         "Nix",
         "B. Nix"
       ],
       "stats": {
-        "passYds": 3692,
-        "passTD": 23.2,
-        "interceptions": 11.1,
+        "passYds": 3650,
+        "passTD": 22.5,
+        "interceptions": 11.3,
         "rushYds": 380,
         "rushTD": 4,
         "fumblesLost": 3
@@ -3296,20 +3453,45 @@
       "pos": "QB",
       "team": "NYG",
       "bye": null,
-      "adp": 123,
-      "posRankConsensus": 16,
-      "yahooRank": 123,
+      "adp": 129,
+      "posRankConsensus": 17,
+      "yahooRank": 129,
       "aliases": [
         "Dart",
         "J. Dart"
       ],
       "stats": {
         "passYds": 3650,
-        "passTD": 22.5,
-        "interceptions": 11.3,
+        "passTD": 21.8,
+        "interceptions": 11.5,
         "rushYds": 420,
         "rushTD": 4,
         "fumblesLost": 3
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "dalton-kincaid-buf-te",
+      "name": "Dalton Kincaid",
+      "pos": "TE",
+      "team": "BUF",
+      "bye": null,
+      "adp": 130,
+      "posRankConsensus": 12,
+      "yahooRank": 130,
+      "aliases": [
+        "Kincaid",
+        "D. Kincaid"
+      ],
+      "stats": {
+        "rec": 48,
+        "recYds": 554,
+        "recTD": 3.9,
+        "returnYds": 0,
+        "fumblesLost": 0
       },
       "provenance": {
         "adp": "FFC-half-ppr-2026-07-14",
@@ -3322,17 +3504,17 @@
       "pos": "WR",
       "team": "CLE",
       "bye": null,
-      "adp": 124,
-      "posRankConsensus": 59,
-      "yahooRank": 124,
+      "adp": 131,
+      "posRankConsensus": 60,
+      "yahooRank": 131,
       "aliases": [
         "Boston",
         "D. Boston"
       ],
       "stats": {
-        "rec": 27,
+        "rec": 25,
         "recYds": 300,
-        "recTD": 2,
+        "recTD": 1.9,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -3349,9 +3531,9 @@
       "pos": "WR",
       "team": "LV",
       "bye": null,
-      "adp": 125,
-      "posRankConsensus": 60,
-      "yahooRank": 125,
+      "adp": 132,
+      "posRankConsensus": 61,
+      "yahooRank": 132,
       "aliases": [
         "Tucker",
         "T. Tucker"
@@ -3359,11 +3541,38 @@
       "stats": {
         "rec": 25,
         "recYds": 300,
-        "recTD": 1.9,
+        "recTD": 1.8,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 560,
         "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "michael-penix-jr-atl-qb",
+      "name": "Michael Penix Jr.",
+      "pos": "QB",
+      "team": "ATL",
+      "bye": null,
+      "adp": 133,
+      "posRankConsensus": 18,
+      "yahooRank": 133,
+      "aliases": [
+        "Michael Penix",
+        "Penix",
+        "M. Penix"
+      ],
+      "stats": {
+        "passYds": 3650,
+        "passTD": 21.1,
+        "interceptions": 11.7,
+        "rushYds": 180,
+        "rushTD": 1.5,
+        "fumblesLost": 3
       },
       "provenance": {
         "adp": "FFC-half-ppr-2026-07-14",
@@ -3376,9 +3585,9 @@
       "pos": "DEF",
       "team": "PHI",
       "bye": null,
-      "adp": 126,
+      "adp": 134,
       "posRankConsensus": 6,
-      "yahooRank": 126,
+      "yahooRank": 134,
       "aliases": [
         "Philadelphia D/ST",
         "Philadelphia Defense"
@@ -3405,9 +3614,9 @@
       "pos": "RB",
       "team": "WAS",
       "bye": null,
-      "adp": 127,
-      "posRankConsensus": 36,
-      "yahooRank": 127,
+      "adp": 135,
+      "posRankConsensus": 38,
+      "yahooRank": 135,
       "aliases": [
         "White",
         "R. White"
@@ -3417,7 +3626,7 @@
         "rushTD": 1,
         "rec": 52,
         "recYds": 437,
-        "recTD": 0.9,
+        "recTD": 0.8,
         "returnYds": 0,
         "fumblesLost": 2
       },
@@ -3432,9 +3641,9 @@
       "pos": "DEF",
       "team": "JAX",
       "bye": null,
-      "adp": 128,
+      "adp": 136,
       "posRankConsensus": 7,
-      "yahooRank": 128,
+      "yahooRank": 136,
       "aliases": [
         "Jacksonville D/ST",
         "Jacksonville Defense"
@@ -3456,22 +3665,49 @@
       }
     },
     {
+      "id": "keon-coleman-buf-wr",
+      "name": "Keon Coleman",
+      "pos": "WR",
+      "team": "BUF",
+      "bye": null,
+      "adp": 137,
+      "posRankConsensus": 62,
+      "yahooRank": 137,
+      "aliases": [
+        "Coleman",
+        "K. Coleman"
+      ],
+      "stats": {
+        "rec": 25,
+        "recYds": 300,
+        "recTD": 1.7,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
       "id": "george-kittle-sf-te",
       "name": "George Kittle",
       "pos": "TE",
       "team": "SF",
       "bye": null,
-      "adp": 129,
-      "posRankConsensus": 10,
-      "yahooRank": 129,
+      "adp": 138,
+      "posRankConsensus": 13,
+      "yahooRank": 138,
       "aliases": [
         "Kittle",
         "G. Kittle"
       ],
       "stats": {
-        "rec": 54,
-        "recYds": 626,
-        "recTD": 4.5,
+        "rec": 45,
+        "recYds": 518,
+        "recTD": 3.6,
         "returnYds": 0,
         "fumblesLost": 0
       },
@@ -3486,9 +3722,9 @@
       "pos": "RB",
       "team": "TB",
       "bye": null,
-      "adp": 130,
-      "posRankConsensus": 37,
-      "yahooRank": 130,
+      "adp": 139,
+      "posRankConsensus": 39,
+      "yahooRank": 139,
       "aliases": [
         "Gainwell",
         "K. Gainwell"
@@ -3498,9 +3734,35 @@
         "rushTD": 1,
         "rec": 46,
         "recYds": 386,
-        "recTD": 0.8,
+        "recTD": 0.7,
         "returnYds": 0,
         "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "daniel-jones-ind-qb",
+      "name": "Daniel Jones",
+      "pos": "QB",
+      "team": "IND",
+      "bye": null,
+      "adp": 140,
+      "posRankConsensus": 19,
+      "yahooRank": 140,
+      "aliases": [
+        "Jones",
+        "D. Jones"
+      ],
+      "stats": {
+        "passYds": 3650,
+        "passTD": 20.4,
+        "interceptions": 12,
+        "rushYds": 270,
+        "rushTD": 2,
+        "fumblesLost": 3
       },
       "provenance": {
         "adp": "FFC-half-ppr-2026-07-14",
@@ -3513,9 +3775,9 @@
       "pos": "K",
       "team": "DAL",
       "bye": null,
-      "adp": 131,
+      "adp": 141,
       "posRankConsensus": 1,
-      "yahooRank": 131,
+      "yahooRank": 141,
       "aliases": [
         "Aubrey",
         "B. Aubrey"
@@ -3539,9 +3801,9 @@
       "pos": "K",
       "team": "SEA",
       "bye": null,
-      "adp": 132,
+      "adp": 142,
       "posRankConsensus": 2,
-      "yahooRank": 132,
+      "yahooRank": 142,
       "aliases": [
         "Myers",
         "J. Myers"
@@ -3565,9 +3827,9 @@
       "pos": "K",
       "team": "LAC",
       "bye": null,
-      "adp": 133,
+      "adp": 143,
       "posRankConsensus": 3,
-      "yahooRank": 133,
+      "yahooRank": 143,
       "aliases": [
         "Dicker",
         "C. Dicker"
@@ -3591,9 +3853,9 @@
       "pos": "K",
       "team": "HOU",
       "bye": null,
-      "adp": 134,
+      "adp": 144,
       "posRankConsensus": 4,
-      "yahooRank": 134,
+      "yahooRank": 144,
       "aliases": [
         "Fairbairn",
         "K. Fairbairn"
@@ -3617,9 +3879,9 @@
       "pos": "K",
       "team": "DET",
       "bye": null,
-      "adp": 135,
+      "adp": 145,
       "posRankConsensus": 5,
-      "yahooRank": 135,
+      "yahooRank": 145,
       "aliases": [
         "Bates",
         "J. Bates"
@@ -3638,14 +3900,40 @@
       }
     },
     {
+      "id": "geno-smith-lv-qb",
+      "name": "Geno Smith",
+      "pos": "QB",
+      "team": "LV",
+      "bye": null,
+      "adp": 146,
+      "posRankConsensus": 20,
+      "yahooRank": 146,
+      "aliases": [
+        "Smith",
+        "G. Smith"
+      ],
+      "stats": {
+        "passYds": 3650,
+        "passTD": 20,
+        "interceptions": 12.2,
+        "rushYds": 130,
+        "rushTD": 1,
+        "fumblesLost": 3
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
       "id": "chase-mclaughlin-tb-k",
       "name": "Chase McLaughlin",
       "pos": "K",
       "team": "TB",
       "bye": null,
-      "adp": 136,
+      "adp": 147,
       "posRankConsensus": 6,
-      "yahooRank": 136,
+      "yahooRank": 147,
       "aliases": [
         "McLaughlin",
         "C. McLaughlin"
@@ -3669,9 +3957,9 @@
       "pos": "K",
       "team": "KC",
       "bye": null,
-      "adp": 137,
+      "adp": 148,
       "posRankConsensus": 7,
-      "yahooRank": 137,
+      "yahooRank": 148,
       "aliases": [
         "Butker",
         "H. Butker"
@@ -3695,9 +3983,9 @@
       "pos": "K",
       "team": "JAX",
       "bye": null,
-      "adp": 138,
+      "adp": 149,
       "posRankConsensus": 8,
-      "yahooRank": 138,
+      "yahooRank": 149,
       "aliases": [
         "Little",
         "C. Little"
@@ -3721,9 +4009,9 @@
       "pos": "K",
       "team": "CIN",
       "bye": null,
-      "adp": 139,
+      "adp": 150,
       "posRankConsensus": 9,
-      "yahooRank": 139,
+      "yahooRank": 150,
       "aliases": [
         "McPherson",
         "E. McPherson"
@@ -3747,9 +4035,9 @@
       "pos": "K",
       "team": "MIN",
       "bye": null,
-      "adp": 140,
+      "adp": 151,
       "posRankConsensus": 10,
-      "yahooRank": 140,
+      "yahooRank": 151,
       "aliases": [
         "Reichard",
         "W. Reichard"
@@ -3768,14 +4056,41 @@
       }
     },
     {
+      "id": "blake-corum-lar-rb",
+      "name": "Blake Corum",
+      "pos": "RB",
+      "team": "LAR",
+      "bye": null,
+      "adp": 152,
+      "posRankConsensus": 40,
+      "yahooRank": 152,
+      "aliases": [
+        "Corum",
+        "B. Corum"
+      ],
+      "stats": {
+        "rushYds": 210,
+        "rushTD": 1,
+        "rec": 26,
+        "recYds": 218,
+        "recTD": 0.6,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
       "id": "detroit-det-def",
       "name": "Detroit DST",
       "pos": "DEF",
       "team": "DET",
       "bye": null,
-      "adp": 141,
+      "adp": 153,
       "posRankConsensus": 8,
-      "yahooRank": 141,
+      "yahooRank": 153,
       "aliases": [
         "Detroit D/ST",
         "Detroit Defense"
@@ -3802,9 +4117,9 @@
       "pos": "DEF",
       "team": "MIN",
       "bye": null,
-      "adp": 142,
+      "adp": 154,
       "posRankConsensus": 9,
-      "yahooRank": 142,
+      "yahooRank": 154,
       "aliases": [
         "Minnesota D/ST",
         "Minnesota Defense"
@@ -3831,9 +4146,9 @@
       "pos": "DEF",
       "team": "PIT",
       "bye": null,
-      "adp": 143,
+      "adp": 155,
       "posRankConsensus": 10,
-      "yahooRank": 143,
+      "yahooRank": 155,
       "aliases": [
         "Pittsburgh D/ST",
         "Pittsburgh Defense"
@@ -3860,9 +4175,9 @@
       "pos": "DEF",
       "team": "BUF",
       "bye": null,
-      "adp": 144,
+      "adp": 156,
       "posRankConsensus": 11,
-      "yahooRank": 144,
+      "yahooRank": 156,
       "aliases": [
         "Buffalo D/ST",
         "Buffalo Defense"
@@ -3889,9 +4204,9 @@
       "pos": "DEF",
       "team": "BAL",
       "bye": null,
-      "adp": 145,
+      "adp": 157,
       "posRankConsensus": 12,
-      "yahooRank": 145,
+      "yahooRank": 157,
       "aliases": [
         "Baltimore D/ST",
         "Baltimore Defense"
@@ -3913,14 +4228,41 @@
       }
     },
     {
+      "id": "woody-marks-hou-rb",
+      "name": "Woody Marks",
+      "pos": "RB",
+      "team": "HOU",
+      "bye": null,
+      "adp": 158,
+      "posRankConsensus": 41,
+      "yahooRank": 158,
+      "aliases": [
+        "Marks",
+        "W. Marks"
+      ],
+      "stats": {
+        "rushYds": 210,
+        "rushTD": 1,
+        "rec": 42,
+        "recYds": 353,
+        "recTD": 0.6,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
       "id": "la-chargers-lac-def",
       "name": "LA Chargers DST",
       "pos": "DEF",
       "team": "LAC",
       "bye": null,
-      "adp": 146,
+      "adp": 159,
       "posRankConsensus": 13,
-      "yahooRank": 146,
+      "yahooRank": 159,
       "aliases": [
         "Chargers",
         "L. Chargers",
@@ -3937,6 +4279,189 @@
         "returnTD": 0.4,
         "fourthDownStops": 4.6,
         "pointsAllowedPerGame": 25.9
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "keaton-mitchell-lac-rb",
+      "name": "Keaton Mitchell",
+      "pos": "RB",
+      "team": "LAC",
+      "bye": null,
+      "adp": 160,
+      "posRankConsensus": 42,
+      "yahooRank": 160,
+      "aliases": [
+        "Mitchell",
+        "K. Mitchell"
+      ],
+      "stats": {
+        "rushYds": 210,
+        "rushTD": 1,
+        "rec": 30,
+        "recYds": 252,
+        "recTD": 0.5,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "oronde-gadsden-lac-te",
+      "name": "Oronde Gadsden",
+      "pos": "TE",
+      "team": "LAC",
+      "bye": null,
+      "adp": 161,
+      "posRankConsensus": 14,
+      "yahooRank": 161,
+      "aliases": [
+        "Gadsden",
+        "O. Gadsden"
+      ],
+      "stats": {
+        "rec": 42,
+        "recYds": 482,
+        "recTD": 3.4,
+        "returnYds": 0,
+        "fumblesLost": 0
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "aaron-rodgers-pit-qb",
+      "name": "Aaron Rodgers",
+      "pos": "QB",
+      "team": "PIT",
+      "bye": null,
+      "adp": 162,
+      "posRankConsensus": 21,
+      "yahooRank": 162,
+      "aliases": [
+        "Rodgers",
+        "A. Rodgers"
+      ],
+      "stats": {
+        "passYds": 3650,
+        "passTD": 20,
+        "interceptions": 12.4,
+        "rushYds": 180,
+        "rushTD": 1.5,
+        "fumblesLost": 3
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "jaylin-noel-hou-wr",
+      "name": "Jaylin Noel",
+      "pos": "WR",
+      "team": "HOU",
+      "bye": null,
+      "adp": 163,
+      "posRankConsensus": 63,
+      "yahooRank": 163,
+      "aliases": [
+        "Noel",
+        "J. Noel"
+      ],
+      "stats": {
+        "rec": 25,
+        "recYds": 300,
+        "recTD": 1.6,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "eli-stowers-phi-te",
+      "name": "Eli Stowers",
+      "pos": "TE",
+      "team": "PHI",
+      "bye": null,
+      "adp": 164,
+      "posRankConsensus": 15,
+      "yahooRank": 164,
+      "aliases": [
+        "Stowers",
+        "E. Stowers"
+      ],
+      "stats": {
+        "rec": 39,
+        "recYds": 446,
+        "recTD": 3.1,
+        "returnYds": 0,
+        "fumblesLost": 0
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "chris-brazzell-car-wr",
+      "name": "Chris Brazzell",
+      "pos": "WR",
+      "team": "CAR",
+      "bye": null,
+      "adp": 165,
+      "posRankConsensus": 64,
+      "yahooRank": 165,
+      "aliases": [
+        "Brazzell",
+        "C. Brazzell"
+      ],
+      "stats": {
+        "rec": 25,
+        "recYds": 300,
+        "recTD": 1.4,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "malik-willis-mia-qb",
+      "name": "Malik Willis",
+      "pos": "QB",
+      "team": "MIA",
+      "bye": null,
+      "adp": 166,
+      "posRankConsensus": 22,
+      "yahooRank": 166,
+      "aliases": [
+        "Willis",
+        "M. Willis"
+      ],
+      "stats": {
+        "passYds": 3650,
+        "passTD": 20,
+        "interceptions": 12.6,
+        "rushYds": 330,
+        "rushTD": 2,
+        "fumblesLost": 3
       },
       "provenance": {
         "adp": "FFC-half-ppr-2026-07-14",

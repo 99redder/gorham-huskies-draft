@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "note": "Baked-in analyst intel from JagSays' 2026 RotoWire projections guide (redraft/dynasty/best-ball). Deltas are curated to reflect the strength of each take. Editable/removable in the Intel Log like any pasted intel.",
   "source": "@JagSays (RotoWire)",
   "entries": [
@@ -64,6 +64,27 @@
     { "id": "jag26_burden", "snippet": "Appropriately priced; needs TDs to match hype.", "players": [{ "name": "Luther Burden III", "delta": -6 }] },
     { "id": "jag26_mcbride", "snippet": "Could see slight regression.", "players": [{ "name": "Trey McBride", "delta": -6 }] },
     { "id": "jag26_nix", "snippet": "Lukewarm — rather just have him than a weekly rotation piece.", "players": [{ "name": "Bo Nix", "delta": -4 }] },
-    { "id": "jag26_mhj", "snippet": "Willing to buy in dynasty, but must overcome McBride competition.", "players": [{ "name": "Marvin Harrison Jr.", "delta": 5 }] }
+    { "id": "jag26_mhj", "snippet": "Willing to buy in dynasty, but must overcome McBride competition.", "players": [{ "name": "Marvin Harrison Jr.", "delta": 5 }] },
+
+    { "id": "jag26_andrews", "snippet": "Upside is undeniable at his price with a new scheme.", "players": [{ "name": "Mark Andrews", "delta": 12 }] },
+    { "id": "jag26_hunter", "snippet": "So cheap that it's worth a shot.", "players": [{ "name": "Travis Hunter", "delta": 10 }] },
+    { "id": "jag26_kmurray", "snippet": "So underpriced he warrants hedging with McCarthy.", "players": [{ "name": "Kyler Murray", "delta": 6 }] },
+    { "id": "jag26_ferguson", "snippet": "High-end option, comparable to Cade Otton.", "players": [{ "name": "Jake Ferguson", "delta": 9 }] },
+    { "id": "jag26_brooks", "snippet": "PPR smash target after Dowdle's departure.", "players": [{ "name": "Jonathon Brooks", "delta": 12 }] },
+    { "id": "jag26_marks", "snippet": "Don't mind the price given the upside.", "players": [{ "name": "Woody Marks", "delta": 8 }] },
+    { "id": "jag26_corum", "snippet": "Buy for the upside alone.", "players": [{ "name": "Blake Corum", "delta": 9 }] },
+    { "id": "jag26_kmitchell", "snippet": "Take plenty of shots at this cost.", "players": [{ "name": "Keaton Mitchell", "delta": 8 }] },
+    { "id": "jag26_stowers", "snippet": "Will probably never be cheaper.", "players": [{ "name": "Eli Stowers", "delta": 8 }] },
+    { "id": "jag26_brazzell", "snippet": "A steal as a vertical-threat option.", "players": [{ "name": "Chris Brazzell", "delta": 9 }] },
+
+    { "id": "jag26_penix", "snippet": "Already 26 — dangerously close to sell territory.", "players": [{ "name": "Michael Penix Jr.", "delta": -12 }] },
+    { "id": "jag26_kincaid", "snippet": "Poor performance invalidated my hope.", "players": [{ "name": "Dalton Kincaid", "delta": -12 }] },
+    { "id": "jag26_coleman", "snippet": "Never believed in him as a prospect.", "players": [{ "name": "Keon Coleman", "delta": -12 }] },
+    { "id": "jag26_gadsden", "snippet": "Inflated if you're expecting a value jump.", "players": [{ "name": "Oronde Gadsden", "delta": -8 }] },
+    { "id": "jag26_willis", "snippet": "Want no part of him despite the rushing floor; fading Miami.", "players": [{ "name": "Malik Willis", "delta": -12 }] },
+    { "id": "jag26_djones", "snippet": "Projection is contingent on health.", "players": [{ "name": "Daniel Jones", "delta": -8 }] },
+    { "id": "jag26_kjohnson", "snippet": "Looking like a massive bust unless he impresses.", "players": [{ "name": "Kaleb Johnson", "delta": -16 }] },
+    { "id": "jag26_rodgers", "snippet": "May be benched; don't buy unless super cheap. Steelers gonna be a bad time.", "players": [{ "name": "Aaron Rodgers", "delta": -14 }] },
+    { "id": "jag26_noel", "snippet": "Careful for everyone in Houston not named Collins.", "players": [{ "name": "Jaylin Noel", "delta": -8 }] }
   ]
 }

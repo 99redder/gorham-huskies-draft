@@ -1,6 +1,6 @@
 // data.js — loads the static JSON data bundles.
 export async function loadData() {
-  const bust = "v=3";
+  const bust = "v=4";
   const [league, playersDoc, lexicon, seedIntel] = await Promise.all([
     fetch(`data/league.json?${bust}`).then((r) => r.json()),
     fetch(`data/players.json?${bust}`).then((r) => r.json()),

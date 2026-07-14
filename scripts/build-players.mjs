@@ -76,20 +76,50 @@ const ADP = [
   ["LA Chargers","DEF","LAC"]
 ];
 
+// Supplemental players discussed by analysts (e.g. JagSays' RotoWire guide) that
+// weren't in the FFC top list. Each has an "anchor" — an approximate consensus
+// draft slot — and is merged into the ordered pool by that anchor.
+// [name, pos, team, anchor]
+const EXTRA = [
+  ["Travis Hunter","WR","JAX",92.5],
+  ["Mark Andrews","TE","BAL",100.5],
+  ["Kyler Murray","QB","ARI",110.5],
+  ["Kaleb Johnson","RB","PIT",115.5],
+  ["Jake Ferguson","TE","DAL",118.5],
+  ["Jonathon Brooks","RB","CAR",120.5],
+  ["Dalton Kincaid","TE","BUF",123.5],
+  ["Michael Penix Jr.","QB","ATL",125.5],
+  ["Keon Coleman","WR","BUF",128.5],
+  ["Daniel Jones","QB","IND",130.5],
+  ["Geno Smith","QB","LV",135.5],
+  ["Blake Corum","RB","LAR",140.5],
+  ["Woody Marks","RB","HOU",145.5],
+  ["Keaton Mitchell","RB","LAC",150.5],
+  ["Oronde Gadsden","TE","LAC",155.5],
+  ["Aaron Rodgers","QB","PIT",160.5],
+  ["Jaylin Noel","WR","HOU",165.5],
+  ["Eli Stowers","TE","PHI",175.5],
+  ["Chris Brazzell","WR","CAR",180.5],
+  ["Malik Willis","QB","MIA",200.5]
+];
+
 // Players who catch a lot out of the backfield -> boost receptions (0.5 PPR matters)
 const PASS_CATCH_RB = {
   "Jahmyr Gibbs":75,"Christian McCaffrey":80,"De'Von Achane":78,"James Cook III":52,
   "Breece Hall":58,"Jaylen Warren":52,"Kenneth Walker III":45,"D'Andre Swift":48,
   "Bucky Irving":50,"Kenny Gainwell":46,"Rachaad White":52,"Aaron Jones Sr.":44,
   "Jonathan Taylor":40,"Bijan Robinson":58,"Saquon Barkley":40,"Travis Etienne Jr.":42,
-  "Omarion Hampton":40,"Ashton Jeanty":42,"TreVeyon Henderson":40,"Cam Skattebo":38
+  "Omarion Hampton":40,"Ashton Jeanty":42,"TreVeyon Henderson":40,"Cam Skattebo":38,
+  "Jonathon Brooks":44,"Woody Marks":42,"Keaton Mitchell":30,"Blake Corum":26,"Kaleb Johnson":24
 };
 // Rushing QBs -> add rush volume
 const RUSH_QB = {
   "Josh Allen":{ry:520,rtd:8},"Lamar Jackson":{ry:820,rtd:5},"Jayden Daniels":{ry:820,rtd:6},
   "Jalen Hurts":{ry:600,rtd:12},"Justin Herbert":{ry:260,rtd:3},"Joe Burrow":{ry:180,rtd:2},
   "Caleb Williams":{ry:430,rtd:4},"Bo Nix":{ry:380,rtd:4},"Jaxson Dart":{ry:420,rtd:4},
-  "Drake Maye":{ry:400,rtd:3},"Patrick Mahomes":{ry:330,rtd:2}
+  "Drake Maye":{ry:400,rtd:3},"Patrick Mahomes":{ry:330,rtd:2},
+  "Kyler Murray":{ry:500,rtd:5},"Malik Willis":{ry:330,rtd:2},"Daniel Jones":{ry:270,rtd:2},
+  "Geno Smith":{ry:130,rtd:1}
 };
 // Kick/punt returners -> add return yards (THIS LEAGUE SCORES RETURN YARDS 25/pt)
 const RETURNERS = {
@@ -169,8 +199,15 @@ function statsForDST(rank) {
   };
 }
 
+// Merge the FFC consensus list (sortKey = its 1-based rank) with EXTRA analyst
+// additions (sortKey = anchor), then order by sortKey so ADP/posRank flow correctly.
+const merged = [
+  ...ADP.map((row, i) => ({ row, sortKey: i + 1 })),
+  ...EXTRA.map(([name, pos, team, anchor]) => ({ row: [name, pos, team], sortKey: anchor })),
+].sort((a, b) => a.sortKey - b.sortKey);
+
 const posRank = {};
-const players = ADP.map((row, i) => {
+const players = merged.map(({ row }, i) => {
   const [name, pos, team] = row;
   posRank[pos] = (posRank[pos] || 0) + 1;
   const pr = posRank[pos];
