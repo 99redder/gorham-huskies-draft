@@ -47,7 +47,7 @@ export function computeValues(players, league) {
       p.vor = Math.round((p.proj - repPoints[pos]) * 10) / 10;
       p.tier = 0; // filled below
     });
-    assignTiers(byPos[pos]);
+    assignTiers(byPos[pos], MAX_TIER_SIZE[pos] || 4);
   }
 
   const all = Object.values(byPos).flat();
@@ -55,20 +55,27 @@ export function computeValues(players, league) {
   return all;
 }
 
+// Roughly how many players belong in one tier at each position (shallower for the
+// scarce positions in a 6-team league).
+export const MAX_TIER_SIZE = { QB: 3, RB: 4, WR: 4, TE: 3, K: 3, DEF: 3 };
+
 // Tier detection: walk a position list (already sorted by proj desc) and start a
-// new tier when the drop from the previous player exceeds a dynamic threshold
-// based on the spread of gaps within that position.
-export function assignTiers(list) {
+// new tier when EITHER a real scoring cliff appears OR the current tier reaches
+// maxTierSize. The size cap matters because modeled projections decline smoothly
+// (no natural cliffs), so pure gap detection would lump everyone into one tier.
+export function assignTiers(list, maxTierSize = 4) {
   if (!list.length) return;
   const gaps = [];
   for (let i = 1; i < list.length; i++) gaps.push(list[i - 1].proj - list[i].proj);
   const sorted = [...gaps].sort((a, b) => a - b);
   const median = sorted[Math.floor(sorted.length / 2)] || 0;
-  const threshold = Math.max(8, median * 2.1); // a "real" cliff
-  let tier = 1;
+  const threshold = Math.max(6, median * 1.7); // a genuine drop-off
+  let tier = 1, sizeInTier = 1;
   list[0].tier = 1;
   for (let i = 1; i < list.length; i++) {
-    if (list[i - 1].proj - list[i].proj >= threshold) tier++;
+    const cliff = list[i - 1].proj - list[i].proj >= threshold;
+    if (cliff || sizeInTier >= maxTierSize) { tier++; sizeInTier = 1; }
+    else sizeInTier++;
     list[i].tier = tier;
   }
 }
