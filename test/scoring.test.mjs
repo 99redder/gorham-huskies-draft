@@ -1,0 +1,45 @@
+// Minimal test harness (no deps): node test/scoring.test.mjs
+import { readFileSync } from "node:fs";
+import { projectedPoints } from "../js/scoring.js";
+import { computeValues, replacementRanks } from "../js/value.js";
+
+const league = JSON.parse(readFileSync(new URL("../data/league.json", import.meta.url)));
+const { players } = JSON.parse(readFileSync(new URL("../data/players.json", import.meta.url)));
+
+let pass = 0, fail = 0;
+function eq(name, got, want, tol = 0.05) {
+  if (Math.abs(got - want) <= tol) { pass++; }
+  else { fail++; console.error(`FAIL ${name}: got ${got}, want ${want}`); }
+}
+
+// Hand-computed WR: 102 rec, 1450 yds, 9 TD, 1 fum lost (0.5PPR, 10yd/pt, 6pt TD, -2 fum)
+eq("WR 102/1450/9/1fum",
+  projectedPoints({ pos: "WR", stats: { rec: 102, recYds: 1450, recTD: 9, fumblesLost: 1 } }, league),
+  51 + 145 + 54 - 2);
+
+// Return yards matter (league scores 25/pt): +400 return yds = +16
+eq("return yards add 16",
+  projectedPoints({ pos: "WR", stats: { rec: 50, recYds: 700, recTD: 5, returnYds: 400 } }, league)
+  - projectedPoints({ pos: "WR", stats: { rec: 50, recYds: 700, recTD: 5, returnYds: 0 } }, league),
+  16);
+
+// Kicker: 5x FG40-49 (@4) + 3x FG50+ (@5) + 30 PAT = 20 + 15 + 30
+eq("kicker tiers",
+  projectedPoints({ pos: "K", stats: { fg40_49: 5, fg50plus: 3, pat: 30 } }, league),
+  20 + 15 + 30);
+
+// DEF 4th-down stops scored 2 ea (non-default): 6 stops = +12 over baseline
+eq("4th down stops",
+  projectedPoints({ pos: "DEF", stats: { fourthDownStops: 6, pointsAllowedPerGame: 21 } }, league)
+  - projectedPoints({ pos: "DEF", stats: { fourthDownStops: 0, pointsAllowedPerGame: 21 } }, league),
+  12);
+
+// Sanity: full dataset VOR ranks the top pick reasonably, replacement levels shallow
+const values = computeValues(players, league);
+console.log("Replacement ranks (6-team):", replacementRanks(league));
+console.log("Top 8 by VOR:");
+values.slice(0, 8).forEach((v, i) =>
+  console.log(`  ${i + 1}. ${v.name} (${v.pos}) proj=${v.proj} vor=${v.vor} tier=${v.tier}`));
+
+console.log(`\n${pass} passed, ${fail} failed`);
+process.exit(fail ? 1 : 0);

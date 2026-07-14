@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Draft HQ — Gorham Huskies</title>
+  <meta name="theme-color" content="#0b0f1a" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="css/styles.css?v=2" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">🏈</span>
+      <div>
+        <h1>Draft HQ</h1>
+        <p class="sub">Gorham Huskies Somersworth · 6-team · 0.5 PPR</p>
+      </div>
+    </div>
+    <div class="controls">
+      <label class="pick">Pick #
+        <input type="number" id="pickNumber" min="1" value="1" />
+      </label>
+      <button id="btnSettings" class="btn ghost" title="Scoring weights">⚙ Weights</button>
+      <button id="btnExport" class="btn ghost" title="Export draft + intel">⬇ Export</button>
+      <label class="btn ghost" title="Import backup">⬆ Import
+        <input type="file" id="importFile" accept="application/json" hidden />
+      </label>
+      <button id="btnReset" class="btn danger" title="Reset draft">Reset</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <!-- BOARD -->
+    <section class="board panel">
+      <div class="board-head">
+        <div class="filters">
+          <button class="pos-filter active" data-pos="ALL">All</button>
+          <button class="pos-filter" data-pos="QB">QB</button>
+          <button class="pos-filter" data-pos="RB">RB</button>
+          <button class="pos-filter" data-pos="WR">WR</button>
+          <button class="pos-filter" data-pos="TE">TE</button>
+          <button class="pos-filter" data-pos="FLEX">FLEX</button>
+          <button class="pos-filter" data-pos="K">K</button>
+          <button class="pos-filter" data-pos="DEF">DEF</button>
+        </div>
+        <div class="board-tools">
+          <input type="search" id="search" placeholder="Search player…" />
+          <select id="sortBy" title="Sort by">
+            <option value="blend">Sort: Best Pick</option>
+            <option value="vor">Sort: VOR</option>
+            <option value="proj">Sort: Proj Pts</option>
+            <option value="adp">Sort: ADP</option>
+          </select>
+          <label class="chk"><input type="checkbox" id="hideDrafted" checked /> Hide drafted</label>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table id="boardTable">
+          <thead>
+            <tr>
+              <th>#</th><th>Player</th><th>Pos</th><th>Tm</th>
+              <th title="Projected points, your scoring">Proj</th>
+              <th title="Value Over Replacement (6-team)">VOR</th>
+              <th>Tier</th><th title="Consensus ADP">ADP</th>
+              <th title="Analyst intel">Intel</th>
+              <th title="Blended best-pick score">Score</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="boardBody"></tbody>
+        </table>
+      </div>
+      <p class="provenance" id="provenance"></p>
+    </section>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <nav class="tabs">
+        <button class="tab active" data-tab="recommend">Recommend</button>
+        <button class="tab" data-tab="team">My Team</button>
+        <button class="tab" data-tab="intel">Intel</button>
+      </nav>
+
+      <div class="tab-panel active" id="tab-recommend">
+        <div id="alerts"></div>
+        <h2>Top Picks Now</h2>
+        <ol id="recList" class="rec-list"></ol>
+      </div>
+
+      <div class="tab-panel" id="tab-team">
+        <div class="team-summary" id="teamSummary"></div>
+        <ul id="rosterSlots" class="roster"></ul>
+        <div class="needs" id="needs"></div>
+      </div>
+
+      <div class="tab-panel" id="tab-intel">
+        <h2>Paste Analyst Intel</h2>
+        <p class="hint">Paste the text of a post. We'll match players &amp; detect the take, then you confirm.</p>
+        <label class="fld">Source
+          <input list="sourceList" id="intelSource" value="@JagSays" />
+          <datalist id="sourceList"></datalist>
+        </label>
+        <textarea id="intelText" rows="5" placeholder="e.g. Pounding the table on De'Von Achane as a league winner. Fading Derrick Henry — age + committee concerns."></textarea>
+        <button id="btnParse" class="btn primary">Analyze →</button>
+        <div id="intelReview" class="intel-review"></div>
+        <h3>Intel Log</h3>
+        <ul id="intelLog" class="intel-log"></ul>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Settings drawer -->
+  <div class="drawer" id="settingsDrawer" hidden>
+    <div class="drawer-inner">
+      <h2>Blend Weights</h2>
+      <p class="hint">Tune how the "Best Pick" score is built for your draft.</p>
+      <label>VOR (league value) <input type="range" id="wVor" min="0" max="2" step="0.05" value="1"><span data-out="wVor"></span></label>
+      <label>ADP value (fall/steal) <input type="range" id="wAdp" min="0" max="2" step="0.05" value="0.6"><span data-out="wAdp"></span></label>
+      <label>Roster need <input type="range" id="wNeed" min="0" max="2" step="0.05" value="1"><span data-out="wNeed"></span></label>
+      <label>Analyst intel <input type="range" id="wIntel" min="0" max="2" step="0.05" value="1"><span data-out="wIntel"></span></label>
+      <button id="btnCloseSettings" class="btn primary">Done</button>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <script type="module" src="js/app.js?v=1"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
+    }
+  </script>
+</body>
+</html>

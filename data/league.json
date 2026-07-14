@@ -1,0 +1,59 @@
+{
+  "id": "160121",
+  "name": "Gorham Huskies Somersworth",
+  "teams": 6,
+  "scoringType": "head-to-head",
+  "fractionalPoints": true,
+  "negativePoints": true,
+  "roster": {
+    "starters": { "QB": 1, "WR": 3, "RB": 3, "TE": 1, "FLEX": 1, "K": 1, "DEF": 1 },
+    "flexEligible": ["WR", "RB", "TE"],
+    "bench": 5,
+    "total": 16
+  },
+  "scoring": {
+    "offense": {
+      "passYardsPerPoint": 25,
+      "passTD": 4,
+      "interception": -1,
+      "rushYardsPerPoint": 10,
+      "rushTD": 6,
+      "reception": 0.5,
+      "recYardsPerPoint": 10,
+      "recTD": 6,
+      "returnYardsPerPoint": 25,
+      "returnTD": 6,
+      "twoPointConversion": 2,
+      "fumbleLost": -2,
+      "offensiveFumbleReturnTD": 6
+    },
+    "kicking": {
+      "fg0_19": 3,
+      "fg20_29": 3,
+      "fg30_39": 3,
+      "fg40_49": 4,
+      "fg50plus": 5,
+      "pat": 1
+    },
+    "defense": {
+      "sack": 1,
+      "interception": 2,
+      "fumbleRecovery": 2,
+      "touchdown": 6,
+      "safety": 2,
+      "blockKick": 2,
+      "returnTD": 6,
+      "fourthDownStop": 2,
+      "pointsAllowed": [
+        { "max": 0, "points": 10 },
+        { "max": 6, "points": 7 },
+        { "max": 13, "points": 4 },
+        { "max": 20, "points": 1 },
+        { "max": 27, "points": 0 },
+        { "max": 34, "points": -1 },
+        { "max": 99, "points": -4 }
+      ]
+    }
+  },
+  "notes": "Non-default vs Yahoo: 0.5 PPR, return yards (25/pt), 4th-down stops (2 ea), tiered long FGs (40-49=4, 50+=5). These shift value toward pass-catching backs/receivers, return men, and kickers on strong offenses/defenses."
+}

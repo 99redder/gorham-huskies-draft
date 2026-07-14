@@ -1,0 +1,3947 @@
+{
+  "generatedAt": "2026-07-14T16:20:42.127Z",
+  "source": "FantasyFootballCalculator Half-PPR consensus (mock-draft aggregate), 2026-07-14; stat lines modeled",
+  "count": 146,
+  "players": [
+    {
+      "id": "jahmyr-gibbs-det-rb",
+      "name": "Jahmyr Gibbs",
+      "pos": "RB",
+      "team": "DET",
+      "bye": null,
+      "adp": 1,
+      "posRankConsensus": 1,
+      "yahooRank": 1,
+      "aliases": [
+        "Gibbs",
+        "J. Gibbs"
+      ],
+      "stats": {
+        "rushYds": 1300,
+        "rushTD": 10,
+        "rec": 75,
+        "recYds": 686,
+        "recTD": 2.6,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "bijan-robinson-atl-rb",
+      "name": "Bijan Robinson",
+      "pos": "RB",
+      "team": "ATL",
+      "bye": null,
+      "adp": 2,
+      "posRankConsensus": 2,
+      "yahooRank": 2,
+      "aliases": [
+        "Robinson",
+        "B. Robinson"
+      ],
+      "stats": {
+        "rushYds": 1254,
+        "rushTD": 9.6,
+        "rec": 58,
+        "recYds": 522,
+        "recTD": 2.5,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "puka-nacua-lar-wr",
+      "name": "Puka Nacua",
+      "pos": "WR",
+      "team": "LAR",
+      "bye": null,
+      "adp": 3,
+      "posRankConsensus": 1,
+      "yahooRank": 3,
+      "aliases": [
+        "Nacua",
+        "P. Nacua"
+      ],
+      "stats": {
+        "rec": 102,
+        "recYds": 1450,
+        "recTD": 9,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "ja-marr-chase-cin-wr",
+      "name": "Ja'Marr Chase",
+      "pos": "WR",
+      "team": "CIN",
+      "bye": null,
+      "adp": 4,
+      "posRankConsensus": 2,
+      "yahooRank": 4,
+      "aliases": [
+        "Chase",
+        "J. Chase"
+      ],
+      "stats": {
+        "rec": 100,
+        "recYds": 1424,
+        "recTD": 8.8,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "christian-mccaffrey-sf-rb",
+      "name": "Christian McCaffrey",
+      "pos": "RB",
+      "team": "SF",
+      "bye": null,
+      "adp": 5,
+      "posRankConsensus": 3,
+      "yahooRank": 5,
+      "aliases": [
+        "McCaffrey",
+        "C. McCaffrey"
+      ],
+      "stats": {
+        "rushYds": 1208,
+        "rushTD": 9.2,
+        "rec": 80,
+        "recYds": 708,
+        "recTD": 2.5,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "jonathan-taylor-ind-rb",
+      "name": "Jonathan Taylor",
+      "pos": "RB",
+      "team": "IND",
+      "bye": null,
+      "adp": 6,
+      "posRankConsensus": 4,
+      "yahooRank": 6,
+      "aliases": [
+        "Taylor",
+        "J. Taylor"
+      ],
+      "stats": {
+        "rushYds": 1162,
+        "rushTD": 8.8,
+        "rec": 40,
+        "recYds": 348,
+        "recTD": 2.4,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "jaxon-smith-njigba-sea-wr",
+      "name": "Jaxon Smith-Njigba",
+      "pos": "WR",
+      "team": "SEA",
+      "bye": null,
+      "adp": 7,
+      "posRankConsensus": 3,
+      "yahooRank": 7,
+      "aliases": [
+        "Smith-Njigba",
+        "J. Smith-Njigba"
+      ],
+      "stats": {
+        "rec": 98,
+        "recYds": 1398,
+        "recTD": 8.7,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "amon-ra-st-brown-det-wr",
+      "name": "Amon-Ra St. Brown",
+      "pos": "WR",
+      "team": "DET",
+      "bye": null,
+      "adp": 8,
+      "posRankConsensus": 4,
+      "yahooRank": 8,
+      "aliases": [
+        "St. Brown",
+        "A. St. Brown"
+      ],
+      "stats": {
+        "rec": 96,
+        "recYds": 1372,
+        "recTD": 8.5,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "de-von-achane-mia-rb",
+      "name": "De'Von Achane",
+      "pos": "RB",
+      "team": "MIA",
+      "bye": null,
+      "adp": 9,
+      "posRankConsensus": 5,
+      "yahooRank": 9,
+      "aliases": [
+        "Achane",
+        "D. Achane"
+      ],
+      "stats": {
+        "rushYds": 1116,
+        "rushTD": 8.4,
+        "rec": 78,
+        "recYds": 667,
+        "recTD": 2.4,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "derrick-henry-bal-rb",
+      "name": "Derrick Henry",
+      "pos": "RB",
+      "team": "BAL",
+      "bye": null,
+      "adp": 10,
+      "posRankConsensus": 6,
+      "yahooRank": 10,
+      "aliases": [
+        "Henry",
+        "D. Henry"
+      ],
+      "stats": {
+        "rushYds": 1070,
+        "rushTD": 8,
+        "rec": 35,
+        "recYds": 294,
+        "recTD": 2.3,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "james-cook-iii-buf-rb",
+      "name": "James Cook III",
+      "pos": "RB",
+      "team": "BUF",
+      "bye": null,
+      "adp": 11,
+      "posRankConsensus": 7,
+      "yahooRank": 11,
+      "aliases": [
+        "James Cook",
+        "Cook",
+        "J. Cook"
+      ],
+      "stats": {
+        "rushYds": 1024,
+        "rushTD": 7.6,
+        "rec": 52,
+        "recYds": 437,
+        "recTD": 2.2,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "drake-london-atl-wr",
+      "name": "Drake London",
+      "pos": "WR",
+      "team": "ATL",
+      "bye": null,
+      "adp": 12,
+      "posRankConsensus": 5,
+      "yahooRank": 12,
+      "aliases": [
+        "London",
+        "D. London"
+      ],
+      "stats": {
+        "rec": 94,
+        "recYds": 1346,
+        "recTD": 8.3,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "ceedee-lamb-dal-wr",
+      "name": "CeeDee Lamb",
+      "pos": "WR",
+      "team": "DAL",
+      "bye": null,
+      "adp": 13,
+      "posRankConsensus": 6,
+      "yahooRank": 13,
+      "aliases": [
+        "Lamb",
+        "C. Lamb"
+      ],
+      "stats": {
+        "rec": 93,
+        "recYds": 1320,
+        "recTD": 8.2,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "justin-jefferson-min-wr",
+      "name": "Justin Jefferson",
+      "pos": "WR",
+      "team": "MIN",
+      "bye": null,
+      "adp": 14,
+      "posRankConsensus": 7,
+      "yahooRank": 14,
+      "aliases": [
+        "Jefferson",
+        "J. Jefferson"
+      ],
+      "stats": {
+        "rec": 91,
+        "recYds": 1294,
+        "recTD": 8,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "ashton-jeanty-lv-rb",
+      "name": "Ashton Jeanty",
+      "pos": "RB",
+      "team": "LV",
+      "bye": null,
+      "adp": 15,
+      "posRankConsensus": 8,
+      "yahooRank": 15,
+      "aliases": [
+        "Jeanty",
+        "A. Jeanty"
+      ],
+      "stats": {
+        "rushYds": 978,
+        "rushTD": 7.2,
+        "rec": 42,
+        "recYds": 353,
+        "recTD": 2.2,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "a-j-brown-ne-wr",
+      "name": "A.J. Brown",
+      "pos": "WR",
+      "team": "NE",
+      "bye": null,
+      "adp": 16,
+      "posRankConsensus": 8,
+      "yahooRank": 16,
+      "aliases": [
+        "Brown",
+        "A. Brown"
+      ],
+      "stats": {
+        "rec": 89,
+        "recYds": 1268,
+        "recTD": 7.8,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "george-pickens-dal-wr",
+      "name": "George Pickens",
+      "pos": "WR",
+      "team": "DAL",
+      "bye": null,
+      "adp": 17,
+      "posRankConsensus": 9,
+      "yahooRank": 17,
+      "aliases": [
+        "Pickens",
+        "G. Pickens"
+      ],
+      "stats": {
+        "rec": 87,
+        "recYds": 1242,
+        "recTD": 7.6,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "saquon-barkley-phi-rb",
+      "name": "Saquon Barkley",
+      "pos": "RB",
+      "team": "PHI",
+      "bye": null,
+      "adp": 18,
+      "posRankConsensus": 9,
+      "yahooRank": 18,
+      "aliases": [
+        "Barkley",
+        "S. Barkley"
+      ],
+      "stats": {
+        "rushYds": 932,
+        "rushTD": 6.8,
+        "rec": 40,
+        "recYds": 336,
+        "recTD": 2.1,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "omarion-hampton-lac-rb",
+      "name": "Omarion Hampton",
+      "pos": "RB",
+      "team": "LAC",
+      "bye": null,
+      "adp": 19,
+      "posRankConsensus": 10,
+      "yahooRank": 19,
+      "aliases": [
+        "Hampton",
+        "O. Hampton"
+      ],
+      "stats": {
+        "rushYds": 886,
+        "rushTD": 6.4,
+        "rec": 40,
+        "recYds": 336,
+        "recTD": 2.1,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "kenneth-walker-iii-kc-rb",
+      "name": "Kenneth Walker III",
+      "pos": "RB",
+      "team": "KC",
+      "bye": null,
+      "adp": 20,
+      "posRankConsensus": 11,
+      "yahooRank": 20,
+      "aliases": [
+        "Kenneth Walker",
+        "Walker",
+        "K. Walker"
+      ],
+      "stats": {
+        "rushYds": 840,
+        "rushTD": 6,
+        "rec": 45,
+        "recYds": 378,
+        "recTD": 2,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "chase-brown-cin-rb",
+      "name": "Chase Brown",
+      "pos": "RB",
+      "team": "CIN",
+      "bye": null,
+      "adp": 21,
+      "posRankConsensus": 12,
+      "yahooRank": 21,
+      "aliases": [
+        "Brown",
+        "C. Brown"
+      ],
+      "stats": {
+        "rushYds": 794,
+        "rushTD": 5.6,
+        "rec": 27,
+        "recYds": 223,
+        "recTD": 1.9,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "chris-olave-no-wr",
+      "name": "Chris Olave",
+      "pos": "WR",
+      "team": "NO",
+      "bye": null,
+      "adp": 22,
+      "posRankConsensus": 10,
+      "yahooRank": 22,
+      "aliases": [
+        "Olave",
+        "C. Olave"
+      ],
+      "stats": {
+        "rec": 85,
+        "recYds": 1216,
+        "recTD": 7.5,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "tee-higgins-cin-wr",
+      "name": "Tee Higgins",
+      "pos": "WR",
+      "team": "CIN",
+      "bye": null,
+      "adp": 23,
+      "posRankConsensus": 11,
+      "yahooRank": 23,
+      "aliases": [
+        "Higgins",
+        "T. Higgins"
+      ],
+      "stats": {
+        "rec": 83,
+        "recYds": 1190,
+        "recTD": 7.3,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "nico-collins-hou-wr",
+      "name": "Nico Collins",
+      "pos": "WR",
+      "team": "HOU",
+      "bye": null,
+      "adp": 24,
+      "posRankConsensus": 12,
+      "yahooRank": 24,
+      "aliases": [
+        "Collins",
+        "N. Collins"
+      ],
+      "stats": {
+        "rec": 81,
+        "recYds": 1164,
+        "recTD": 7.1,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "zay-flowers-bal-wr",
+      "name": "Zay Flowers",
+      "pos": "WR",
+      "team": "BAL",
+      "bye": null,
+      "adp": 25,
+      "posRankConsensus": 13,
+      "yahooRank": 25,
+      "aliases": [
+        "Flowers",
+        "Z. Flowers"
+      ],
+      "stats": {
+        "rec": 79,
+        "recYds": 1138,
+        "recTD": 7,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "josh-jacobs-gb-rb",
+      "name": "Josh Jacobs",
+      "pos": "RB",
+      "team": "GB",
+      "bye": null,
+      "adp": 26,
+      "posRankConsensus": 13,
+      "yahooRank": 26,
+      "aliases": [
+        "Jacobs",
+        "J. Jacobs"
+      ],
+      "stats": {
+        "rushYds": 748,
+        "rushTD": 5.2,
+        "rec": 25,
+        "recYds": 212,
+        "recTD": 1.9,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "jeremiyah-love-ari-rb",
+      "name": "Jeremiyah Love",
+      "pos": "RB",
+      "team": "ARI",
+      "bye": null,
+      "adp": 27,
+      "posRankConsensus": 14,
+      "yahooRank": 27,
+      "aliases": [
+        "Love",
+        "J. Love"
+      ],
+      "stats": {
+        "rushYds": 702,
+        "rushTD": 4.8,
+        "rec": 24,
+        "recYds": 200,
+        "recTD": 1.8,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "rashee-rice-kc-wr",
+      "name": "Rashee Rice",
+      "pos": "WR",
+      "team": "KC",
+      "bye": null,
+      "adp": 28,
+      "posRankConsensus": 14,
+      "yahooRank": 28,
+      "aliases": [
+        "Rice",
+        "R. Rice"
+      ],
+      "stats": {
+        "rec": 77,
+        "recYds": 1112,
+        "recTD": 6.8,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "garrett-wilson-nyj-wr",
+      "name": "Garrett Wilson",
+      "pos": "WR",
+      "team": "NYJ",
+      "bye": null,
+      "adp": 29,
+      "posRankConsensus": 15,
+      "yahooRank": 29,
+      "aliases": [
+        "Wilson",
+        "G. Wilson"
+      ],
+      "stats": {
+        "rec": 75,
+        "recYds": 1086,
+        "recTD": 6.6,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "devonta-smith-phi-wr",
+      "name": "DeVonta Smith",
+      "pos": "WR",
+      "team": "PHI",
+      "bye": null,
+      "adp": 30,
+      "posRankConsensus": 16,
+      "yahooRank": 30,
+      "aliases": [
+        "Smith",
+        "D. Smith"
+      ],
+      "stats": {
+        "rec": 74,
+        "recYds": 1060,
+        "recTD": 6.4,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "breece-hall-nyj-rb",
+      "name": "Breece Hall",
+      "pos": "RB",
+      "team": "NYJ",
+      "bye": null,
+      "adp": 31,
+      "posRankConsensus": 15,
+      "yahooRank": 31,
+      "aliases": [
+        "Hall",
+        "B. Hall"
+      ],
+      "stats": {
+        "rushYds": 656,
+        "rushTD": 4.4,
+        "rec": 58,
+        "recYds": 487,
+        "recTD": 1.8,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "josh-allen-buf-qb",
+      "name": "Josh Allen",
+      "pos": "QB",
+      "team": "BUF",
+      "bye": null,
+      "adp": 32,
+      "posRankConsensus": 1,
+      "yahooRank": 32,
+      "aliases": [
+        "Allen",
+        "J. Allen"
+      ],
+      "stats": {
+        "passYds": 4750,
+        "passTD": 35,
+        "interceptions": 8,
+        "rushYds": 520,
+        "rushTD": 8,
+        "fumblesLost": 3
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "kyren-williams-lar-rb",
+      "name": "Kyren Williams",
+      "pos": "RB",
+      "team": "LAR",
+      "bye": null,
+      "adp": 33,
+      "posRankConsensus": 16,
+      "yahooRank": 33,
+      "aliases": [
+        "Williams",
+        "K. Williams"
+      ],
+      "stats": {
+        "rushYds": 610,
+        "rushTD": 4,
+        "rec": 21,
+        "recYds": 176,
+        "recTD": 1.7,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "tetairoa-mcmillan-car-wr",
+      "name": "Tetairoa McMillan",
+      "pos": "WR",
+      "team": "CAR",
+      "bye": null,
+      "adp": 34,
+      "posRankConsensus": 17,
+      "yahooRank": 34,
+      "aliases": [
+        "McMillan",
+        "T. McMillan"
+      ],
+      "stats": {
+        "rec": 72,
+        "recYds": 1034,
+        "recTD": 6.3,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "javonte-williams-dal-rb",
+      "name": "Javonte Williams",
+      "pos": "RB",
+      "team": "DAL",
+      "bye": null,
+      "adp": 35,
+      "posRankConsensus": 17,
+      "yahooRank": 35,
+      "aliases": [
+        "Williams",
+        "J. Williams"
+      ],
+      "stats": {
+        "rushYds": 564,
+        "rushTD": 3.6,
+        "rec": 20,
+        "recYds": 165,
+        "recTD": 1.6,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "terry-mclaurin-was-wr",
+      "name": "Terry McLaurin",
+      "pos": "WR",
+      "team": "WAS",
+      "bye": null,
+      "adp": 36,
+      "posRankConsensus": 18,
+      "yahooRank": 36,
+      "aliases": [
+        "McLaurin",
+        "T. McLaurin"
+      ],
+      "stats": {
+        "rec": 70,
+        "recYds": 1008,
+        "recTD": 6.1,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "davante-adams-lar-wr",
+      "name": "Davante Adams",
+      "pos": "WR",
+      "team": "LAR",
+      "bye": null,
+      "adp": 37,
+      "posRankConsensus": 19,
+      "yahooRank": 37,
+      "aliases": [
+        "Adams",
+        "D. Adams"
+      ],
+      "stats": {
+        "rec": 68,
+        "recYds": 982,
+        "recTD": 5.9,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "ladd-mcconkey-lac-wr",
+      "name": "Ladd McConkey",
+      "pos": "WR",
+      "team": "LAC",
+      "bye": null,
+      "adp": 38,
+      "posRankConsensus": 20,
+      "yahooRank": 38,
+      "aliases": [
+        "McConkey",
+        "L. McConkey"
+      ],
+      "stats": {
+        "rec": 66,
+        "recYds": 956,
+        "recTD": 5.8,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "cam-skattebo-nyg-rb",
+      "name": "Cam Skattebo",
+      "pos": "RB",
+      "team": "NYG",
+      "bye": null,
+      "adp": 39,
+      "posRankConsensus": 18,
+      "yahooRank": 39,
+      "aliases": [
+        "Skattebo",
+        "C. Skattebo"
+      ],
+      "stats": {
+        "rushYds": 518,
+        "rushTD": 3.2,
+        "rec": 38,
+        "recYds": 319,
+        "recTD": 1.6,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "jameson-williams-det-wr",
+      "name": "Jameson Williams",
+      "pos": "WR",
+      "team": "DET",
+      "bye": null,
+      "adp": 40,
+      "posRankConsensus": 21,
+      "yahooRank": 40,
+      "aliases": [
+        "Williams",
+        "J. Williams"
+      ],
+      "stats": {
+        "rec": 64,
+        "recYds": 930,
+        "recTD": 5.6,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 260,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "travis-etienne-jr-no-rb",
+      "name": "Travis Etienne Jr.",
+      "pos": "RB",
+      "team": "NO",
+      "bye": null,
+      "adp": 41,
+      "posRankConsensus": 19,
+      "yahooRank": 41,
+      "aliases": [
+        "Travis Etienne",
+        "Etienne",
+        "T. Etienne"
+      ],
+      "stats": {
+        "rushYds": 472,
+        "rushTD": 2.8,
+        "rec": 42,
+        "recYds": 353,
+        "recTD": 1.5,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "jaylen-waddle-den-wr",
+      "name": "Jaylen Waddle",
+      "pos": "WR",
+      "team": "DEN",
+      "bye": null,
+      "adp": 42,
+      "posRankConsensus": 22,
+      "yahooRank": 42,
+      "aliases": [
+        "Waddle",
+        "J. Waddle"
+      ],
+      "stats": {
+        "rec": 62,
+        "recYds": 904,
+        "recTD": 5.4,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 180,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "malik-nabers-nyg-wr",
+      "name": "Malik Nabers",
+      "pos": "WR",
+      "team": "NYG",
+      "bye": null,
+      "adp": 43,
+      "posRankConsensus": 23,
+      "yahooRank": 43,
+      "aliases": [
+        "Nabers",
+        "M. Nabers"
+      ],
+      "stats": {
+        "rec": 60,
+        "recYds": 878,
+        "recTD": 5.3,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "luther-burden-iii-chi-wr",
+      "name": "Luther Burden III",
+      "pos": "WR",
+      "team": "CHI",
+      "bye": null,
+      "adp": 44,
+      "posRankConsensus": 24,
+      "yahooRank": 44,
+      "aliases": [
+        "Luther Burden",
+        "Burden",
+        "L. Burden"
+      ],
+      "stats": {
+        "rec": 58,
+        "recYds": 852,
+        "recTD": 5.1,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "trey-mcbride-ari-te",
+      "name": "Trey McBride",
+      "pos": "TE",
+      "team": "ARI",
+      "bye": null,
+      "adp": 45,
+      "posRankConsensus": 1,
+      "yahooRank": 45,
+      "aliases": [
+        "McBride",
+        "T. McBride"
+      ],
+      "stats": {
+        "rec": 80,
+        "recYds": 950,
+        "recTD": 7,
+        "returnYds": 0,
+        "fumblesLost": 0
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "emeka-egbuka-tb-wr",
+      "name": "Emeka Egbuka",
+      "pos": "WR",
+      "team": "TB",
+      "bye": null,
+      "adp": 46,
+      "posRankConsensus": 25,
+      "yahooRank": 46,
+      "aliases": [
+        "Egbuka",
+        "E. Egbuka"
+      ],
+      "stats": {
+        "rec": 56,
+        "recYds": 826,
+        "recTD": 4.9,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "mike-evans-sf-wr",
+      "name": "Mike Evans",
+      "pos": "WR",
+      "team": "SF",
+      "bye": null,
+      "adp": 47,
+      "posRankConsensus": 26,
+      "yahooRank": 47,
+      "aliases": [
+        "Evans",
+        "M. Evans"
+      ],
+      "stats": {
+        "rec": 55,
+        "recYds": 800,
+        "recTD": 4.8,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "rome-odunze-chi-wr",
+      "name": "Rome Odunze",
+      "pos": "WR",
+      "team": "CHI",
+      "bye": null,
+      "adp": 48,
+      "posRankConsensus": 27,
+      "yahooRank": 48,
+      "aliases": [
+        "Odunze",
+        "R. Odunze"
+      ],
+      "stats": {
+        "rec": 53,
+        "recYds": 774,
+        "recTD": 4.6,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "d-andre-swift-chi-rb",
+      "name": "D'Andre Swift",
+      "pos": "RB",
+      "team": "CHI",
+      "bye": null,
+      "adp": 49,
+      "posRankConsensus": 20,
+      "yahooRank": 49,
+      "aliases": [
+        "Swift",
+        "D. Swift"
+      ],
+      "stats": {
+        "rushYds": 426,
+        "rushTD": 2.4,
+        "rec": 48,
+        "recYds": 403,
+        "recTD": 1.5,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "bucky-irving-tb-rb",
+      "name": "Bucky Irving",
+      "pos": "RB",
+      "team": "TB",
+      "bye": null,
+      "adp": 50,
+      "posRankConsensus": 21,
+      "yahooRank": 50,
+      "aliases": [
+        "Irving",
+        "B. Irving"
+      ],
+      "stats": {
+        "rushYds": 380,
+        "rushTD": 2,
+        "rec": 50,
+        "recYds": 420,
+        "recTD": 1.4,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "dk-metcalf-pit-wr",
+      "name": "DK Metcalf",
+      "pos": "WR",
+      "team": "PIT",
+      "bye": null,
+      "adp": 51,
+      "posRankConsensus": 28,
+      "yahooRank": 51,
+      "aliases": [
+        "Metcalf",
+        "D. Metcalf"
+      ],
+      "stats": {
+        "rec": 51,
+        "recYds": 748,
+        "recTD": 4.4,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "alec-pierce-ind-wr",
+      "name": "Alec Pierce",
+      "pos": "WR",
+      "team": "IND",
+      "bye": null,
+      "adp": 52,
+      "posRankConsensus": 29,
+      "yahooRank": 52,
+      "aliases": [
+        "Pierce",
+        "A. Pierce"
+      ],
+      "stats": {
+        "rec": 49,
+        "recYds": 722,
+        "recTD": 4.2,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "quinshon-judkins-cle-rb",
+      "name": "Quinshon Judkins",
+      "pos": "RB",
+      "team": "CLE",
+      "bye": null,
+      "adp": 53,
+      "posRankConsensus": 22,
+      "yahooRank": 53,
+      "aliases": [
+        "Judkins",
+        "Q. Judkins"
+      ],
+      "stats": {
+        "rushYds": 334,
+        "rushTD": 2,
+        "rec": 13,
+        "recYds": 106,
+        "recTD": 1.3,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "christian-watson-gb-wr",
+      "name": "Christian Watson",
+      "pos": "WR",
+      "team": "GB",
+      "bye": null,
+      "adp": 54,
+      "posRankConsensus": 30,
+      "yahooRank": 54,
+      "aliases": [
+        "Watson",
+        "C. Watson"
+      ],
+      "stats": {
+        "rec": 47,
+        "recYds": 696,
+        "recTD": 4.1,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "brock-bowers-lv-te",
+      "name": "Brock Bowers",
+      "pos": "TE",
+      "team": "LV",
+      "bye": null,
+      "adp": 55,
+      "posRankConsensus": 2,
+      "yahooRank": 55,
+      "aliases": [
+        "Bowers",
+        "B. Bowers"
+      ],
+      "stats": {
+        "rec": 77,
+        "recYds": 908,
+        "recTD": 6.7,
+        "returnYds": 0,
+        "fumblesLost": 0
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "carnell-tate-ten-wr",
+      "name": "Carnell Tate",
+      "pos": "WR",
+      "team": "TEN",
+      "bye": null,
+      "adp": 56,
+      "posRankConsensus": 31,
+      "yahooRank": 56,
+      "aliases": [
+        "Tate",
+        "C. Tate"
+      ],
+      "stats": {
+        "rec": 45,
+        "recYds": 670,
+        "recTD": 3.9,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "marvin-harrison-jr-ari-wr",
+      "name": "Marvin Harrison Jr.",
+      "pos": "WR",
+      "team": "ARI",
+      "bye": null,
+      "adp": 57,
+      "posRankConsensus": 32,
+      "yahooRank": 57,
+      "aliases": [
+        "Marvin Harrison",
+        "Harrison",
+        "M. Harrison"
+      ],
+      "stats": {
+        "rec": 43,
+        "recYds": 644,
+        "recTD": 3.7,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "joe-burrow-cin-qb",
+      "name": "Joe Burrow",
+      "pos": "QB",
+      "team": "CIN",
+      "bye": null,
+      "adp": 58,
+      "posRankConsensus": 2,
+      "yahooRank": 58,
+      "aliases": [
+        "Burrow",
+        "J. Burrow"
+      ],
+      "stats": {
+        "passYds": 4615,
+        "passTD": 33.8,
+        "interceptions": 8.2,
+        "rushYds": 180,
+        "rushTD": 2,
+        "fumblesLost": 3
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "dj-moore-buf-wr",
+      "name": "DJ Moore",
+      "pos": "WR",
+      "team": "BUF",
+      "bye": null,
+      "adp": 59,
+      "posRankConsensus": 33,
+      "yahooRank": 59,
+      "aliases": [
+        "Moore",
+        "D. Moore"
+      ],
+      "stats": {
+        "rec": 41,
+        "recYds": 618,
+        "recTD": 3.6,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "courtland-sutton-den-wr",
+      "name": "Courtland Sutton",
+      "pos": "WR",
+      "team": "DEN",
+      "bye": null,
+      "adp": 60,
+      "posRankConsensus": 34,
+      "yahooRank": 60,
+      "aliases": [
+        "Sutton",
+        "C. Sutton"
+      ],
+      "stats": {
+        "rec": 39,
+        "recYds": 592,
+        "recTD": 3.4,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "parker-washington-jax-wr",
+      "name": "Parker Washington",
+      "pos": "WR",
+      "team": "JAX",
+      "bye": null,
+      "adp": 61,
+      "posRankConsensus": 35,
+      "yahooRank": 61,
+      "aliases": [
+        "Washington",
+        "P. Washington"
+      ],
+      "stats": {
+        "rec": 37,
+        "recYds": 566,
+        "recTD": 3.2,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 520,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "david-montgomery-hou-rb",
+      "name": "David Montgomery",
+      "pos": "RB",
+      "team": "HOU",
+      "bye": null,
+      "adp": 62,
+      "posRankConsensus": 23,
+      "yahooRank": 62,
+      "aliases": [
+        "Montgomery",
+        "D. Montgomery"
+      ],
+      "stats": {
+        "rushYds": 320,
+        "rushTD": 2,
+        "rec": 11,
+        "recYds": 94,
+        "recTD": 1.3,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "bhayshul-tuten-jax-rb",
+      "name": "Bhayshul Tuten",
+      "pos": "RB",
+      "team": "JAX",
+      "bye": null,
+      "adp": 63,
+      "posRankConsensus": 24,
+      "yahooRank": 63,
+      "aliases": [
+        "Tuten",
+        "B. Tuten"
+      ],
+      "stats": {
+        "rushYds": 320,
+        "rushTD": 2,
+        "rec": 10,
+        "recYds": 82,
+        "recTD": 1.2,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "colston-loveland-chi-te",
+      "name": "Colston Loveland",
+      "pos": "TE",
+      "team": "CHI",
+      "bye": null,
+      "adp": 64,
+      "posRankConsensus": 3,
+      "yahooRank": 64,
+      "aliases": [
+        "Loveland",
+        "C. Loveland"
+      ],
+      "stats": {
+        "rec": 73,
+        "recYds": 866,
+        "recTD": 6.4,
+        "returnYds": 0,
+        "fumblesLost": 0
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "brian-thomas-jr-jax-wr",
+      "name": "Brian Thomas Jr.",
+      "pos": "WR",
+      "team": "JAX",
+      "bye": null,
+      "adp": 65,
+      "posRankConsensus": 36,
+      "yahooRank": 65,
+      "aliases": [
+        "Brian Thomas",
+        "Thomas",
+        "B. Thomas"
+      ],
+      "stats": {
+        "rec": 36,
+        "recYds": 540,
+        "recTD": 3,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "treveyon-henderson-ne-rb",
+      "name": "TreVeyon Henderson",
+      "pos": "RB",
+      "team": "NE",
+      "bye": null,
+      "adp": 66,
+      "posRankConsensus": 25,
+      "yahooRank": 66,
+      "aliases": [
+        "Henderson",
+        "T. Henderson"
+      ],
+      "stats": {
+        "rushYds": 320,
+        "rushTD": 2,
+        "rec": 40,
+        "recYds": 336,
+        "recTD": 1.2,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "michael-pittman-jr-pit-wr",
+      "name": "Michael Pittman Jr.",
+      "pos": "WR",
+      "team": "PIT",
+      "bye": null,
+      "adp": 67,
+      "posRankConsensus": 37,
+      "yahooRank": 67,
+      "aliases": [
+        "Michael Pittman",
+        "Pittman",
+        "M. Pittman"
+      ],
+      "stats": {
+        "rec": 34,
+        "recYds": 514,
+        "recTD": 2.9,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "lamar-jackson-bal-qb",
+      "name": "Lamar Jackson",
+      "pos": "QB",
+      "team": "BAL",
+      "bye": null,
+      "adp": 68,
+      "posRankConsensus": 3,
+      "yahooRank": 68,
+      "aliases": [
+        "Jackson",
+        "L. Jackson"
+      ],
+      "stats": {
+        "passYds": 4480,
+        "passTD": 32.5,
+        "interceptions": 8.4,
+        "rushYds": 820,
+        "rushTD": 5,
+        "fumblesLost": 3
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "jayden-reed-gb-wr",
+      "name": "Jayden Reed",
+      "pos": "WR",
+      "team": "GB",
+      "bye": null,
+      "adp": 69,
+      "posRankConsensus": 38,
+      "yahooRank": 69,
+      "aliases": [
+        "Reed",
+        "J. Reed"
+      ],
+      "stats": {
+        "rec": 34,
+        "recYds": 488,
+        "recTD": 2.7,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "michael-wilson-ari-wr",
+      "name": "Michael Wilson",
+      "pos": "WR",
+      "team": "ARI",
+      "bye": null,
+      "adp": 70,
+      "posRankConsensus": 39,
+      "yahooRank": 70,
+      "aliases": [
+        "Wilson",
+        "M. Wilson"
+      ],
+      "stats": {
+        "rec": 34,
+        "recYds": 480,
+        "recTD": 2.5,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "jordyn-tyson-no-wr",
+      "name": "Jordyn Tyson",
+      "pos": "WR",
+      "team": "NO",
+      "bye": null,
+      "adp": 71,
+      "posRankConsensus": 40,
+      "yahooRank": 71,
+      "aliases": [
+        "Tyson",
+        "J. Tyson"
+      ],
+      "stats": {
+        "rec": 34,
+        "recYds": 480,
+        "recTD": 2.5,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "chris-godwin-jr-tb-wr",
+      "name": "Chris Godwin Jr.",
+      "pos": "WR",
+      "team": "TB",
+      "bye": null,
+      "adp": 72,
+      "posRankConsensus": 41,
+      "yahooRank": 72,
+      "aliases": [
+        "Chris Godwin",
+        "Godwin",
+        "C. Godwin"
+      ],
+      "stats": {
+        "rec": 34,
+        "recYds": 480,
+        "recTD": 2.5,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "dak-prescott-dal-qb",
+      "name": "Dak Prescott",
+      "pos": "QB",
+      "team": "DAL",
+      "bye": null,
+      "adp": 73,
+      "posRankConsensus": 4,
+      "yahooRank": 73,
+      "aliases": [
+        "Prescott",
+        "D. Prescott"
+      ],
+      "stats": {
+        "passYds": 4345,
+        "passTD": 31.3,
+        "interceptions": 8.7,
+        "rushYds": 180,
+        "rushTD": 1.5,
+        "fumblesLost": 3
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "jaylen-warren-pit-rb",
+      "name": "Jaylen Warren",
+      "pos": "RB",
+      "team": "PIT",
+      "bye": null,
+      "adp": 74,
+      "posRankConsensus": 26,
+      "yahooRank": 74,
+      "aliases": [
+        "Warren",
+        "J. Warren"
+      ],
+      "stats": {
+        "rushYds": 320,
+        "rushTD": 2,
+        "rec": 52,
+        "recYds": 437,
+        "recTD": 1.1,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "jordan-addison-min-wr",
+      "name": "Jordan Addison",
+      "pos": "WR",
+      "team": "MIN",
+      "bye": null,
+      "adp": 75,
+      "posRankConsensus": 42,
+      "yahooRank": 75,
+      "aliases": [
+        "Addison",
+        "J. Addison"
+      ],
+      "stats": {
+        "rec": 34,
+        "recYds": 480,
+        "recTD": 2.5,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "josh-downs-ind-wr",
+      "name": "Josh Downs",
+      "pos": "WR",
+      "team": "IND",
+      "bye": null,
+      "adp": 76,
+      "posRankConsensus": 43,
+      "yahooRank": 76,
+      "aliases": [
+        "Downs",
+        "J. Downs"
+      ],
+      "stats": {
+        "rec": 34,
+        "recYds": 480,
+        "recTD": 2.5,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "xavier-worthy-kc-wr",
+      "name": "Xavier Worthy",
+      "pos": "WR",
+      "team": "KC",
+      "bye": null,
+      "adp": 77,
+      "posRankConsensus": 44,
+      "yahooRank": 77,
+      "aliases": [
+        "Worthy",
+        "X. Worthy"
+      ],
+      "stats": {
+        "rec": 34,
+        "recYds": 480,
+        "recTD": 2.5,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 620,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "quentin-johnston-lac-wr",
+      "name": "Quentin Johnston",
+      "pos": "WR",
+      "team": "LAC",
+      "bye": null,
+      "adp": 78,
+      "posRankConsensus": 45,
+      "yahooRank": 78,
+      "aliases": [
+        "Johnston",
+        "Q. Johnston"
+      ],
+      "stats": {
+        "rec": 34,
+        "recYds": 480,
+        "recTD": 2.5,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "jadarian-price-sea-rb",
+      "name": "Jadarian Price",
+      "pos": "RB",
+      "team": "SEA",
+      "bye": null,
+      "adp": 79,
+      "posRankConsensus": 27,
+      "yahooRank": 79,
+      "aliases": [
+        "Price",
+        "J. Price"
+      ],
+      "stats": {
+        "rushYds": 320,
+        "rushTD": 2,
+        "rec": 8,
+        "recYds": 67,
+        "recTD": 1,
+        "returnYds": 480,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "tony-pollard-ten-rb",
+      "name": "Tony Pollard",
+      "pos": "RB",
+      "team": "TEN",
+      "bye": null,
+      "adp": 80,
+      "posRankConsensus": 28,
+      "yahooRank": 80,
+      "aliases": [
+        "Pollard",
+        "T. Pollard"
+      ],
+      "stats": {
+        "rushYds": 320,
+        "rushTD": 2,
+        "rec": 8,
+        "recYds": 67,
+        "recTD": 1,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "romeo-doubs-ne-wr",
+      "name": "Romeo Doubs",
+      "pos": "WR",
+      "team": "NE",
+      "bye": null,
+      "adp": 81,
+      "posRankConsensus": 46,
+      "yahooRank": 81,
+      "aliases": [
+        "Doubs",
+        "R. Doubs"
+      ],
+      "stats": {
+        "rec": 34,
+        "recYds": 480,
+        "recTD": 2.5,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "drake-maye-ne-qb",
+      "name": "Drake Maye",
+      "pos": "QB",
+      "team": "NE",
+      "bye": null,
+      "adp": 82,
+      "posRankConsensus": 5,
+      "yahooRank": 82,
+      "aliases": [
+        "Maye",
+        "D. Maye"
+      ],
+      "stats": {
+        "passYds": 4210,
+        "passTD": 30,
+        "interceptions": 8.9,
+        "rushYds": 400,
+        "rushTD": 3,
+        "fumblesLost": 3
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "rhamondre-stevenson-ne-rb",
+      "name": "Rhamondre Stevenson",
+      "pos": "RB",
+      "team": "NE",
+      "bye": null,
+      "adp": 83,
+      "posRankConsensus": 29,
+      "yahooRank": 83,
+      "aliases": [
+        "Stevenson",
+        "R. Stevenson"
+      ],
+      "stats": {
+        "rushYds": 320,
+        "rushTD": 2,
+        "rec": 8,
+        "recYds": 67,
+        "recTD": 0.9,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "jakobi-meyers-jax-wr",
+      "name": "Jakobi Meyers",
+      "pos": "WR",
+      "team": "JAX",
+      "bye": null,
+      "adp": 84,
+      "posRankConsensus": 47,
+      "yahooRank": 84,
+      "aliases": [
+        "Meyers",
+        "J. Meyers"
+      ],
+      "stats": {
+        "rec": 34,
+        "recYds": 480,
+        "recTD": 2.5,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "ricky-pearsall-sf-wr",
+      "name": "Ricky Pearsall",
+      "pos": "WR",
+      "team": "SF",
+      "bye": null,
+      "adp": 85,
+      "posRankConsensus": 48,
+      "yahooRank": 85,
+      "aliases": [
+        "Pearsall",
+        "R. Pearsall"
+      ],
+      "stats": {
+        "rec": 34,
+        "recYds": 480,
+        "recTD": 2.5,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 280,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "wan-dale-robinson-ten-wr",
+      "name": "Wan'Dale Robinson",
+      "pos": "WR",
+      "team": "TEN",
+      "bye": null,
+      "adp": 86,
+      "posRankConsensus": 49,
+      "yahooRank": 86,
+      "aliases": [
+        "Robinson",
+        "W. Robinson"
+      ],
+      "stats": {
+        "rec": 34,
+        "recYds": 480,
+        "recTD": 2.5,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 300,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "tyler-warren-ind-te",
+      "name": "Tyler Warren",
+      "pos": "TE",
+      "team": "IND",
+      "bye": null,
+      "adp": 87,
+      "posRankConsensus": 4,
+      "yahooRank": 87,
+      "aliases": [
+        "Warren",
+        "T. Warren"
+      ],
+      "stats": {
+        "rec": 70,
+        "recYds": 824,
+        "recTD": 6,
+        "returnYds": 0,
+        "fumblesLost": 0
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "khalil-shakir-buf-wr",
+      "name": "Khalil Shakir",
+      "pos": "WR",
+      "team": "BUF",
+      "bye": null,
+      "adp": 88,
+      "posRankConsensus": 50,
+      "yahooRank": 88,
+      "aliases": [
+        "Shakir",
+        "K. Shakir"
+      ],
+      "stats": {
+        "rec": 34,
+        "recYds": 480,
+        "recTD": 2.5,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "rico-dowdle-pit-rb",
+      "name": "Rico Dowdle",
+      "pos": "RB",
+      "team": "PIT",
+      "bye": null,
+      "adp": 89,
+      "posRankConsensus": 30,
+      "yahooRank": 89,
+      "aliases": [
+        "Dowdle",
+        "R. Dowdle"
+      ],
+      "stats": {
+        "rushYds": 320,
+        "rushTD": 2,
+        "rec": 8,
+        "recYds": 67,
+        "recTD": 0.9,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "seattle-sea-def",
+      "name": "Seattle DST",
+      "pos": "DEF",
+      "team": "SEA",
+      "bye": null,
+      "adp": 90,
+      "posRankConsensus": 1,
+      "yahooRank": 90,
+      "aliases": [
+        "Seattle D/ST",
+        "Seattle Defense"
+      ],
+      "stats": {
+        "sacks": 48,
+        "interceptions": 15,
+        "fumbleRecoveries": 9,
+        "defTD": 4,
+        "safeties": 0.5,
+        "blockedKicks": 1,
+        "returnTD": 0.9,
+        "fourthDownStops": 7,
+        "pointsAllowedPerGame": 17.5
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "chuba-hubbard-car-rb",
+      "name": "Chuba Hubbard",
+      "pos": "RB",
+      "team": "CAR",
+      "bye": null,
+      "adp": 91,
+      "posRankConsensus": 31,
+      "yahooRank": 91,
+      "aliases": [
+        "Hubbard",
+        "C. Hubbard"
+      ],
+      "stats": {
+        "rushYds": 320,
+        "rushTD": 2,
+        "rec": 8,
+        "recYds": 67,
+        "recTD": 0.8,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "patrick-mahomes-kc-qb",
+      "name": "Patrick Mahomes",
+      "pos": "QB",
+      "team": "KC",
+      "bye": null,
+      "adp": 92,
+      "posRankConsensus": 6,
+      "yahooRank": 92,
+      "aliases": [
+        "Mahomes",
+        "P. Mahomes"
+      ],
+      "stats": {
+        "passYds": 4075,
+        "passTD": 28.8,
+        "interceptions": 9.1,
+        "rushYds": 330,
+        "rushTD": 2,
+        "fumblesLost": 3
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "makai-lemon-phi-wr",
+      "name": "Makai Lemon",
+      "pos": "WR",
+      "team": "PHI",
+      "bye": null,
+      "adp": 93,
+      "posRankConsensus": 51,
+      "yahooRank": 93,
+      "aliases": [
+        "Lemon",
+        "M. Lemon"
+      ],
+      "stats": {
+        "rec": 34,
+        "recYds": 480,
+        "recTD": 2.5,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 640,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "justin-herbert-lac-qb",
+      "name": "Justin Herbert",
+      "pos": "QB",
+      "team": "LAC",
+      "bye": null,
+      "adp": 94,
+      "posRankConsensus": 7,
+      "yahooRank": 94,
+      "aliases": [
+        "Herbert",
+        "J. Herbert"
+      ],
+      "stats": {
+        "passYds": 3940,
+        "passTD": 27.5,
+        "interceptions": 9.3,
+        "rushYds": 260,
+        "rushTD": 3,
+        "fumblesLost": 3
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "trevor-lawrence-jax-qb",
+      "name": "Trevor Lawrence",
+      "pos": "QB",
+      "team": "JAX",
+      "bye": null,
+      "adp": 95,
+      "posRankConsensus": 8,
+      "yahooRank": 95,
+      "aliases": [
+        "Lawrence",
+        "T. Lawrence"
+      ],
+      "stats": {
+        "passYds": 3805,
+        "passTD": 26.3,
+        "interceptions": 9.5,
+        "rushYds": 180,
+        "rushTD": 1.5,
+        "fumblesLost": 3
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "jalen-coker-car-wr",
+      "name": "Jalen Coker",
+      "pos": "WR",
+      "team": "CAR",
+      "bye": null,
+      "adp": 96,
+      "posRankConsensus": 52,
+      "yahooRank": 96,
+      "aliases": [
+        "Coker",
+        "J. Coker"
+      ],
+      "stats": {
+        "rec": 34,
+        "recYds": 480,
+        "recTD": 2.5,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "matthew-golden-gb-wr",
+      "name": "Matthew Golden",
+      "pos": "WR",
+      "team": "GB",
+      "bye": null,
+      "adp": 97,
+      "posRankConsensus": 53,
+      "yahooRank": 97,
+      "aliases": [
+        "Golden",
+        "M. Golden"
+      ],
+      "stats": {
+        "rec": 34,
+        "recYds": 480,
+        "recTD": 2.5,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "j-k-dobbins-den-rb",
+      "name": "J.K. Dobbins",
+      "pos": "RB",
+      "team": "DEN",
+      "bye": null,
+      "adp": 98,
+      "posRankConsensus": 32,
+      "yahooRank": 98,
+      "aliases": [
+        "Dobbins",
+        "J. Dobbins"
+      ],
+      "stats": {
+        "rushYds": 320,
+        "rushTD": 2,
+        "rec": 8,
+        "recYds": 67,
+        "recTD": 0.7,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "jayden-daniels-was-qb",
+      "name": "Jayden Daniels",
+      "pos": "QB",
+      "team": "WAS",
+      "bye": null,
+      "adp": 99,
+      "posRankConsensus": 9,
+      "yahooRank": 99,
+      "aliases": [
+        "Daniels",
+        "J. Daniels"
+      ],
+      "stats": {
+        "passYds": 3670,
+        "passTD": 25,
+        "interceptions": 9.8,
+        "rushYds": 820,
+        "rushTD": 6,
+        "fumblesLost": 3
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "jayden-higgins-hou-wr",
+      "name": "Jayden Higgins",
+      "pos": "WR",
+      "team": "HOU",
+      "bye": null,
+      "adp": 100,
+      "posRankConsensus": 54,
+      "yahooRank": 100,
+      "aliases": [
+        "Higgins",
+        "J. Higgins"
+      ],
+      "stats": {
+        "rec": 34,
+        "recYds": 480,
+        "recTD": 2.5,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "jared-goff-det-qb",
+      "name": "Jared Goff",
+      "pos": "QB",
+      "team": "DET",
+      "bye": null,
+      "adp": 101,
+      "posRankConsensus": 10,
+      "yahooRank": 101,
+      "aliases": [
+        "Goff",
+        "J. Goff"
+      ],
+      "stats": {
+        "passYds": 3535,
+        "passTD": 23.8,
+        "interceptions": 10,
+        "rushYds": 180,
+        "rushTD": 1.5,
+        "fumblesLost": 3
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "kc-concepcion-cle-wr",
+      "name": "KC Concepcion",
+      "pos": "WR",
+      "team": "CLE",
+      "bye": null,
+      "adp": 102,
+      "posRankConsensus": 55,
+      "yahooRank": 102,
+      "aliases": [
+        "Concepcion",
+        "K. Concepcion"
+      ],
+      "stats": {
+        "rec": 34,
+        "recYds": 480,
+        "recTD": 2.5,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 700,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "denver-den-def",
+      "name": "Denver DST",
+      "pos": "DEF",
+      "team": "DEN",
+      "bye": null,
+      "adp": 103,
+      "posRankConsensus": 2,
+      "yahooRank": 103,
+      "aliases": [
+        "Denver D/ST",
+        "Denver Defense"
+      ],
+      "stats": {
+        "sacks": 46.6,
+        "interceptions": 14.6,
+        "fumbleRecoveries": 8.8,
+        "defTD": 3.9,
+        "safeties": 0.5,
+        "blockedKicks": 1,
+        "returnTD": 0.9,
+        "fourthDownStops": 6.8,
+        "pointsAllowedPerGame": 18.2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "tucker-kraft-gb-te",
+      "name": "Tucker Kraft",
+      "pos": "TE",
+      "team": "GB",
+      "bye": null,
+      "adp": 104,
+      "posRankConsensus": 5,
+      "yahooRank": 104,
+      "aliases": [
+        "Kraft",
+        "T. Kraft"
+      ],
+      "stats": {
+        "rec": 66,
+        "recYds": 782,
+        "recTD": 5.7,
+        "returnYds": 0,
+        "fumblesLost": 0
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "harold-fannin-jr-cle-te",
+      "name": "Harold Fannin Jr.",
+      "pos": "TE",
+      "team": "CLE",
+      "bye": null,
+      "adp": 105,
+      "posRankConsensus": 6,
+      "yahooRank": 105,
+      "aliases": [
+        "Harold Fannin",
+        "Fannin",
+        "H. Fannin"
+      ],
+      "stats": {
+        "rec": 63,
+        "recYds": 740,
+        "recTD": 5.4,
+        "returnYds": 0,
+        "fumblesLost": 0
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "sam-laporta-det-te",
+      "name": "Sam LaPorta",
+      "pos": "TE",
+      "team": "DET",
+      "bye": null,
+      "adp": 106,
+      "posRankConsensus": 7,
+      "yahooRank": 106,
+      "aliases": [
+        "LaPorta",
+        "S. LaPorta"
+      ],
+      "stats": {
+        "rec": 60,
+        "recYds": 698,
+        "recTD": 5.1,
+        "returnYds": 0,
+        "fumblesLost": 0
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "jalen-hurts-phi-qb",
+      "name": "Jalen Hurts",
+      "pos": "QB",
+      "team": "PHI",
+      "bye": null,
+      "adp": 107,
+      "posRankConsensus": 11,
+      "yahooRank": 107,
+      "aliases": [
+        "Hurts",
+        "J. Hurts"
+      ],
+      "stats": {
+        "passYds": 3400,
+        "passTD": 22.5,
+        "interceptions": 10.2,
+        "rushYds": 600,
+        "rushTD": 12,
+        "fumblesLost": 3
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "brock-purdy-sf-qb",
+      "name": "Brock Purdy",
+      "pos": "QB",
+      "team": "SF",
+      "bye": null,
+      "adp": 108,
+      "posRankConsensus": 12,
+      "yahooRank": 108,
+      "aliases": [
+        "Purdy",
+        "B. Purdy"
+      ],
+      "stats": {
+        "passYds": 3265,
+        "passTD": 21.3,
+        "interceptions": 10.4,
+        "rushYds": 180,
+        "rushTD": 1.5,
+        "fumblesLost": 3
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "matthew-stafford-lar-qb",
+      "name": "Matthew Stafford",
+      "pos": "QB",
+      "team": "LAR",
+      "bye": null,
+      "adp": 109,
+      "posRankConsensus": 13,
+      "yahooRank": 109,
+      "aliases": [
+        "Stafford",
+        "M. Stafford"
+      ],
+      "stats": {
+        "passYds": 3200,
+        "passTD": 20,
+        "interceptions": 10.6,
+        "rushYds": 180,
+        "rushTD": 1.5,
+        "fumblesLost": 3
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "caleb-williams-chi-qb",
+      "name": "Caleb Williams",
+      "pos": "QB",
+      "team": "CHI",
+      "bye": null,
+      "adp": 110,
+      "posRankConsensus": 14,
+      "yahooRank": 110,
+      "aliases": [
+        "Williams",
+        "C. Williams"
+      ],
+      "stats": {
+        "passYds": 3200,
+        "passTD": 18.8,
+        "interceptions": 10.9,
+        "rushYds": 430,
+        "rushTD": 4,
+        "fumblesLost": 3
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "aaron-jones-sr-min-rb",
+      "name": "Aaron Jones Sr.",
+      "pos": "RB",
+      "team": "MIN",
+      "bye": null,
+      "adp": 111,
+      "posRankConsensus": 33,
+      "yahooRank": 111,
+      "aliases": [
+        "Aaron Jones",
+        "Jones",
+        "A. Jones"
+      ],
+      "stats": {
+        "rushYds": 320,
+        "rushTD": 2,
+        "rec": 44,
+        "recYds": 370,
+        "recTD": 0.7,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "rj-harvey-den-rb",
+      "name": "RJ Harvey",
+      "pos": "RB",
+      "team": "DEN",
+      "bye": null,
+      "adp": 112,
+      "posRankConsensus": 34,
+      "yahooRank": 112,
+      "aliases": [
+        "Harvey",
+        "R. Harvey"
+      ],
+      "stats": {
+        "rushYds": 320,
+        "rushTD": 2,
+        "rec": 8,
+        "recYds": 67,
+        "recTD": 0.6,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "la-rams-lar-def",
+      "name": "LA Rams DST",
+      "pos": "DEF",
+      "team": "LAR",
+      "bye": null,
+      "adp": 113,
+      "posRankConsensus": 3,
+      "yahooRank": 113,
+      "aliases": [
+        "Rams",
+        "L. Rams",
+        "LA Rams D/ST",
+        "LA Rams Defense"
+      ],
+      "stats": {
+        "sacks": 45.2,
+        "interceptions": 14.2,
+        "fumbleRecoveries": 8.6,
+        "defTD": 3.8,
+        "safeties": 0.5,
+        "blockedKicks": 0.9,
+        "returnTD": 0.8,
+        "fourthDownStops": 6.6,
+        "pointsAllowedPerGame": 18.9
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "rashid-shaheed-sea-wr",
+      "name": "Rashid Shaheed",
+      "pos": "WR",
+      "team": "SEA",
+      "bye": null,
+      "adp": 114,
+      "posRankConsensus": 56,
+      "yahooRank": 114,
+      "aliases": [
+        "Shaheed",
+        "R. Shaheed"
+      ],
+      "stats": {
+        "rec": 34,
+        "recYds": 480,
+        "recTD": 2.5,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 540,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "houston-hou-def",
+      "name": "Houston DST",
+      "pos": "DEF",
+      "team": "HOU",
+      "bye": null,
+      "adp": 115,
+      "posRankConsensus": 4,
+      "yahooRank": 115,
+      "aliases": [
+        "Houston D/ST",
+        "Houston Defense"
+      ],
+      "stats": {
+        "sacks": 43.8,
+        "interceptions": 13.8,
+        "fumbleRecoveries": 8.3,
+        "defTD": 3.6,
+        "safeties": 0.5,
+        "blockedKicks": 0.9,
+        "returnTD": 0.8,
+        "fourthDownStops": 6.4,
+        "pointsAllowedPerGame": 19.6
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "jauan-jennings-min-wr",
+      "name": "Jauan Jennings",
+      "pos": "WR",
+      "team": "MIN",
+      "bye": null,
+      "adp": 116,
+      "posRankConsensus": 57,
+      "yahooRank": 116,
+      "aliases": [
+        "Jennings",
+        "J. Jennings"
+      ],
+      "stats": {
+        "rec": 34,
+        "recYds": 480,
+        "recTD": 2.5,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "new-england-ne-def",
+      "name": "New England DST",
+      "pos": "DEF",
+      "team": "NE",
+      "bye": null,
+      "adp": 117,
+      "posRankConsensus": 5,
+      "yahooRank": 117,
+      "aliases": [
+        "England",
+        "N. England",
+        "New England D/ST",
+        "New England Defense"
+      ],
+      "stats": {
+        "sacks": 42.4,
+        "interceptions": 13.4,
+        "fumbleRecoveries": 8.1,
+        "defTD": 3.5,
+        "safeties": 0.5,
+        "blockedKicks": 0.8,
+        "returnTD": 0.7,
+        "fourthDownStops": 6.2,
+        "pointsAllowedPerGame": 20.3
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "kyle-monangai-chi-rb",
+      "name": "Kyle Monangai",
+      "pos": "RB",
+      "team": "CHI",
+      "bye": null,
+      "adp": 118,
+      "posRankConsensus": 35,
+      "yahooRank": 118,
+      "aliases": [
+        "Monangai",
+        "K. Monangai"
+      ],
+      "stats": {
+        "rushYds": 320,
+        "rushTD": 2,
+        "rec": 8,
+        "recYds": 67,
+        "recTD": 0.6,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "omar-cooper-jr-nyj-wr",
+      "name": "Omar Cooper Jr.",
+      "pos": "WR",
+      "team": "NYJ",
+      "bye": null,
+      "adp": 119,
+      "posRankConsensus": 58,
+      "yahooRank": 119,
+      "aliases": [
+        "Omar Cooper",
+        "Cooper",
+        "O. Cooper"
+      ],
+      "stats": {
+        "rec": 34,
+        "recYds": 480,
+        "recTD": 2.5,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 540,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "kyle-pitts-sr-atl-te",
+      "name": "Kyle Pitts Sr.",
+      "pos": "TE",
+      "team": "ATL",
+      "bye": null,
+      "adp": 120,
+      "posRankConsensus": 8,
+      "yahooRank": 120,
+      "aliases": [
+        "Kyle Pitts",
+        "Pitts",
+        "K. Pitts"
+      ],
+      "stats": {
+        "rec": 56,
+        "recYds": 656,
+        "recTD": 4.8,
+        "returnYds": 0,
+        "fumblesLost": 0
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "travis-kelce-kc-te",
+      "name": "Travis Kelce",
+      "pos": "TE",
+      "team": "KC",
+      "bye": null,
+      "adp": 121,
+      "posRankConsensus": 9,
+      "yahooRank": 121,
+      "aliases": [
+        "Kelce",
+        "T. Kelce"
+      ],
+      "stats": {
+        "rec": 53,
+        "recYds": 614,
+        "recTD": 4.4,
+        "returnYds": 0,
+        "fumblesLost": 0
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "bo-nix-den-qb",
+      "name": "Bo Nix",
+      "pos": "QB",
+      "team": "DEN",
+      "bye": null,
+      "adp": 122,
+      "posRankConsensus": 15,
+      "yahooRank": 122,
+      "aliases": [
+        "Nix",
+        "B. Nix"
+      ],
+      "stats": {
+        "passYds": 3200,
+        "passTD": 17.5,
+        "interceptions": 11.1,
+        "rushYds": 380,
+        "rushTD": 4,
+        "fumblesLost": 3
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "jaxson-dart-nyg-qb",
+      "name": "Jaxson Dart",
+      "pos": "QB",
+      "team": "NYG",
+      "bye": null,
+      "adp": 123,
+      "posRankConsensus": 16,
+      "yahooRank": 123,
+      "aliases": [
+        "Dart",
+        "J. Dart"
+      ],
+      "stats": {
+        "passYds": 3200,
+        "passTD": 16.3,
+        "interceptions": 11.3,
+        "rushYds": 420,
+        "rushTD": 4,
+        "fumblesLost": 3
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "denzel-boston-cle-wr",
+      "name": "Denzel Boston",
+      "pos": "WR",
+      "team": "CLE",
+      "bye": null,
+      "adp": 124,
+      "posRankConsensus": 59,
+      "yahooRank": 124,
+      "aliases": [
+        "Boston",
+        "D. Boston"
+      ],
+      "stats": {
+        "rec": 34,
+        "recYds": 480,
+        "recTD": 2.5,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 0,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "tre-tucker-lv-wr",
+      "name": "Tre Tucker",
+      "pos": "WR",
+      "team": "LV",
+      "bye": null,
+      "adp": 125,
+      "posRankConsensus": 60,
+      "yahooRank": 125,
+      "aliases": [
+        "Tucker",
+        "T. Tucker"
+      ],
+      "stats": {
+        "rec": 34,
+        "recYds": 480,
+        "recTD": 2.5,
+        "rushYds": 0,
+        "rushTD": 0,
+        "returnYds": 560,
+        "fumblesLost": 1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "philadelphia-phi-def",
+      "name": "Philadelphia DST",
+      "pos": "DEF",
+      "team": "PHI",
+      "bye": null,
+      "adp": 126,
+      "posRankConsensus": 6,
+      "yahooRank": 126,
+      "aliases": [
+        "Philadelphia D/ST",
+        "Philadelphia Defense"
+      ],
+      "stats": {
+        "sacks": 41,
+        "interceptions": 13,
+        "fumbleRecoveries": 7.9,
+        "defTD": 3.4,
+        "safeties": 0.5,
+        "blockedKicks": 0.8,
+        "returnTD": 0.7,
+        "fourthDownStops": 6,
+        "pointsAllowedPerGame": 21
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "rachaad-white-was-rb",
+      "name": "Rachaad White",
+      "pos": "RB",
+      "team": "WAS",
+      "bye": null,
+      "adp": 127,
+      "posRankConsensus": 36,
+      "yahooRank": 127,
+      "aliases": [
+        "White",
+        "R. White"
+      ],
+      "stats": {
+        "rushYds": 320,
+        "rushTD": 2,
+        "rec": 52,
+        "recYds": 437,
+        "recTD": 0.5,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "jacksonville-jax-def",
+      "name": "Jacksonville DST",
+      "pos": "DEF",
+      "team": "JAX",
+      "bye": null,
+      "adp": 128,
+      "posRankConsensus": 7,
+      "yahooRank": 128,
+      "aliases": [
+        "Jacksonville D/ST",
+        "Jacksonville Defense"
+      ],
+      "stats": {
+        "sacks": 39.6,
+        "interceptions": 12.6,
+        "fumbleRecoveries": 7.7,
+        "defTD": 3.3,
+        "safeties": 0.5,
+        "blockedKicks": 0.8,
+        "returnTD": 0.7,
+        "fourthDownStops": 5.8,
+        "pointsAllowedPerGame": 21.7
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "george-kittle-sf-te",
+      "name": "George Kittle",
+      "pos": "TE",
+      "team": "SF",
+      "bye": null,
+      "adp": 129,
+      "posRankConsensus": 10,
+      "yahooRank": 129,
+      "aliases": [
+        "Kittle",
+        "G. Kittle"
+      ],
+      "stats": {
+        "rec": 49,
+        "recYds": 572,
+        "recTD": 4.1,
+        "returnYds": 0,
+        "fumblesLost": 0
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "kenny-gainwell-tb-rb",
+      "name": "Kenny Gainwell",
+      "pos": "RB",
+      "team": "TB",
+      "bye": null,
+      "adp": 130,
+      "posRankConsensus": 37,
+      "yahooRank": 130,
+      "aliases": [
+        "Gainwell",
+        "K. Gainwell"
+      ],
+      "stats": {
+        "rushYds": 320,
+        "rushTD": 2,
+        "rec": 46,
+        "recYds": 386,
+        "recTD": 0.5,
+        "returnYds": 0,
+        "fumblesLost": 2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "brandon-aubrey-dal-k",
+      "name": "Brandon Aubrey",
+      "pos": "K",
+      "team": "DAL",
+      "bye": null,
+      "adp": 131,
+      "posRankConsensus": 1,
+      "yahooRank": 131,
+      "aliases": [
+        "Aubrey",
+        "B. Aubrey"
+      ],
+      "stats": {
+        "fg0_19": 0,
+        "fg20_29": 5,
+        "fg30_39": 9,
+        "fg40_49": 10,
+        "fg50plus": 7,
+        "pat": 42
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "jason-myers-sea-k",
+      "name": "Jason Myers",
+      "pos": "K",
+      "team": "SEA",
+      "bye": null,
+      "adp": 132,
+      "posRankConsensus": 2,
+      "yahooRank": 132,
+      "aliases": [
+        "Myers",
+        "J. Myers"
+      ],
+      "stats": {
+        "fg0_19": 0,
+        "fg20_29": 5,
+        "fg30_39": 9,
+        "fg40_49": 10,
+        "fg50plus": 7,
+        "pat": 41
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "cameron-dicker-lac-k",
+      "name": "Cameron Dicker",
+      "pos": "K",
+      "team": "LAC",
+      "bye": null,
+      "adp": 133,
+      "posRankConsensus": 3,
+      "yahooRank": 133,
+      "aliases": [
+        "Dicker",
+        "C. Dicker"
+      ],
+      "stats": {
+        "fg0_19": 0,
+        "fg20_29": 5,
+        "fg30_39": 9,
+        "fg40_49": 9,
+        "fg50plus": 7,
+        "pat": 40
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "ka-imi-fairbairn-hou-k",
+      "name": "Ka'imi Fairbairn",
+      "pos": "K",
+      "team": "HOU",
+      "bye": null,
+      "adp": 134,
+      "posRankConsensus": 4,
+      "yahooRank": 134,
+      "aliases": [
+        "Fairbairn",
+        "K. Fairbairn"
+      ],
+      "stats": {
+        "fg0_19": 0,
+        "fg20_29": 5,
+        "fg30_39": 9,
+        "fg40_49": 9,
+        "fg50plus": 6,
+        "pat": 39
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "jake-bates-det-k",
+      "name": "Jake Bates",
+      "pos": "K",
+      "team": "DET",
+      "bye": null,
+      "adp": 135,
+      "posRankConsensus": 5,
+      "yahooRank": 135,
+      "aliases": [
+        "Bates",
+        "J. Bates"
+      ],
+      "stats": {
+        "fg0_19": 0,
+        "fg20_29": 5,
+        "fg30_39": 8,
+        "fg40_49": 9,
+        "fg50plus": 6,
+        "pat": 38
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "chase-mclaughlin-tb-k",
+      "name": "Chase McLaughlin",
+      "pos": "K",
+      "team": "TB",
+      "bye": null,
+      "adp": 136,
+      "posRankConsensus": 6,
+      "yahooRank": 136,
+      "aliases": [
+        "McLaughlin",
+        "C. McLaughlin"
+      ],
+      "stats": {
+        "fg0_19": 0,
+        "fg20_29": 4,
+        "fg30_39": 8,
+        "fg40_49": 9,
+        "fg50plus": 6,
+        "pat": 37
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "harrison-butker-kc-k",
+      "name": "Harrison Butker",
+      "pos": "K",
+      "team": "KC",
+      "bye": null,
+      "adp": 137,
+      "posRankConsensus": 7,
+      "yahooRank": 137,
+      "aliases": [
+        "Butker",
+        "H. Butker"
+      ],
+      "stats": {
+        "fg0_19": 0,
+        "fg20_29": 4,
+        "fg30_39": 8,
+        "fg40_49": 9,
+        "fg50plus": 6,
+        "pat": 35
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "cam-little-jax-k",
+      "name": "Cam Little",
+      "pos": "K",
+      "team": "JAX",
+      "bye": null,
+      "adp": 138,
+      "posRankConsensus": 8,
+      "yahooRank": 138,
+      "aliases": [
+        "Little",
+        "C. Little"
+      ],
+      "stats": {
+        "fg0_19": 0,
+        "fg20_29": 4,
+        "fg30_39": 8,
+        "fg40_49": 8,
+        "fg50plus": 6,
+        "pat": 34
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "evan-mcpherson-cin-k",
+      "name": "Evan McPherson",
+      "pos": "K",
+      "team": "CIN",
+      "bye": null,
+      "adp": 139,
+      "posRankConsensus": 9,
+      "yahooRank": 139,
+      "aliases": [
+        "McPherson",
+        "E. McPherson"
+      ],
+      "stats": {
+        "fg0_19": 0,
+        "fg20_29": 4,
+        "fg30_39": 8,
+        "fg40_49": 8,
+        "fg50plus": 6,
+        "pat": 33
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "will-reichard-min-k",
+      "name": "Will Reichard",
+      "pos": "K",
+      "team": "MIN",
+      "bye": null,
+      "adp": 140,
+      "posRankConsensus": 10,
+      "yahooRank": 140,
+      "aliases": [
+        "Reichard",
+        "W. Reichard"
+      ],
+      "stats": {
+        "fg0_19": 0,
+        "fg20_29": 4,
+        "fg30_39": 7,
+        "fg40_49": 8,
+        "fg50plus": 5,
+        "pat": 32
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "detroit-det-def",
+      "name": "Detroit DST",
+      "pos": "DEF",
+      "team": "DET",
+      "bye": null,
+      "adp": 141,
+      "posRankConsensus": 8,
+      "yahooRank": 141,
+      "aliases": [
+        "Detroit D/ST",
+        "Detroit Defense"
+      ],
+      "stats": {
+        "sacks": 38.2,
+        "interceptions": 12.2,
+        "fumbleRecoveries": 7.5,
+        "defTD": 3.2,
+        "safeties": 0.5,
+        "blockedKicks": 0.7,
+        "returnTD": 0.6,
+        "fourthDownStops": 5.6,
+        "pointsAllowedPerGame": 22.4
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "minnesota-min-def",
+      "name": "Minnesota DST",
+      "pos": "DEF",
+      "team": "MIN",
+      "bye": null,
+      "adp": 142,
+      "posRankConsensus": 9,
+      "yahooRank": 142,
+      "aliases": [
+        "Minnesota D/ST",
+        "Minnesota Defense"
+      ],
+      "stats": {
+        "sacks": 36.8,
+        "interceptions": 11.8,
+        "fumbleRecoveries": 7.2,
+        "defTD": 3,
+        "safeties": 0.5,
+        "blockedKicks": 0.7,
+        "returnTD": 0.6,
+        "fourthDownStops": 5.4,
+        "pointsAllowedPerGame": 23.1
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "pittsburgh-pit-def",
+      "name": "Pittsburgh DST",
+      "pos": "DEF",
+      "team": "PIT",
+      "bye": null,
+      "adp": 143,
+      "posRankConsensus": 10,
+      "yahooRank": 143,
+      "aliases": [
+        "Pittsburgh D/ST",
+        "Pittsburgh Defense"
+      ],
+      "stats": {
+        "sacks": 35.4,
+        "interceptions": 11.4,
+        "fumbleRecoveries": 7,
+        "defTD": 2.9,
+        "safeties": 0.5,
+        "blockedKicks": 0.6,
+        "returnTD": 0.5,
+        "fourthDownStops": 5.2,
+        "pointsAllowedPerGame": 23.8
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "buffalo-buf-def",
+      "name": "Buffalo DST",
+      "pos": "DEF",
+      "team": "BUF",
+      "bye": null,
+      "adp": 144,
+      "posRankConsensus": 11,
+      "yahooRank": 144,
+      "aliases": [
+        "Buffalo D/ST",
+        "Buffalo Defense"
+      ],
+      "stats": {
+        "sacks": 34,
+        "interceptions": 11,
+        "fumbleRecoveries": 6.8,
+        "defTD": 2.8,
+        "safeties": 0.5,
+        "blockedKicks": 0.6,
+        "returnTD": 0.5,
+        "fourthDownStops": 5,
+        "pointsAllowedPerGame": 24.5
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "baltimore-bal-def",
+      "name": "Baltimore DST",
+      "pos": "DEF",
+      "team": "BAL",
+      "bye": null,
+      "adp": 145,
+      "posRankConsensus": 12,
+      "yahooRank": 145,
+      "aliases": [
+        "Baltimore D/ST",
+        "Baltimore Defense"
+      ],
+      "stats": {
+        "sacks": 32.6,
+        "interceptions": 10.6,
+        "fumbleRecoveries": 6.6,
+        "defTD": 2.7,
+        "safeties": 0.5,
+        "blockedKicks": 0.6,
+        "returnTD": 0.5,
+        "fourthDownStops": 4.8,
+        "pointsAllowedPerGame": 25.2
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    },
+    {
+      "id": "la-chargers-lac-def",
+      "name": "LA Chargers DST",
+      "pos": "DEF",
+      "team": "LAC",
+      "bye": null,
+      "adp": 146,
+      "posRankConsensus": 13,
+      "yahooRank": 146,
+      "aliases": [
+        "Chargers",
+        "L. Chargers",
+        "LA Chargers D/ST",
+        "LA Chargers Defense"
+      ],
+      "stats": {
+        "sacks": 31.2,
+        "interceptions": 10.2,
+        "fumbleRecoveries": 6.4,
+        "defTD": 2.6,
+        "safeties": 0.5,
+        "blockedKicks": 0.5,
+        "returnTD": 0.4,
+        "fourthDownStops": 4.6,
+        "pointsAllowedPerGame": 25.9
+      },
+      "provenance": {
+        "adp": "FFC-half-ppr-2026-07-14",
+        "stats": "modeled-2026"
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "sources": {
+    "@JagSays": 1.4,
+    "@FantasyPros": 1.0,
+    "@Rotoworld": 1.0,
+    "@FieldYates": 1.1,
+    "@MattHarmon_BYB": 1.15,
+    "@JJZachariason": 1.2,
+    "@ChrisRaybon": 1.1,
+    "manual": 1.0
+  },
+  "defaultTrust": 1.0,
+  "boost": {
+    "league winner": 3, "smash": 2.5, "league-winner": 3, "must draft": 2.5,
+    "must-draft": 2.5, "elite": 2, "breakout": 2, "ascending": 1.5, "buy": 2,
+    "love": 2, "target": 1.5, "sleeper": 2, "value": 1.5, "steal": 2.2,
+    "rising": 1.5, "up": 1, "bullish": 2, "high": 1, "ceiling": 1.2,
+    "undervalued": 2, "underrated": 1.8, "pound the table": 2.6, "locked in": 1.5,
+    "workhorse": 1.8, "bellcow": 2, "alpha": 1.8, "top": 1, "usage": 1.2
+  },
+  "fade": {
+    "fade": -2.5, "avoid": -2.5, "bust": -2.5, "overvalued": -2.2, "overrated": -2,
+    "trap": -2.2, "sell": -1.8, "concern": -1.5, "concerns": -1.5, "down": -1,
+    "risk": -1.2, "risky": -1.5, "injury": -1.8, "injured": -1.8, "hurt": -1.5,
+    "questionable": -1.2, "committee": -1.5, "timeshare": -1.5, "regression": -1.8,
+    "aging": -1.5, "declining": -1.8, "bearish": -2, "expensive": -1.2, "reach": -1.5,
+    "suspended": -2.5, "hold off": -1.5, "passing on": -2, "out": -1.5
+  },
+  "negators": ["not", "no", "isn't", "isnt", "won't", "wont", "don't", "dont", "never", "without"],
+  "tierCues": { "tier 1": 2.5, "tier one": 2.5, "tier 2": 1.2, "rb1": 1.5, "wr1": 1.5, "te1": 1.5, "qb1": 1 },
+  "baseMagnitude": 6
+}
