@@ -1,7 +1,7 @@
 // app.js — main controller: state, rendering, and event wiring.
 import { loadData } from "./data.js";
 import { computeValues, normalizeVor } from "./value.js";
-import { parseIntel, intelDelta } from "./intel.js";
+import { parseIntel, intelDelta, buildNameIndex, resolvePlayer } from "./intel.js";
 import { fillRoster, positionNeeds, blendedScore, runAlerts, recommend } from "./draft.js";
 import * as store from "./storage.js";
 
@@ -10,7 +10,7 @@ const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 
 const S = {
-  league: null, players: [], lexicon: null, dataMeta: null,
+  league: null, players: [], lexicon: null, dataMeta: null, seedIntel: { version: 0, entries: [] },
   values: [], byId: new Map(),
   drafted: store.load("drafted", {}),            // id -> "mine" | "other"
   intelLog: store.load("intelLog", []),          // [{id, source, snippet, matches:[{playerId,delta,name}]}]
@@ -26,7 +26,9 @@ init();
 async function init() {
   const data = await loadData();
   S.league = data.league; S.players = data.players; S.lexicon = data.lexicon; S.dataMeta = data.dataMeta;
+  S.seedIntel = data.seedIntel || { version: 0, entries: [] };
   populateSourceList();
+  applySeedIntel(false);
   recompute();
   wireEvents();
   renderMode();
@@ -45,6 +47,30 @@ function recompute() {
   for (const v of values) v.intelDelta = Math.round((deltas[v.id] || 0) * 10) / 10;
   S.values = values;
   S.byId = new Map(values.map((v) => [v.id, v]));
+}
+
+// Merge baked analyst intel (e.g. JagSays' RotoWire guide) into the Intel Log.
+// Runs once per seed version (tracked in localStorage) so it isn't duplicated;
+// force=true re-applies after a reset. Seed entries are editable/removable like
+// any pasted intel.
+function applySeedIntel(force) {
+  const seed = S.seedIntel;
+  if (!seed || !seed.entries || !seed.entries.length) return;
+  const storedVer = store.load("intelSeedVersion", 0);
+  if (!force && storedVer >= seed.version) return;
+  const index = buildNameIndex(S.players);
+  const existing = new Set(S.intelLog.map((e) => e.id));
+  for (const e of seed.entries) {
+    if (existing.has(e.id)) continue;
+    const matches = [];
+    for (const pl of e.players) {
+      const p = resolvePlayer(pl.name, index);
+      if (p) matches.push({ playerId: p.id, name: p.name, delta: pl.delta });
+    }
+    if (matches.length) S.intelLog.push({ id: e.id, source: seed.source || "@JagSays", snippet: e.snippet, matches, createdAt: Date.now(), seed: true });
+  }
+  store.save("intelLog", S.intelLog);
+  store.save("intelSeedVersion", seed.version);
 }
 
 function availablePlayers() {
@@ -162,7 +188,7 @@ function renderIntelLog() {
   $("#intelLog").innerHTML = S.intelLog.length
     ? S.intelLog.map((e) => `
       <li>
-        <div class="ilog-head"><b>${e.source}</b> <button class="mini danger" data-act="del-intel" data-id="${e.id}">✕</button></div>
+        <div class="ilog-head"><b>${e.source}</b>${e.seed ? `<span class="seed-tag">baseline</span>` : ""} <button class="mini danger" data-act="del-intel" data-id="${e.id}">✕</button></div>
         <div class="ilog-snip">"${escapeHtml(e.snippet)}"</div>
         <div class="ilog-players">${e.matches.map((m) => `<span class="intel-badge ${m.delta > 0 ? "up" : "down"}">${m.name} ${m.delta > 0 ? "▲" : "▼"}${Math.abs(m.delta)}</span>`).join("")}</div>
       </li>`).join("")
@@ -345,9 +371,11 @@ function doImport(e) {
   e.target.value = "";
 }
 function doReset() {
-  if (!confirm("Reset the draft board and intel? This clears drafted players and the intel log on this device.")) return;
+  if (!confirm("Reset the draft board? This clears drafted players and any intel you added. The baked JagSays baseline stays.")) return;
   S.drafted = {}; S.intelLog = []; S.pickNumber = 1;
-  persist(); recompute(); render(); toast("Draft reset.");
+  store.save("intelSeedVersion", 0);
+  applySeedIntel(true);
+  persist(); recompute(); render(); toast("Draft reset — JagSays baseline restored.");
 }
 
 function populateSourceList() {

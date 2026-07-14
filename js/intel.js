@@ -42,6 +42,18 @@ export function buildNameIndex(players) {
   return { exact, lastName };
 }
 
+// Resolve a single player name (e.g. from seed intel) to a player via the index.
+// Handles suffix differences ("James Cook" -> "James Cook III") and unambiguous
+// last names; returns null if not found or ambiguous.
+export function resolvePlayer(name, index) {
+  const key = normalize(name);
+  if (index.exact.has(key)) return index.exact.get(key);
+  const parts = key.replace(/\s+(jr|sr|ii|iii|iv)\.?$/i, "").split(" ");
+  const ln = parts.length >= 2 ? parts.slice(1).join(" ") : parts[0];
+  const cands = index.lastName.get(ln);
+  return cands && cands.length === 1 ? cands[0] : null;
+}
+
 // Scan text, return matches: [{player, snippet, sentiment, magnitude, ambiguous, candidates}]
 export function parseIntel(text, players, lexicon) {
   const index = buildNameIndex(players);
