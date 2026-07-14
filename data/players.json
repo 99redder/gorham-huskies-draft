@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-14T17:58:41.951Z",
+  "generatedAt": "2026-07-14T18:07:47.189Z",
   "source": "FantasyFootballCalculator Half-PPR consensus (mock-draft aggregate), 2026-07-14; stat lines modeled",
   "count": 146,
   "players": [
@@ -44,11 +44,11 @@
         "B. Robinson"
       ],
       "stats": {
-        "rushYds": 1254,
-        "rushTD": 9.6,
+        "rushYds": 1262,
+        "rushTD": 9.7,
         "rec": 58,
         "recYds": 522,
-        "recTD": 2.5,
+        "recTD": 2.6,
         "returnYds": 0,
         "fumblesLost": 2
       },
@@ -71,8 +71,8 @@
         "P. Nacua"
       ],
       "stats": {
-        "rec": 102,
-        "recYds": 1450,
+        "rec": 105,
+        "recYds": 1470,
         "recTD": 9,
         "rushYds": 0,
         "rushTD": 0,
@@ -98,9 +98,9 @@
         "J. Chase"
       ],
       "stats": {
-        "rec": 100,
-        "recYds": 1424,
-        "recTD": 8.8,
+        "rec": 104,
+        "recYds": 1450,
+        "recTD": 8.9,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -125,8 +125,8 @@
         "C. McCaffrey"
       ],
       "stats": {
-        "rushYds": 1208,
-        "rushTD": 9.2,
+        "rushYds": 1224,
+        "rushTD": 9.4,
         "rec": 80,
         "recYds": 708,
         "recTD": 2.5,
@@ -152,11 +152,11 @@
         "J. Taylor"
       ],
       "stats": {
-        "rushYds": 1162,
-        "rushTD": 8.8,
+        "rushYds": 1186,
+        "rushTD": 9,
         "rec": 40,
         "recYds": 348,
-        "recTD": 2.4,
+        "recTD": 2.5,
         "returnYds": 0,
         "fumblesLost": 2
       },
@@ -179,9 +179,9 @@
         "J. Smith-Njigba"
       ],
       "stats": {
-        "rec": 98,
-        "recYds": 1398,
-        "recTD": 8.7,
+        "rec": 102,
+        "recYds": 1429,
+        "recTD": 8.8,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -206,9 +206,9 @@
         "A. St. Brown"
       ],
       "stats": {
-        "rec": 96,
-        "recYds": 1372,
-        "recTD": 8.5,
+        "rec": 101,
+        "recYds": 1409,
+        "recTD": 8.6,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -233,8 +233,8 @@
         "D. Achane"
       ],
       "stats": {
-        "rushYds": 1116,
-        "rushTD": 8.4,
+        "rushYds": 1148,
+        "rushTD": 8.7,
         "rec": 78,
         "recYds": 667,
         "recTD": 2.4,
@@ -260,11 +260,11 @@
         "D. Henry"
       ],
       "stats": {
-        "rushYds": 1070,
-        "rushTD": 8,
-        "rec": 35,
-        "recYds": 294,
-        "recTD": 2.3,
+        "rushYds": 1110,
+        "rushTD": 8.4,
+        "rec": 39,
+        "recYds": 326,
+        "recTD": 2.4,
         "returnYds": 0,
         "fumblesLost": 2
       },
@@ -288,11 +288,11 @@
         "J. Cook"
       ],
       "stats": {
-        "rushYds": 1024,
-        "rushTD": 7.6,
+        "rushYds": 1072,
+        "rushTD": 8.1,
         "rec": 52,
         "recYds": 437,
-        "recTD": 2.2,
+        "recTD": 2.3,
         "returnYds": 0,
         "fumblesLost": 2
       },
@@ -315,9 +315,9 @@
         "D. London"
       ],
       "stats": {
-        "rec": 94,
-        "recYds": 1346,
-        "recTD": 8.3,
+        "rec": 100,
+        "recYds": 1388,
+        "recTD": 8.5,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -342,9 +342,9 @@
         "C. Lamb"
       ],
       "stats": {
-        "rec": 93,
-        "recYds": 1320,
-        "recTD": 8.2,
+        "rec": 98,
+        "recYds": 1368,
+        "recTD": 8.4,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -369,9 +369,9 @@
         "J. Jefferson"
       ],
       "stats": {
-        "rec": 91,
-        "recYds": 1294,
-        "recTD": 8,
+        "rec": 97,
+        "recYds": 1347,
+        "recTD": 8.3,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -396,11 +396,11 @@
         "A. Jeanty"
       ],
       "stats": {
-        "rushYds": 978,
-        "rushTD": 7.2,
+        "rushYds": 1034,
+        "rushTD": 7.8,
         "rec": 42,
         "recYds": 353,
-        "recTD": 2.2,
+        "recTD": 2.3,
         "returnYds": 0,
         "fumblesLost": 2
       },
@@ -423,9 +423,9 @@
         "A. Brown"
       ],
       "stats": {
-        "rec": 89,
-        "recYds": 1268,
-        "recTD": 7.8,
+        "rec": 96,
+        "recYds": 1327,
+        "recTD": 8.2,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -450,9 +450,9 @@
         "G. Pickens"
       ],
       "stats": {
-        "rec": 87,
-        "recYds": 1242,
-        "recTD": 7.6,
+        "rec": 94,
+        "recYds": 1306,
+        "recTD": 8,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -477,11 +477,11 @@
         "S. Barkley"
       ],
       "stats": {
-        "rushYds": 932,
-        "rushTD": 6.8,
+        "rushYds": 996,
+        "rushTD": 7.4,
         "rec": 40,
         "recYds": 336,
-        "recTD": 2.1,
+        "recTD": 2.2,
         "returnYds": 0,
         "fumblesLost": 2
       },
@@ -504,8 +504,8 @@
         "O. Hampton"
       ],
       "stats": {
-        "rushYds": 886,
-        "rushTD": 6.4,
+        "rushYds": 958,
+        "rushTD": 7.1,
         "rec": 40,
         "recYds": 336,
         "recTD": 2.1,
@@ -532,11 +532,11 @@
         "K. Walker"
       ],
       "stats": {
-        "rushYds": 840,
-        "rushTD": 6,
+        "rushYds": 920,
+        "rushTD": 6.8,
         "rec": 45,
         "recYds": 378,
-        "recTD": 2,
+        "recTD": 2.1,
         "returnYds": 0,
         "fumblesLost": 2
       },
@@ -559,11 +559,11 @@
         "C. Brown"
       ],
       "stats": {
-        "rushYds": 794,
-        "rushTD": 5.6,
-        "rec": 27,
-        "recYds": 223,
-        "recTD": 1.9,
+        "rushYds": 882,
+        "rushTD": 6.5,
+        "rec": 32,
+        "recYds": 273,
+        "recTD": 2,
         "returnYds": 0,
         "fumblesLost": 2
       },
@@ -586,9 +586,9 @@
         "C. Olave"
       ],
       "stats": {
-        "rec": 85,
-        "recYds": 1216,
-        "recTD": 7.5,
+        "rec": 93,
+        "recYds": 1286,
+        "recTD": 7.9,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -613,9 +613,9 @@
         "T. Higgins"
       ],
       "stats": {
-        "rec": 83,
-        "recYds": 1190,
-        "recTD": 7.3,
+        "rec": 92,
+        "recYds": 1265,
+        "recTD": 7.8,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -640,9 +640,9 @@
         "N. Collins"
       ],
       "stats": {
-        "rec": 81,
-        "recYds": 1164,
-        "recTD": 7.1,
+        "rec": 90,
+        "recYds": 1245,
+        "recTD": 7.7,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -667,9 +667,9 @@
         "Z. Flowers"
       ],
       "stats": {
-        "rec": 79,
-        "recYds": 1138,
-        "recTD": 7,
+        "rec": 89,
+        "recYds": 1224,
+        "recTD": 7.6,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -694,11 +694,11 @@
         "J. Jacobs"
       ],
       "stats": {
-        "rushYds": 748,
-        "rushTD": 5.2,
-        "rec": 25,
-        "recYds": 212,
-        "recTD": 1.9,
+        "rushYds": 844,
+        "rushTD": 6.2,
+        "rec": 31,
+        "recYds": 264,
+        "recTD": 2,
         "returnYds": 0,
         "fumblesLost": 2
       },
@@ -721,11 +721,11 @@
         "J. Love"
       ],
       "stats": {
-        "rushYds": 702,
-        "rushTD": 4.8,
-        "rec": 24,
-        "recYds": 200,
-        "recTD": 1.8,
+        "rushYds": 806,
+        "rushTD": 5.8,
+        "rec": 30,
+        "recYds": 255,
+        "recTD": 2,
         "returnYds": 0,
         "fumblesLost": 2
       },
@@ -748,9 +748,9 @@
         "R. Rice"
       ],
       "stats": {
-        "rec": 77,
-        "recYds": 1112,
-        "recTD": 6.8,
+        "rec": 87,
+        "recYds": 1204,
+        "recTD": 7.4,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -775,9 +775,9 @@
         "G. Wilson"
       ],
       "stats": {
-        "rec": 75,
-        "recYds": 1086,
-        "recTD": 6.6,
+        "rec": 86,
+        "recYds": 1183,
+        "recTD": 7.3,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -802,9 +802,9 @@
         "D. Smith"
       ],
       "stats": {
-        "rec": 74,
-        "recYds": 1060,
-        "recTD": 6.4,
+        "rec": 85,
+        "recYds": 1163,
+        "recTD": 7.2,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -829,11 +829,11 @@
         "B. Hall"
       ],
       "stats": {
-        "rushYds": 656,
-        "rushTD": 4.4,
+        "rushYds": 768,
+        "rushTD": 5.5,
         "rec": 58,
         "recYds": 487,
-        "recTD": 1.8,
+        "recTD": 1.9,
         "returnYds": 0,
         "fumblesLost": 2
       },
@@ -882,11 +882,11 @@
         "K. Williams"
       ],
       "stats": {
-        "rushYds": 610,
-        "rushTD": 4,
-        "rec": 21,
-        "recYds": 176,
-        "recTD": 1.7,
+        "rushYds": 730,
+        "rushTD": 5.2,
+        "rec": 28,
+        "recYds": 237,
+        "recTD": 1.9,
         "returnYds": 0,
         "fumblesLost": 2
       },
@@ -909,9 +909,9 @@
         "T. McMillan"
       ],
       "stats": {
-        "rec": 72,
-        "recYds": 1034,
-        "recTD": 6.3,
+        "rec": 83,
+        "recYds": 1142,
+        "recTD": 7.1,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -936,11 +936,11 @@
         "J. Williams"
       ],
       "stats": {
-        "rushYds": 564,
-        "rushTD": 3.6,
-        "rec": 20,
-        "recYds": 165,
-        "recTD": 1.6,
+        "rushYds": 692,
+        "rushTD": 4.9,
+        "rec": 27,
+        "recYds": 228,
+        "recTD": 1.8,
         "returnYds": 0,
         "fumblesLost": 2
       },
@@ -963,9 +963,9 @@
         "T. McLaurin"
       ],
       "stats": {
-        "rec": 70,
-        "recYds": 1008,
-        "recTD": 6.1,
+        "rec": 82,
+        "recYds": 1122,
+        "recTD": 7,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -990,9 +990,9 @@
         "D. Adams"
       ],
       "stats": {
-        "rec": 68,
-        "recYds": 982,
-        "recTD": 5.9,
+        "rec": 81,
+        "recYds": 1101,
+        "recTD": 6.8,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -1017,9 +1017,9 @@
         "L. McConkey"
       ],
       "stats": {
-        "rec": 66,
-        "recYds": 956,
-        "recTD": 5.8,
+        "rec": 79,
+        "recYds": 1081,
+        "recTD": 6.7,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -1044,11 +1044,11 @@
         "C. Skattebo"
       ],
       "stats": {
-        "rushYds": 518,
-        "rushTD": 3.2,
+        "rushYds": 654,
+        "rushTD": 4.6,
         "rec": 38,
         "recYds": 319,
-        "recTD": 1.6,
+        "recTD": 1.8,
         "returnYds": 0,
         "fumblesLost": 2
       },
@@ -1071,9 +1071,9 @@
         "J. Williams"
       ],
       "stats": {
-        "rec": 64,
-        "recYds": 930,
-        "recTD": 5.6,
+        "rec": 78,
+        "recYds": 1060,
+        "recTD": 6.6,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 260,
@@ -1099,11 +1099,11 @@
         "T. Etienne"
       ],
       "stats": {
-        "rushYds": 472,
-        "rushTD": 2.8,
+        "rushYds": 616,
+        "rushTD": 4.2,
         "rec": 42,
         "recYds": 353,
-        "recTD": 1.5,
+        "recTD": 1.7,
         "returnYds": 0,
         "fumblesLost": 2
       },
@@ -1126,9 +1126,9 @@
         "J. Waddle"
       ],
       "stats": {
-        "rec": 62,
-        "recYds": 904,
-        "recTD": 5.4,
+        "rec": 77,
+        "recYds": 1040,
+        "recTD": 6.5,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 180,
@@ -1153,9 +1153,9 @@
         "M. Nabers"
       ],
       "stats": {
-        "rec": 60,
-        "recYds": 878,
-        "recTD": 5.3,
+        "rec": 75,
+        "recYds": 1019,
+        "recTD": 6.4,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -1181,9 +1181,9 @@
         "L. Burden"
       ],
       "stats": {
-        "rec": 58,
-        "recYds": 852,
-        "recTD": 5.1,
+        "rec": 74,
+        "recYds": 999,
+        "recTD": 6.2,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -1233,9 +1233,9 @@
         "E. Egbuka"
       ],
       "stats": {
-        "rec": 56,
-        "recYds": 826,
-        "recTD": 4.9,
+        "rec": 73,
+        "recYds": 978,
+        "recTD": 6.1,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -1260,9 +1260,9 @@
         "M. Evans"
       ],
       "stats": {
-        "rec": 55,
-        "recYds": 800,
-        "recTD": 4.8,
+        "rec": 71,
+        "recYds": 958,
+        "recTD": 6,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -1287,9 +1287,9 @@
         "R. Odunze"
       ],
       "stats": {
-        "rec": 53,
-        "recYds": 774,
-        "recTD": 4.6,
+        "rec": 70,
+        "recYds": 937,
+        "recTD": 5.9,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -1314,11 +1314,11 @@
         "D. Swift"
       ],
       "stats": {
-        "rushYds": 426,
-        "rushTD": 2.4,
+        "rushYds": 578,
+        "rushTD": 3.9,
         "rec": 48,
         "recYds": 403,
-        "recTD": 1.5,
+        "recTD": 1.6,
         "returnYds": 0,
         "fumblesLost": 2
       },
@@ -1341,11 +1341,11 @@
         "B. Irving"
       ],
       "stats": {
-        "rushYds": 380,
-        "rushTD": 2,
+        "rushYds": 540,
+        "rushTD": 3.6,
         "rec": 50,
         "recYds": 420,
-        "recTD": 1.4,
+        "recTD": 1.6,
         "returnYds": 0,
         "fumblesLost": 2
       },
@@ -1368,9 +1368,9 @@
         "D. Metcalf"
       ],
       "stats": {
-        "rec": 51,
-        "recYds": 748,
-        "recTD": 4.4,
+        "rec": 69,
+        "recYds": 917,
+        "recTD": 5.8,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -1395,9 +1395,9 @@
         "A. Pierce"
       ],
       "stats": {
-        "rec": 49,
-        "recYds": 722,
-        "recTD": 4.2,
+        "rec": 67,
+        "recYds": 896,
+        "recTD": 5.6,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -1422,11 +1422,11 @@
         "Q. Judkins"
       ],
       "stats": {
-        "rushYds": 334,
-        "rushTD": 2,
-        "rec": 13,
-        "recYds": 106,
-        "recTD": 1.3,
+        "rushYds": 502,
+        "rushTD": 3.3,
+        "rec": 22,
+        "recYds": 184,
+        "recTD": 1.6,
         "returnYds": 0,
         "fumblesLost": 2
       },
@@ -1449,9 +1449,9 @@
         "C. Watson"
       ],
       "stats": {
-        "rec": 47,
-        "recYds": 696,
-        "recTD": 4.1,
+        "rec": 66,
+        "recYds": 876,
+        "recTD": 5.5,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -1477,7 +1477,7 @@
       ],
       "stats": {
         "rec": 77,
-        "recYds": 908,
+        "recYds": 914,
         "recTD": 6.7,
         "returnYds": 0,
         "fumblesLost": 0
@@ -1501,9 +1501,9 @@
         "C. Tate"
       ],
       "stats": {
-        "rec": 45,
-        "recYds": 670,
-        "recTD": 3.9,
+        "rec": 65,
+        "recYds": 855,
+        "recTD": 5.4,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -1529,9 +1529,9 @@
         "M. Harrison"
       ],
       "stats": {
-        "rec": 43,
-        "recYds": 644,
-        "recTD": 3.7,
+        "rec": 63,
+        "recYds": 835,
+        "recTD": 5.3,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -1582,9 +1582,9 @@
         "D. Moore"
       ],
       "stats": {
-        "rec": 41,
-        "recYds": 618,
-        "recTD": 3.6,
+        "rec": 62,
+        "recYds": 814,
+        "recTD": 5.2,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -1609,9 +1609,9 @@
         "C. Sutton"
       ],
       "stats": {
-        "rec": 39,
-        "recYds": 592,
-        "recTD": 3.4,
+        "rec": 60,
+        "recYds": 794,
+        "recTD": 5,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -1636,9 +1636,9 @@
         "P. Washington"
       ],
       "stats": {
-        "rec": 37,
-        "recYds": 566,
-        "recTD": 3.2,
+        "rec": 59,
+        "recYds": 773,
+        "recTD": 4.9,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 520,
@@ -1663,11 +1663,11 @@
         "D. Montgomery"
       ],
       "stats": {
-        "rushYds": 320,
-        "rushTD": 2,
-        "rec": 11,
-        "recYds": 94,
-        "recTD": 1.3,
+        "rushYds": 464,
+        "rushTD": 3,
+        "rec": 21,
+        "recYds": 176,
+        "recTD": 1.5,
         "returnYds": 0,
         "fumblesLost": 2
       },
@@ -1690,11 +1690,11 @@
         "B. Tuten"
       ],
       "stats": {
-        "rushYds": 320,
-        "rushTD": 2,
-        "rec": 10,
-        "recYds": 82,
-        "recTD": 1.2,
+        "rushYds": 426,
+        "rushTD": 2.6,
+        "rec": 20,
+        "recYds": 167,
+        "recTD": 1.4,
         "returnYds": 0,
         "fumblesLost": 2
       },
@@ -1717,8 +1717,8 @@
         "C. Loveland"
       ],
       "stats": {
-        "rec": 73,
-        "recYds": 866,
+        "rec": 74,
+        "recYds": 878,
         "recTD": 6.4,
         "returnYds": 0,
         "fumblesLost": 0
@@ -1743,9 +1743,9 @@
         "B. Thomas"
       ],
       "stats": {
-        "rec": 36,
-        "recYds": 540,
-        "recTD": 3,
+        "rec": 58,
+        "recYds": 753,
+        "recTD": 4.8,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -1770,11 +1770,11 @@
         "T. Henderson"
       ],
       "stats": {
-        "rushYds": 320,
-        "rushTD": 2,
+        "rushYds": 388,
+        "rushTD": 2.3,
         "rec": 40,
         "recYds": 336,
-        "recTD": 1.2,
+        "recTD": 1.4,
         "returnYds": 0,
         "fumblesLost": 2
       },
@@ -1798,9 +1798,9 @@
         "M. Pittman"
       ],
       "stats": {
-        "rec": 34,
-        "recYds": 514,
-        "recTD": 2.9,
+        "rec": 56,
+        "recYds": 732,
+        "recTD": 4.7,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -1851,9 +1851,9 @@
         "J. Reed"
       ],
       "stats": {
-        "rec": 34,
-        "recYds": 488,
-        "recTD": 2.7,
+        "rec": 55,
+        "recYds": 712,
+        "recTD": 4.6,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -1878,9 +1878,9 @@
         "M. Wilson"
       ],
       "stats": {
-        "rec": 34,
-        "recYds": 480,
-        "recTD": 2.5,
+        "rec": 54,
+        "recYds": 691,
+        "recTD": 4.4,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -1905,9 +1905,9 @@
         "J. Tyson"
       ],
       "stats": {
-        "rec": 34,
-        "recYds": 480,
-        "recTD": 2.5,
+        "rec": 52,
+        "recYds": 671,
+        "recTD": 4.3,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -1933,9 +1933,9 @@
         "C. Godwin"
       ],
       "stats": {
-        "rec": 34,
-        "recYds": 480,
-        "recTD": 2.5,
+        "rec": 51,
+        "recYds": 650,
+        "recTD": 4.2,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -1986,11 +1986,11 @@
         "J. Warren"
       ],
       "stats": {
-        "rushYds": 320,
+        "rushYds": 350,
         "rushTD": 2,
         "rec": 52,
         "recYds": 437,
-        "recTD": 1.1,
+        "recTD": 1.4,
         "returnYds": 0,
         "fumblesLost": 2
       },
@@ -2013,9 +2013,9 @@
         "J. Addison"
       ],
       "stats": {
-        "rec": 34,
-        "recYds": 480,
-        "recTD": 2.5,
+        "rec": 50,
+        "recYds": 630,
+        "recTD": 4.1,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -2040,9 +2040,9 @@
         "J. Downs"
       ],
       "stats": {
-        "rec": 34,
-        "recYds": 480,
-        "recTD": 2.5,
+        "rec": 48,
+        "recYds": 609,
+        "recTD": 4,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -2067,9 +2067,9 @@
         "X. Worthy"
       ],
       "stats": {
-        "rec": 34,
-        "recYds": 480,
-        "recTD": 2.5,
+        "rec": 47,
+        "recYds": 589,
+        "recTD": 3.8,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 620,
@@ -2094,9 +2094,9 @@
         "Q. Johnston"
       ],
       "stats": {
-        "rec": 34,
-        "recYds": 480,
-        "recTD": 2.5,
+        "rec": 46,
+        "recYds": 568,
+        "recTD": 3.7,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -2121,11 +2121,11 @@
         "J. Price"
       ],
       "stats": {
-        "rushYds": 320,
-        "rushTD": 2,
-        "rec": 8,
-        "recYds": 67,
-        "recTD": 1,
+        "rushYds": 312,
+        "rushTD": 1.7,
+        "rec": 17,
+        "recYds": 140,
+        "recTD": 1.3,
         "returnYds": 480,
         "fumblesLost": 2
       },
@@ -2148,11 +2148,11 @@
         "T. Pollard"
       ],
       "stats": {
-        "rushYds": 320,
-        "rushTD": 2,
-        "rec": 8,
-        "recYds": 67,
-        "recTD": 1,
+        "rushYds": 274,
+        "rushTD": 1.4,
+        "rec": 16,
+        "recYds": 131,
+        "recTD": 1.3,
         "returnYds": 0,
         "fumblesLost": 2
       },
@@ -2175,9 +2175,9 @@
         "R. Doubs"
       ],
       "stats": {
-        "rec": 34,
-        "recYds": 480,
-        "recTD": 2.5,
+        "rec": 44,
+        "recYds": 548,
+        "recTD": 3.6,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -2228,11 +2228,11 @@
         "R. Stevenson"
       ],
       "stats": {
-        "rushYds": 320,
-        "rushTD": 2,
-        "rec": 8,
-        "recYds": 67,
-        "recTD": 0.9,
+        "rushYds": 236,
+        "rushTD": 1,
+        "rec": 15,
+        "recYds": 123,
+        "recTD": 1.2,
         "returnYds": 0,
         "fumblesLost": 2
       },
@@ -2255,9 +2255,9 @@
         "J. Meyers"
       ],
       "stats": {
-        "rec": 34,
-        "recYds": 480,
-        "recTD": 2.5,
+        "rec": 43,
+        "recYds": 527,
+        "recTD": 3.5,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -2282,9 +2282,9 @@
         "R. Pearsall"
       ],
       "stats": {
-        "rec": 34,
-        "recYds": 480,
-        "recTD": 2.5,
+        "rec": 42,
+        "recYds": 507,
+        "recTD": 3.4,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 280,
@@ -2309,9 +2309,9 @@
         "W. Robinson"
       ],
       "stats": {
-        "rec": 34,
-        "recYds": 480,
-        "recTD": 2.5,
+        "rec": 40,
+        "recYds": 486,
+        "recTD": 3.2,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 300,
@@ -2336,9 +2336,9 @@
         "T. Warren"
       ],
       "stats": {
-        "rec": 70,
-        "recYds": 824,
-        "recTD": 6,
+        "rec": 71,
+        "recYds": 842,
+        "recTD": 6.2,
         "returnYds": 0,
         "fumblesLost": 0
       },
@@ -2361,9 +2361,9 @@
         "K. Shakir"
       ],
       "stats": {
-        "rec": 34,
-        "recYds": 480,
-        "recTD": 2.5,
+        "rec": 39,
+        "recYds": 466,
+        "recTD": 3.1,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -2388,11 +2388,11 @@
         "R. Dowdle"
       ],
       "stats": {
-        "rushYds": 320,
-        "rushTD": 2,
-        "rec": 8,
-        "recYds": 67,
-        "recTD": 0.9,
+        "rushYds": 210,
+        "rushTD": 1,
+        "rec": 14,
+        "recYds": 114,
+        "recTD": 1.1,
         "returnYds": 0,
         "fumblesLost": 2
       },
@@ -2444,11 +2444,11 @@
         "C. Hubbard"
       ],
       "stats": {
-        "rushYds": 320,
-        "rushTD": 2,
-        "rec": 8,
-        "recYds": 67,
-        "recTD": 0.8,
+        "rushYds": 210,
+        "rushTD": 1,
+        "rec": 13,
+        "recYds": 105,
+        "recTD": 1.1,
         "returnYds": 0,
         "fumblesLost": 2
       },
@@ -2497,9 +2497,9 @@
         "M. Lemon"
       ],
       "stats": {
-        "rec": 34,
-        "recYds": 480,
-        "recTD": 2.5,
+        "rec": 38,
+        "recYds": 445,
+        "recTD": 3,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 640,
@@ -2576,9 +2576,9 @@
         "J. Coker"
       ],
       "stats": {
-        "rec": 34,
-        "recYds": 480,
-        "recTD": 2.5,
+        "rec": 36,
+        "recYds": 425,
+        "recTD": 2.9,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -2603,9 +2603,9 @@
         "M. Golden"
       ],
       "stats": {
-        "rec": 34,
-        "recYds": 480,
-        "recTD": 2.5,
+        "rec": 35,
+        "recYds": 404,
+        "recTD": 2.8,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -2630,11 +2630,11 @@
         "J. Dobbins"
       ],
       "stats": {
-        "rushYds": 320,
-        "rushTD": 2,
-        "rec": 8,
-        "recYds": 67,
-        "recTD": 0.7,
+        "rushYds": 210,
+        "rushTD": 1,
+        "rec": 11,
+        "recYds": 96,
+        "recTD": 1.1,
         "returnYds": 0,
         "fumblesLost": 2
       },
@@ -2683,9 +2683,9 @@
         "J. Higgins"
       ],
       "stats": {
-        "rec": 34,
-        "recYds": 480,
-        "recTD": 2.5,
+        "rec": 33,
+        "recYds": 384,
+        "recTD": 2.6,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -2736,8 +2736,8 @@
         "K. Concepcion"
       ],
       "stats": {
-        "rec": 34,
-        "recYds": 480,
+        "rec": 32,
+        "recYds": 363,
         "recTD": 2.5,
         "rushYds": 0,
         "rushTD": 0,
@@ -2792,9 +2792,9 @@
         "T. Kraft"
       ],
       "stats": {
-        "rec": 66,
-        "recYds": 782,
-        "recTD": 5.7,
+        "rec": 68,
+        "recYds": 806,
+        "recTD": 5.9,
         "returnYds": 0,
         "fumblesLost": 0
       },
@@ -2818,9 +2818,9 @@
         "H. Fannin"
       ],
       "stats": {
-        "rec": 63,
-        "recYds": 740,
-        "recTD": 5.4,
+        "rec": 66,
+        "recYds": 770,
+        "recTD": 5.6,
         "returnYds": 0,
         "fumblesLost": 0
       },
@@ -2843,9 +2843,9 @@
         "S. LaPorta"
       ],
       "stats": {
-        "rec": 60,
-        "recYds": 698,
-        "recTD": 5.1,
+        "rec": 63,
+        "recYds": 734,
+        "recTD": 5.3,
         "returnYds": 0,
         "fumblesLost": 0
       },
@@ -2973,11 +2973,11 @@
         "A. Jones"
       ],
       "stats": {
-        "rushYds": 320,
-        "rushTD": 2,
+        "rushYds": 210,
+        "rushTD": 1,
         "rec": 44,
         "recYds": 370,
-        "recTD": 0.7,
+        "recTD": 1,
         "returnYds": 0,
         "fumblesLost": 2
       },
@@ -3000,11 +3000,11 @@
         "R. Harvey"
       ],
       "stats": {
-        "rushYds": 320,
-        "rushTD": 2,
-        "rec": 8,
-        "recYds": 67,
-        "recTD": 0.6,
+        "rushYds": 210,
+        "rushTD": 1,
+        "rec": 9,
+        "recYds": 79,
+        "recTD": 0.9,
         "returnYds": 0,
         "fumblesLost": 2
       },
@@ -3058,9 +3058,9 @@
         "R. Shaheed"
       ],
       "stats": {
-        "rec": 34,
-        "recYds": 480,
-        "recTD": 2.5,
+        "rec": 31,
+        "recYds": 343,
+        "recTD": 2.4,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 540,
@@ -3114,9 +3114,9 @@
         "J. Jennings"
       ],
       "stats": {
-        "rec": 34,
-        "recYds": 480,
-        "recTD": 2.5,
+        "rec": 29,
+        "recYds": 322,
+        "recTD": 2.3,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -3172,11 +3172,11 @@
         "K. Monangai"
       ],
       "stats": {
-        "rushYds": 320,
-        "rushTD": 2,
+        "rushYds": 210,
+        "rushTD": 1,
         "rec": 8,
-        "recYds": 67,
-        "recTD": 0.6,
+        "recYds": 70,
+        "recTD": 0.9,
         "returnYds": 0,
         "fumblesLost": 2
       },
@@ -3200,9 +3200,9 @@
         "O. Cooper"
       ],
       "stats": {
-        "rec": 34,
-        "recYds": 480,
-        "recTD": 2.5,
+        "rec": 28,
+        "recYds": 302,
+        "recTD": 2.2,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 540,
@@ -3228,9 +3228,9 @@
         "K. Pitts"
       ],
       "stats": {
-        "rec": 56,
-        "recYds": 656,
-        "recTD": 4.8,
+        "rec": 60,
+        "recYds": 698,
+        "recTD": 5,
         "returnYds": 0,
         "fumblesLost": 0
       },
@@ -3253,9 +3253,9 @@
         "T. Kelce"
       ],
       "stats": {
-        "rec": 53,
-        "recYds": 614,
-        "recTD": 4.4,
+        "rec": 57,
+        "recYds": 662,
+        "recTD": 4.8,
         "returnYds": 0,
         "fumblesLost": 0
       },
@@ -3330,9 +3330,9 @@
         "D. Boston"
       ],
       "stats": {
-        "rec": 34,
-        "recYds": 480,
-        "recTD": 2.5,
+        "rec": 27,
+        "recYds": 300,
+        "recTD": 2,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 0,
@@ -3357,9 +3357,9 @@
         "T. Tucker"
       ],
       "stats": {
-        "rec": 34,
-        "recYds": 480,
-        "recTD": 2.5,
+        "rec": 25,
+        "recYds": 300,
+        "recTD": 1.9,
         "rushYds": 0,
         "rushTD": 0,
         "returnYds": 560,
@@ -3413,11 +3413,11 @@
         "R. White"
       ],
       "stats": {
-        "rushYds": 320,
-        "rushTD": 2,
+        "rushYds": 210,
+        "rushTD": 1,
         "rec": 52,
         "recYds": 437,
-        "recTD": 0.5,
+        "recTD": 0.9,
         "returnYds": 0,
         "fumblesLost": 2
       },
@@ -3469,9 +3469,9 @@
         "G. Kittle"
       ],
       "stats": {
-        "rec": 49,
-        "recYds": 572,
-        "recTD": 4.1,
+        "rec": 54,
+        "recYds": 626,
+        "recTD": 4.5,
         "returnYds": 0,
         "fumblesLost": 0
       },
@@ -3494,11 +3494,11 @@
         "K. Gainwell"
       ],
       "stats": {
-        "rushYds": 320,
-        "rushTD": 2,
+        "rushYds": 210,
+        "rushTD": 1,
         "rec": 46,
         "recYds": 386,
-        "recTD": 0.5,
+        "recTD": 0.8,
         "returnYds": 0,
         "fumblesLost": 2
       },

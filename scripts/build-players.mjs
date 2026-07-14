@@ -103,20 +103,21 @@ const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
 
 function statsForRB(rank, name) {
   const r = rank; // within-position rank (1-based)
-  let rushYds = clamp(1300 - (r - 1) * 46, 320, 1600);
-  let rushTD = clamp(10 - (r - 1) * 0.4, 2, 13);
-  let rec = PASS_CATCH_RB[name] != null ? PASS_CATCH_RB[name] : clamp(42 - (r - 1) * 1.4, 8, 60);
+  // Gentle decay + low floors so the tail keeps descending (no big flat tie block).
+  let rushYds = clamp(1300 - (r - 1) * 38, 210, 1600);
+  let rushTD = clamp(10 - (r - 1) * 0.32, 1, 13);
+  let rec = PASS_CATCH_RB[name] != null ? PASS_CATCH_RB[name] : clamp(44 - (r - 1) * 1.05, 6, 62);
   let recYds = Math.round(rec * (8.4 + Math.max(0, 6 - r) * 0.15));
-  let recTD = clamp(2.6 - (r - 1) * 0.06, 0.5, 3);
+  let recTD = clamp(2.6 - (r - 1) * 0.05, 0.3, 3);
   const ret = RETURNERS[name] || 0;
   return { rushYds: Math.round(rushYds), rushTD: +rushTD.toFixed(1), rec: Math.round(rec),
     recYds, recTD: +recTD.toFixed(1), returnYds: ret, fumblesLost: 2 };
 }
 function statsForWR(rank, name) {
   const r = rank;
-  let rec = clamp(102 - (r - 1) * 1.9, 34, 112);
-  let recYds = clamp(1450 - (r - 1) * 26, 480, 1600);
-  let recTD = clamp(9 - (r - 1) * 0.17, 2.5, 10);
+  let rec = clamp(105 - (r - 1) * 1.35, 25, 112);
+  let recYds = clamp(1470 - (r - 1) * 20.5, 300, 1600);
+  let recTD = clamp(9 - (r - 1) * 0.12, 1.4, 10);
   const ret = RETURNERS[name] || 0;
   const rush = r <= 40 && (name.includes("Worthy") || name.includes("Tucker")) ? 120 : 0;
   return { rec: Math.round(rec), recYds: Math.round(recYds), recTD: +recTD.toFixed(1),
@@ -124,9 +125,9 @@ function statsForWR(rank, name) {
 }
 function statsForTE(rank) {
   const r = rank;
-  let rec = clamp(80 - (r - 1) * 3.4, 24, 90);
-  let recYds = clamp(950 - (r - 1) * 42, 260, 1050);
-  let recTD = clamp(7 - (r - 1) * 0.32, 2, 8);
+  let rec = clamp(80 - (r - 1) * 2.9, 16, 90);
+  let recYds = clamp(950 - (r - 1) * 36, 170, 1050);
+  let recTD = clamp(7 - (r - 1) * 0.28, 1.3, 8);
   return { rec: Math.round(rec), recYds: Math.round(recYds), recTD: +recTD.toFixed(1),
     returnYds: 0, fumblesLost: 0 };
 }
