@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "note": "Baked-in analyst intel from JagSays' 2026 RotoWire projections guide (redraft/dynasty/best-ball). Deltas are curated to reflect the strength of each take. Editable/removable in the Intel Log like any pasted intel.",
   "source": "@JagSays (RotoWire)",
   "entries": [
@@ -85,6 +85,12 @@
     { "id": "jag26_djones", "snippet": "Projection is contingent on health.", "players": [{ "name": "Daniel Jones", "delta": -8 }] },
     { "id": "jag26_kjohnson", "snippet": "Looking like a massive bust unless he impresses.", "players": [{ "name": "Kaleb Johnson", "delta": -16 }] },
     { "id": "jag26_rodgers", "snippet": "May be benched; don't buy unless super cheap. Steelers gonna be a bad time.", "players": [{ "name": "Aaron Rodgers", "delta": -14 }] },
-    { "id": "jag26_noel", "snippet": "Careful for everyone in Houston not named Collins.", "players": [{ "name": "Jaylin Noel", "delta": -8 }] }
+    { "id": "jag26_noel", "snippet": "Careful for everyone in Houston not named Collins.", "players": [{ "name": "Jaylin Noel", "delta": -8 }] },
+
+    { "id": "jag26_mcconkey2", "snippet": "Mike McDaniel offense — virtually the same measurables and skill set as Garrett Wilson, but with a QB and coach. Draft him instead of Tee Higgins or Kyren Williams.", "players": [{ "name": "Ladd McConkey", "delta": 10 }, { "name": "Tee Higgins", "delta": -5 }, { "name": "Kyren Williams", "delta": -5 }] },
+    { "id": "jag26_btj2", "snippet": "Locked into his X role; one injury-riddled down season shouldn't outweigh a strong rookie year. Upside is apparent at a cheap cost. Draft him instead of Christian Watson or Bhayshul Tuten.", "players": [{ "name": "Brian Thomas Jr.", "delta": 10 }, { "name": "Christian Watson", "delta": -5 }, { "name": "Bhayshul Tuten", "delta": -5 }] },
+    { "id": "jag26_egbuka", "snippet": "Highest air yards of any rookie since 2021, high-volume offense, and Mike Evans is gone. Don't overthink it. Draft him instead of Tee Higgins or Kyren Williams.", "players": [{ "name": "Emeka Egbuka", "delta": 12 }, { "name": "Tee Higgins", "delta": -5 }, { "name": "Kyren Williams", "delta": -5 }] },
+    { "id": "jag26_flowers2", "snippet": "Flowers + Declan Doyle = Amon-Ra St. Brown upside. Elite route runner who keeps improving in a great system. Draft him instead of Breece Hall or Jeremiyah Love.", "players": [{ "name": "Zay Flowers", "delta": 10 }, { "name": "Breece Hall", "delta": -5 }, { "name": "Jeremiyah Love", "delta": -5 }] },
+    { "id": "jag26_olave2", "snippet": "WR3 in PPG with a 29% target share after Shough took over Kellen Moore's offense; expect them playing from behind, meaning more single coverage. Draft him instead of DeVonta Smith or Rashee Rice.", "players": [{ "name": "Chris Olave", "delta": 10 }, { "name": "DeVonta Smith", "delta": -5 }, { "name": "Rashee Rice", "delta": -5 }] }
   ]
 }
