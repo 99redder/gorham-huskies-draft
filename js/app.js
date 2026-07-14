@@ -76,6 +76,23 @@ function applySeedIntel(force) {
 function availablePlayers() {
   return S.values.filter((p) => !S.drafted[p.id]);
 }
+
+// All intel blurbs affecting a player (for the hover popover).
+function intelEntriesForPlayer(id) {
+  const out = [];
+  for (const e of S.intelLog) {
+    const m = e.matches.find((x) => x.playerId === id);
+    if (m) out.push({ source: e.source, snippet: e.snippet, delta: m.delta });
+  }
+  return out;
+}
+
+// Intel badge with a data hook so hovering/tapping it reveals the blurbs.
+function intelBadgeHtml(p) {
+  if (!p.intelDelta) return "";
+  const cls = p.intelDelta > 0 ? "up" : "down";
+  return `<span class="intel-badge ${cls}" data-intel="${p.id}" tabindex="0" title="">${p.intelDelta > 0 ? "▲" : "▼"}${Math.abs(p.intelDelta)}</span>`;
+}
 function ctx() {
   const mine = S.values.filter((p) => S.drafted[p.id] === "mine");
   const slots = fillRoster(mine, S.league);
@@ -113,7 +130,7 @@ function renderBoard() {
 }
 
 function rowHtml(p, rank, isDrafted = false) {
-  const intel = p.intelDelta ? `<span class="intel-badge ${p.intelDelta > 0 ? "up" : "down"}">${p.intelDelta > 0 ? "▲" : "▼"}${Math.abs(p.intelDelta)}</span>` : "";
+  const intel = intelBadgeHtml(p);
   const tierCls = `t${Math.min(p.tier, 6)}`;
   const who = S.drafted[p.id]; // "mine" | "other" | undefined
   const draftCls = isDrafted ? `drafted-row ${who === "mine" ? "mine-row" : "other-row"}` : "";
@@ -152,7 +169,7 @@ function renderSidebar() {
       <div class="rec-main">
         <span class="pos-pill ${p.pos}">${p.pos}</span>
         <b>${p.name}</b> <span class="tm">${p.team}</span>
-        ${p.intelDelta ? `<span class="intel-badge ${p.intelDelta > 0 ? "up" : "down"}">${p.intelDelta > 0 ? "▲" : "▼"}${Math.abs(p.intelDelta)}</span>` : ""}
+        ${intelBadgeHtml(p)}
       </div>
       <div class="rec-meta">Score ${p.blend} · VOR ${p.vor} · Tier ${p.tier} · ADP ${p.adp}</div>
       ${S.draftMode
@@ -319,6 +336,25 @@ function wireEvents() {
     if (e.target.id === "btnReset") doReset();
   });
 
+  // intel blurb popover — hover (desktop), focus (keyboard), tap (touch)
+  document.body.addEventListener("mouseover", (e) => {
+    const b = e.target.closest(".intel-badge[data-intel]");
+    if (b) showIntelTip(b);
+  });
+  document.body.addEventListener("mouseout", (e) => {
+    if (e.target.closest(".intel-badge[data-intel]")) hideIntelTip();
+  });
+  document.body.addEventListener("focusin", (e) => {
+    const b = e.target.closest && e.target.closest(".intel-badge[data-intel]");
+    if (b) showIntelTip(b);
+  });
+  document.body.addEventListener("click", (e) => {
+    const b = e.target.closest(".intel-badge[data-intel]");
+    if (b) { e.stopPropagation(); ($("#intelTip").hidden ? showIntelTip(b) : hideIntelTip()); }
+    else hideIntelTip();
+  });
+  document.addEventListener("scroll", hideIntelTip, true);
+
   // live slider updates inside intel review
   $("#intelReview").addEventListener("input", (e) => {
     if (e.target.classList.contains("rr-slider")) {
@@ -382,6 +418,31 @@ function populateSourceList() {
   const dl = $("#sourceList");
   dl.innerHTML = Object.keys(S.lexicon.sources || {}).map((s) => `<option value="${s}">`).join("");
 }
+
+// ---- intel hover popover ------------------------------------------------
+function showIntelTip(badge) {
+  const id = badge.dataset.intel;
+  const entries = intelEntriesForPlayer(id);
+  if (!entries.length) return;
+  const p = S.byId.get(id);
+  const tip = $("#intelTip");
+  tip.innerHTML =
+    `<div class="tip-name">${p ? escapeHtml(p.name) : ""} <span class="tip-net ${p && p.intelDelta > 0 ? "up" : "down"}">net ${p && p.intelDelta > 0 ? "▲" : "▼"}${p ? Math.abs(p.intelDelta) : ""}</span></div>` +
+    entries.map((en) => `
+      <div class="tip-row">
+        <div class="tip-head"><span class="tip-src">${escapeHtml(en.source)}</span><span class="intel-badge ${en.delta > 0 ? "up" : "down"}">${en.delta > 0 ? "▲" : "▼"}${Math.abs(en.delta)}</span></div>
+        <div class="tip-q">“${escapeHtml(en.snippet)}”</div>
+      </div>`).join("");
+  tip.hidden = false;
+  const r = badge.getBoundingClientRect();
+  const tw = tip.offsetWidth, th = tip.offsetHeight;
+  let left = Math.min(Math.max(8, r.left + r.width / 2 - tw / 2), window.innerWidth - tw - 8);
+  let top = r.bottom + 8;
+  if (top + th > window.innerHeight - 8) top = r.top - th - 8; // flip above if no room
+  tip.style.left = left + "px";
+  tip.style.top = Math.max(8, top) + "px";
+}
+function hideIntelTip() { const t = $("#intelTip"); if (t) t.hidden = true; }
 
 // ---- utils --------------------------------------------------------------
 let toastTimer;

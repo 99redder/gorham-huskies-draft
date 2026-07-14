@@ -84,6 +84,19 @@ td.adp, td.tm { color: var(--muted); }
 .tier.t4 { background: #5b4a86; } .tier.t5 { background: #6b3f6f; } .tier.t6 { background: #6f3a4c; }
 .intel-badge { display: inline-block; padding: 1px 6px; border-radius: 999px; font-size: 11px; font-weight: 800; }
 .intel-badge.up { background: #10361f; color: var(--up); } .intel-badge.down { background: #3a1620; color: var(--down); }
+.intel-badge[data-intel] { cursor: help; }
+.intel-badge[data-intel]:hover, .intel-badge[data-intel]:focus { outline: 1px solid currentColor; outline-offset: 1px; }
+
+/* Intel blurb popover */
+.intel-tip { position: fixed; z-index: 90; max-width: 340px; min-width: 220px; background: #0e1626; border: 1px solid var(--line); border-radius: 10px; box-shadow: var(--shadow); padding: 10px 12px; pointer-events: none; }
+.intel-tip[hidden] { display: none; }
+.intel-tip .tip-name { font-weight: 800; font-size: 13px; margin-bottom: 7px; display: flex; align-items: center; gap: 8px; }
+.intel-tip .tip-net { font-size: 11px; font-weight: 800; }
+.intel-tip .tip-net.up { color: var(--up); } .intel-tip .tip-net.down { color: var(--down); }
+.intel-tip .tip-row { padding: 6px 0; border-top: 1px solid var(--line); }
+.intel-tip .tip-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 3px; }
+.intel-tip .tip-src { font-weight: 700; font-size: 12px; color: var(--accent); }
+.intel-tip .tip-q { color: var(--text); font-size: 12px; font-style: italic; line-height: 1.35; }
 
 .mini { border: 1px solid var(--line); background: var(--panel2); color: var(--text); border-radius: 6px; padding: 4px 8px; font-size: 12px; font-weight: 700; }
 .mini.mine { background: #10361f; color: var(--up); border-color: #1c5a34; }
