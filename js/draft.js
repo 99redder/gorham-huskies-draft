@@ -86,6 +86,51 @@ export function runAlerts(available, need) {
   return alerts;
 }
 
+// The starters (non-bench filled slots) of the optimal lineup from a set of
+// players — fillRoster slots highest projections into starters + FLEX.
+function starters(myPlayers, league) {
+  return fillRoster(myPlayers, league).filter((s) => s.label !== "BN" && s.player).map((s) => s.player);
+}
+
+// Raw projected points of the optimal starting lineup (a real, meaningful total).
+export function optimalLineupPoints(myPlayers, league) {
+  return Math.round(starters(myPlayers, league).reduce((a, p) => a + (p.proj || 0), 0) * 10) / 10;
+}
+
+// Value (sum of VOR) of the optimal starting lineup. Using VOR — not raw points —
+// keeps draft priority honest: a QB scores lots of points but little value over a
+// replacement QB, so it won't dominate "Attack Next" in this 1-QB league.
+function lineupValue(myPlayers, league) {
+  return starters(myPlayers, league).reduce((a, p) => a + (p.vor || 0), 0);
+}
+
+// For each position, how much value the best available player there would add to
+// your optimal starting lineup — i.e. which position to attack next.
+export function attackNext(myPlayers, available, league) {
+  const base = lineupValue(myPlayers, league);
+  const out = [];
+  for (const pos of ["QB", "RB", "WR", "TE", "K", "DEF"]) {
+    const best = available.filter((p) => p.pos === pos).sort((a, b) => b.proj - a.proj)[0];
+    if (!best) continue;
+    const gain = Math.round((lineupValue([...myPlayers, best], league) - base) * 10) / 10;
+    out.push({ pos, gain, best });
+  }
+  return out.sort((a, b) => b.gain - a.gain);
+}
+
+// Weeks where multiple of your STARTERS share a bye (a tough week to fill).
+export function byeConflicts(starterSlots, threshold = 2) {
+  const weeks = {};
+  for (const s of starterSlots) {
+    if (s.label === "BN" || !s.player || !s.player.bye) continue;
+    (weeks[s.player.bye] ||= []).push(s.player);
+  }
+  return Object.entries(weeks)
+    .map(([wk, players]) => ({ week: +wk, players, count: players.length }))
+    .filter((w) => w.count >= threshold)
+    .sort((a, b) => b.count - a.count || a.week - b.week);
+}
+
 // Top-N recommendations from the available pool by blended score.
 export function recommend(available, ctx, weights, n = 5) {
   return [...available]

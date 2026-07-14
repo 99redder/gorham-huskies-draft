@@ -8,7 +8,7 @@
   <link rel="manifest" href="manifest.json" />
   <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="icons/icon-192.png" />
-  <link rel="stylesheet" href="css/styles.css?v=6" />
+  <link rel="stylesheet" href="css/styles.css?v=7" />
 </head>
 <body>
   <header class="topbar">
@@ -88,6 +88,7 @@
 
       <div class="tab-panel active" id="tab-recommend">
         <div id="alerts"></div>
+        <div id="attackNext" class="attack-next"></div>
         <h2>Top Picks Now</h2>
         <ol id="recList" class="rec-list"></ol>
       </div>
@@ -96,6 +97,7 @@
         <div class="team-summary" id="teamSummary"></div>
         <ul id="rosterSlots" class="roster"></ul>
         <div class="needs" id="needs"></div>
+        <div class="byes" id="byeConflicts"></div>
       </div>
 
       <div class="tab-panel" id="tab-intel">
@@ -130,7 +132,7 @@
   <div id="intelTip" class="intel-tip" hidden></div>
   <div id="toast" class="toast" hidden></div>
 
-  <script type="module" src="js/app.js?v=6"></script>
+  <script type="module" src="js/app.js?v=7"></script>
   <script>
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));

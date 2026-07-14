@@ -2,7 +2,7 @@
 import { loadData } from "./data.js";
 import { computeValues, normalizeVor } from "./value.js";
 import { parseIntel, intelDelta, buildNameIndex, resolvePlayer } from "./intel.js";
-import { fillRoster, positionNeeds, blendedScore, runAlerts, recommend } from "./draft.js";
+import { fillRoster, positionNeeds, blendedScore, runAlerts, recommend, attackNext, byeConflicts, optimalLineupPoints } from "./draft.js";
 import * as store from "./storage.js";
 
 const STATE_KEYS = ["drafted", "intelLog", "weights", "pickNumber", "draftMode"];
@@ -164,6 +164,21 @@ function renderSidebar() {
   $("#alerts").innerHTML = alerts.length
     ? alerts.map((a) => `<div class="alert">⚠ <b>${a.pos} run:</b> only ${a.remaining} left in Tier ${a.tier} — you still need ${a.pos}. Prioritize.</div>`).join("")
     : "";
+
+  // Attack Next — which position adds the most to your optimal starting lineup
+  const an = attackNext(c.mine, availablePlayers(), S.league).filter((x) => x.gain > 0);
+  const maxGain = an.length ? an[0].gain : 0;
+  $("#attackNext").innerHTML = an.length
+    ? `<h2>Attack Next <span class="sub-inline">value each position adds to your lineup</span></h2>
+       <div class="attack-rows">${an.map((x, i) => `
+         <div class="attack-row ${i === 0 ? "top" : ""}">
+           <span class="pos-pill ${x.pos}">${x.pos}</span>
+           <div class="attack-bar"><span style="width:${Math.max(4, (x.gain / maxGain) * 100)}%"></span></div>
+           <span class="attack-gain">+${x.gain}</span>
+           <span class="attack-best">${x.best.name}</span>
+         </div>`).join("")}</div>`
+    : "";
+
   $("#recList").innerHTML = recs.map((p) => `
     <li>
       <div class="rec-main">
@@ -178,18 +193,16 @@ function renderSidebar() {
     </li>`).join("");
 
   // My team
-  const startPts = c.slots.filter((s) => s.label !== "BN" && s.player).reduce((a, s) => a + (s.player.proj || 0), 0);
+  const startPts = optimalLineupPoints(c.mine, S.league);
   const drafted = Object.keys(S.drafted).length;
   $("#teamSummary").innerHTML = `
     <div class="stat"><span>${c.mine.length}</span>My picks</div>
-    <div class="stat"><span>${Math.round(startPts)}</span>Proj starters</div>
+    <div class="stat"><span>${Math.round(startPts)}</span>Starter pts</div>
     <div class="stat"><span>${drafted}</span>Off board</div>`;
-  const byes = {};
-  for (const s of c.slots) if (s.player && s.player.bye) (byes[s.player.bye] ||= []).push(s.player.pos);
   $("#rosterSlots").innerHTML = c.slots.map((s) => `
     <li class="slot ${s.player ? "filled" : "open"} ${s.label === "BN" ? "bench" : ""}">
       <span class="slot-label">${s.label}</span>
-      ${s.player ? `<span class="slot-player">${s.player.name} <em>${s.player.team} · ${s.player.proj}</em></span>
+      ${s.player ? `<span class="slot-player">${s.player.name} <em>${s.player.team} · B${s.player.bye || "—"} · ${s.player.proj}</em></span>
         <button class="mini undo" data-act="undraft" data-id="${s.player.id}">↩</button>`
         : `<span class="slot-empty">— open —</span>`}
     </li>`).join("");
@@ -197,6 +210,12 @@ function renderSidebar() {
   $("#needs").innerHTML = (needList.length || c.need.FLEX)
     ? `<h3>Still need</h3><div class="need-pills">${needList.map(([k, v]) => `<span class="need-pill">${k}×${v}</span>`).join("")}${c.need.FLEX ? `<span class="need-pill flex">FLEX×${c.need.FLEX}</span>` : ""}</div>`
     : `<h3>Starters full ✓</h3>`;
+
+  // Bye conflicts among starters
+  const conflicts = byeConflicts(c.slots, 2);
+  $("#byeConflicts").innerHTML = `<h3>Bye weeks</h3>` + (conflicts.length
+    ? conflicts.map((w) => `<div class="bye-warn ${w.count >= 3 ? "bad" : ""}">⚠ <b>Week ${w.week}:</b> ${w.count} starters out (${w.players.map((p) => p.pos).join(", ")})</div>`).join("")
+    : `<div class="bye-ok">No starter bye stacks ✓</div>`);
 
   renderIntelLog();
 }
