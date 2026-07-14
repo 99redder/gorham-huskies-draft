@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-14T16:20:42.127Z",
+  "generatedAt": "2026-07-14T17:58:41.951Z",
   "source": "FantasyFootballCalculator Half-PPR consensus (mock-draft aggregate), 2026-07-14; stat lines modeled",
   "count": 146,
   "players": [
@@ -856,8 +856,8 @@
         "J. Allen"
       ],
       "stats": {
-        "passYds": 4750,
-        "passTD": 35,
+        "passYds": 4700,
+        "passTD": 33,
         "interceptions": 8,
         "rushYds": 520,
         "rushTD": 8,
@@ -1556,8 +1556,8 @@
         "J. Burrow"
       ],
       "stats": {
-        "passYds": 4615,
-        "passTD": 33.8,
+        "passYds": 4628,
+        "passTD": 32.3,
         "interceptions": 8.2,
         "rushYds": 180,
         "rushTD": 2,
@@ -1825,8 +1825,8 @@
         "L. Jackson"
       ],
       "stats": {
-        "passYds": 4480,
-        "passTD": 32.5,
+        "passYds": 4556,
+        "passTD": 31.6,
         "interceptions": 8.4,
         "rushYds": 820,
         "rushTD": 5,
@@ -1960,8 +1960,8 @@
         "D. Prescott"
       ],
       "stats": {
-        "passYds": 4345,
-        "passTD": 31.3,
+        "passYds": 4484,
+        "passTD": 30.9,
         "interceptions": 8.7,
         "rushYds": 180,
         "rushTD": 1.5,
@@ -2202,8 +2202,8 @@
         "D. Maye"
       ],
       "stats": {
-        "passYds": 4210,
-        "passTD": 30,
+        "passYds": 4412,
+        "passTD": 30.2,
         "interceptions": 8.9,
         "rushYds": 400,
         "rushTD": 3,
@@ -2471,8 +2471,8 @@
         "P. Mahomes"
       ],
       "stats": {
-        "passYds": 4075,
-        "passTD": 28.8,
+        "passYds": 4340,
+        "passTD": 29.5,
         "interceptions": 9.1,
         "rushYds": 330,
         "rushTD": 2,
@@ -2524,8 +2524,8 @@
         "J. Herbert"
       ],
       "stats": {
-        "passYds": 3940,
-        "passTD": 27.5,
+        "passYds": 4268,
+        "passTD": 28.8,
         "interceptions": 9.3,
         "rushYds": 260,
         "rushTD": 3,
@@ -2550,8 +2550,8 @@
         "T. Lawrence"
       ],
       "stats": {
-        "passYds": 3805,
-        "passTD": 26.3,
+        "passYds": 4196,
+        "passTD": 28.1,
         "interceptions": 9.5,
         "rushYds": 180,
         "rushTD": 1.5,
@@ -2657,8 +2657,8 @@
         "J. Daniels"
       ],
       "stats": {
-        "passYds": 3670,
-        "passTD": 25,
+        "passYds": 4124,
+        "passTD": 27.4,
         "interceptions": 9.8,
         "rushYds": 820,
         "rushTD": 6,
@@ -2710,8 +2710,8 @@
         "J. Goff"
       ],
       "stats": {
-        "passYds": 3535,
-        "passTD": 23.8,
+        "passYds": 4052,
+        "passTD": 26.7,
         "interceptions": 10,
         "rushYds": 180,
         "rushTD": 1.5,
@@ -2868,8 +2868,8 @@
         "J. Hurts"
       ],
       "stats": {
-        "passYds": 3400,
-        "passTD": 22.5,
+        "passYds": 3980,
+        "passTD": 26,
         "interceptions": 10.2,
         "rushYds": 600,
         "rushTD": 12,
@@ -2894,8 +2894,8 @@
         "B. Purdy"
       ],
       "stats": {
-        "passYds": 3265,
-        "passTD": 21.3,
+        "passYds": 3908,
+        "passTD": 25.3,
         "interceptions": 10.4,
         "rushYds": 180,
         "rushTD": 1.5,
@@ -2920,8 +2920,8 @@
         "M. Stafford"
       ],
       "stats": {
-        "passYds": 3200,
-        "passTD": 20,
+        "passYds": 3836,
+        "passTD": 24.6,
         "interceptions": 10.6,
         "rushYds": 180,
         "rushTD": 1.5,
@@ -2946,8 +2946,8 @@
         "C. Williams"
       ],
       "stats": {
-        "passYds": 3200,
-        "passTD": 18.8,
+        "passYds": 3764,
+        "passTD": 23.9,
         "interceptions": 10.9,
         "rushYds": 430,
         "rushTD": 4,
@@ -3278,8 +3278,8 @@
         "B. Nix"
       ],
       "stats": {
-        "passYds": 3200,
-        "passTD": 17.5,
+        "passYds": 3692,
+        "passTD": 23.2,
         "interceptions": 11.1,
         "rushYds": 380,
         "rushTD": 4,
@@ -3304,8 +3304,8 @@
         "J. Dart"
       ],
       "stats": {
-        "passYds": 3200,
-        "passTD": 16.3,
+        "passYds": 3650,
+        "passTD": 22.5,
         "interceptions": 11.3,
         "rushYds": 420,
         "rushTD": 4,

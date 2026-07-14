@@ -132,8 +132,10 @@ function statsForTE(rank) {
 }
 function statsForQB(rank, name) {
   const r = rank;
-  let passYds = clamp(4750 - (r - 1) * 135, 3200, 5000);
-  let passTD = clamp(35 - (r - 1) * 1.25, 16, 40);
+  // Flatter curve: even QB16 is a real starter (~16 ppg), so cross-position VOR
+  // isn't wildly negative. In a 1-QB/6-team league QBs are still de-prioritized.
+  let passYds = clamp(4700 - (r - 1) * 72, 3650, 5000);
+  let passTD = clamp(33 - (r - 1) * 0.7, 20, 40);
   let intc = clamp(8 + (r - 1) * 0.22, 6, 16);
   const rush = RUSH_QB[name] || { ry: 180, rtd: 1.5 };
   return { passYds: Math.round(passYds), passTD: +passTD.toFixed(1), interceptions: +intc.toFixed(1),

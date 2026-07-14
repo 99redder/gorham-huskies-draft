@@ -66,8 +66,13 @@ td.rk { color: var(--muted); }
 td.vor { color: var(--accent); font-weight: 700; }
 td.score { font-weight: 800; color: var(--accent2); }
 td.adp, td.tm { color: var(--muted); }
-.drafted-row { opacity: .38; }
-.drafted-row td.nm { text-decoration: line-through; }
+.drafted-row.other-row { opacity: .4; }
+.drafted-row.other-row td.nm { text-decoration: line-through; }
+.drafted-row.mine-row { background: rgba(55,214,122,.09); box-shadow: inset 3px 0 0 var(--up); }
+.drafted-row.mine-row td.nm { color: var(--up); font-weight: 700; }
+.draft-tag { display: inline-block; padding: 2px 7px; border-radius: 5px; font-size: 10px; font-weight: 800; letter-spacing: .3px; }
+.draft-tag.mine { background: #10361f; color: var(--up); }
+.draft-tag.other { background: #2a2f3d; color: var(--muted); }
 .provenance { color: var(--muted); font-size: 11px; padding: 8px 12px; margin: 0; border-top: 1px solid var(--line); }
 
 .pos-pill { display: inline-block; min-width: 30px; text-align: center; padding: 2px 6px; border-radius: 5px; font-size: 11px; font-weight: 800; color: #06101d; }

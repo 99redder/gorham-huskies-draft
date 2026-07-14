@@ -89,7 +89,9 @@ function renderBoard() {
 function rowHtml(p, rank, isDrafted = false) {
   const intel = p.intelDelta ? `<span class="intel-badge ${p.intelDelta > 0 ? "up" : "down"}">${p.intelDelta > 0 ? "▲" : "▼"}${Math.abs(p.intelDelta)}</span>` : "";
   const tierCls = `t${Math.min(p.tier, 6)}`;
-  return `<tr class="${isDrafted ? "drafted-row" : ""} pos-${p.pos}" data-id="${p.id}">
+  const who = S.drafted[p.id]; // "mine" | "other" | undefined
+  const draftCls = isDrafted ? `drafted-row ${who === "mine" ? "mine-row" : "other-row"}` : "";
+  return `<tr class="${draftCls} pos-${p.pos}" data-id="${p.id}">
     <td class="rk">${rank}</td>
     <td class="nm">${p.name}</td>
     <td><span class="pos-pill ${p.pos}">${p.pos}</span></td>
@@ -101,12 +103,12 @@ function rowHtml(p, rank, isDrafted = false) {
     <td>${intel}</td>
     <td class="score">${p.blend != null ? p.blend : ""}</td>
     <td class="act">
-      ${!S.draftMode
-        ? `<span class="locked" title="Press “Start Draft” to mark picks">🔒</span>`
-        : isDrafted
-        ? `<button class="mini undo" data-act="undraft" data-id="${p.id}">↩</button><span class="who">${S.drafted[p.id] === "mine" ? "ME" : "—"}</span>`
-        : `<button class="mini mine" data-act="mine" data-id="${p.id}" title="Draft to my team">＋ME</button>
-           <button class="mini other" data-act="other" data-id="${p.id}" title="Taken by another team">✕</button>`}
+      ${isDrafted
+        ? `<span class="draft-tag ${who}">${who === "mine" ? "✓ MINE" : "TAKEN"}</span>${S.draftMode ? `<button class="mini undo" data-act="undraft" data-id="${p.id}" title="Undo pick">↩</button>` : ""}`
+        : S.draftMode
+        ? `<button class="mini mine" data-act="mine" data-id="${p.id}" title="I drafted this player">＋ Me</button>
+           <button class="mini other" data-act="other" data-id="${p.id}" title="Drafted by another team">Other</button>`
+        : `<span class="locked" title="Press “Start Draft” to mark picks">🔒</span>`}
     </td>
   </tr>`;
 }
