@@ -5,7 +5,7 @@ import { parseIntel, intelDelta } from "./intel.js";
 import { fillRoster, positionNeeds, blendedScore, runAlerts, recommend } from "./draft.js";
 import * as store from "./storage.js";
 
-const STATE_KEYS = ["drafted", "intelLog", "weights", "pickNumber"];
+const STATE_KEYS = ["drafted", "intelLog", "weights", "pickNumber", "draftMode"];
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 
@@ -16,6 +16,7 @@ const S = {
   intelLog: store.load("intelLog", []),          // [{id, source, snippet, matches:[{playerId,delta,name}]}]
   weights: store.load("weights", { vor: 1, adp: 0.6, need: 1, intel: 1 }),
   pickNumber: store.load("pickNumber", 1),
+  draftMode: store.load("draftMode", false),      // must be enabled before any pick can be marked
   filterPos: "ALL", query: "", sortBy: "blend", hideDrafted: true,
   pendingReview: [],
 };
@@ -28,6 +29,7 @@ async function init() {
   populateSourceList();
   recompute();
   wireEvents();
+  renderMode();
   render();
   $("#provenance").textContent =
     `Data: ${S.dataMeta.source}. Projections are a modeled starting point — edit data/players.json to refine.`;
@@ -99,7 +101,9 @@ function rowHtml(p, rank, isDrafted = false) {
     <td>${intel}</td>
     <td class="score">${p.blend != null ? p.blend : ""}</td>
     <td class="act">
-      ${isDrafted
+      ${!S.draftMode
+        ? `<span class="locked" title="Press “Start Draft” to mark picks">🔒</span>`
+        : isDrafted
         ? `<button class="mini undo" data-act="undraft" data-id="${p.id}">↩</button><span class="who">${S.drafted[p.id] === "mine" ? "ME" : "—"}</span>`
         : `<button class="mini mine" data-act="mine" data-id="${p.id}" title="Draft to my team">＋ME</button>
            <button class="mini other" data-act="other" data-id="${p.id}" title="Taken by another team">✕</button>`}
@@ -123,7 +127,9 @@ function renderSidebar() {
         ${p.intelDelta ? `<span class="intel-badge ${p.intelDelta > 0 ? "up" : "down"}">${p.intelDelta > 0 ? "▲" : "▼"}${Math.abs(p.intelDelta)}</span>` : ""}
       </div>
       <div class="rec-meta">Score ${p.blend} · VOR ${p.vor} · Tier ${p.tier} · ADP ${p.adp}</div>
-      <button class="mini mine" data-act="mine" data-id="${p.id}">＋ Draft to my team</button>
+      ${S.draftMode
+        ? `<button class="mini mine" data-act="mine" data-id="${p.id}">＋ Draft to my team</button>`
+        : `<span class="locked-hint">🔒 Start Draft to pick</span>`}
     </li>`).join("");
 
   // My team
@@ -225,11 +231,38 @@ function confirmIntel() {
   toast(`Applied intel to ${matches.length} player(s).`);
 }
 
-// ---- actions ------------------------------------------------------------
-function draftPlayer(id, who) { S.drafted[id] = who; S.pickNumber = Object.keys(S.drafted).length + 1; $("#pickNumber").value = S.pickNumber; persist(); render(); }
-function undraft(id) { delete S.drafted[id]; S.pickNumber = Object.keys(S.drafted).length + 1; $("#pickNumber").value = S.pickNumber; persist(); render(); }
+// ---- draft mode ---------------------------------------------------------
+function toggleDraftMode(on) {
+  S.draftMode = on == null ? !S.draftMode : on;
+  store.save("draftMode", S.draftMode);
+  renderMode();
+  render();
+  toast(S.draftMode ? "Draft Mode ON — picks unlocked." : "Draft paused — picks locked.");
+}
+function renderMode() {
+  document.body.classList.toggle("draft-mode", S.draftMode);
+  const b = $("#btnDraftMode");
+  b.textContent = S.draftMode ? "● Draft Mode ON" : "▶ Start Draft";
+  b.classList.toggle("on", S.draftMode);
+  b.setAttribute("aria-pressed", String(S.draftMode));
+  const banner = $("#modeBanner");
+  banner.className = "mode-banner " + (S.draftMode ? "live" : "prep");
+  banner.innerHTML = S.draftMode
+    ? `🟢 <b>Draft Mode is live.</b> Marking a player removes them from the board. <button class="mini" id="btnPauseDraft">Pause</button>`
+    : `🔒 <b>Prep mode.</b> Reviewing rankings — picks are locked. Press <b>Start Draft</b> to begin marking players as they're taken.`;
+}
 
-function persist() { store.save("drafted", S.drafted); store.save("intelLog", S.intelLog); store.save("weights", S.weights); store.save("pickNumber", S.pickNumber); }
+// ---- actions ------------------------------------------------------------
+function draftPlayer(id, who) {
+  if (!S.draftMode) return toast("Press “Start Draft” first to mark picks.");
+  S.drafted[id] = who; S.pickNumber = Object.keys(S.drafted).length + 1; $("#pickNumber").value = S.pickNumber; persist(); render();
+}
+function undraft(id) {
+  if (!S.draftMode) return toast("Draft Mode is off.");
+  delete S.drafted[id]; S.pickNumber = Object.keys(S.drafted).length + 1; $("#pickNumber").value = S.pickNumber; persist(); render();
+}
+
+function persist() { store.save("drafted", S.drafted); store.save("intelLog", S.intelLog); store.save("weights", S.weights); store.save("pickNumber", S.pickNumber); store.save("draftMode", S.draftMode); }
 
 // ---- events -------------------------------------------------------------
 function wireEvents() {
@@ -248,6 +281,8 @@ function wireEvents() {
     const tab = e.target.closest(".tab");
     if (tab) { $$(".tab").forEach((x) => x.classList.remove("active")); tab.classList.add("active");
       $$(".tab-panel").forEach((p) => p.classList.remove("active")); $("#tab-" + tab.dataset.tab).classList.add("active"); return; }
+    if (e.target.id === "btnDraftMode") toggleDraftMode();
+    if (e.target.id === "btnPauseDraft") toggleDraftMode(false);
     if (e.target.id === "btnParse") analyzeIntel();
     if (e.target.id === "btnConfirmIntel") confirmIntel();
     if (e.target.id === "btnSettings") $("#settingsDrawer").hidden = false;
@@ -300,7 +335,8 @@ function doImport(e) {
       store.importState(JSON.parse(reader.result));
       S.drafted = store.load("drafted", {}); S.intelLog = store.load("intelLog", []);
       S.weights = store.load("weights", S.weights); S.pickNumber = store.load("pickNumber", 1);
-      recompute(); render(); toast("Imported backup.");
+      S.draftMode = store.load("draftMode", false);
+      recompute(); renderMode(); render(); toast("Imported backup.");
     } catch (err) { toast("Import failed: " + err.message); }
   };
   reader.readAsText(file);
