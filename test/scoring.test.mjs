@@ -41,5 +41,23 @@ console.log("Top 8 by VOR:");
 values.slice(0, 8).forEach((v, i) =>
   console.log(`  ${i + 1}. ${v.name} (${v.pos}) proj=${v.proj} vor=${v.vor} tier=${v.tier}`));
 
+// Simulator sanity: full snake draft fills every team's required starters.
+import { snakeOrder, botPick } from "../js/simulator.js";
+const teams = league.teams, rounds = league.roster.total;
+eq("snake order length", snakeOrder(teams, rounds).length, teams * rounds, 0);
+{
+  const avail = new Set(values.map((p) => p.id));
+  const counts = Array.from({ length: teams }, () => ({}));
+  const order = snakeOrder(teams, rounds);
+  for (let i = 0; i < order.length; i++) {
+    const t = order[i], r = Math.floor(i / teams) + 1;
+    const pk = botPick(values.filter((p) => avail.has(p.id)), counts[t], r, rounds);
+    avail.delete(pk.id);
+    counts[t][pk.pos] = (counts[t][pk.pos] || 0) + 1;
+  }
+  const missing = counts.filter((c) => !(c.QB >= 1 && c.K >= 1 && c.DEF >= 1)).length;
+  eq("every bot team has QB/K/DEF", missing, 0, 0);
+}
+
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);

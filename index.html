@@ -8,7 +8,7 @@
   <link rel="manifest" href="manifest.json" />
   <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="icons/icon-192.png" />
-  <link rel="stylesheet" href="css/styles.css?v=7" />
+  <link rel="stylesheet" href="css/styles.css?v=8" />
 </head>
 <body>
   <header class="topbar">
@@ -24,6 +24,7 @@
       <label class="pick">Pick #
         <input type="number" id="pickNumber" min="1" value="1" />
       </label>
+      <button id="btnSim" class="btn ghost" title="Mock draft simulator">🤖 Mock</button>
       <button id="btnSettings" class="btn ghost" title="Scoring weights">⚙ Weights</button>
       <button id="btnExport" class="btn ghost" title="Export draft + intel">⬇ Export</button>
       <label class="btn ghost" title="Import backup">⬆ Import
@@ -129,10 +130,20 @@
     </div>
   </div>
 
+  <div class="sim-modal" id="simModal" hidden>
+    <div class="sim-inner">
+      <div class="sim-head">
+        <h2>🤖 Mock Draft</h2>
+        <button class="btn ghost" id="simClose">✕ Close</button>
+      </div>
+      <div id="simBody"></div>
+    </div>
+  </div>
+
   <div id="intelTip" class="intel-tip" hidden></div>
   <div id="toast" class="toast" hidden></div>
 
-  <script type="module" src="js/app.js?v=7"></script>
+  <script type="module" src="js/app.js?v=8"></script>
   <script>
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));

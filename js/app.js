@@ -3,6 +3,7 @@ import { loadData } from "./data.js";
 import { computeValues, normalizeVor } from "./value.js";
 import { parseIntel, intelDelta, buildNameIndex, resolvePlayer } from "./intel.js";
 import { fillRoster, positionNeeds, blendedScore, runAlerts, recommend, attackNext, byeConflicts, optimalLineupPoints } from "./draft.js";
+import { snakeOrder, botPick, strategyPick, availabilityAtMyPicks } from "./simulator.js";
 import * as store from "./storage.js";
 
 const STATE_KEYS = ["drafted", "intelLog", "weights", "pickNumber", "draftMode"];
@@ -355,6 +356,22 @@ function wireEvents() {
     if (e.target.id === "btnReset") doReset();
   });
 
+  // mock draft simulator
+  $("#btnSim").addEventListener("click", openSim);
+  $("#simModal").addEventListener("click", (e) => {
+    const pickBtn = e.target.closest("[data-sim-pick]");
+    if (pickBtn) return userSimPick(pickBtn.dataset.simPick);
+    const posf = e.target.closest("[data-sim-pos]");
+    if (posf && SIM) { SIM.filterPos = posf.dataset.simPos; renderSim(); return; }
+    const id = e.target.id;
+    if (id === "simClose") closeSim();
+    else if (id === "simStart") startSim();
+    else if (id === "simQuick") runQuickSim();
+    else if (id === "simAutoPick") autoPickUser();
+    else if (id === "simToEnd") { SIM.autopilot = true; advanceSim(); }
+    else if (id === "simRestart" || id === "simRunAgain") renderSimSetup();
+  });
+
   // intel blurb popover — hover (desktop), focus (keyboard), tap (touch)
   document.body.addEventListener("mouseover", (e) => {
     const b = e.target.closest(".intel-badge[data-intel]");
@@ -436,6 +453,197 @@ function doReset() {
 function populateSourceList() {
   const dl = $("#sourceList");
   dl.innerHTML = Object.keys(S.lexicon.sources || {}).map((s) => `<option value="${s}">`).join("");
+}
+
+// ---- mock draft simulator (isolated state) ------------------------------
+let SIM = null;
+
+function openSim() { $("#simModal").hidden = false; renderSimSetup(); }
+function closeSim() { $("#simModal").hidden = true; SIM = null; }
+
+function slotSuffix(i) { return ["st", "nd", "rd", "th", "th", "th"][i] || "th"; }
+
+function renderSimSetup() {
+  const teams = S.league.teams;
+  $("#simBody").innerHTML = `
+    <div class="sim-setup">
+      <p class="hint">Rehearse your draft from your slot. Bots draft by ADP with realistic reach and positional discipline; you pick at your turns. Nothing here touches your real draft board.</p>
+      <div class="sim-setup-grid">
+        <label class="fld">Your draft slot
+          <select id="simSlot">${Array.from({ length: teams }, (_, i) => `<option value="${i}"${i === 2 ? " selected" : ""}>${i + 1}${slotSuffix(i)} of ${teams}</option>`).join("")}</select>
+        </label>
+        <label class="fld">Autopilot strategy
+          <select id="simStrategy">
+            <option value="best">Best available (value)</option>
+            <option value="zero-rb">Zero-RB</option>
+            <option value="hero-rb">Hero-RB</option>
+          </select>
+        </label>
+      </div>
+      <div class="sim-setup-actions">
+        <button class="btn primary" id="simStart">Start mock draft →</button>
+        <button class="btn ghost" id="simQuick">⚡ Quick sim ×25</button>
+      </div>
+      <div id="simQuickOut" class="sim-quick-out"></div>
+    </div>`;
+}
+
+function runQuickSim() {
+  const teams = S.league.teams, rounds = S.league.roster.total;
+  const slot = +$("#simSlot").value;
+  $("#simQuickOut").innerHTML = `<p class="muted">Running 25 sims…</p>`;
+  setTimeout(() => {
+    const out = availabilityAtMyPicks(S.values, S.byId, teams, rounds, slot, 25);
+    $("#simQuickOut").innerHTML = `<h3>Typically available at your picks (25 sims)</h3>` +
+      out.map((r) => `<div class="qs-row"><b>Rd ${r.round} · #${r.pick}</b> ${r.players.map((p) => `<span class="qs-p ${p.pos}">${p.name} ${Math.round(p.prob * 100)}%</span>`).join(" ")}</div>`).join("");
+  }, 20);
+}
+
+function startSim() {
+  const teams = S.league.teams, rounds = S.league.roster.total;
+  SIM = {
+    teams, rounds,
+    slot: +$("#simSlot").value,
+    strategy: $("#simStrategy").value,
+    order: snakeOrder(teams, rounds),
+    i: 0,
+    avail: new Set(S.values.map((p) => p.id)),
+    counts: Array.from({ length: teams }, () => ({})),
+    rosters: Array.from({ length: teams }, () => []),
+    feed: [],
+    filterPos: "ALL",
+    autopilot: false,
+    done: false,
+  };
+  advanceSim();
+}
+
+const simAvailList = () => S.values.filter((p) => SIM.avail.has(p.id));
+
+// Need-aware value function for the user's autopilot picks — mirrors the real
+// board's blended score so "sim to end" builds a balanced roster, not a stack.
+function userValueFn() {
+  const s = SIM;
+  const ctx = { need: positionNeeds(fillRoster(s.rosters[s.slot], S.league)), pickNumber: s.i + 1 };
+  return (p) => blendedScore(p, ctx, S.weights);
+}
+
+function applySimPick(team, p, round) {
+  const s = SIM;
+  s.avail.delete(p.id);
+  s.counts[team][p.pos] = (s.counts[team][p.pos] || 0) + 1;
+  s.rosters[team].push(p);
+  s.feed.unshift({ overall: s.i + 1, round, team, player: p, mine: team === s.slot });
+  s.i++;
+}
+
+function advanceSim() {
+  const s = SIM;
+  while (s.i < s.order.length) {
+    const team = s.order[s.i];
+    const round = Math.floor(s.i / s.teams) + 1;
+    if (team === s.slot && !s.autopilot) { renderSim(); return; }
+    const list = simAvailList();
+    const pick = team === s.slot
+      ? strategyPick(list, s.counts[team], round, s.rounds, s.strategy, userValueFn())
+      : botPick(list, s.counts[team], round, s.rounds);
+    applySimPick(team, pick, round);
+  }
+  s.done = true;
+  renderSim();
+}
+
+function userSimPick(id) {
+  const s = SIM;
+  if (!s || s.done || s.order[s.i] !== s.slot) return;
+  const p = S.byId.get(id);
+  if (!p || !s.avail.has(id)) return;
+  applySimPick(s.slot, p, Math.floor(s.i / s.teams) + 1);
+  advanceSim();
+}
+
+function autoPickUser() {
+  const s = SIM;
+  if (!s || s.order[s.i] !== s.slot) return;
+  const round = Math.floor(s.i / s.teams) + 1;
+  applySimPick(s.slot, strategyPick(simAvailList(), s.counts[s.slot], round, s.rounds, s.strategy, userValueFn()), round);
+  advanceSim();
+}
+
+function renderSim() {
+  const s = SIM;
+  if (!s) return;
+  if (s.done) return renderSimResults();
+  const team = s.order[s.i];
+  const round = Math.floor(s.i / s.teams) + 1;
+  const onClock = team === s.slot;
+  const myPlayers = s.rosters[s.slot];
+  const slots = fillRoster(myPlayers, S.league);
+  const ctx = { need: positionNeeds(slots), pickNumber: s.i + 1 };
+  let list = simAvailList();
+  if (s.filterPos !== "ALL") list = s.filterPos === "FLEX"
+    ? list.filter((p) => ["RB", "WR", "TE"].includes(p.pos))
+    : list.filter((p) => p.pos === s.filterPos);
+  const ranked = list.map((p) => ({ p, blend: blendedScore(p, ctx, S.weights) }))
+    .sort((a, b) => b.blend - a.blend).slice(0, 60);
+
+  $("#simBody").innerHTML = `
+    <div class="sim-draft">
+      <div class="sim-status ${onClock ? "live" : ""}">
+        <div>
+          <div class="sim-round">Round ${round} · Pick #${s.i + 1} of ${s.order.length}</div>
+          <div class="sim-clock">${onClock ? "🟢 YOUR PICK — draft a player" : `Team ${team + 1} on the clock…`}</div>
+        </div>
+        <div class="sim-actions">
+          ${onClock ? `<button class="mini mine" id="simAutoPick">Auto-pick</button>` : ""}
+          <button class="mini" id="simToEnd">Sim to end ▶▶</button>
+          <button class="mini" id="simRestart">↺ Restart</button>
+        </div>
+      </div>
+      <div class="sim-cols">
+        <div class="sim-board">
+          <div class="sim-filters">${["ALL", "QB", "RB", "WR", "TE", "FLEX", "K", "DEF"].map((x) => `<button class="pos-filter ${s.filterPos === x ? "active" : ""}" data-sim-pos="${x}">${x === "ALL" ? "All" : x}</button>`).join("")}</div>
+          <div class="sim-list">
+            ${ranked.map(({ p, blend }) => `
+              <div class="sim-p">
+                <span class="pos-pill ${p.pos}">${p.pos}</span>
+                <span class="sim-p-name">${p.name} <em>${p.team}·B${p.bye || "—"}</em></span>
+                <span class="sim-p-meta">VOR ${p.vor} · ADP ${p.adp}${p.intelDelta ? ` · <span class="intel-badge ${p.intelDelta > 0 ? "up" : "down"}">${p.intelDelta > 0 ? "▲" : "▼"}${Math.abs(p.intelDelta)}</span>` : ""}</span>
+                ${onClock ? `<button class="mini mine" data-sim-pick="${p.id}">Draft</button>` : `<span class="sim-p-blend">${blend}</span>`}
+              </div>`).join("")}
+          </div>
+        </div>
+        <div class="sim-side">
+          <h3>Your roster · Team ${s.slot + 1}</h3>
+          <ul class="roster sim-roster">${slots.map((sl) => `<li class="slot ${sl.player ? "filled" : "open"} ${sl.label === "BN" ? "bench" : ""}"><span class="slot-label">${sl.label}</span>${sl.player ? `<span class="slot-player">${sl.player.name} <em>${sl.player.team}·${sl.player.proj}</em></span>` : `<span class="slot-empty">—</span>`}</li>`).join("")}</ul>
+          <h3>Pick feed</h3>
+          <ul class="sim-feed">${s.feed.slice(0, 16).map((f) => `<li class="${f.mine ? "mine" : ""}"><b>${f.round}.${String(((f.overall - 1) % s.teams) + 1).padStart(2, "0")}</b> ${f.mine ? "★ " : ""}T${f.team + 1}: ${f.player.name} <span class="pos-pill ${f.player.pos}">${f.player.pos}</span></li>`).join("")}</ul>
+        </div>
+      </div>
+    </div>`;
+}
+
+function renderSimResults() {
+  const s = SIM;
+  const myPlayers = s.rosters[s.slot];
+  const slots = fillRoster(myPlayers, S.league);
+  const myPts = optimalLineupPoints(myPlayers, S.league);
+  const allPts = s.rosters.map((r) => optimalLineupPoints(r, S.league));
+  const rank = [...allPts].sort((a, b) => b - a).indexOf(myPts) + 1;
+  $("#simBody").innerHTML = `
+    <div class="sim-results">
+      <div class="sim-grade">
+        <div class="stat"><span>${Math.round(myPts)}</span>Starter pts</div>
+        <div class="stat"><span>#${rank} / ${s.teams}</span>Roster strength</div>
+        <div class="stat"><span>${myPlayers.length}</span>Players</div>
+      </div>
+      <h3>Your team</h3>
+      <ul class="roster">${slots.map((sl) => `<li class="slot ${sl.player ? "filled" : "open"} ${sl.label === "BN" ? "bench" : ""}"><span class="slot-label">${sl.label}</span>${sl.player ? `<span class="slot-player">${sl.player.name} <em>${sl.player.team}·B${sl.player.bye || "—"}·${sl.player.proj}</em></span>` : `<span class="slot-empty">—</span>`}</li>`).join("")}</ul>
+      <div class="sim-setup-actions">
+        <button class="btn primary" id="simRunAgain">↺ New mock</button>
+        <button class="btn ghost" id="simClose">Done</button>
+      </div>
+    </div>`;
 }
 
 // ---- intel hover popover ------------------------------------------------
