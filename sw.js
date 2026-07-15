@@ -1,10 +1,10 @@
 // sw.js — network-first for data/HTML (fresh rankings win), cache fallback for offline.
-const CACHE = "huskies-draft-v11";
+const CACHE = "huskies-draft-v12";
 const ASSETS = [
   "./", "./index.html", "./css/styles.css",
   "./js/app.js", "./js/data.js", "./js/scoring.js", "./js/value.js",
   "./js/draft.js", "./js/intel.js", "./js/injuries.js", "./js/storage.js", "./js/simulator.js",
-  "./data/intel-seed.json",
+  "./data/intel-seed.json", "./data/preseason-alpha.json", "./data/alpha-sources.json",
   "./data/league.json", "./data/players.json", "./data/rankings.json", "./data/intel-lexicon.json",
   "./manifest.json", "./icons/icon.svg"
 ];

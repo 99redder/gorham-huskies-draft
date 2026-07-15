@@ -14,6 +14,16 @@
     "@The_Oddsmaker": 1.25,
     "@NMariano53": 1.18,
     "@Fitz_FF": 1.1,
+    "Sleeper Trends": 0.75,
+    "ESPN NFL": 0.9,
+    "Yahoo Sports NFL": 1.0,
+    "CBS Sports NFL": 0.95,
+    "RotoBaller Fantasy Football": 1.1,
+    "PFF": 1.0,
+    "r/fantasyfootball": 0.65,
+    "Pro Football Rumors": 0.9,
+    "Establish The Run": 1.15,
+    "Late-Round Fantasy": 1.2,
     "manual": 1.0
   },
   "sourceMeta": {
@@ -27,7 +37,17 @@
     "@Fitz_FF": { "name": "Pat Fitzmaurice · FantasyPros", "note": "Long-running public analyst account and FantasyPros ranker." },
     "@ChrisRaybon": { "name": "Chris Raybon · Action Network", "note": "Top-three WR ranker in FantasyPros' 2025 preseason accuracy results." },
     "@MattHarmon_BYB": { "name": "Matt Harmon · Reception Perception", "note": "Public receiver analysis and Yahoo Fantasy contributor." },
-    "@JJZachariason": { "name": "JJ Zachariason · Late-Round Fantasy", "note": "Public data-driven fantasy analysis." }
+    "@JJZachariason": { "name": "JJ Zachariason · Late-Round Fantasy", "note": "Public data-driven fantasy analysis." },
+    "Sleeper Trends": { "name": "Sleeper · market adds", "note": "24-hour add momentum; deliberately discounted because popularity is not scouting." },
+    "ESPN NFL": { "name": "ESPN · public NFL RSS", "note": "Strict name-and-signal matches from public headlines and excerpts." },
+    "Yahoo Sports NFL": { "name": "Yahoo Sports · public NFL RSS", "note": "Yahoo reporting and camp news, relevant to the host draft platform." },
+    "CBS Sports NFL": { "name": "CBS Sports · public NFL RSS", "note": "Public NFL reporting with strict player matching." },
+    "RotoBaller Fantasy Football": { "name": "RotoBaller · free fantasy feed", "note": "Fantasy-specific public analysis." },
+    "PFF": { "name": "PFF · public article feed", "note": "Public titles and excerpts; paid article bodies are not fetched." },
+    "r/fantasyfootball": { "name": "Reddit · community aggregation", "note": "Lower-trust discovery layer for beat reports and camp discussion." },
+    "Pro Football Rumors": { "name": "Pro Football Rumors · public RSS", "note": "Role-changing transactions, injuries, and roster news." },
+    "Establish The Run": { "name": "Establish The Run · public RSS", "note": "Public titles/excerpts only; no paywalled content is scraped." },
+    "Late-Round Fantasy": { "name": "Late-Round Fantasy · public RSS", "note": "Public data-driven fantasy analysis from JJ Zachariason." }
   },
   "defaultTrust": 1.0,
   "boost": {
@@ -36,7 +56,9 @@
     "love": 2, "target": 1.5, "sleeper": 2, "value": 1.5, "steal": 2.2,
     "rising": 1.5, "up": 1, "bullish": 2, "high": 1, "ceiling": 1.2,
     "undervalued": 2, "underrated": 1.8, "pound the table": 2.6, "locked in": 1.5,
-    "workhorse": 1.8, "bellcow": 2, "alpha": 1.8, "top": 1, "usage": 1.2
+    "workhorse": 1.8, "bellcow": 2, "alpha": 1.8, "top": 1, "usage": 1.2,
+    "first-team": 1.8, "first team": 1.8, "starting": 1.2, "featured role": 1.8,
+    "earned reps": 1.5, "impressed": 1.4, "standout": 1.8, "healthy": 1.2
   },
   "fade": {
     "fade": -2.5, "avoid": -2.5, "bust": -2.5, "overvalued": -2.2, "overrated": -2,
@@ -44,7 +66,9 @@
     "risk": -1.2, "risky": -1.5, "injury": -1.8, "injured": -1.8, "hurt": -1.5,
     "questionable": -1.2, "committee": -1.5, "timeshare": -1.5, "regression": -1.8,
     "aging": -1.5, "declining": -1.8, "bearish": -2, "expensive": -1.2, "reach": -1.5,
-    "suspended": -2.5, "hold off": -1.5, "passing on": -2, "out": -1.5
+    "suspended": -2.5, "hold off": -1.5, "passing on": -2, "out": -1.5,
+    "carted off": -3, "miss time": -2, "missing time": -2, "limited": -1,
+    "second-team": -1.8, "second team": -1.8, "demoted": -2.2, "buried": -2
   },
   "negators": ["not", "no", "isn't", "isnt", "won't", "wont", "don't", "dont", "never", "without"],
   "tierCues": { "tier 1": 2.5, "tier one": 2.5, "tier 2": 1.2, "rb1": 1.5, "wr1": 1.5, "te1": 1.5, "qb1": 1 },

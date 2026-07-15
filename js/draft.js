@@ -72,7 +72,8 @@ export function blendedScore(p, ctx, weights) {
     + (w.sleeper ?? 0.45) * rankValue(p.sleeperAdp)
     + (w.yahoo ?? 0.3) * rankValue(p.yahooRank)
     + w.intel * (p.intelDelta || 0);
-  return Math.round(base * (1 + w.need * (need - 1)) * 10) / 10;
+  const injuryPenalty = (w.injury ?? 1) * (p.injuryDelta || 0);
+  return Math.round((base * (1 + w.need * (need - 1)) + injuryPenalty) * 10) / 10;
 }
 
 // Largest disagreement among the independent market/preseason sources.
@@ -136,6 +137,79 @@ export function runAlerts(available, need) {
     }
   }
   return alerts;
+}
+
+// Summarize how many upcoming opponents still have an open starter need at each
+// position. teamRosters is an array indexed by 0-based draft slot.
+export function opponentDemand(teamRosters, league, upcomingTeams = []) {
+  const teams = [...new Set(upcomingTeams)].filter((team) => team >= 0 && team < teamRosters.length);
+  const positions = ["RB", "WR", "QB", "TE", "K", "DEF"];
+  return positions.map((pos) => {
+    let teamsNeeding = 0, openSlots = 0;
+    for (const team of teams) {
+      const need = positionNeeds(fillRoster(teamRosters[team] || [], league));
+      const flex = ["RB", "WR", "TE"].includes(pos) ? (need.FLEX || 0) * 0.5 : 0;
+      const demand = (need[pos] || 0) + flex;
+      if (demand > 0) teamsNeeding++;
+      openSlots += demand;
+    }
+    return { pos, teamsNeeding, openSlots, teamsConsidered: teams.length };
+  }).sort((a, b) => b.teamsNeeding - a.teamsNeeding || b.openSlots - a.openSlots);
+}
+
+export function consensusMarketRank(player) {
+  const ranks = [player.adp, player.sleeperAdp, player.yahooRank].filter(Number.isFinite);
+  return ranks.length ? ranks.reduce((sum, rank) => sum + rank, 0) / ranks.length : null;
+}
+
+// Deterministic ADP-based estimate used only for planning, not player scoring.
+export function estimatedAvailability(player, futurePick) {
+  const rank = consensusMarketRank(player);
+  if (!Number.isFinite(rank) || !Number.isFinite(futurePick)) return 0.5;
+  return Math.round((1 / (1 + Math.exp((futurePick - rank) / 5))) * 100) / 100;
+}
+
+// Build alternate two-pick paths while leaving recommend()/blendedScore() intact.
+export function planNextTwoPicks(available, ctx, weights, league, nextPick, n = 3) {
+  if (!Number.isFinite(nextPick) || nextPick <= (ctx.pickNumber || 0)) return [];
+  return recommend(available, ctx, weights, n).map((now) => {
+    const remaining = available.filter((p) => p.id !== now.id);
+    const nextSlots = fillRoster([...(ctx.mine || []), now], league);
+    const nextCtx = { ...ctx, need: positionNeeds(nextSlots), pickNumber: nextPick };
+    const ranked = remaining
+      .map((p) => ({ ...p, returnProbability: estimatedAvailability(p, nextPick), blend: blendedScore(p, nextCtx, weights) }))
+      .sort((a, b) => b.blend - a.blend);
+    const likely = ranked.filter((p) => p.returnProbability >= 0.35);
+    const next = (likely.length ? likely : ranked)[0] || null;
+    const pivot = ranked.find((p) => p.id !== next?.id && p.pos !== next?.pos)
+      || ranked.find((p) => p.id !== next?.id)
+      || null;
+    return { now, next, pivot, nextPick, returnProbability: next?.returnProbability ?? null };
+  });
+}
+
+export function playerRiskProfile(player) {
+  const baseVolatility = { QB: 0.12, RB: 0.18, WR: 0.20, TE: 0.18, K: 0.16, DEF: 0.18 }[player.pos] || 0.18;
+  const status = String(player.injury?.status || "").toUpperCase();
+  const injuryRisk = status === "QUESTIONABLE" ? 0.05
+    : status === "DOUBTFUL" ? 0.12
+    : ["OUT", "IR", "PUP"].includes(status) ? 0.18 : 0;
+  const disagreement = sourceDisagreement(player) || 0;
+  const marketRisk = disagreement >= 30 ? 0.05 : disagreement >= 20 ? 0.03 : 0;
+  const intelRisk = (player.intelDelta || 0) <= -5 ? 0.03 : 0;
+  const volatility = clamp(baseVolatility + injuryRisk + marketRisk + intelRisk, 0.1, 0.38);
+  const projection = Math.max(0, player.proj || 0);
+  const floor = Math.round(projection * (1 - volatility) * 10) / 10;
+  const ceiling = Math.round(projection * (1 + volatility) * 10) / 10;
+  const label = volatility >= 0.28 ? "High risk"
+    : volatility >= 0.22 ? "Volatile"
+    : volatility <= 0.13 ? "Steady"
+    : "Balanced";
+  const flags = [];
+  if (status) flags.push(player.injury.status);
+  if (disagreement >= 20) flags.push("Rank disagreement");
+  if ((player.intelDelta || 0) <= -5) flags.push("Intel concern");
+  return { floor, ceiling, volatility: Math.round(volatility * 100), label, flags };
 }
 
 // Tunable, deterministic cutoffs for the compact "Why this pick?" explanation.
@@ -209,6 +283,11 @@ export function explainPick(player, ctx, weights, options = {}) {
 
   if ((options.byeConflictCount || 0) > 0)
     add(warnings, `Bye overlaps with ${options.byeConflictCount} starter${options.byeConflictCount === 1 ? "" : "s"}`);
+
+  if ((player.injuryDelta || 0) < 0)
+    add(warnings, player.injuryImpact?.projectedGamesMissed
+      ? `Injury: may miss ${player.injuryImpact.projectedGamesMissed} game${player.injuryImpact.projectedGamesMissed === 1 ? "" : "s"}`
+      : `Injury adjustment · ${player.injuryDelta}`);
 
   const urgent = tierRemaining === 1 || options.returnProbability <= t.unlikelyToReturn;
   const label = urgent ? "Take now"

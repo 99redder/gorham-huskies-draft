@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "maxAgeDays": 45,
+  "sources": [
+    { "id": "sleeper-trends", "name": "Sleeper Trends", "publisher": "Sleeper", "type": "sleeper-trends", "url": "https://api.sleeper.app/v1/players/nfl/trending/add?lookback_hours=24&limit=50", "trust": 0.75, "note": "Public add/drop momentum; useful as a market signal, not a scouting verdict." },
+    { "id": "espn-nfl", "name": "ESPN NFL", "publisher": "ESPN", "type": "rss", "url": "https://www.espn.com/espn/rss/nfl/news", "trust": 0.9, "note": "Official ESPN NFL headline and excerpt feed." },
+    { "id": "yahoo-nfl", "name": "Yahoo Sports NFL", "publisher": "Yahoo Sports", "type": "rss", "url": "https://sports.yahoo.com/nfl/rss.xml", "trust": 1.0, "note": "Yahoo NFL and fantasy reporting; especially relevant to Yahoo drafts." },
+    { "id": "cbs-nfl", "name": "CBS Sports NFL", "publisher": "CBS Sports", "type": "rss", "url": "https://www.cbssports.com/rss/headlines/nfl/", "trust": 0.95, "note": "Public CBS NFL headline feed with fantasy-relevant camp and role news." },
+    { "id": "rotoballer", "name": "RotoBaller Fantasy Football", "publisher": "RotoBaller", "type": "rss", "url": "https://www.rotoballer.com/category/nfl/fantasy-football-advice-analysis/feed", "trust": 1.1, "note": "Free fantasy-specific analysis and player news." },
+    { "id": "pff", "name": "PFF", "publisher": "PFF", "type": "rss", "url": "https://www.pff.com/feed", "trust": 1.0, "note": "Public PFF article feed; only strict player-and-signal matches are applied." },
+    { "id": "reddit-fantasyfootball", "name": "r/fantasyfootball", "publisher": "Reddit", "type": "atom", "url": "https://www.reddit.com/r/fantasyfootball/.rss", "trust": 0.65, "note": "Community aggregation of beat reports. Lower trust limits crowd-noise impact." },
+    { "id": "pro-football-rumors", "name": "Pro Football Rumors", "publisher": "Pro Football Rumors", "type": "rss", "url": "https://www.profootballrumors.com/feed", "trust": 0.9, "note": "Transactions, roster moves, injuries, and role-changing NFL news." },
+    { "id": "establish-the-run", "name": "Establish The Run", "publisher": "Establish The Run", "type": "rss", "url": "https://establishtherun.com/feed/", "trust": 1.15, "note": "Public article-feed titles and excerpts from a respected fantasy analysis outlet." },
+    { "id": "late-round", "name": "Late-Round Fantasy", "publisher": "Late-Round Fantasy", "type": "rss", "url": "https://lateround.com/feed/", "trust": 1.2, "note": "Public data-driven analysis from JJ Zachariason's Late-Round Fantasy." }
+  ]
+}

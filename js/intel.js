@@ -146,3 +146,17 @@ export function intelDelta(entry, lexicon, trustOverrides = {}) {
   // entry.magnitude is user-confirmed (may be edited via slider); trust scales it.
   return Math.round(entry.magnitude * trust * 10) / 10;
 }
+
+export function alphaFreshness(publishedAt, now = Date.now()) {
+  const age = now - Date.parse(publishedAt || 0);
+  if (!Number.isFinite(age) || age < 0) return 1;
+  const days = age / 86400000;
+  if (days <= 7) return 1;
+  if (days <= 21) return 0.75;
+  if (days <= 45) return 0.5;
+  return 0;
+}
+
+export function alphaDelta(rawDelta, sourceTrust = 1, publishedAt, now = Date.now()) {
+  return Math.round(rawDelta * sourceTrust * alphaFreshness(publishedAt, now) * 10) / 10;
+}

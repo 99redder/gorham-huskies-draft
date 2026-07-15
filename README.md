@@ -31,9 +31,14 @@ computed tiers, your roster needs, and hand-entered analyst "alpha" intel.
 - **Draft board + My Team** — mark players drafted (to you or another team), auto-fill
   your roster slots, see remaining needs, get live **Best Pick** recommendations and
   **positional-run alerts** ([`js/draft.js`](js/draft.js)).
-- **On-demand injuries** — press **Injuries** to refresh current Sleeper designations,
-  body parts, notes, and practice status. The last successful result is saved locally
-  and exported with the rest of the draft state ([`js/injuries.js`](js/injuries.js)).
+- **Preseason alpha scraper** — ten free public sources are refreshed into an auditable
+  static snapshot. Only direct player headlines with concrete camp, role, practice, or
+  injury language move the board; source trust is adjustable and reports decay after 7
+  days, then expire after 45 ([`scripts/refresh-alpha.mjs`](scripts/refresh-alpha.mjs)).
+- **Severity-aware injuries** — press **Injuries** to refresh Sleeper designations,
+  body parts, notes, and practice status. Short absences apply a ranking penalty while
+  retaining the player; explicit season-ending reports remove that player from the
+  board and recommendations ([`js/injuries.js`](js/injuries.js)).
 - **Works offline / installable** — service worker + manifest; state persists in
   localStorage with JSON export/import.
 
@@ -65,6 +70,19 @@ Yahoo's public rank is its default preseason/pre-draft rank, not its separate
 Expert Rank. Sleeper ADP is calculated from recent 8-team, 1-QB, half-PPR redraft
 pick distributions published by YAFSB, the closest public format to this 6-team league.
 
+Refresh preseason reports (this writes [`data/preseason-alpha.json`](data/preseason-alpha.json)):
+
+```bash
+node scripts/refresh-alpha.mjs
+```
+
+The ten configured publishers are Sleeper Trends, ESPN NFL, Yahoo Sports NFL, CBS
+Sports NFL, RotoBaller, PFF, r/fantasyfootball, Pro Football Rumors, Establish The
+Run, and Late-Round Fantasy. URLs, trust defaults, and notes live in
+[`data/alpha-sources.json`](data/alpha-sources.json). The GitHub Actions workflow runs
+twice daily during July–September and can also be run manually. It stores only a short
+excerpt and link—not full article text—and one failed source does not block the others.
+
 ## Run locally
 
 ```bash
@@ -80,8 +98,8 @@ node test/scoring.test.mjs   # scoring math + VOR sanity checks
 
 ## Tuning the "Best Pick" blend
 
-Open **⚙ Weights** to adjust how VOR, ADP value, roster need, and analyst intel combine
-into the board's Score column. Defaults are tuned for a 6-team league.
+Open **⚙ Weights** to adjust how VOR, ADP value, roster need, analyst intel, and injury
+severity combine into the board's Score column. Defaults are tuned for a 6-team league.
 
 ## Notes
 

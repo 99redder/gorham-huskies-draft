@@ -1,19 +1,20 @@
 // app.js — main controller: state, rendering, and event wiring.
 import { loadData } from "./data.js";
 import { computeValues, normalizeVor } from "./value.js";
-import { parseIntel, intelDelta, buildNameIndex, resolvePlayer } from "./intel.js";
-import { SLEEPER_PLAYERS_URL, matchSleeperInjuries, injuryAbbreviation } from "./injuries.js";
-import { fillRoster, positionNeeds, blendedScore, sourceDisagreement, defaultSortDirection, compareDraftPlayers, runAlerts, explainPick, recommend, attackNext, byeConflicts, optimalLineupPoints } from "./draft.js";
-import { snakeOrder, botPick, strategyPick, availabilityAtMyPicks } from "./simulator.js";
+import { parseIntel, intelDelta, alphaDelta, buildNameIndex, resolvePlayer } from "./intel.js";
+import { SLEEPER_PLAYERS_URL, matchSleeperInjuries, injuryAbbreviation, injuryImpact } from "./injuries.js";
+import { fillRoster, positionNeeds, blendedScore, sourceDisagreement, defaultSortDirection, compareDraftPlayers, runAlerts, opponentDemand, planNextTwoPicks, playerRiskProfile, explainPick, recommend, attackNext, byeConflicts, optimalLineupPoints } from "./draft.js";
+import { snakeOrder, pickNumbersForSlot, botPick, strategyPick, availabilityAtMyPicks } from "./simulator.js";
 import * as store from "./storage.js";
 
-const STATE_KEYS = ["drafted", "intelLog", "weights", "sourceTrust", "injuries", "injuryRefreshedAt", "pickNumber", "draftMode"];
+const STATE_KEYS = ["drafted", "intelLog", "weights", "sourceTrust", "injuries", "injuryRefreshedAt", "pickNumber", "draftSlot", "draftMode"];
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
-const DEFAULT_WEIGHTS = { vor: 1, adp: 0.45, sleeper: 0.45, yahoo: 0.3, need: 1, intel: 1 };
+const DEFAULT_WEIGHTS = { vor: 1, adp: 0.45, sleeper: 0.45, yahoo: 0.3, need: 1, intel: 1, injury: 1 };
 
 const S = {
   league: null, players: [], lexicon: null, dataMeta: null, seedIntel: { version: 0, entries: [] },
+  alphaDoc: { sources: [], entries: [] }, alphaRefreshing: false,
   values: [], byId: new Map(),
   drafted: store.load("drafted", {}),            // id -> "mine" | "other"
   intelLog: store.load("intelLog", []),          // [{id, source, snippet, matches:[{playerId,delta,name}]}]
@@ -23,6 +24,7 @@ const S = {
   injuryRefreshedAt: store.load("injuryRefreshedAt", null),
   injuryRefreshing: false,
   pickNumber: store.load("pickNumber", 1),
+  draftSlot: store.load("draftSlot", 2),
   draftMode: store.load("draftMode", false),      // must be enabled before any pick can be marked
   filterPos: "ALL", query: "", sortBy: "blend", sortDir: "desc", hideDrafted: true,
   pendingReview: [],
@@ -34,6 +36,7 @@ async function init() {
   const data = await loadData();
   S.league = data.league; S.players = data.players; S.lexicon = data.lexicon; S.dataMeta = data.dataMeta;
   S.seedIntel = data.seedIntel || { version: 0, entries: [] };
+  S.alphaDoc = data.alphaDoc || { sources: [], entries: [] };
   populateSourceList();
   populateSourceTrustControls();
   applySeedIntel(false);
@@ -48,15 +51,35 @@ async function init() {
 function recompute() {
   const values = normalizeVor(computeValues(S.players, S.league));
   // aggregate intel deltas per player
-  const deltas = {};
+  const manualDeltas = {}, alphaDeltas = {}, alphaInjuries = {};
   for (const entry of S.intelLog) {
     const trust = sourceTrust(entry.source);
     for (const m of entry.matches)
-      deltas[m.playerId] = (deltas[m.playerId] || 0) + m.delta * trust;
+      manualDeltas[m.playerId] = (manualDeltas[m.playerId] || 0) + m.delta * trust;
+  }
+  for (const entry of S.alphaDoc.entries || []) {
+    for (const m of entry.matches || []) {
+      alphaDeltas[m.playerId] = (alphaDeltas[m.playerId] || 0)
+        + alphaDelta(m.delta, sourceTrust(entry.source), entry.publishedAt);
+      if (m.injury) {
+        const candidate = { ...m.injury, source: entry.source, sourceUrl: entry.sourceUrl };
+        if (!alphaInjuries[m.playerId]
+          || (candidate.sourceUpdatedAt || 0) > (alphaInjuries[m.playerId].sourceUpdatedAt || 0))
+          alphaInjuries[m.playerId] = candidate;
+      }
+    }
   }
   for (const v of values) {
-    v.intelDelta = Math.round((deltas[v.id] || 0) * 10) / 10;
-    v.injury = S.injuries[v.id] || null;
+    v.manualIntelDelta = Math.round((manualDeltas[v.id] || 0) * 10) / 10;
+    v.alphaDelta = Math.round(Math.max(-15, Math.min(15, alphaDeltas[v.id] || 0)) * 10) / 10;
+    v.intelDelta = Math.round((v.manualIntelDelta + v.alphaDelta) * 10) / 10;
+    const sleeperInjury = S.injuries[v.id] || null;
+    const reportInjury = alphaInjuries[v.id] || null;
+    v.injury = reportInjury && (!sleeperInjury
+      || (reportInjury.sourceUpdatedAt || 0) >= (sleeperInjury.sourceUpdatedAt || 0))
+      ? reportInjury : sleeperInjury;
+    v.injuryImpact = injuryImpact(v.injury);
+    v.injuryDelta = v.injuryImpact.scorePenalty;
   }
   S.values = values;
   S.byId = new Map(values.map((v) => [v.id, v]));
@@ -87,7 +110,34 @@ function applySeedIntel(force) {
 }
 
 function availablePlayers() {
-  return S.values.filter((p) => !S.drafted[p.id]);
+  return S.values.filter((p) => !S.drafted[p.id] && !p.injuryImpact?.unavailable);
+}
+
+function ownerTeam(owner) {
+  if (owner === "mine") return S.draftSlot;
+  const match = /^team:(\d+)$/.exec(owner || "");
+  return match ? +match[1] : null;
+}
+
+function allTeamRosters() {
+  const rosters = Array.from({ length: S.league.teams }, () => []);
+  for (const player of S.values) {
+    const team = ownerTeam(S.drafted[player.id]);
+    if (team != null && rosters[team]) rosters[team].push(player);
+  }
+  return rosters;
+}
+
+function planningContext() {
+  const picks = pickNumbersForSlot(S.draftSlot, S.league.teams, S.league.roster.total)
+    .filter((pick) => pick >= S.pickNumber);
+  const currentTurn = picks[0] || null;
+  const nextTurn = picks[1] || null;
+  const order = snakeOrder(S.league.teams, S.league.roster.total);
+  const upcomingTeams = currentTurn && nextTurn
+    ? order.slice(currentTurn, nextTurn - 1).filter((team) => team !== S.draftSlot)
+    : [];
+  return { currentTurn, nextTurn, upcomingTeams: [...new Set(upcomingTeams)] };
 }
 
 // All intel blurbs affecting a player (for the hover popover).
@@ -97,7 +147,12 @@ function intelEntriesForPlayer(id) {
     const m = e.matches.find((x) => x.playerId === id);
     if (m) out.push({ source: e.source, snippet: e.snippet, delta: effectiveIntelDelta(m.delta, e.source) });
   }
-  return out;
+  for (const e of S.alphaDoc.entries || []) {
+    const m = (e.matches || []).find((x) => x.playerId === id);
+    if (m) out.push({ source: e.source, snippet: e.snippet || e.title,
+      delta: effectiveAlphaDelta(m.delta, e), auto: true, url: e.sourceUrl, publishedAt: e.publishedAt });
+  }
+  return out.sort((a, b) => Date.parse(b.publishedAt || 0) - Date.parse(a.publishedAt || 0));
 }
 
 // Intel badge with a data hook so hovering/tapping it reveals the blurbs.
@@ -107,12 +162,13 @@ function intelBadgeHtml(p) {
   return `<span class="intel-badge ${cls}" data-intel="${p.id}" tabindex="0" title="">${p.intelDelta > 0 ? "▲" : "▼"}${Math.abs(p.intelDelta)}</span>`;
 }
 
-function injuryHtml(injury) {
+function injuryHtml(injury, impact) {
   if (!injury) return "";
   const status = escapeHtml(injury.status);
   const note = escapeHtml(injury.note || injury.status);
   const cls = String(injury.status).toLowerCase().replace(/[^a-z0-9]+/g, "-");
-  return `<span class="injury-wrap" title="${status}${injury.note ? ` · ${note}` : ""}">
+  const penalty = impact?.scorePenalty < 0 && !impact.unavailable ? ` · ranking ${impact.scorePenalty}` : "";
+  return `<span class="injury-wrap" title="${status}${injury.note ? ` · ${note}` : ""}${penalty}">
     <span class="injury-badge ${cls}">${escapeHtml(injuryAbbreviation(injury.status))}</span>
     <span class="injury-note">${note}</span>
   </span>`;
@@ -121,11 +177,11 @@ function ctx() {
   const mine = S.values.filter((p) => S.drafted[p.id] === "mine");
   const slots = fillRoster(mine, S.league);
   const need = positionNeeds(slots);
-  return { mine, slots, need, pickNumber: S.pickNumber };
+  return { mine, slots, need, pickNumber: S.pickNumber, draftSlot: S.draftSlot };
 }
 
 // ---- rendering ----------------------------------------------------------
-function render() { renderBoard(); renderSidebar(); renderInjuryButton(); }
+function render() { renderBoard(); renderSidebar(); renderInjuryButton(); renderAlphaButton(); }
 
 function renderBoard() {
   const c = ctx();
@@ -173,12 +229,15 @@ function rowHtml(p, rank, isDrafted = false) {
   const intel = intelBadgeHtml(p);
   const tierCls = `t${Math.min(p.tier, 6)}`;
   const who = S.drafted[p.id]; // "mine" | "other" | undefined
+  const owner = ownerTeam(who);
+  const ownerLabel = who === "mine" ? "✓ MINE" : owner == null ? "TAKEN" : `TEAM ${owner + 1}`;
+  const teamAtPick = snakeOrder(S.league.teams, S.league.roster.total)[S.pickNumber - 1];
   const gap = sourceDisagreement(p);
   const rankTitle = `FFC ${p.adp ?? "—"} · Sleeper ${p.sleeperAdp ?? "—"} · Yahoo ${p.yahooRank ?? "—"}`;
   const draftCls = isDrafted ? `drafted-row ${who === "mine" ? "mine-row" : "other-row"}` : "";
   return `<tr class="${draftCls} pos-${p.pos}" data-id="${p.id}">
     <td class="rk">${rank}</td>
-    <td class="nm"><span class="player-name">${p.name}</span>${injuryHtml(p.injury)}</td>
+    <td class="nm"><span class="player-name">${p.name}</span>${injuryHtml(p.injury, p.injuryImpact)}</td>
     <td><span class="pos-pill ${p.pos}">${p.pos}</span></td>
     <td class="tm">${p.team}</td>
     <td class="bye">${p.bye ?? "—"}</td>
@@ -193,10 +252,10 @@ function rowHtml(p, rank, isDrafted = false) {
     <td class="score">${p.blend != null ? p.blend : ""}</td>
     <td class="act">
       ${isDrafted
-        ? `<span class="draft-tag ${who}">${who === "mine" ? "✓ MINE" : "TAKEN"}</span>${S.draftMode ? `<button class="mini undo" data-act="undraft" data-id="${p.id}" title="Undo pick">↩</button>` : ""}`
+        ? `<span class="draft-tag ${who === "mine" ? "mine" : "other"}">${ownerLabel}</span>${S.draftMode ? `<button class="mini undo" data-act="undraft" data-id="${p.id}" title="Undo pick">↩</button>` : ""}`
         : S.draftMode
         ? `<button class="mini mine" data-act="mine" data-id="${p.id}" title="I drafted this player">＋ Me</button>
-           <button class="mini other" data-act="other" data-id="${p.id}" title="Drafted by another team">Other</button>`
+           <button class="mini other" data-act="other" data-id="${p.id}" title="Drafted by Team ${(teamAtPick ?? 0) + 1} at pick #${S.pickNumber}">＋ T${(teamAtPick ?? 0) + 1}</button>`
         : `<span class="locked" title="Press “Start Draft” to mark picks">🔒</span>`}
     </td>
   </tr>`;
@@ -208,6 +267,15 @@ function renderSidebar() {
   const available = availablePlayers();
   const recs = recommend(available, c, S.weights, 6);
   const alerts = runAlerts(available, c.need);
+  const planning = planningContext();
+  const demand = opponentDemand(allTeamRosters(), S.league, planning.upcomingTeams);
+  const knownOpponentPicks = Object.values(S.drafted).filter((owner) => /^team:\d+$/.test(owner)).length;
+  $("#opponentDemand").innerHTML = planning.nextTurn
+    ? `<h2>Opponent pressure <span class="sub-inline">before your pick #${planning.nextTurn}</span></h2>
+       <div class="demand-chips">${demand.filter((x) => x.teamsNeeding).slice(0, 6).map((x) =>
+         `<span class="demand-chip ${x.teamsNeeding >= Math.max(3, x.teamsConsidered - 1) ? "hot" : ""}"><b>${x.pos}</b> ${x.teamsNeeding}/${x.teamsConsidered} teams need</span>`).join("")}</div>
+       ${!knownOpponentPicks && Object.keys(S.drafted).length ? `<p class="context-note">Older “Other” picks are unassigned; new picks will be tracked by team.</p>` : ""}`
+    : `<p class="context-note">Set your draft slot and pick number to see opponent pressure.</p>`;
   $("#alerts").innerHTML = alerts.length
     ? alerts.map((a) => `<div class="alert">⚠ <b>${a.pos} run:</b> only ${a.remaining} left in Tier ${a.tier} — you still need ${a.pos}. Prioritize.</div>`).join("")
     : "";
@@ -226,18 +294,35 @@ function renderSidebar() {
          </div>`).join("")}</div>`
     : "";
 
+  const planCtx = { ...c, pickNumber: planning.currentTurn || c.pickNumber };
+  const plans = planNextTwoPicks(available, planCtx, S.weights, S.league, planning.nextTurn, 2);
+  $("#twoPickPlan").innerHTML = plans.length
+    ? `<h2>Two-pick plan <span class="sub-inline">picks #${planning.currentTurn} and #${planning.nextTurn}</span></h2>
+       ${plans.map((plan) => `<div class="plan-row">
+         <div><span class="plan-step">Pick ${planning.currentTurn}</span><b>${plan.now.name}</b> <span class="pos-pill ${plan.now.pos}">${plan.now.pos}</span></div>
+         <div><span class="plan-arrow">→</span><span class="plan-step">Pick ${plan.nextPick}</span><b>${plan.next?.name || "Best available"}</b>${plan.next ? ` <span class="pos-pill ${plan.next.pos}">${plan.next.pos}</span>` : ""}</div>
+         ${plan.pivot ? `<div class="plan-pivot">Pivot if gone: ${plan.pivot.name} (${plan.pivot.pos})</div>` : ""}
+       </div>`).join("")}`
+    : "";
+
   $("#recList").innerHTML = recs.map((p) => {
     const intelSources = intelEntriesForPlayer(p.id).filter((x) => x.delta > 0).map((x) => x.source);
     const byeConflictCount = p.bye ? c.slots.filter((s) => s.label !== "BN" && s.player?.bye === p.bye).length : 0;
     const why = explainPick(p, c, S.weights, { available, runAlerts: alerts, intelSources, byeConflictCount });
+    const risk = playerRiskProfile(p);
     return `
     <li>
       <div class="rec-main">
         <span class="pos-pill ${p.pos}">${p.pos}</span>
         <b>${p.name}</b> <span class="tm">${p.team}</span>
+        ${injuryHtml(p.injury, p.injuryImpact)}
         ${intelBadgeHtml(p)}
       </div>
       <div class="rec-meta">Score ${p.blend} · VOR ${p.vor} · Tier ${p.tier} · ADP ${p.adp}</div>
+      <div class="risk-profile" title="Modeled from position volatility, injuries, analyst concern, and ranking-source disagreement">
+        <span>Floor <b>${risk.floor}</b></span><span>Median <b>${p.proj}</b></span><span>Ceiling <b>${risk.ceiling}</b></span>
+        <span class="risk-label ${risk.label.toLowerCase().replace(/\s+/g, "-")}">${risk.label}</span>
+      </div>
       <details class="rec-why">
         <summary aria-label="Why this pick for ${escapeHtml(p.name)}?">Why this pick? <span class="why-label">${escapeHtml(why.label)}</span></summary>
         <div class="why-chips">
@@ -277,7 +362,39 @@ function renderSidebar() {
     ? conflicts.map((w) => `<div class="bye-warn ${w.count >= 3 ? "bad" : ""}">⚠ <b>Week ${w.week}:</b> ${w.count} starters out (${w.players.map((p) => p.pos).join(", ")})</div>`).join("")
     : `<div class="bye-ok">No starter bye stacks ✓</div>`);
 
+  const teamRosters = allTeamRosters();
+  $("#opponentRosters").innerHTML = `<h3>Opponent rosters</h3>` + teamRosters
+    .map((roster, team) => ({ roster, team }))
+    .filter(({ team }) => team !== S.draftSlot)
+    .map(({ roster, team }) => {
+      const counts = Object.fromEntries(["QB", "RB", "WR", "TE", "K", "DEF"].map((pos) => [pos, roster.filter((p) => p.pos === pos).length]));
+      const need = positionNeeds(fillRoster(roster, S.league));
+      const topNeeds = ["RB", "WR", "QB", "TE", "K", "DEF"].filter((pos) => need[pos] > 0).slice(0, 3);
+      return `<div class="opponent-row"><b>Team ${team + 1}</b><span>${roster.length} picks</span>
+        <div class="opponent-counts">${Object.entries(counts).filter(([, count]) => count).map(([pos, count]) => `${pos}×${count}`).join(" · ") || "No picks yet"}</div>
+        <div class="opponent-needs">Needs: ${topNeeds.join(", ") || "starters filled"}</div></div>`;
+    }).join("");
+
+  renderAlphaLog();
   renderIntelLog();
+}
+
+function renderAlphaLog() {
+  const summary = $("#alphaSummary"), sourceList = $("#alphaSources"), log = $("#alphaLog");
+  if (!summary || !sourceList || !log) return;
+  const sources = S.alphaDoc.sources || [], entries = S.alphaDoc.entries || [];
+  const healthy = sources.filter((source) => source.ok).length;
+  const when = S.alphaDoc.generatedAt ? new Date(S.alphaDoc.generatedAt).toLocaleString() : "not loaded";
+  summary.textContent = `${entries.length} signals · ${healthy}/${sources.length || 10} sources healthy · ${when}. Signals decay after 7 days and expire after 45.`;
+  sourceList.innerHTML = sources.map((source) => `<a class="alpha-source ${source.ok ? "ok" : "failed"}"
+    href="${escapeHtml(source.url)}" target="_blank" rel="noopener" title="${escapeHtml(source.ok ? `${source.matched} strict matches` : source.error || "Refresh failed")}">
+    ${source.ok ? "✓" : "!"} ${escapeHtml(source.name)}</a>`).join("");
+  log.innerHTML = entries.length ? entries.slice(0, 12).map((entry) => `
+    <li>
+      <div class="ilog-head"><b>${escapeHtml(entry.source)}</b><span class="seed-tag auto-tag">auto</span><span class="trust-tag">×${sourceTrust(entry.source).toFixed(2)}</span></div>
+      <a class="alpha-link" href="${escapeHtml(entry.sourceUrl)}" target="_blank" rel="noopener">${escapeHtml(entry.title)}</a>
+      <div class="ilog-players">${(entry.matches || []).map((m) => { const d = effectiveAlphaDelta(m.delta, entry); return `<span class="intel-badge ${d > 0 ? "up" : "down"}">${escapeHtml(m.name)} ${d > 0 ? "▲" : "▼"}${Math.abs(d)}</span>`; }).join("")}</div>
+    </li>`).join("") : `<li class="muted">No strict player + camp-signal matches in the current feeds.</li>`;
 }
 
 function renderIntelLog() {
@@ -295,17 +412,27 @@ function renderInjuryButton() {
   const button = $("#btnInjuries");
   if (!button) return;
   const count = Object.keys(S.injuries).length;
+  const removed = S.values.filter((p) => p.injuryImpact?.unavailable).length;
   button.disabled = S.injuryRefreshing;
   button.textContent = S.injuryRefreshing ? "🏥 Refreshing…" : `🏥 Injuries${count ? ` (${count})` : ""}`;
   button.title = S.injuryRefreshedAt
-    ? `Refresh from Sleeper · last updated ${new Date(S.injuryRefreshedAt).toLocaleString()}`
+    ? `Refresh from Sleeper · last updated ${new Date(S.injuryRefreshedAt).toLocaleString()}${removed ? ` · ${removed} season-ending removal(s)` : ""}`
     : "Refresh injury designations from Sleeper";
+}
+
+function renderAlphaButton() {
+  const button = $("#btnAlpha");
+  if (!button) return;
+  const count = (S.alphaDoc.entries || []).length;
+  button.disabled = S.alphaRefreshing;
+  button.textContent = S.alphaRefreshing ? "📡 Loading…" : `📡 Alpha${count ? ` (${count})` : ""}`;
 }
 
 function renderProvenance() {
   const marketDate = S.dataMeta.rankingsGeneratedAt ? new Date(S.dataMeta.rankingsGeneratedAt).toLocaleDateString() : "not loaded";
   const injuryDate = S.injuryRefreshedAt ? new Date(S.injuryRefreshedAt).toLocaleString() : "not refreshed";
-  $("#provenance").innerHTML = `Projections: ${escapeHtml(S.dataMeta.source)}. Yahoo + Sleeper ranks captured ${marketDate}. Injuries: <a href="https://sleeper.com/" target="_blank" rel="noopener">Sleeper</a> (${injuryDate}).`;
+  const alphaDate = S.alphaDoc.generatedAt ? new Date(S.alphaDoc.generatedAt).toLocaleString() : "not loaded";
+  $("#provenance").innerHTML = `Projections: ${escapeHtml(S.dataMeta.source)}. Yahoo + Sleeper ranks captured ${marketDate}. Preseason alpha: 10 public sources (${alphaDate}). Injuries: <a href="https://sleeper.com/" target="_blank" rel="noopener">Sleeper</a> (${injuryDate}).`;
 }
 
 // ---- intel review flow --------------------------------------------------
@@ -396,14 +523,16 @@ function renderMode() {
 // ---- actions ------------------------------------------------------------
 function draftPlayer(id, who) {
   if (!S.draftMode) return toast("Press “Start Draft” first to mark picks.");
-  S.drafted[id] = who; S.pickNumber = Object.keys(S.drafted).length + 1; $("#pickNumber").value = S.pickNumber; persist(); render();
+  const teamAtPick = snakeOrder(S.league.teams, S.league.roster.total)[S.pickNumber - 1];
+  S.drafted[id] = who === "other" && teamAtPick != null ? `team:${teamAtPick}` : who;
+  S.pickNumber = Object.keys(S.drafted).length + 1; $("#pickNumber").value = S.pickNumber; persist(); render();
 }
 function undraft(id) {
   if (!S.draftMode) return toast("Draft Mode is off.");
   delete S.drafted[id]; S.pickNumber = Object.keys(S.drafted).length + 1; $("#pickNumber").value = S.pickNumber; persist(); render();
 }
 
-function persist() { store.save("drafted", S.drafted); store.save("intelLog", S.intelLog); store.save("weights", S.weights); store.save("sourceTrust", S.sourceTrust); store.save("injuries", S.injuries); store.save("injuryRefreshedAt", S.injuryRefreshedAt); store.save("pickNumber", S.pickNumber); store.save("draftMode", S.draftMode); }
+function persist() { store.save("drafted", S.drafted); store.save("intelLog", S.intelLog); store.save("weights", S.weights); store.save("sourceTrust", S.sourceTrust); store.save("injuries", S.injuries); store.save("injuryRefreshedAt", S.injuryRefreshedAt); store.save("pickNumber", S.pickNumber); store.save("draftSlot", S.draftSlot); store.save("draftMode", S.draftMode); }
 
 async function refreshInjuries() {
   if (S.injuryRefreshing) return;
@@ -423,6 +552,24 @@ async function refreshInjuries() {
   } finally {
     S.injuryRefreshing = false;
     renderInjuryButton();
+  }
+}
+
+async function refreshAlpha() {
+  if (S.alphaRefreshing) return;
+  S.alphaRefreshing = true;
+  renderAlphaButton();
+  try {
+    const response = await fetch(`data/preseason-alpha.json?t=${Date.now()}`, { cache: "no-store" });
+    if (!response.ok) throw new Error(`snapshot returned ${response.status}`);
+    S.alphaDoc = await response.json();
+    recompute(); render(); renderProvenance();
+    toast(`Loaded ${(S.alphaDoc.entries || []).length} current preseason signals.`);
+  } catch (err) {
+    toast(`Alpha refresh failed — keeping the loaded snapshot. ${err.message}`);
+  } finally {
+    S.alphaRefreshing = false;
+    renderAlphaButton();
   }
 }
 
@@ -449,6 +596,7 @@ function wireEvents() {
     if (e.target.id === "btnPauseDraft") toggleDraftMode(false);
     if (e.target.id === "btnParse") analyzeIntel();
     if (e.target.id === "btnInjuries") refreshInjuries();
+    if (e.target.id === "btnAlpha") refreshAlpha();
     if (e.target.id === "btnConfirmIntel") confirmIntel();
     if (e.target.id === "btnSettings") $("#settingsDrawer").hidden = false;
     if (e.target.id === "btnCloseSettings") $("#settingsDrawer").hidden = true;
@@ -514,9 +662,10 @@ function wireEvents() {
   $("#sortBy").addEventListener("change", (e) => { S.sortBy = e.target.value; S.sortDir = defaultSortDirection(S.sortBy); renderBoard(); });
   $("#hideDrafted").addEventListener("change", (e) => { S.hideDrafted = e.target.checked; renderBoard(); });
   $("#pickNumber").addEventListener("change", (e) => { S.pickNumber = Math.max(1, +e.target.value || 1); persist(); render(); });
+  $("#draftSlot").addEventListener("change", (e) => { S.draftSlot = Math.max(0, Math.min(S.league.teams - 1, +e.target.value || 0)); persist(); render(); });
 
   // weight sliders
-  for (const [id, key] of [["wVor", "vor"], ["wAdp", "adp"], ["wSleeper", "sleeper"], ["wYahoo", "yahoo"], ["wNeed", "need"], ["wIntel", "intel"]]) {
+  for (const [id, key] of [["wVor", "vor"], ["wAdp", "adp"], ["wSleeper", "sleeper"], ["wYahoo", "yahoo"], ["wNeed", "need"], ["wIntel", "intel"], ["wInjury", "injury"]]) {
     const el = $("#" + id); el.value = S.weights[key];
     $(`[data-out="${id}"]`).textContent = (+el.value).toFixed(2);
     el.addEventListener("input", (e) => { S.weights[key] = +e.target.value; $(`[data-out="${id}"]`).textContent = (+e.target.value).toFixed(2); persist(); render(); });
@@ -526,6 +675,7 @@ function wireEvents() {
 
   $("#importFile").addEventListener("change", doImport);
   $("#pickNumber").value = S.pickNumber;
+  $("#draftSlot").value = S.draftSlot;
 }
 
 function doExport() {
@@ -546,9 +696,10 @@ function doImport(e) {
       S.drafted = store.load("drafted", {}); S.intelLog = store.load("intelLog", []);
       S.weights = { ...DEFAULT_WEIGHTS, ...store.load("weights", {}) };
       S.sourceTrust = store.load("sourceTrust", {}); S.pickNumber = store.load("pickNumber", 1);
+      S.draftSlot = store.load("draftSlot", 2);
       S.injuries = store.load("injuries", {}); S.injuryRefreshedAt = store.load("injuryRefreshedAt", null);
       S.draftMode = store.load("draftMode", false);
-      populateSourceTrustControls(); wireSourceTrustEvents(); recompute(); renderMode(); render(); renderProvenance(); toast("Imported backup.");
+      $("#draftSlot").value = S.draftSlot; populateSourceTrustControls(); wireSourceTrustEvents(); recompute(); renderMode(); render(); renderProvenance(); toast("Imported backup.");
     } catch (err) { toast("Import failed: " + err.message); }
   };
   reader.readAsText(file);
@@ -573,6 +724,10 @@ function sourceTrust(source) {
 
 function effectiveIntelDelta(rawDelta, source) {
   return Math.round(rawDelta * sourceTrust(source) * 10) / 10;
+}
+
+function effectiveAlphaDelta(rawDelta, entry) {
+  return alphaDelta(rawDelta, sourceTrust(entry.source), entry.publishedAt);
 }
 
 function populateSourceTrustControls() {
@@ -638,7 +793,8 @@ function runQuickSim() {
   const slot = +$("#simSlot").value;
   $("#simQuickOut").innerHTML = `<p class="muted">Running 25 sims…</p>`;
   setTimeout(() => {
-    const out = availabilityAtMyPicks(S.values, S.byId, teams, rounds, slot, 25);
+    const eligible = S.values.filter((p) => !p.injuryImpact?.unavailable);
+    const out = availabilityAtMyPicks(eligible, new Map(eligible.map((p) => [p.id, p])), teams, rounds, slot, 25);
     $("#simQuickOut").innerHTML = `<h3>Typically available at your picks (25 sims)</h3>` +
       out.map((r) => `<div class="qs-row"><b>Rd ${r.round} · #${r.pick}</b> ${r.players.map((p) => `<span class="qs-p ${p.pos}">${p.name} ${Math.round(p.prob * 100)}%</span>`).join(" ")}</div>`).join("");
   }, 20);
@@ -652,7 +808,7 @@ function startSim() {
     strategy: $("#simStrategy").value,
     order: snakeOrder(teams, rounds),
     i: 0,
-    avail: new Set(S.values.map((p) => p.id)),
+    avail: new Set(S.values.filter((p) => !p.injuryImpact?.unavailable).map((p) => p.id)),
     counts: Array.from({ length: teams }, () => ({})),
     rosters: Array.from({ length: teams }, () => []),
     feed: [],

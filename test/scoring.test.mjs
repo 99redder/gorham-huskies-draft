@@ -2,9 +2,9 @@
 import { readFileSync } from "node:fs";
 import { projectedPoints } from "../js/scoring.js";
 import { computeValues, replacementRanks } from "../js/value.js";
-import { blendedScore, sourceDisagreement, compareDraftPlayers, explainPick } from "../js/draft.js";
-import { intelDelta } from "../js/intel.js";
-import { injuryFromSleeper, matchSleeperInjuries, injuryAbbreviation } from "../js/injuries.js";
+import { blendedScore, sourceDisagreement, compareDraftPlayers, opponentDemand, planNextTwoPicks, playerRiskProfile, explainPick } from "../js/draft.js";
+import { intelDelta, alphaFreshness, alphaDelta } from "../js/intel.js";
+import { injuryFromSleeper, matchSleeperInjuries, injuryAbbreviation, injuryImpact } from "../js/injuries.js";
 
 const league = JSON.parse(readFileSync(new URL("../data/league.json", import.meta.url)));
 const { players } = JSON.parse(readFileSync(new URL("../data/players.json", import.meta.url)));
@@ -52,6 +52,8 @@ eq("source disagreement", sourceDisagreement({ adp: 10, sleeperAdp: 25, yahooRan
   ok("fall past ADP beats a reach", fell > reach);
 }
 eq("analyst trust override", intelDelta({ source: "@analyst", magnitude: 10 }, { defaultTrust: 1 }, { "@analyst": 1.25 }), 12.5);
+eq("alpha is full strength for first week", alphaFreshness("2026-07-10", Date.parse("2026-07-15")), 1);
+eq("alpha trust and freshness stack", alphaDelta(8, 1.25, "2026-07-01", Date.parse("2026-07-15")), 7.5);
 
 // Column sorting uses sensible defaults and keeps missing values at the bottom.
 {
@@ -95,10 +97,38 @@ eq("analyst trust override", intelDelta({ source: "@analyst", magnitude: 10 }, {
   const matched = matchSleeperInjuries([{ id: "cook", name: "James Cook III", pos: "RB" }], { "1": sleeper });
   ok("injury player suffix matching", matched.injuries.cook?.status === "Questionable");
   ok("injury abbreviation", injuryAbbreviation("Questionable") === "Q");
+
+  const short = injuryImpact({ status: "Out", note: "Expected to miss Week 1 and Week 2" }, { now: Date.parse("2026-08-20") });
+  ok("two-week injury penalizes but retains player", short.scorePenalty < 0 && short.scorePenalty > -1000 && !short.unavailable);
+  const season = injuryImpact({ status: "Out", note: "Torn ACL; out for the season" }, { now: Date.parse("2026-08-20") });
+  ok("explicit season-ending injury removes player", season.unavailable && season.scorePenalty === -1000);
+  const vague = injuryImpact({ status: "Out", note: "Hamstring" }, { now: Date.parse("2026-08-20") });
+  ok("generic out designation does not remove player", !vague.unavailable);
+  const surgery = injuryImpact({ status: "Questionable", note: "Achilles · Surgery" }, { now: Date.parse("2026-08-20") });
+  ok("major surgery receives a long-term penalty", surgery.severity === "long-term" && surgery.scorePenalty <= -35 && !surgery.unavailable);
+  const practicing = injuryImpact({ status: "Questionable", note: "Knee · Full practice participant" }, { now: Date.parse("2026-08-20") });
+  ok("full practice reduces injury penalty", practicing.scorePenalty === -1);
 }
 
 // Sanity: full dataset VOR ranks the top pick reasonably, replacement levels shallow
 const values = computeValues(players, league);
+{
+  const qb = values.find((p) => p.pos === "QB");
+  const demand = opponentDemand([[qb], []], league, [0, 1]);
+  ok("opponent demand sees one open QB team", demand.find((x) => x.pos === "QB")?.teamsNeeding === 1);
+
+  const healthy = playerRiskProfile({ pos: "RB", proj: 200, adp: 10, sleeperAdp: 10, yahooRank: 10 });
+  const injured = playerRiskProfile({ pos: "RB", proj: 200, adp: 10, sleeperAdp: 40, yahooRank: 10,
+    injury: { status: "Doubtful" } });
+  ok("risk profile brackets projection", healthy.floor < 200 && healthy.ceiling > 200);
+  ok("injury and disagreement widen range", injured.volatility > healthy.volatility);
+
+  const planCtx = { mine: [], need: { QB: 1, RB: 3, WR: 3, TE: 1, K: 1, DEF: 1, FLEX: 1 }, pickNumber: 3 };
+  const plans = planNextTwoPicks(values.slice(0, 40), planCtx,
+    { vor: 1, adp: .45, sleeper: .45, yahoo: .3, need: 1, intel: 1 }, league, 10, 2);
+  ok("two-pick plan returns alternate paths", plans.length === 2 && plans.every((x) => x.next && x.next.id !== x.now.id));
+  ok("two-pick plan targets requested turn", plans.every((x) => x.nextPick === 10));
+}
 console.log("Replacement ranks (6-team):", replacementRanks(league));
 console.log("Top 8 by VOR:");
 values.slice(0, 8).forEach((v, i) =>

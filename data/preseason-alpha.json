@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "generatedAt": "2026-07-15T16:24:48.550Z",
+  "maxAgeDays": 45,
+  "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
+  "sources": [
+    {
+      "id": "sleeper-trends",
+      "name": "Sleeper Trends",
+      "url": "https://api.sleeper.app/v1/players/nfl/trending/add?lookback_hours=24&limit=50",
+      "ok": true,
+      "matched": 2
+    },
+    {
+      "id": "espn-nfl",
+      "name": "ESPN NFL",
+      "url": "https://www.espn.com/espn/rss/nfl/news",
+      "ok": true,
+      "matched": 0
+    },
+    {
+      "id": "yahoo-nfl",
+      "name": "Yahoo Sports NFL",
+      "url": "https://sports.yahoo.com/nfl/rss.xml",
+      "ok": true,
+      "matched": 0
+    },
+    {
+      "id": "cbs-nfl",
+      "name": "CBS Sports NFL",
+      "url": "https://www.cbssports.com/rss/headlines/nfl/",
+      "ok": true,
+      "matched": 0
+    },
+    {
+      "id": "rotoballer",
+      "name": "RotoBaller Fantasy Football",
+      "url": "https://www.rotoballer.com/category/nfl/fantasy-football-advice-analysis/feed",
+      "ok": true,
+      "matched": 0
+    },
+    {
+      "id": "pff",
+      "name": "PFF",
+      "url": "https://www.pff.com/feed",
+      "ok": true,
+      "matched": 0
+    },
+    {
+      "id": "reddit-fantasyfootball",
+      "name": "r/fantasyfootball",
+      "url": "https://www.reddit.com/r/fantasyfootball/.rss",
+      "ok": true,
+      "matched": 0
+    },
+    {
+      "id": "pro-football-rumors",
+      "name": "Pro Football Rumors",
+      "url": "https://www.profootballrumors.com/feed",
+      "ok": true,
+      "matched": 0
+    },
+    {
+      "id": "establish-the-run",
+      "name": "Establish The Run",
+      "url": "https://establishtherun.com/feed/",
+      "ok": true,
+      "matched": 0
+    },
+    {
+      "id": "late-round",
+      "name": "Late-Round Fantasy",
+      "url": "https://lateround.com/feed/",
+      "ok": true,
+      "matched": 0
+    }
+  ],
+  "entries": [
+    {
+      "id": "alpha_9e25aba50d28296e",
+      "source": "Sleeper Trends",
+      "publisher": "Sleeper",
+      "sourceUrl": "https://sleeper.com/",
+      "title": "Malik Willis is trending in Sleeper adds",
+      "snippet": "Top-10 add over the last 24 hours (1,750 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-15T16:24:48.550Z",
+      "trust": 0.75,
+      "matches": [
+        {
+          "playerId": "malik-willis-mia-qb",
+          "name": "Malik Willis",
+          "delta": 4.7
+        }
+      ]
+    },
+    {
+      "id": "alpha_fe3ddb7ed800ba6c",
+      "source": "Sleeper Trends",
+      "publisher": "Sleeper",
+      "sourceUrl": "https://sleeper.com/",
+      "title": "Keaton Mitchell is trending in Sleeper adds",
+      "snippet": "Top-15 add over the last 24 hours (1,368 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-15T16:24:48.550Z",
+      "trust": 0.75,
+      "matches": [
+        {
+          "playerId": "keaton-mitchell-lac-rb",
+          "name": "Keaton Mitchell",
+          "delta": 4.6
+        }
+      ]
+    }
+  ]
+}

@@ -8,7 +8,7 @@
   <link rel="manifest" href="manifest.json" />
   <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="icons/icon-192.png" />
-  <link rel="stylesheet" href="css/styles.css?v=11" />
+  <link rel="stylesheet" href="css/styles.css?v=12" />
 </head>
 <body>
   <header class="topbar">
@@ -24,8 +24,15 @@
       <label class="pick">Pick #
         <input type="number" id="pickNumber" min="1" value="1" />
       </label>
+      <label class="pick">My slot
+        <select id="draftSlot" title="Your position in the 6-team snake draft">
+          <option value="0">1</option><option value="1">2</option><option value="2">3</option>
+          <option value="3">4</option><option value="4">5</option><option value="5">6</option>
+        </select>
+      </label>
       <button id="btnSim" class="btn ghost" title="Mock draft simulator">🤖 Mock</button>
       <button id="btnInjuries" class="btn ghost" title="Refresh injury designations from Sleeper">🏥 Injuries</button>
+      <button id="btnAlpha" class="btn ghost" title="Load the latest published preseason report snapshot">📡 Alpha</button>
       <button id="btnSettings" class="btn ghost" title="Scoring weights">⚙ Weights</button>
       <button id="btnExport" class="btn ghost" title="Export draft + intel">⬇ Export</button>
       <label class="btn ghost" title="Import backup">⬆ Import
@@ -106,8 +113,10 @@
       </nav>
 
       <div class="tab-panel active" id="tab-recommend">
+        <div id="opponentDemand" class="opponent-demand"></div>
         <div id="alerts"></div>
         <div id="attackNext" class="attack-next"></div>
+        <div id="twoPickPlan" class="two-pick-plan"></div>
         <h2>Top Picks Now</h2>
         <ol id="recList" class="rec-list"></ol>
       </div>
@@ -117,9 +126,16 @@
         <ul id="rosterSlots" class="roster"></ul>
         <div class="needs" id="needs"></div>
         <div class="byes" id="byeConflicts"></div>
+        <div id="opponentRosters" class="opponent-rosters"></div>
       </div>
 
       <div class="tab-panel" id="tab-intel">
+        <div class="alpha-head">
+          <h2>Preseason Alpha</h2>
+          <p class="hint" id="alphaSummary"></p>
+          <div id="alphaSources" class="alpha-sources"></div>
+          <ul id="alphaLog" class="intel-log alpha-log"></ul>
+        </div>
         <h2>Paste Analyst Intel</h2>
         <p class="hint">Paste the text of a post. We'll match players &amp; detect the take, then you confirm.</p>
         <label class="fld">Source
@@ -146,6 +162,7 @@
       <label>Yahoo preseason rank <input type="range" id="wYahoo" min="0" max="2" step="0.05" value="0.3"><span data-out="wYahoo"></span></label>
       <label>Roster need <input type="range" id="wNeed" min="0" max="2" step="0.05" value="1"><span data-out="wNeed"></span></label>
       <label>Analyst intel <input type="range" id="wIntel" min="0" max="2" step="0.05" value="1"><span data-out="wIntel"></span></label>
+      <label>Injury penalty <input type="range" id="wInjury" min="0" max="2" step="0.05" value="1"><span data-out="wInjury"></span></label>
       <div class="trust-settings">
         <h3>Analyst source trust</h3>
         <p class="hint">Applied dynamically to every take from that source. Multiple takes stack.</p>
@@ -168,7 +185,7 @@
   <div id="intelTip" class="intel-tip" hidden></div>
   <div id="toast" class="toast" hidden></div>
 
-  <script type="module" src="js/app.js?v=11"></script>
+  <script type="module" src="js/app.js?v=12"></script>
   <script>
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
