@@ -80,6 +80,45 @@ export function sourceDisagreement(p) {
   const ranks = [p.adp, p.sleeperAdp, p.yahooRank].filter(Number.isFinite);
   return ranks.length >= 2 ? Math.round((Math.max(...ranks) - Math.min(...ranks)) * 10) / 10 : null;
 }
+
+export const SORT_DEFAULT_DIRECTIONS = Object.freeze({
+  name: "asc", pos: "asc", team: "asc", bye: "asc", tier: "asc",
+  adp: "asc", sleeperAdp: "asc", yahoo: "asc",
+  proj: "desc", vor: "desc", disagree: "desc", intel: "desc", blend: "desc",
+});
+
+export function defaultSortDirection(sortBy) {
+  return SORT_DEFAULT_DIRECTIONS[sortBy] || "asc";
+}
+
+// Shared board comparator: missing data always sorts last, regardless of direction.
+export function compareDraftPlayers(a, b, sortBy, direction = defaultSortDirection(sortBy)) {
+  const value = {
+    name: (p) => p.name,
+    pos: (p) => p.pos,
+    team: (p) => p.team,
+    bye: (p) => p.bye,
+    proj: (p) => p.proj,
+    vor: (p) => p.vor,
+    tier: (p) => p.tier,
+    adp: (p) => p.adp,
+    sleeperAdp: (p) => p.sleeperAdp,
+    yahoo: (p) => p.yahooRank,
+    disagree: (p) => sourceDisagreement(p),
+    intel: (p) => p.intelDelta,
+    blend: (p) => p.blend,
+  }[sortBy] || ((p) => p.blend);
+  const av = value(a), bv = value(b);
+  const aMissing = av == null || (typeof av === "number" && !Number.isFinite(av));
+  const bMissing = bv == null || (typeof bv === "number" && !Number.isFinite(bv));
+  if (aMissing !== bMissing) return aMissing ? 1 : -1;
+  if (aMissing) return String(a.name || "").localeCompare(String(b.name || ""));
+  const cmp = typeof av === "string"
+    ? av.localeCompare(String(bv))
+    : av - bv;
+  const directed = direction === "desc" ? -cmp : cmp;
+  return directed || String(a.name || "").localeCompare(String(b.name || ""));
+}
 function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
 
 // Positional-run alert: if a tier at a needed position is nearly exhausted among the

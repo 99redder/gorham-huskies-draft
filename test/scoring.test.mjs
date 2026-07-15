@@ -2,7 +2,7 @@
 import { readFileSync } from "node:fs";
 import { projectedPoints } from "../js/scoring.js";
 import { computeValues, replacementRanks } from "../js/value.js";
-import { blendedScore, sourceDisagreement, explainPick } from "../js/draft.js";
+import { blendedScore, sourceDisagreement, compareDraftPlayers, explainPick } from "../js/draft.js";
 import { intelDelta } from "../js/intel.js";
 import { injuryFromSleeper, matchSleeperInjuries, injuryAbbreviation } from "../js/injuries.js";
 
@@ -52,6 +52,14 @@ eq("source disagreement", sourceDisagreement({ adp: 10, sleeperAdp: 25, yahooRan
   ok("fall past ADP beats a reach", fell > reach);
 }
 eq("analyst trust override", intelDelta({ source: "@analyst", magnitude: 10 }, { defaultTrust: 1 }, { "@analyst": 1.25 }), 12.5);
+
+// Column sorting uses sensible defaults and keeps missing values at the bottom.
+{
+  const sortable = [{ name: "Low", vor: 10, adp: 20 }, { name: "High", vor: 30, adp: 5 }, { name: "Missing" }];
+  ok("VOR column sorts high to low", [...sortable].sort((a, b) => compareDraftPlayers(a, b, "vor"))[0].name === "High");
+  ok("ADP column sorts low to high", [...sortable].sort((a, b) => compareDraftPlayers(a, b, "adp"))[0].name === "High");
+  ok("missing sort values stay last", [...sortable].sort((a, b) => compareDraftPlayers(a, b, "vor", "asc")).at(-1).name === "Missing");
+}
 
 // Recommendation explanations describe existing score inputs without reranking.
 {

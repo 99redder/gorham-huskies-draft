@@ -61,6 +61,8 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--accent2); o
 table { width: 100%; border-collapse: collapse; }
 thead th { position: sticky; top: 0; background: var(--panel2); color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .5px; text-align: left; padding: 9px 8px; border-bottom: 1px solid var(--line); z-index: 2; }
 thead th[data-tip] { cursor: help; }
+thead th[data-sort] { cursor: pointer; user-select: none; }
+thead th[data-sort]::before { content: attr(data-sort-indicator); display: inline-block; width: 10px; color: var(--accent2); font-size: 9px; }
 thead th[data-tip]::after {
   content: attr(data-tip);
   position: absolute;

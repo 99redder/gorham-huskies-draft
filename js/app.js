@@ -3,7 +3,7 @@ import { loadData } from "./data.js";
 import { computeValues, normalizeVor } from "./value.js";
 import { parseIntel, intelDelta, buildNameIndex, resolvePlayer } from "./intel.js";
 import { SLEEPER_PLAYERS_URL, matchSleeperInjuries, injuryAbbreviation } from "./injuries.js";
-import { fillRoster, positionNeeds, blendedScore, sourceDisagreement, runAlerts, explainPick, recommend, attackNext, byeConflicts, optimalLineupPoints } from "./draft.js";
+import { fillRoster, positionNeeds, blendedScore, sourceDisagreement, defaultSortDirection, compareDraftPlayers, runAlerts, explainPick, recommend, attackNext, byeConflicts, optimalLineupPoints } from "./draft.js";
 import { snakeOrder, botPick, strategyPick, availabilityAtMyPicks } from "./simulator.js";
 import * as store from "./storage.js";
 
@@ -24,7 +24,7 @@ const S = {
   injuryRefreshing: false,
   pickNumber: store.load("pickNumber", 1),
   draftMode: store.load("draftMode", false),      // must be enabled before any pick can be marked
-  filterPos: "ALL", query: "", sortBy: "blend", hideDrafted: true,
+  filterPos: "ALL", query: "", sortBy: "blend", sortDir: "desc", hideDrafted: true,
   pendingReview: [],
 };
 
@@ -140,12 +140,8 @@ function renderBoard() {
     rows = rows.filter((p) => p.name.toLowerCase().includes(q) || p.team.toLowerCase().includes(q));
   }
   for (const p of rows) p.blend = blendedScore(p, c, S.weights);
-  const cmp = { blend: (a, b) => b.blend - a.blend, vor: (a, b) => b.vor - a.vor,
-    proj: (a, b) => b.proj - a.proj, adp: (a, b) => a.adp - b.adp,
-    sleeperAdp: (a, b) => (a.sleeperAdp ?? 999) - (b.sleeperAdp ?? 999),
-    yahoo: (a, b) => (a.yahooRank ?? 999) - (b.yahooRank ?? 999),
-    disagree: (a, b) => (sourceDisagreement(b) ?? -1) - (sourceDisagreement(a) ?? -1) }[S.sortBy];
-  rows.sort(cmp);
+  rows.sort((a, b) => compareDraftPlayers(a, b, S.sortBy, S.sortDir));
+  renderSortHeaders();
 
   const showDrafted = !S.hideDrafted;
   const body = $("#boardBody");
@@ -154,6 +150,23 @@ function renderBoard() {
     const drafted = S.values.filter((p) => S.drafted[p.id]);
     body.innerHTML += drafted.map((p) => rowHtml(p, "", true)).join("");
   }
+}
+
+function setBoardSort(sortBy) {
+  S.sortDir = S.sortBy === sortBy
+    ? (S.sortDir === "asc" ? "desc" : "asc")
+    : defaultSortDirection(sortBy);
+  S.sortBy = sortBy;
+  $("#sortBy").value = sortBy;
+  renderBoard();
+}
+
+function renderSortHeaders() {
+  $$(`thead th[data-sort]`).forEach((th) => {
+    const active = th.dataset.sort === S.sortBy;
+    th.dataset.sortIndicator = active ? (S.sortDir === "asc" ? "▲" : "▼") : "";
+    th.setAttribute("aria-sort", active ? (S.sortDir === "asc" ? "ascending" : "descending") : "none");
+  });
 }
 
 function rowHtml(p, rank, isDrafted = false) {
@@ -427,6 +440,8 @@ function wireEvents() {
     }
     const posf = e.target.closest(".pos-filter");
     if (posf) { $$(".pos-filter").forEach((x) => x.classList.remove("active")); posf.classList.add("active"); S.filterPos = posf.dataset.pos; renderBoard(); return; }
+    const sortHeader = e.target.closest("thead th[data-sort]");
+    if (sortHeader) { setBoardSort(sortHeader.dataset.sort); return; }
     const tab = e.target.closest(".tab");
     if (tab) { $$(".tab").forEach((x) => x.classList.remove("active")); tab.classList.add("active");
       $$(".tab-panel").forEach((p) => p.classList.remove("active")); $("#tab-" + tab.dataset.tab).classList.add("active"); return; }
@@ -439,6 +454,13 @@ function wireEvents() {
     if (e.target.id === "btnCloseSettings") $("#settingsDrawer").hidden = true;
     if (e.target.id === "btnExport") doExport();
     if (e.target.id === "btnReset") doReset();
+  });
+  $("#boardTable thead").addEventListener("keydown", (e) => {
+    const sortHeader = e.target.closest("th[data-sort]");
+    if (sortHeader && (e.key === "Enter" || e.key === " ")) {
+      e.preventDefault();
+      setBoardSort(sortHeader.dataset.sort);
+    }
   });
 
   // mock draft simulator
@@ -489,7 +511,7 @@ function wireEvents() {
   });
 
   $("#search").addEventListener("input", (e) => { S.query = e.target.value; renderBoard(); });
-  $("#sortBy").addEventListener("change", (e) => { S.sortBy = e.target.value; renderBoard(); });
+  $("#sortBy").addEventListener("change", (e) => { S.sortBy = e.target.value; S.sortDir = defaultSortDirection(S.sortBy); renderBoard(); });
   $("#hideDrafted").addEventListener("change", (e) => { S.hideDrafted = e.target.checked; renderBoard(); });
   $("#pickNumber").addEventListener("change", (e) => { S.pickNumber = Math.max(1, +e.target.value || 1); persist(); render(); });
 

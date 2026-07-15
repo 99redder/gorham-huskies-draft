@@ -53,12 +53,18 @@
           <input type="search" id="search" placeholder="Search player…" />
           <select id="sortBy" title="Sort by">
             <option value="blend">Sort: Best Pick</option>
+            <option value="name">Sort: Player</option>
+            <option value="pos">Sort: Position</option>
+            <option value="team">Sort: Team</option>
+            <option value="bye">Sort: Bye Week</option>
             <option value="vor">Sort: VOR</option>
             <option value="proj">Sort: Proj Pts</option>
+            <option value="tier">Sort: Tier</option>
             <option value="adp">Sort: FFC ADP</option>
             <option value="sleeperAdp">Sort: Sleeper ADP</option>
             <option value="yahoo">Sort: Yahoo Rank</option>
             <option value="disagree">Sort: Source Disagreement</option>
+            <option value="intel">Sort: Intel</option>
           </select>
           <label class="chk"><input type="checkbox" id="hideDrafted" checked /> Hide drafted</label>
         </div>
@@ -69,19 +75,19 @@
           <thead>
             <tr>
               <th tabindex="0" data-tip="Current board order using the selected Sort option. This is not a source rank unless you sort by one.">#</th>
-              <th tabindex="0" data-tip="Player name. Current injury designation and a short injury note appear beside the name after an injury refresh.">Player</th>
-              <th tabindex="0" data-tip="Fantasy position: quarterback, running back, wide receiver, tight end, kicker, or team defense.">Pos</th>
-              <th tabindex="0" data-tip="Player's current NFL team abbreviation.">Tm</th>
-              <th tabindex="0" data-tip="NFL bye week. Use this to avoid overloading your starting lineup with players off in the same week.">Bye</th>
-              <th tabindex="0" data-tip="Projected season fantasy points using this league's custom scoring settings.">Proj</th>
-              <th tabindex="0" data-tip="Value Over Replacement: projected points above the expected replacement-level player at this position in a 6-team league.">VOR</th>
-              <th tabindex="0" data-tip="Projection tier. Tier 1 contains the strongest options; players in the same tier have broadly similar value.">Tier</th>
-              <th tabindex="0" data-tip="FantasyFootballCalculator half-PPR average draft position. Lower numbers mean players are usually drafted earlier.">FFC</th>
-              <th tabindex="0" data-tip="Sleeper half-PPR average draft position. Lower numbers mean players are usually drafted earlier.">SLP</th>
-              <th tabindex="0" data-tip="Yahoo's default preseason pre-draft rank. This is independent from the FFC and Sleeper market ranks.">Y!</th>
-              <th tabindex="0" data-tip="Largest rank difference among FFC, Sleeper, and Yahoo. A larger number means the sources disagree more.">Δ</th>
-              <th tabindex="0" data-tip="Net boost or penalty from pasted analyst takes after applying each source's trust weight.">Intel</th>
-              <th tabindex="0" data-tip="Blended Best Pick score combining league-specific VOR, market ranks, roster need, and analyst intel using your selected weights.">Score</th>
+              <th tabindex="0" data-sort="name" data-tip="Player name. Click to sort alphabetically. Current injury details appear beside the name after a refresh.">Player</th>
+              <th tabindex="0" data-sort="pos" data-tip="Fantasy position. Click to group players alphabetically by position.">Pos</th>
+              <th tabindex="0" data-sort="team" data-tip="Player's current NFL team. Click to sort alphabetically by team.">Tm</th>
+              <th tabindex="0" data-sort="bye" data-tip="NFL bye week. Click to sort earliest to latest; click again to reverse.">Bye</th>
+              <th tabindex="0" data-sort="proj" data-tip="Projected season fantasy points using this league's scoring. Click to sort high to low.">Proj</th>
+              <th tabindex="0" data-sort="vor" data-tip="Value Over Replacement in this 6-team league. Click to sort high to low.">VOR</th>
+              <th tabindex="0" data-sort="tier" data-tip="Projection tier. Click to sort Tier 1 first; click again to reverse.">Tier</th>
+              <th tabindex="0" data-sort="adp" data-tip="FantasyFootballCalculator half-PPR ADP. Click to sort earliest draft position first.">FFC</th>
+              <th tabindex="0" data-sort="sleeperAdp" data-tip="Sleeper half-PPR ADP. Click to sort earliest draft position first.">SLP</th>
+              <th tabindex="0" data-sort="yahoo" data-tip="Yahoo default preseason rank. Click to sort highest-ranked players first.">Y!</th>
+              <th tabindex="0" data-sort="disagree" data-tip="Largest difference among FFC, Sleeper, and Yahoo. Click to show the biggest disagreements first.">Δ</th>
+              <th tabindex="0" data-sort="intel" data-tip="Net analyst boost or penalty after trust weights. Click to sort strongest boosts first.">Intel</th>
+              <th tabindex="0" data-sort="blend" data-tip="Blended Best Pick score. Click to sort highest score first.">Score</th>
               <th tabindex="0" data-tip="Draft actions. In Draft Mode, mark a player as yours or taken by another manager.">Actions</th>
             </tr>
           </thead>
