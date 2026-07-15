@@ -1,13 +1,33 @@
 {
   "sources": {
     "@JagSays": 1.4,
+    "@JagSays (RotoWire)": 1.4,
     "@FantasyPros": 1.0,
     "@Rotoworld": 1.0,
     "@FieldYates": 1.1,
     "@MattHarmon_BYB": 1.15,
     "@JJZachariason": 1.2,
     "@ChrisRaybon": 1.1,
+    "@justinboone": 1.3,
+    "@crossroadsffp": 1.25,
+    "@JodySmithNFL": 1.18,
+    "@The_Oddsmaker": 1.25,
+    "@NMariano53": 1.18,
+    "@Fitz_FF": 1.1,
     "manual": 1.0
+  },
+  "sourceMeta": {
+    "@JagSays": { "name": "JagSays", "note": "Existing RotoWire guide baseline." },
+    "@JagSays (RotoWire)": { "name": "JagSays · seeded guide", "note": "Existing RotoWire guide baseline." },
+    "@justinboone": { "name": "Justin Boone · Yahoo", "note": "No. 1 in FantasyPros' 2025 in-season accuracy rankings; free Yahoo draft content." },
+    "@crossroadsffp": { "name": "Seth Miller · Crossroads FF", "note": "No. 1 in FantasyPros' 2025 preseason draft accuracy rankings." },
+    "@JodySmithNFL": { "name": "Jody Smith · Draft Sharks", "note": "Top 10 in FantasyPros' 2025 preseason draft accuracy rankings." },
+    "@The_Oddsmaker": { "name": "Sean Koerner · FantasyLabs", "note": "Four-time FantasyPros in-season accuracy winner; public account takes are free." },
+    "@NMariano53": { "name": "Nick Mariano · RotoBaller", "note": "Top-20 2025 preseason ranker and multi-year accuracy award winner." },
+    "@Fitz_FF": { "name": "Pat Fitzmaurice · FantasyPros", "note": "Long-running public analyst account and FantasyPros ranker." },
+    "@ChrisRaybon": { "name": "Chris Raybon · Action Network", "note": "Top-three WR ranker in FantasyPros' 2025 preseason accuracy results." },
+    "@MattHarmon_BYB": { "name": "Matt Harmon · Reception Perception", "note": "Public receiver analysis and Yahoo Fantasy contributor." },
+    "@JJZachariason": { "name": "JJ Zachariason · Late-Round Fantasy", "note": "Public data-driven fantasy analysis." }
   },
   "defaultTrust": 1.0,
   "boost": {

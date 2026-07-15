@@ -138,8 +138,11 @@ export function scoreSentiment(snippet, lexicon) {
 function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
 
 // Final signed delta an intel entry contributes to a player's blended score.
-export function intelDelta(entry, lexicon) {
-  const trust = (lexicon.sources && lexicon.sources[entry.source]) || lexicon.defaultTrust || 1;
+export function intelDelta(entry, lexicon, trustOverrides = {}) {
+  const trust = trustOverrides[entry.source]
+    ?? (lexicon.sources && lexicon.sources[entry.source])
+    ?? lexicon.defaultTrust
+    ?? 1;
   // entry.magnitude is user-confirmed (may be edited via slider); trust scales it.
   return Math.round(entry.magnitude * trust * 10) / 10;
 }

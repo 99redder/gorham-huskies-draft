@@ -21,6 +21,9 @@ computed tiers, your roster needs, and hand-entered analyst "alpha" intel.
   (1QB / 3RB / 3WR / 1TE / 1FLEX / K / DEF × 6 teams), so scarce-position premiums are
   correctly compressed vs a 12-teamer. Tiers are detected from projection cliffs
   ([`js/value.js`](js/value.js)).
+- **Independent market ranks** — the board shows FFC ADP, actual Sleeper-draft ADP,
+  Yahoo's public default preseason rank, and a disagreement spread. Each source has
+  its own blend weight, so platform bias is visible instead of silently averaged.
 - **Analyst intel ingest** — paste the *text* of a post (e.g. `@JagSays`), tag the
   source, and the app matches players + detects a bullish/bearish take, proposing an
   adjustable, source-weighted boost/fade you confirm before it moves the board
@@ -47,6 +50,17 @@ node scripts/build-players.mjs   # writes data/players.json
 ```
 
 You can also edit [`data/players.json`](data/players.json) directly.
+
+Refresh Yahoo and Sleeper market data separately (this writes
+[`data/rankings.json`](data/rankings.json)):
+
+```bash
+node scripts/refresh-market-data.mjs
+```
+
+Yahoo's public rank is its default preseason/pre-draft rank, not its separate
+Expert Rank. Sleeper ADP is calculated from recent 8-team, 1-QB, half-PPR redraft
+pick distributions published by YAFSB, the closest public format to this 6-team league.
 
 ## Run locally
 

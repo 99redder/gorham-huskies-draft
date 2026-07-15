@@ -240,7 +240,6 @@ const players = merged.map(({ row }, i) => {
     bye: BYES[team] ?? null,
     adp: i + 1,
     posRankConsensus: pr,
-    yahooRank: i + 1,
     aliases: buildAliases(name, pos),
     stats,
     provenance: { adp: "FFC-half-ppr-2026-07-14", stats: "modeled-2026" }

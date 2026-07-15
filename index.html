@@ -8,7 +8,7 @@
   <link rel="manifest" href="manifest.json" />
   <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="icons/icon-192.png" />
-  <link rel="stylesheet" href="css/styles.css?v=8" />
+  <link rel="stylesheet" href="css/styles.css?v=9" />
 </head>
 <body>
   <header class="topbar">
@@ -54,7 +54,10 @@
             <option value="blend">Sort: Best Pick</option>
             <option value="vor">Sort: VOR</option>
             <option value="proj">Sort: Proj Pts</option>
-            <option value="adp">Sort: ADP</option>
+            <option value="adp">Sort: FFC ADP</option>
+            <option value="sleeperAdp">Sort: Sleeper ADP</option>
+            <option value="yahoo">Sort: Yahoo Rank</option>
+            <option value="disagree">Sort: Source Disagreement</option>
           </select>
           <label class="chk"><input type="checkbox" id="hideDrafted" checked /> Hide drafted</label>
         </div>
@@ -67,7 +70,10 @@
               <th>#</th><th>Player</th><th>Pos</th><th>Tm</th>
               <th title="Projected points, your scoring">Proj</th>
               <th title="Value Over Replacement (6-team)">VOR</th>
-              <th>Tier</th><th title="Consensus ADP">ADP</th>
+              <th>Tier</th><th title="FantasyFootballCalculator half-PPR ADP">FFC</th>
+              <th title="Actual half-PPR Sleeper draft ADP">SLP</th>
+              <th title="Yahoo default preseason rank">Y!</th>
+              <th title="Largest rank gap among available sources">Δ</th>
               <th title="Analyst intel">Intel</th>
               <th title="Blended best-pick score">Score</th>
               <th></th>
@@ -123,9 +129,16 @@
       <h2>Blend Weights</h2>
       <p class="hint">Tune how the "Best Pick" score is built for your draft.</p>
       <label>VOR (league value) <input type="range" id="wVor" min="0" max="2" step="0.05" value="1"><span data-out="wVor"></span></label>
-      <label>ADP value (fall/steal) <input type="range" id="wAdp" min="0" max="2" step="0.05" value="0.6"><span data-out="wAdp"></span></label>
+      <label>FFC ADP <input type="range" id="wAdp" min="0" max="2" step="0.05" value="0.45"><span data-out="wAdp"></span></label>
+      <label>Sleeper ADP <input type="range" id="wSleeper" min="0" max="2" step="0.05" value="0.45"><span data-out="wSleeper"></span></label>
+      <label>Yahoo preseason rank <input type="range" id="wYahoo" min="0" max="2" step="0.05" value="0.3"><span data-out="wYahoo"></span></label>
       <label>Roster need <input type="range" id="wNeed" min="0" max="2" step="0.05" value="1"><span data-out="wNeed"></span></label>
       <label>Analyst intel <input type="range" id="wIntel" min="0" max="2" step="0.05" value="1"><span data-out="wIntel"></span></label>
+      <div class="trust-settings">
+        <h3>Analyst source trust</h3>
+        <p class="hint">Applied dynamically to every take from that source. Multiple takes stack.</p>
+        <div id="sourceTrustControls"></div>
+      </div>
       <button id="btnCloseSettings" class="btn primary">Done</button>
     </div>
   </div>
@@ -143,7 +156,7 @@
   <div id="intelTip" class="intel-tip" hidden></div>
   <div id="toast" class="toast" hidden></div>
 
-  <script type="module" src="js/app.js?v=8"></script>
+  <script type="module" src="js/app.js?v=9"></script>
   <script>
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));

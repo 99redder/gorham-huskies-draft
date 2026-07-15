@@ -2,20 +2,22 @@
 import { loadData } from "./data.js";
 import { computeValues, normalizeVor } from "./value.js";
 import { parseIntel, intelDelta, buildNameIndex, resolvePlayer } from "./intel.js";
-import { fillRoster, positionNeeds, blendedScore, runAlerts, recommend, attackNext, byeConflicts, optimalLineupPoints } from "./draft.js";
+import { fillRoster, positionNeeds, blendedScore, sourceDisagreement, runAlerts, recommend, attackNext, byeConflicts, optimalLineupPoints } from "./draft.js";
 import { snakeOrder, botPick, strategyPick, availabilityAtMyPicks } from "./simulator.js";
 import * as store from "./storage.js";
 
-const STATE_KEYS = ["drafted", "intelLog", "weights", "pickNumber", "draftMode"];
+const STATE_KEYS = ["drafted", "intelLog", "weights", "sourceTrust", "pickNumber", "draftMode"];
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
+const DEFAULT_WEIGHTS = { vor: 1, adp: 0.45, sleeper: 0.45, yahoo: 0.3, need: 1, intel: 1 };
 
 const S = {
   league: null, players: [], lexicon: null, dataMeta: null, seedIntel: { version: 0, entries: [] },
   values: [], byId: new Map(),
   drafted: store.load("drafted", {}),            // id -> "mine" | "other"
   intelLog: store.load("intelLog", []),          // [{id, source, snippet, matches:[{playerId,delta,name}]}]
-  weights: store.load("weights", { vor: 1, adp: 0.6, need: 1, intel: 1 }),
+  weights: { ...DEFAULT_WEIGHTS, ...store.load("weights", {}) },
+  sourceTrust: store.load("sourceTrust", {}),
   pickNumber: store.load("pickNumber", 1),
   draftMode: store.load("draftMode", false),      // must be enabled before any pick can be marked
   filterPos: "ALL", query: "", sortBy: "blend", hideDrafted: true,
@@ -29,13 +31,15 @@ async function init() {
   S.league = data.league; S.players = data.players; S.lexicon = data.lexicon; S.dataMeta = data.dataMeta;
   S.seedIntel = data.seedIntel || { version: 0, entries: [] };
   populateSourceList();
+  populateSourceTrustControls();
   applySeedIntel(false);
   recompute();
   wireEvents();
   renderMode();
   render();
+  const marketDate = S.dataMeta.rankingsGeneratedAt ? new Date(S.dataMeta.rankingsGeneratedAt).toLocaleDateString() : "not loaded";
   $("#provenance").textContent =
-    `Data: ${S.dataMeta.source}. Projections are a modeled starting point — edit data/players.json to refine.`;
+    `Projections: ${S.dataMeta.source}. Yahoo + Sleeper ranks captured ${marketDate}. Modeled projections remain editable in data/players.json.`;
 }
 
 // ---- core compute -------------------------------------------------------
@@ -43,8 +47,11 @@ function recompute() {
   const values = normalizeVor(computeValues(S.players, S.league));
   // aggregate intel deltas per player
   const deltas = {};
-  for (const entry of S.intelLog)
-    for (const m of entry.matches) deltas[m.playerId] = (deltas[m.playerId] || 0) + m.delta;
+  for (const entry of S.intelLog) {
+    const trust = sourceTrust(entry.source);
+    for (const m of entry.matches)
+      deltas[m.playerId] = (deltas[m.playerId] || 0) + m.delta * trust;
+  }
   for (const v of values) v.intelDelta = Math.round((deltas[v.id] || 0) * 10) / 10;
   S.values = values;
   S.byId = new Map(values.map((v) => [v.id, v]));
@@ -83,7 +90,7 @@ function intelEntriesForPlayer(id) {
   const out = [];
   for (const e of S.intelLog) {
     const m = e.matches.find((x) => x.playerId === id);
-    if (m) out.push({ source: e.source, snippet: e.snippet, delta: m.delta });
+    if (m) out.push({ source: e.source, snippet: e.snippet, delta: effectiveIntelDelta(m.delta, e.source) });
   }
   return out;
 }
@@ -118,7 +125,10 @@ function renderBoard() {
   }
   for (const p of rows) p.blend = blendedScore(p, c, S.weights);
   const cmp = { blend: (a, b) => b.blend - a.blend, vor: (a, b) => b.vor - a.vor,
-    proj: (a, b) => b.proj - a.proj, adp: (a, b) => a.adp - b.adp }[S.sortBy];
+    proj: (a, b) => b.proj - a.proj, adp: (a, b) => a.adp - b.adp,
+    sleeperAdp: (a, b) => (a.sleeperAdp ?? 999) - (b.sleeperAdp ?? 999),
+    yahoo: (a, b) => (a.yahooRank ?? 999) - (b.yahooRank ?? 999),
+    disagree: (a, b) => (sourceDisagreement(b) ?? -1) - (sourceDisagreement(a) ?? -1) }[S.sortBy];
   rows.sort(cmp);
 
   const showDrafted = !S.hideDrafted;
@@ -134,6 +144,8 @@ function rowHtml(p, rank, isDrafted = false) {
   const intel = intelBadgeHtml(p);
   const tierCls = `t${Math.min(p.tier, 6)}`;
   const who = S.drafted[p.id]; // "mine" | "other" | undefined
+  const gap = sourceDisagreement(p);
+  const rankTitle = `FFC ${p.adp ?? "—"} · Sleeper ${p.sleeperAdp ?? "—"} · Yahoo ${p.yahooRank ?? "—"}`;
   const draftCls = isDrafted ? `drafted-row ${who === "mine" ? "mine-row" : "other-row"}` : "";
   return `<tr class="${draftCls} pos-${p.pos}" data-id="${p.id}">
     <td class="rk">${rank}</td>
@@ -143,7 +155,10 @@ function rowHtml(p, rank, isDrafted = false) {
     <td>${p.proj}</td>
     <td class="vor">${p.vor}</td>
     <td><span class="tier ${tierCls}">${p.tier}</span></td>
-    <td class="adp">${p.adp}</td>
+    <td class="adp">${p.adp ?? "—"}</td>
+    <td class="adp">${p.sleeperAdp ?? "—"}</td>
+    <td class="adp">${p.yahooRank ?? "—"}</td>
+    <td title="${rankTitle}">${gap == null ? "—" : `<span class="source-gap ${gap >= 20 ? "hot" : ""}">${gap}</span>`}</td>
     <td>${intel}</td>
     <td class="score">${p.blend != null ? p.blend : ""}</td>
     <td class="act">
@@ -225,9 +240,9 @@ function renderIntelLog() {
   $("#intelLog").innerHTML = S.intelLog.length
     ? S.intelLog.map((e) => `
       <li>
-        <div class="ilog-head"><b>${e.source}</b>${e.seed ? `<span class="seed-tag">baseline</span>` : ""} <button class="mini danger" data-act="del-intel" data-id="${e.id}">✕</button></div>
+        <div class="ilog-head"><b>${escapeHtml(e.source)}</b>${e.seed ? `<span class="seed-tag">baseline</span>` : ""} <span class="trust-tag">×${sourceTrust(e.source).toFixed(2)}</span> <button class="mini danger" data-act="del-intel" data-id="${e.id}">✕</button></div>
         <div class="ilog-snip">"${escapeHtml(e.snippet)}"</div>
-        <div class="ilog-players">${e.matches.map((m) => `<span class="intel-badge ${m.delta > 0 ? "up" : "down"}">${m.name} ${m.delta > 0 ? "▲" : "▼"}${Math.abs(m.delta)}</span>`).join("")}</div>
+        <div class="ilog-players">${e.matches.map((m) => { const d = effectiveIntelDelta(m.delta, e.source); return `<span class="intel-badge ${d > 0 ? "up" : "down"}">${escapeHtml(m.name)} ${d > 0 ? "▲" : "▼"}${Math.abs(d)}</span>`; }).join("")}</div>
       </li>`).join("")
     : `<li class="muted">No intel yet.</li>`;
 }
@@ -250,7 +265,7 @@ function analyzeIntel() {
 
 function reviewRowHtml(m, i, source) {
   if (m.ambiguous) {
-    return `<div class="review-row amb">
+    return `<div class="review-row amb" data-review="${i}">
       <div class="rr-name">Ambiguous: "${m.token}"</div>
       <select data-review="${i}" class="amb-select">
         <option value="">— pick player —</option>
@@ -259,12 +274,12 @@ function reviewRowHtml(m, i, source) {
       <div class="rr-snip">"${escapeHtml(m.snippet)}"</div>
     </div>`;
   }
-  const delta = intelDelta({ magnitude: m.magnitude, source }, S.lexicon);
+  const delta = intelDelta({ magnitude: m.magnitude, source }, S.lexicon, S.sourceTrust);
   const dir = m.sentiment >= 0 ? "up" : "down";
   return `<div class="review-row" data-player="${m.player.id}" data-review="${i}">
     <div class="rr-name"><b>${m.player.name}</b> <span class="pos-pill ${m.player.pos}">${m.player.pos}</span>
       <span class="rr-delta ${dir}">${delta > 0 ? "+" : ""}${delta.toFixed(1)}</span></div>
-    <input type="range" class="rr-slider" min="-30" max="30" step="1" value="${Math.round(delta)}" data-review="${i}">
+    <input type="range" class="rr-slider" min="-30" max="30" step="1" value="${Math.round(m.magnitude)}" data-review="${i}" title="Raw take strength; source trust is applied separately">
     <div class="rr-snip">"${escapeHtml(m.snippet)}"</div>
   </div>`;
 }
@@ -327,7 +342,7 @@ function undraft(id) {
   delete S.drafted[id]; S.pickNumber = Object.keys(S.drafted).length + 1; $("#pickNumber").value = S.pickNumber; persist(); render();
 }
 
-function persist() { store.save("drafted", S.drafted); store.save("intelLog", S.intelLog); store.save("weights", S.weights); store.save("pickNumber", S.pickNumber); store.save("draftMode", S.draftMode); }
+function persist() { store.save("drafted", S.drafted); store.save("intelLog", S.intelLog); store.save("weights", S.weights); store.save("sourceTrust", S.sourceTrust); store.save("pickNumber", S.pickNumber); store.save("draftMode", S.draftMode); }
 
 // ---- events -------------------------------------------------------------
 function wireEvents() {
@@ -395,9 +410,10 @@ function wireEvents() {
   $("#intelReview").addEventListener("input", (e) => {
     if (e.target.classList.contains("rr-slider")) {
       const row = e.target.closest(".review-row");
-      const d = +e.target.value;
+      const pending = S.pendingReview[+e.target.dataset.review];
+      const d = intelDelta({ magnitude: +e.target.value, source: pending.source }, S.lexicon, S.sourceTrust);
       const badge = $(".rr-delta", row);
-      badge.textContent = (d > 0 ? "+" : "") + d;
+      badge.textContent = (d > 0 ? "+" : "") + d.toFixed(1);
       badge.className = "rr-delta " + (d >= 0 ? "up" : "down");
     }
   });
@@ -408,11 +424,13 @@ function wireEvents() {
   $("#pickNumber").addEventListener("change", (e) => { S.pickNumber = Math.max(1, +e.target.value || 1); persist(); render(); });
 
   // weight sliders
-  for (const [id, key] of [["wVor", "vor"], ["wAdp", "adp"], ["wNeed", "need"], ["wIntel", "intel"]]) {
+  for (const [id, key] of [["wVor", "vor"], ["wAdp", "adp"], ["wSleeper", "sleeper"], ["wYahoo", "yahoo"], ["wNeed", "need"], ["wIntel", "intel"]]) {
     const el = $("#" + id); el.value = S.weights[key];
     $(`[data-out="${id}"]`).textContent = (+el.value).toFixed(2);
     el.addEventListener("input", (e) => { S.weights[key] = +e.target.value; $(`[data-out="${id}"]`).textContent = (+e.target.value).toFixed(2); persist(); render(); });
   }
+
+  wireSourceTrustEvents();
 
   $("#importFile").addEventListener("change", doImport);
   $("#pickNumber").value = S.pickNumber;
@@ -434,9 +452,10 @@ function doImport(e) {
     try {
       store.importState(JSON.parse(reader.result));
       S.drafted = store.load("drafted", {}); S.intelLog = store.load("intelLog", []);
-      S.weights = store.load("weights", S.weights); S.pickNumber = store.load("pickNumber", 1);
+      S.weights = { ...DEFAULT_WEIGHTS, ...store.load("weights", {}) };
+      S.sourceTrust = store.load("sourceTrust", {}); S.pickNumber = store.load("pickNumber", 1);
       S.draftMode = store.load("draftMode", false);
-      recompute(); renderMode(); render(); toast("Imported backup.");
+      populateSourceTrustControls(); wireSourceTrustEvents(); recompute(); renderMode(); render(); toast("Imported backup.");
     } catch (err) { toast("Import failed: " + err.message); }
   };
   reader.readAsText(file);
@@ -453,6 +472,39 @@ function doReset() {
 function populateSourceList() {
   const dl = $("#sourceList");
   dl.innerHTML = Object.keys(S.lexicon.sources || {}).map((s) => `<option value="${s}">`).join("");
+}
+
+function sourceTrust(source) {
+  return S.sourceTrust[source] ?? S.lexicon.sources?.[source] ?? S.lexicon.defaultTrust ?? 1;
+}
+
+function effectiveIntelDelta(rawDelta, source) {
+  return Math.round(rawDelta * sourceTrust(source) * 10) / 10;
+}
+
+function populateSourceTrustControls() {
+  const root = $("#sourceTrustControls");
+  if (!root || !S.lexicon) return;
+  root.innerHTML = Object.entries(S.lexicon.sources || {}).map(([source, fallback]) => {
+    const value = S.sourceTrust[source] ?? fallback;
+    const meta = S.lexicon.sourceMeta?.[source];
+    return `<label title="${escapeHtml(meta?.note || "")}">${escapeHtml(source)}${meta?.name ? ` <em>${escapeHtml(meta.name)}</em>` : ""}
+      <input type="range" min="0" max="2" step="0.05" value="${value}" data-source-trust="${escapeHtml(source)}">
+      <span data-trust-out>${value.toFixed(2)}</span></label>`;
+  }).join("");
+}
+
+function wireSourceTrustEvents() {
+  for (const el of $$('[data-source-trust]')) {
+    if (el.dataset.wired) continue;
+    el.dataset.wired = "1";
+    el.addEventListener("input", (e) => {
+      const source = e.target.dataset.sourceTrust;
+      S.sourceTrust[source] = +e.target.value;
+      e.target.closest("label").querySelector("[data-trust-out]").textContent = (+e.target.value).toFixed(2);
+      persist(); recompute(); render();
+    });
+  }
 }
 
 // ---- mock draft simulator (isolated state) ------------------------------

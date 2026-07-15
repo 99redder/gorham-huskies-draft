@@ -2,6 +2,8 @@
 import { readFileSync } from "node:fs";
 import { projectedPoints } from "../js/scoring.js";
 import { computeValues, replacementRanks } from "../js/value.js";
+import { blendedScore, sourceDisagreement } from "../js/draft.js";
+import { intelDelta } from "../js/intel.js";
 
 const league = JSON.parse(readFileSync(new URL("../data/league.json", import.meta.url)));
 const { players } = JSON.parse(readFileSync(new URL("../data/players.json", import.meta.url)));
@@ -10,6 +12,10 @@ let pass = 0, fail = 0;
 function eq(name, got, want, tol = 0.05) {
   if (Math.abs(got - want) <= tol) { pass++; }
   else { fail++; console.error(`FAIL ${name}: got ${got}, want ${want}`); }
+}
+function ok(name, value) {
+  if (value) pass++;
+  else { fail++; console.error(`FAIL ${name}`); }
 }
 
 // Hand-computed WR: 102 rec, 1450 yds, 9 TD, 1 fum lost (0.5PPR, 10yd/pt, 6pt TD, -2 fum)
@@ -33,6 +39,18 @@ eq("4th down stops",
   projectedPoints({ pos: "DEF", stats: { fourthDownStops: 6, pointsAllowedPerGame: 21 } }, league)
   - projectedPoints({ pos: "DEF", stats: { fourthDownStops: 0, pointsAllowedPerGame: 21 } }, league),
   12);
+
+// Independent rank sources: spread is visible and a player who falls past ADP
+// receives more market value than a reach (regression for the old reversed sign).
+eq("source disagreement", sourceDisagreement({ adp: 10, sleeperAdp: 25, yahooRank: 5 }), 20);
+{
+  const ctx = { pickNumber: 20, need: {} };
+  const weights = { vor: 0, adp: 1, sleeper: 0, yahoo: 0, need: 0, intel: 0 };
+  const fell = blendedScore({ adp: 10 }, ctx, weights);
+  const reach = blendedScore({ adp: 30 }, ctx, weights);
+  ok("fall past ADP beats a reach", fell > reach);
+}
+eq("analyst trust override", intelDelta({ source: "@analyst", magnitude: 10 }, { defaultTrust: 1 }, { "@analyst": 1.25 }), 12.5);
 
 // Sanity: full dataset VOR ranks the top pick reasonably, replacement levels shallow
 const values = computeValues(players, league);

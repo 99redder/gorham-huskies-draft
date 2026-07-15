@@ -57,15 +57,28 @@ export function needMultiplier(pos, need) {
 //   intelDelta  signed analyst-intel adjustment
 export function blendedScore(p, ctx, weights) {
   const w = weights;
-  // Consensus-ADP backbone: below replacement, VOR is flat/noisy and not comparable
-  // across positions, so a small market-consensus term keeps the deep board sane
-  // (e.g. a startable WR/QB ranks by ADP, not lumped with waiver fodder).
-  const adpBackbone = Math.max(0, 26 - (p.adp - 1) * 0.18);
-  // "Fall/steal": positive when a player is still available past their ADP.
-  const adpValue = clamp((p.adp - (ctx.pickNumber || p.adp)) * 0.6, -25, 25);
+  const pick = ctx.pickNumber || 1;
+  // Each independent market rank contributes both overall market strength and a
+  // fall/steal signal. A player still available after his rank is a positive value.
+  const rankValue = (rank) => {
+    if (!Number.isFinite(rank)) return 0;
+    const backbone = Math.max(0, 26 - (rank - 1) * 0.18);
+    const fall = clamp((pick - rank) * 0.6, -25, 25);
+    return backbone + fall;
+  };
   const need = needMultiplier(p.pos, ctx.need);
-  const base = w.vor * (p.vorNorm || 0) + adpBackbone + w.adp * adpValue + w.intel * (p.intelDelta || 0);
+  const base = w.vor * (p.vorNorm || 0)
+    + w.adp * rankValue(p.adp)
+    + (w.sleeper ?? 0.45) * rankValue(p.sleeperAdp)
+    + (w.yahoo ?? 0.3) * rankValue(p.yahooRank)
+    + w.intel * (p.intelDelta || 0);
   return Math.round(base * (1 + w.need * (need - 1)) * 10) / 10;
+}
+
+// Largest disagreement among the independent market/preseason sources.
+export function sourceDisagreement(p) {
+  const ranks = [p.adp, p.sleeperAdp, p.yahooRank].filter(Number.isFinite);
+  return ranks.length >= 2 ? Math.round((Math.max(...ranks) - Math.min(...ranks)) * 10) / 10 : null;
 }
 function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
 

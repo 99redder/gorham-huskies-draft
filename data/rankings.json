@@ -1,0 +1,661 @@
+{
+  "generatedAt": "2026-07-15T12:07:57.154Z",
+  "sources": {
+    "yahoo": {
+      "label": "Yahoo default preseason rank",
+      "url": "https://football.fantasysports.yahoo.com/f1/public_prerank",
+      "capturedAt": "2026-07-15T12:07:57.154Z",
+      "note": "Public Top 200 default pre-draft rankings; distinct from Yahoo Expert Rank."
+    },
+    "sleeper": {
+      "label": "Sleeper half-PPR redraft ADP",
+      "url": "https://yafsb.com/fantasy-football/adp-rankings/?scoring_type=half_ppr&league_size=8&is_superflex=False&is_dynasty=False&is_rookies=False",
+      "capturedAt": "2026-07-15T12:07:57.154Z",
+      "note": "Average actual picks from recent 8-team, 1-QB, half-PPR Sleeper drafts via YAFSB."
+    }
+  },
+  "players": {
+    "josh-allen-buf-qb": {
+      "yahooRank": 1,
+      "sleeperAdp": 13.6
+    },
+    "jahmyr-gibbs-det-rb": {
+      "yahooRank": 2,
+      "sleeperAdp": 2.3
+    },
+    "bijan-robinson-atl-rb": {
+      "yahooRank": 3,
+      "sleeperAdp": 1.3
+    },
+    "jayden-daniels-was-qb": {
+      "yahooRank": 4,
+      "sleeperAdp": 61.8
+    },
+    "joe-burrow-cin-qb": {
+      "yahooRank": 5,
+      "sleeperAdp": 42.8
+    },
+    "dak-prescott-dal-qb": {
+      "yahooRank": 6,
+      "sleeperAdp": 98.8
+    },
+    "jalen-hurts-phi-qb": {
+      "yahooRank": 7,
+      "sleeperAdp": 61.3
+    },
+    "lamar-jackson-bal-qb": {
+      "yahooRank": 8,
+      "sleeperAdp": 43.5
+    },
+    "drake-maye-ne-qb": {
+      "yahooRank": 9,
+      "sleeperAdp": 27.4
+    },
+    "ja-marr-chase-cin-wr": {
+      "yahooRank": 10,
+      "sleeperAdp": 5.8
+    },
+    "jaxson-dart-nyg-qb": {
+      "yahooRank": 11,
+      "sleeperAdp": 58
+    },
+    "trevor-lawrence-jax-qb": {
+      "yahooRank": 12,
+      "sleeperAdp": 106.8
+    },
+    "patrick-mahomes-kc-qb": {
+      "yahooRank": 13,
+      "sleeperAdp": 104.3
+    },
+    "jared-goff-det-qb": {
+      "yahooRank": 14,
+      "sleeperAdp": 92.8
+    },
+    "christian-mccaffrey-sf-rb": {
+      "yahooRank": 15,
+      "sleeperAdp": 10.2
+    },
+    "caleb-williams-chi-qb": {
+      "yahooRank": 16,
+      "sleeperAdp": 73.8
+    },
+    "justin-herbert-lac-qb": {
+      "yahooRank": 17,
+      "sleeperAdp": 69
+    },
+    "puka-nacua-lar-wr": {
+      "yahooRank": 18,
+      "sleeperAdp": 5.6
+    },
+    "bo-nix-den-qb": {
+      "yahooRank": 19,
+      "sleeperAdp": 44.8
+    },
+    "jonathan-taylor-ind-rb": {
+      "yahooRank": 20,
+      "sleeperAdp": 4.6
+    },
+    "brock-purdy-sf-qb": {
+      "yahooRank": 22,
+      "sleeperAdp": 75.5
+    },
+    "amon-ra-st-brown-det-wr": {
+      "yahooRank": 23,
+      "sleeperAdp": 8
+    },
+    "matthew-stafford-lar-qb": {
+      "yahooRank": 24,
+      "sleeperAdp": 55
+    },
+    "kyler-murray-ari-qb": {
+      "yahooRank": 25,
+      "sleeperAdp": 99.7
+    },
+    "malik-willis-mia-qb": {
+      "yahooRank": 26,
+      "sleeperAdp": 92.3
+    },
+    "daniel-jones-ind-qb": {
+      "yahooRank": 28,
+      "sleeperAdp": 103
+    },
+    "jaxon-smith-njigba-sea-wr": {
+      "yahooRank": 31,
+      "sleeperAdp": 7.2
+    },
+    "de-von-achane-mia-rb": {
+      "yahooRank": 33,
+      "sleeperAdp": 21
+    },
+    "james-cook-iii-buf-rb": {
+      "yahooRank": 34,
+      "sleeperAdp": 8.4
+    },
+    "ceedee-lamb-dal-wr": {
+      "yahooRank": 35,
+      "sleeperAdp": 11.8
+    },
+    "derrick-henry-bal-rb": {
+      "yahooRank": 36,
+      "sleeperAdp": 38.3
+    },
+    "justin-jefferson-min-wr": {
+      "yahooRank": 37,
+      "sleeperAdp": 13.3
+    },
+    "drake-london-atl-wr": {
+      "yahooRank": 38,
+      "sleeperAdp": 18
+    },
+    "aaron-rodgers-pit-qb": {
+      "yahooRank": 39,
+      "sleeperAdp": 185
+    },
+    "chase-brown-cin-rb": {
+      "yahooRank": 42,
+      "sleeperAdp": 34.5
+    },
+    "george-pickens-dal-wr": {
+      "yahooRank": 43,
+      "sleeperAdp": 25.3
+    },
+    "saquon-barkley-phi-rb": {
+      "yahooRank": 44,
+      "sleeperAdp": 15.8
+    },
+    "kenneth-walker-iii-kc-rb": {
+      "yahooRank": 45,
+      "sleeperAdp": 15.4
+    },
+    "josh-jacobs-gb-rb": {
+      "yahooRank": 46,
+      "sleeperAdp": 37.3
+    },
+    "ashton-jeanty-lv-rb": {
+      "yahooRank": 47,
+      "sleeperAdp": 12.3
+    },
+    "omarion-hampton-lac-rb": {
+      "yahooRank": 48,
+      "sleeperAdp": 22.8
+    },
+    "jeremiyah-love-ari-rb": {
+      "yahooRank": 50,
+      "sleeperAdp": 14
+    },
+    "kyren-williams-lar-rb": {
+      "yahooRank": 51,
+      "sleeperAdp": 30.6
+    },
+    "geno-smith-lv-qb": {
+      "yahooRank": 52,
+      "sleeperAdp": 71
+    },
+    "tee-higgins-cin-wr": {
+      "yahooRank": 53,
+      "sleeperAdp": 42.8
+    },
+    "nico-collins-hou-wr": {
+      "yahooRank": 54,
+      "sleeperAdp": 20.4
+    },
+    "javonte-williams-dal-rb": {
+      "yahooRank": 55,
+      "sleeperAdp": 48.4
+    },
+    "zay-flowers-bal-wr": {
+      "yahooRank": 56,
+      "sleeperAdp": 49.3
+    },
+    "a-j-brown-ne-wr": {
+      "yahooRank": 57,
+      "sleeperAdp": 31.5
+    },
+    "breece-hall-nyj-rb": {
+      "yahooRank": 58,
+      "sleeperAdp": 41.8
+    },
+    "rashee-rice-kc-wr": {
+      "yahooRank": 59,
+      "sleeperAdp": 45
+    },
+    "cam-skattebo-nyg-rb": {
+      "yahooRank": 60,
+      "sleeperAdp": 56
+    },
+    "chris-olave-no-wr": {
+      "yahooRank": 61,
+      "sleeperAdp": 24.3
+    },
+    "trey-mcbride-ari-te": {
+      "yahooRank": 63,
+      "sleeperAdp": 21
+    },
+    "devonta-smith-phi-wr": {
+      "yahooRank": 64,
+      "sleeperAdp": 54.3
+    },
+    "terry-mclaurin-was-wr": {
+      "yahooRank": 65,
+      "sleeperAdp": 48.2
+    },
+    "david-montgomery-hou-rb": {
+      "yahooRank": 66,
+      "sleeperAdp": 69.8
+    },
+    "travis-etienne-jr-no-rb": {
+      "yahooRank": 67,
+      "sleeperAdp": 43.5
+    },
+    "d-andre-swift-chi-rb": {
+      "yahooRank": 68,
+      "sleeperAdp": 60.4
+    },
+    "treveyon-henderson-ne-rb": {
+      "yahooRank": 69,
+      "sleeperAdp": 41.4
+    },
+    "tetairoa-mcmillan-car-wr": {
+      "yahooRank": 70,
+      "sleeperAdp": 33.5
+    },
+    "brock-bowers-lv-te": {
+      "yahooRank": 71,
+      "sleeperAdp": 20.5
+    },
+    "davante-adams-lar-wr": {
+      "yahooRank": 72,
+      "sleeperAdp": 48
+    },
+    "malik-nabers-nyg-wr": {
+      "yahooRank": 73,
+      "sleeperAdp": 33.5
+    },
+    "jaylen-waddle-den-wr": {
+      "yahooRank": 74,
+      "sleeperAdp": 46.5
+    },
+    "jaylen-warren-pit-rb": {
+      "yahooRank": 75,
+      "sleeperAdp": 90.5
+    },
+    "bucky-irving-tb-rb": {
+      "yahooRank": 76,
+      "sleeperAdp": 46.8
+    },
+    "alec-pierce-ind-wr": {
+      "yahooRank": 77,
+      "sleeperAdp": 92.2
+    },
+    "luther-burden-iii-chi-wr": {
+      "yahooRank": 78,
+      "sleeperAdp": 43
+    },
+    "jameson-williams-det-wr": {
+      "yahooRank": 79,
+      "sleeperAdp": 60.5
+    },
+    "garrett-wilson-nyj-wr": {
+      "yahooRank": 80,
+      "sleeperAdp": 39.3
+    },
+    "quinshon-judkins-cle-rb": {
+      "yahooRank": 81,
+      "sleeperAdp": 80.3
+    },
+    "chuba-hubbard-car-rb": {
+      "yahooRank": 82,
+      "sleeperAdp": 90.3
+    },
+    "jadarian-price-sea-rb": {
+      "yahooRank": 83,
+      "sleeperAdp": 42.8
+    },
+    "rhamondre-stevenson-ne-rb": {
+      "yahooRank": 84,
+      "sleeperAdp": 67.2
+    },
+    "emeka-egbuka-tb-wr": {
+      "yahooRank": 85,
+      "sleeperAdp": 56.8
+    },
+    "rico-dowdle-pit-rb": {
+      "yahooRank": 86,
+      "sleeperAdp": 64.1
+    },
+    "tyler-warren-ind-te": {
+      "yahooRank": 87,
+      "sleeperAdp": 42.5
+    },
+    "ladd-mcconkey-lac-wr": {
+      "yahooRank": 88,
+      "sleeperAdp": 49
+    },
+    "bhayshul-tuten-jax-rb": {
+      "yahooRank": 89,
+      "sleeperAdp": 56.8
+    },
+    "colston-loveland-chi-te": {
+      "yahooRank": 90,
+      "sleeperAdp": 31.4
+    },
+    "mike-evans-sf-wr": {
+      "yahooRank": 91,
+      "sleeperAdp": 62
+    },
+    "rome-odunze-chi-wr": {
+      "yahooRank": 92,
+      "sleeperAdp": 54.7
+    },
+    "christian-watson-gb-wr": {
+      "yahooRank": 93,
+      "sleeperAdp": 61.8
+    },
+    "dj-moore-buf-wr": {
+      "yahooRank": 94,
+      "sleeperAdp": 35
+    },
+    "tony-pollard-ten-rb": {
+      "yahooRank": 95,
+      "sleeperAdp": 79
+    },
+    "kyle-monangai-chi-rb": {
+      "yahooRank": 96,
+      "sleeperAdp": 71.5
+    },
+    "dk-metcalf-pit-wr": {
+      "yahooRank": 97,
+      "sleeperAdp": 76.8
+    },
+    "aaron-jones-sr-min-rb": {
+      "yahooRank": 98,
+      "sleeperAdp": 121.3
+    },
+    "rj-harvey-den-rb": {
+      "yahooRank": 99,
+      "sleeperAdp": 54.8
+    },
+    "kenny-gainwell-tb-rb": {
+      "yahooRank": 100,
+      "sleeperAdp": 83.2
+    },
+    "tucker-kraft-gb-te": {
+      "yahooRank": 101,
+      "sleeperAdp": 68
+    },
+    "sam-laporta-det-te": {
+      "yahooRank": 102,
+      "sleeperAdp": 55.3
+    },
+    "josh-downs-ind-wr": {
+      "yahooRank": 103,
+      "sleeperAdp": 111
+    },
+    "jayden-reed-gb-wr": {
+      "yahooRank": 104,
+      "sleeperAdp": 85.3
+    },
+    "parker-washington-jax-wr": {
+      "yahooRank": 105,
+      "sleeperAdp": 89.2
+    },
+    "chris-godwin-jr-tb-wr": {
+      "yahooRank": 106,
+      "sleeperAdp": 80.4
+    },
+    "harold-fannin-jr-cle-te": {
+      "yahooRank": 107,
+      "sleeperAdp": 54.3
+    },
+    "courtland-sutton-den-wr": {
+      "yahooRank": 108,
+      "sleeperAdp": 69.7
+    },
+    "blake-corum-lar-rb": {
+      "yahooRank": 109,
+      "sleeperAdp": 68.5
+    },
+    "kyle-pitts-sr-atl-te": {
+      "yahooRank": 110,
+      "sleeperAdp": 64.3
+    },
+    "rachaad-white-was-rb": {
+      "yahooRank": 111,
+      "sleeperAdp": 85
+    },
+    "j-k-dobbins-den-rb": {
+      "yahooRank": 112,
+      "sleeperAdp": 68.2
+    },
+    "marvin-harrison-jr-ari-wr": {
+      "yahooRank": 113,
+      "sleeperAdp": 84.3
+    },
+    "carnell-tate-ten-wr": {
+      "yahooRank": 115,
+      "sleeperAdp": 36.8
+    },
+    "michael-wilson-ari-wr": {
+      "yahooRank": 116,
+      "sleeperAdp": 72.5
+    },
+    "brian-thomas-jr-jax-wr": {
+      "yahooRank": 117,
+      "sleeperAdp": 91.8
+    },
+    "travis-kelce-kc-te": {
+      "yahooRank": 118,
+      "sleeperAdp": 82
+    },
+    "romeo-doubs-ne-wr": {
+      "yahooRank": 119,
+      "sleeperAdp": 107.5
+    },
+    "michael-pittman-jr-pit-wr": {
+      "yahooRank": 120,
+      "sleeperAdp": 120
+    },
+    "jordan-addison-min-wr": {
+      "yahooRank": 122,
+      "sleeperAdp": 120.3
+    },
+    "jason-myers-sea-k": {
+      "yahooRank": 123,
+      "sleeperAdp": 70
+    },
+    "cameron-dicker-lac-k": {
+      "yahooRank": 126,
+      "sleeperAdp": 65
+    },
+    "brandon-aubrey-dal-k": {
+      "yahooRank": 127,
+      "sleeperAdp": 60.3
+    },
+    "evan-mcpherson-cin-k": {
+      "yahooRank": 128,
+      "sleeperAdp": 62
+    },
+    "jake-bates-det-k": {
+      "yahooRank": 129,
+      "sleeperAdp": 76
+    },
+    "mark-andrews-bal-te": {
+      "yahooRank": 130,
+      "sleeperAdp": 108.3
+    },
+    "jordyn-tyson-no-wr": {
+      "yahooRank": 131,
+      "sleeperAdp": 51.5
+    },
+    "jakobi-meyers-jax-wr": {
+      "yahooRank": 132,
+      "sleeperAdp": 82.6
+    },
+    "ka-imi-fairbairn-hou-k": {
+      "yahooRank": 133,
+      "sleeperAdp": 76.4
+    },
+    "quentin-johnston-lac-wr": {
+      "yahooRank": 134,
+      "sleeperAdp": 93.7
+    },
+    "xavier-worthy-kc-wr": {
+      "yahooRank": 137,
+      "sleeperAdp": 139
+    },
+    "khalil-shakir-buf-wr": {
+      "yahooRank": 138,
+      "sleeperAdp": 58.3
+    },
+    "harrison-butker-kc-k": {
+      "yahooRank": 141
+    },
+    "jake-ferguson-dal-te": {
+      "yahooRank": 145,
+      "sleeperAdp": 99
+    },
+    "cam-little-jax-k": {
+      "yahooRank": 146,
+      "sleeperAdp": 62
+    },
+    "chase-mclaughlin-tb-k": {
+      "yahooRank": 149,
+      "sleeperAdp": 71
+    },
+    "la-rams-lar-def": {
+      "yahooRank": 150,
+      "sleeperAdp": 44.2
+    },
+    "will-reichard-min-k": {
+      "yahooRank": 151,
+      "sleeperAdp": 142
+    },
+    "wan-dale-robinson-ten-wr": {
+      "yahooRank": 153,
+      "sleeperAdp": 99
+    },
+    "jonathon-brooks-car-rb": {
+      "yahooRank": 154,
+      "sleeperAdp": 148
+    },
+    "denver-den-def": {
+      "yahooRank": 156,
+      "sleeperAdp": 75
+    },
+    "houston-hou-def": {
+      "yahooRank": 158,
+      "sleeperAdp": 53.3
+    },
+    "matthew-golden-gb-wr": {
+      "yahooRank": 162,
+      "sleeperAdp": 103.7
+    },
+    "ricky-pearsall-sf-wr": {
+      "yahooRank": 164,
+      "sleeperAdp": 100.6
+    },
+    "seattle-sea-def": {
+      "yahooRank": 165,
+      "sleeperAdp": 43.5
+    },
+    "george-kittle-sf-te": {
+      "yahooRank": 167,
+      "sleeperAdp": 92.8
+    },
+    "kc-concepcion-cle-wr": {
+      "yahooRank": 170,
+      "sleeperAdp": 52.3
+    },
+    "jalen-coker-car-wr": {
+      "yahooRank": 171,
+      "sleeperAdp": 91.5
+    },
+    "new-england-ne-def": {
+      "yahooRank": 172,
+      "sleeperAdp": 61
+    },
+    "minnesota-min-def": {
+      "yahooRank": 174,
+      "sleeperAdp": 116.5
+    },
+    "dalton-kincaid-buf-te": {
+      "yahooRank": 175,
+      "sleeperAdp": 70.3
+    },
+    "makai-lemon-phi-wr": {
+      "yahooRank": 176,
+      "sleeperAdp": 44.1
+    },
+    "jayden-higgins-hou-wr": {
+      "yahooRank": 177,
+      "sleeperAdp": 91.8
+    },
+    "philadelphia-phi-def": {
+      "yahooRank": 182,
+      "sleeperAdp": 86.7
+    },
+    "oronde-gadsden-lac-te": {
+      "yahooRank": 184,
+      "sleeperAdp": 78.5
+    },
+    "detroit-det-def": {
+      "yahooRank": 186,
+      "sleeperAdp": 94
+    },
+    "michael-penix-jr-atl-qb": {
+      "yahooRank": 188,
+      "sleeperAdp": 73
+    },
+    "woody-marks-hou-rb": {
+      "yahooRank": 189,
+      "sleeperAdp": 84.5
+    },
+    "la-chargers-lac-def": {
+      "yahooRank": 191,
+      "sleeperAdp": 105
+    },
+    "pittsburgh-pit-def": {
+      "yahooRank": 192
+    },
+    "jacksonville-jax-def": {
+      "yahooRank": 193,
+      "sleeperAdp": 78.5
+    },
+    "buffalo-buf-def": {
+      "yahooRank": 194,
+      "sleeperAdp": 65
+    },
+    "baltimore-bal-def": {
+      "yahooRank": 195
+    },
+    "jauan-jennings-min-wr": {
+      "yahooRank": 197,
+      "sleeperAdp": 70.3
+    },
+    "rashid-shaheed-sea-wr": {
+      "yahooRank": 200,
+      "sleeperAdp": 72.7
+    },
+    "keon-coleman-buf-wr": {
+      "sleeperAdp": 66
+    },
+    "denzel-boston-cle-wr": {
+      "sleeperAdp": 77
+    },
+    "omar-cooper-jr-nyj-wr": {
+      "sleeperAdp": 59.8
+    },
+    "eli-stowers-phi-te": {
+      "sleeperAdp": 41.6
+    },
+    "keaton-mitchell-lac-rb": {
+      "sleeperAdp": 156
+    },
+    "travis-hunter-jax-wr": {
+      "sleeperAdp": 165.5
+    },
+    "tre-tucker-lv-wr": {
+      "sleeperAdp": 150
+    }
+  }
+}
