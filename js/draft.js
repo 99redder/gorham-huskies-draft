@@ -124,13 +124,17 @@ export function explainPick(player, ctx, weights, options = {}) {
   const pick = ctx.pickNumber || 1;
   const add = (list, text) => { if (text && !list.includes(text)) list.push(text); };
 
+  const biggestNeed = Math.max(...["QB", "RB", "WR", "TE", "K", "DEF"]
+    .map((pos) => needMultiplier(pos, ctx.need || {})));
   if ((weights.need ?? 1) > 0 && need >= t.strongNeed)
-    add(reasons, `Biggest ${player.pos} roster need`);
+    add(reasons, need >= biggestNeed ? `Biggest roster need · ${player.pos}` : `Strong ${player.pos} roster need`);
   else if ((weights.need ?? 1) > 0 && need <= t.lowNeed)
     add(warnings, `Low ${player.pos} roster need`);
 
   if ((weights.vor ?? 1) > 0 && (player.vorNorm || 0) >= t.highVorNorm)
     add(reasons, "High VOR edge");
+  else if ((weights.vor ?? 1) > 0 && Number.isFinite(player.posRank) && player.posRank <= 3)
+    add(reasons, `${player.pos}${player.posRank} by projection`);
 
   if ((weights.adp ?? 0) > 0 && Number.isFinite(player.adp) && pick - player.adp >= t.adpDiscount)
     add(reasons, `ADP discount · ${Math.round(pick - player.adp)} picks`);
