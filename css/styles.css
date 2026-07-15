@@ -28,6 +28,7 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--accent2); o
 .controls .pick input { width: 62px; }
 .btn { background: var(--panel); border: 1px solid var(--line); color: var(--text); padding: 8px 12px; border-radius: 8px; }
 .btn:hover { border-color: var(--accent2); }
+.btn:disabled { opacity: .65; cursor: wait; }
 .btn.primary { background: linear-gradient(180deg, var(--accent), #17b7a2); color: #05231f; border: none; font-weight: 700; }
 .btn.ghost { background: transparent; }
 .btn.danger { background: transparent; color: var(--down); border-color: #55303a; }
@@ -62,10 +63,14 @@ thead th { position: sticky; top: 0; background: var(--panel2); color: var(--mut
 tbody td { padding: 8px; border-bottom: 1px solid #1a2438; white-space: nowrap; }
 tbody tr:hover { background: #16203450; }
 td.nm { font-weight: 600; }
+.injury-wrap { display: inline-flex; align-items: center; gap: 5px; margin-left: 7px; vertical-align: middle; }
+.injury-badge { display: inline-block; min-width: 20px; padding: 1px 5px; border-radius: 5px; text-align: center; background: #3a2f10; color: var(--warn); font-size: 10px; font-weight: 900; }
+.injury-badge.out, .injury-badge.ir, .injury-badge.pup, .injury-badge.doubtful { background: #3a1620; color: var(--down); }
+.injury-note { display: inline-block; max-width: 150px; overflow: hidden; text-overflow: ellipsis; color: var(--muted); font-size: 10px; font-weight: 500; vertical-align: middle; }
 td.rk { color: var(--muted); }
 td.vor { color: var(--accent); font-weight: 700; }
 td.score { font-weight: 800; color: var(--accent2); }
-td.adp, td.tm { color: var(--muted); }
+td.adp, td.tm, td.bye { color: var(--muted); }
 .source-gap { display: inline-block; min-width: 25px; text-align: center; padding: 2px 5px; border-radius: 5px; background: #263149; color: var(--muted); font-size: 11px; font-weight: 800; }
 .source-gap.hot { background: #3a2f10; color: var(--warn); }
 .drafted-row.other-row { opacity: .4; }
@@ -76,6 +81,7 @@ td.adp, td.tm { color: var(--muted); }
 .draft-tag.mine { background: #10361f; color: var(--up); }
 .draft-tag.other { background: #2a2f3d; color: var(--muted); }
 .provenance { color: var(--muted); font-size: 11px; padding: 8px 12px; margin: 0; border-top: 1px solid var(--line); }
+.provenance a { color: var(--accent2); }
 
 .pos-pill { display: inline-block; min-width: 30px; text-align: center; padding: 2px 6px; border-radius: 5px; font-size: 11px; font-weight: 800; color: #06101d; }
 .pos-pill.QB { background: var(--qb); } .pos-pill.RB { background: var(--rb); }

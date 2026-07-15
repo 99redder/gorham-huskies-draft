@@ -31,6 +31,9 @@ computed tiers, your roster needs, and hand-entered analyst "alpha" intel.
 - **Draft board + My Team** — mark players drafted (to you or another team), auto-fill
   your roster slots, see remaining needs, get live **Best Pick** recommendations and
   **positional-run alerts** ([`js/draft.js`](js/draft.js)).
+- **On-demand injuries** — press **Injuries** to refresh current Sleeper designations,
+  body parts, notes, and practice status. The last successful result is saved locally
+  and exported with the rest of the draft state ([`js/injuries.js`](js/injuries.js)).
 - **Works offline / installable** — service worker + manifest; state persists in
   localStorage with JSON export/import.
 

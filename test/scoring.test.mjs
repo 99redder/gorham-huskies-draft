@@ -4,6 +4,7 @@ import { projectedPoints } from "../js/scoring.js";
 import { computeValues, replacementRanks } from "../js/value.js";
 import { blendedScore, sourceDisagreement } from "../js/draft.js";
 import { intelDelta } from "../js/intel.js";
+import { injuryFromSleeper, matchSleeperInjuries, injuryAbbreviation } from "../js/injuries.js";
 
 const league = JSON.parse(readFileSync(new URL("../data/league.json", import.meta.url)));
 const { players } = JSON.parse(readFileSync(new URL("../data/players.json", import.meta.url)));
@@ -51,6 +52,19 @@ eq("source disagreement", sourceDisagreement({ adp: 10, sleeperAdp: 25, yahooRan
   ok("fall past ADP beats a reach", fell > reach);
 }
 eq("analyst trust override", intelDelta({ source: "@analyst", magnitude: 10 }, { defaultTrust: 1 }, { "@analyst": 1.25 }), 12.5);
+
+// Sleeper injury normalization + suffix-tolerant matching.
+{
+  const sleeper = { player_id: "1", full_name: "James Cook", injury_status: "Questionable",
+    injury_body_part: "Knee", injury_notes: "Soreness", news_updated: 123 };
+  const injury = injuryFromSleeper(sleeper);
+  eq("injury source timestamp", injury.sourceUpdatedAt, 123, 0);
+  ok("injury note includes details", injury.note === "Knee · Soreness");
+  ok("healthy designation ignored", injuryFromSleeper({ injury_status: "NA" }) === null);
+  const matched = matchSleeperInjuries([{ id: "cook", name: "James Cook III", pos: "RB" }], { "1": sleeper });
+  ok("injury player suffix matching", matched.injuries.cook?.status === "Questionable");
+  ok("injury abbreviation", injuryAbbreviation("Questionable") === "Q");
+}
 
 // Sanity: full dataset VOR ranks the top pick reasonably, replacement levels shallow
 const values = computeValues(players, league);

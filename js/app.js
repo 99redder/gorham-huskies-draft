@@ -2,11 +2,12 @@
 import { loadData } from "./data.js";
 import { computeValues, normalizeVor } from "./value.js";
 import { parseIntel, intelDelta, buildNameIndex, resolvePlayer } from "./intel.js";
+import { SLEEPER_PLAYERS_URL, matchSleeperInjuries, injuryAbbreviation } from "./injuries.js";
 import { fillRoster, positionNeeds, blendedScore, sourceDisagreement, runAlerts, recommend, attackNext, byeConflicts, optimalLineupPoints } from "./draft.js";
 import { snakeOrder, botPick, strategyPick, availabilityAtMyPicks } from "./simulator.js";
 import * as store from "./storage.js";
 
-const STATE_KEYS = ["drafted", "intelLog", "weights", "sourceTrust", "pickNumber", "draftMode"];
+const STATE_KEYS = ["drafted", "intelLog", "weights", "sourceTrust", "injuries", "injuryRefreshedAt", "pickNumber", "draftMode"];
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 const DEFAULT_WEIGHTS = { vor: 1, adp: 0.45, sleeper: 0.45, yahoo: 0.3, need: 1, intel: 1 };
@@ -18,6 +19,9 @@ const S = {
   intelLog: store.load("intelLog", []),          // [{id, source, snippet, matches:[{playerId,delta,name}]}]
   weights: { ...DEFAULT_WEIGHTS, ...store.load("weights", {}) },
   sourceTrust: store.load("sourceTrust", {}),
+  injuries: store.load("injuries", {}),
+  injuryRefreshedAt: store.load("injuryRefreshedAt", null),
+  injuryRefreshing: false,
   pickNumber: store.load("pickNumber", 1),
   draftMode: store.load("draftMode", false),      // must be enabled before any pick can be marked
   filterPos: "ALL", query: "", sortBy: "blend", hideDrafted: true,
@@ -37,9 +41,7 @@ async function init() {
   wireEvents();
   renderMode();
   render();
-  const marketDate = S.dataMeta.rankingsGeneratedAt ? new Date(S.dataMeta.rankingsGeneratedAt).toLocaleDateString() : "not loaded";
-  $("#provenance").textContent =
-    `Projections: ${S.dataMeta.source}. Yahoo + Sleeper ranks captured ${marketDate}. Modeled projections remain editable in data/players.json.`;
+  renderProvenance();
 }
 
 // ---- core compute -------------------------------------------------------
@@ -52,7 +54,10 @@ function recompute() {
     for (const m of entry.matches)
       deltas[m.playerId] = (deltas[m.playerId] || 0) + m.delta * trust;
   }
-  for (const v of values) v.intelDelta = Math.round((deltas[v.id] || 0) * 10) / 10;
+  for (const v of values) {
+    v.intelDelta = Math.round((deltas[v.id] || 0) * 10) / 10;
+    v.injury = S.injuries[v.id] || null;
+  }
   S.values = values;
   S.byId = new Map(values.map((v) => [v.id, v]));
 }
@@ -101,6 +106,17 @@ function intelBadgeHtml(p) {
   const cls = p.intelDelta > 0 ? "up" : "down";
   return `<span class="intel-badge ${cls}" data-intel="${p.id}" tabindex="0" title="">${p.intelDelta > 0 ? "▲" : "▼"}${Math.abs(p.intelDelta)}</span>`;
 }
+
+function injuryHtml(injury) {
+  if (!injury) return "";
+  const status = escapeHtml(injury.status);
+  const note = escapeHtml(injury.note || injury.status);
+  const cls = String(injury.status).toLowerCase().replace(/[^a-z0-9]+/g, "-");
+  return `<span class="injury-wrap" title="${status}${injury.note ? ` · ${note}` : ""}">
+    <span class="injury-badge ${cls}">${escapeHtml(injuryAbbreviation(injury.status))}</span>
+    <span class="injury-note">${note}</span>
+  </span>`;
+}
 function ctx() {
   const mine = S.values.filter((p) => S.drafted[p.id] === "mine");
   const slots = fillRoster(mine, S.league);
@@ -109,7 +125,7 @@ function ctx() {
 }
 
 // ---- rendering ----------------------------------------------------------
-function render() { renderBoard(); renderSidebar(); }
+function render() { renderBoard(); renderSidebar(); renderInjuryButton(); }
 
 function renderBoard() {
   const c = ctx();
@@ -149,9 +165,10 @@ function rowHtml(p, rank, isDrafted = false) {
   const draftCls = isDrafted ? `drafted-row ${who === "mine" ? "mine-row" : "other-row"}` : "";
   return `<tr class="${draftCls} pos-${p.pos}" data-id="${p.id}">
     <td class="rk">${rank}</td>
-    <td class="nm">${p.name}</td>
+    <td class="nm"><span class="player-name">${p.name}</span>${injuryHtml(p.injury)}</td>
     <td><span class="pos-pill ${p.pos}">${p.pos}</span></td>
     <td class="tm">${p.team}</td>
+    <td class="bye">${p.bye ?? "—"}</td>
     <td>${p.proj}</td>
     <td class="vor">${p.vor}</td>
     <td><span class="tier ${tierCls}">${p.tier}</span></td>
@@ -245,6 +262,23 @@ function renderIntelLog() {
         <div class="ilog-players">${e.matches.map((m) => { const d = effectiveIntelDelta(m.delta, e.source); return `<span class="intel-badge ${d > 0 ? "up" : "down"}">${escapeHtml(m.name)} ${d > 0 ? "▲" : "▼"}${Math.abs(d)}</span>`; }).join("")}</div>
       </li>`).join("")
     : `<li class="muted">No intel yet.</li>`;
+}
+
+function renderInjuryButton() {
+  const button = $("#btnInjuries");
+  if (!button) return;
+  const count = Object.keys(S.injuries).length;
+  button.disabled = S.injuryRefreshing;
+  button.textContent = S.injuryRefreshing ? "🏥 Refreshing…" : `🏥 Injuries${count ? ` (${count})` : ""}`;
+  button.title = S.injuryRefreshedAt
+    ? `Refresh from Sleeper · last updated ${new Date(S.injuryRefreshedAt).toLocaleString()}`
+    : "Refresh injury designations from Sleeper";
+}
+
+function renderProvenance() {
+  const marketDate = S.dataMeta.rankingsGeneratedAt ? new Date(S.dataMeta.rankingsGeneratedAt).toLocaleDateString() : "not loaded";
+  const injuryDate = S.injuryRefreshedAt ? new Date(S.injuryRefreshedAt).toLocaleString() : "not refreshed";
+  $("#provenance").innerHTML = `Projections: ${escapeHtml(S.dataMeta.source)}. Yahoo + Sleeper ranks captured ${marketDate}. Injuries: <a href="https://sleeper.com/" target="_blank" rel="noopener">Sleeper</a> (${injuryDate}).`;
 }
 
 // ---- intel review flow --------------------------------------------------
@@ -342,7 +376,28 @@ function undraft(id) {
   delete S.drafted[id]; S.pickNumber = Object.keys(S.drafted).length + 1; $("#pickNumber").value = S.pickNumber; persist(); render();
 }
 
-function persist() { store.save("drafted", S.drafted); store.save("intelLog", S.intelLog); store.save("weights", S.weights); store.save("sourceTrust", S.sourceTrust); store.save("pickNumber", S.pickNumber); store.save("draftMode", S.draftMode); }
+function persist() { store.save("drafted", S.drafted); store.save("intelLog", S.intelLog); store.save("weights", S.weights); store.save("sourceTrust", S.sourceTrust); store.save("injuries", S.injuries); store.save("injuryRefreshedAt", S.injuryRefreshedAt); store.save("pickNumber", S.pickNumber); store.save("draftMode", S.draftMode); }
+
+async function refreshInjuries() {
+  if (S.injuryRefreshing) return;
+  S.injuryRefreshing = true;
+  renderInjuryButton();
+  try {
+    const response = await fetch(SLEEPER_PLAYERS_URL, { cache: "no-store" });
+    if (!response.ok) throw new Error(`Sleeper returned ${response.status}`);
+    const sleeperPlayers = await response.json();
+    const { injuries, matched } = matchSleeperInjuries(S.players, sleeperPlayers);
+    S.injuries = injuries;
+    S.injuryRefreshedAt = Date.now();
+    persist(); recompute(); render(); renderProvenance();
+    toast(`Updated ${Object.keys(injuries).length} injury designations across ${matched} matched players.`);
+  } catch (err) {
+    toast(`Injury refresh failed — keeping saved data. ${err.message}`);
+  } finally {
+    S.injuryRefreshing = false;
+    renderInjuryButton();
+  }
+}
 
 // ---- events -------------------------------------------------------------
 function wireEvents() {
@@ -364,6 +419,7 @@ function wireEvents() {
     if (e.target.id === "btnDraftMode") toggleDraftMode();
     if (e.target.id === "btnPauseDraft") toggleDraftMode(false);
     if (e.target.id === "btnParse") analyzeIntel();
+    if (e.target.id === "btnInjuries") refreshInjuries();
     if (e.target.id === "btnConfirmIntel") confirmIntel();
     if (e.target.id === "btnSettings") $("#settingsDrawer").hidden = false;
     if (e.target.id === "btnCloseSettings") $("#settingsDrawer").hidden = true;
@@ -454,8 +510,9 @@ function doImport(e) {
       S.drafted = store.load("drafted", {}); S.intelLog = store.load("intelLog", []);
       S.weights = { ...DEFAULT_WEIGHTS, ...store.load("weights", {}) };
       S.sourceTrust = store.load("sourceTrust", {}); S.pickNumber = store.load("pickNumber", 1);
+      S.injuries = store.load("injuries", {}); S.injuryRefreshedAt = store.load("injuryRefreshedAt", null);
       S.draftMode = store.load("draftMode", false);
-      populateSourceTrustControls(); wireSourceTrustEvents(); recompute(); renderMode(); render(); toast("Imported backup.");
+      populateSourceTrustControls(); wireSourceTrustEvents(); recompute(); renderMode(); render(); renderProvenance(); toast("Imported backup.");
     } catch (err) { toast("Import failed: " + err.message); }
   };
   reader.readAsText(file);

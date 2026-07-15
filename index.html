@@ -8,7 +8,7 @@
   <link rel="manifest" href="manifest.json" />
   <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="icons/icon-192.png" />
-  <link rel="stylesheet" href="css/styles.css?v=9" />
+  <link rel="stylesheet" href="css/styles.css?v=10" />
 </head>
 <body>
   <header class="topbar">
@@ -25,6 +25,7 @@
         <input type="number" id="pickNumber" min="1" value="1" />
       </label>
       <button id="btnSim" class="btn ghost" title="Mock draft simulator">🤖 Mock</button>
+      <button id="btnInjuries" class="btn ghost" title="Refresh injury designations from Sleeper">🏥 Injuries</button>
       <button id="btnSettings" class="btn ghost" title="Scoring weights">⚙ Weights</button>
       <button id="btnExport" class="btn ghost" title="Export draft + intel">⬇ Export</button>
       <label class="btn ghost" title="Import backup">⬆ Import
@@ -67,7 +68,7 @@
         <table id="boardTable">
           <thead>
             <tr>
-              <th>#</th><th>Player</th><th>Pos</th><th>Tm</th>
+              <th>#</th><th>Player</th><th>Pos</th><th>Tm</th><th title="NFL bye week">Bye</th>
               <th title="Projected points, your scoring">Proj</th>
               <th title="Value Over Replacement (6-team)">VOR</th>
               <th>Tier</th><th title="FantasyFootballCalculator half-PPR ADP">FFC</th>
@@ -156,7 +157,7 @@
   <div id="intelTip" class="intel-tip" hidden></div>
   <div id="toast" class="toast" hidden></div>
 
-  <script type="module" src="js/app.js?v=9"></script>
+  <script type="module" src="js/app.js?v=10"></script>
   <script>
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
