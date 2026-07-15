@@ -8,7 +8,7 @@
   <link rel="manifest" href="manifest.json" />
   <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="icons/icon-192.png" />
-  <link rel="stylesheet" href="css/styles.css?v=10" />
+  <link rel="stylesheet" href="css/styles.css?v=11" />
 </head>
 <body>
   <header class="topbar">
@@ -68,16 +68,21 @@
         <table id="boardTable">
           <thead>
             <tr>
-              <th>#</th><th>Player</th><th>Pos</th><th>Tm</th><th title="NFL bye week">Bye</th>
-              <th title="Projected points, your scoring">Proj</th>
-              <th title="Value Over Replacement (6-team)">VOR</th>
-              <th>Tier</th><th title="FantasyFootballCalculator half-PPR ADP">FFC</th>
-              <th title="Actual half-PPR Sleeper draft ADP">SLP</th>
-              <th title="Yahoo default preseason rank">Y!</th>
-              <th title="Largest rank gap among available sources">Δ</th>
-              <th title="Analyst intel">Intel</th>
-              <th title="Blended best-pick score">Score</th>
-              <th></th>
+              <th tabindex="0" data-tip="Current board order using the selected Sort option. This is not a source rank unless you sort by one.">#</th>
+              <th tabindex="0" data-tip="Player name. Current injury designation and a short injury note appear beside the name after an injury refresh.">Player</th>
+              <th tabindex="0" data-tip="Fantasy position: quarterback, running back, wide receiver, tight end, kicker, or team defense.">Pos</th>
+              <th tabindex="0" data-tip="Player's current NFL team abbreviation.">Tm</th>
+              <th tabindex="0" data-tip="NFL bye week. Use this to avoid overloading your starting lineup with players off in the same week.">Bye</th>
+              <th tabindex="0" data-tip="Projected season fantasy points using this league's custom scoring settings.">Proj</th>
+              <th tabindex="0" data-tip="Value Over Replacement: projected points above the expected replacement-level player at this position in a 6-team league.">VOR</th>
+              <th tabindex="0" data-tip="Projection tier. Tier 1 contains the strongest options; players in the same tier have broadly similar value.">Tier</th>
+              <th tabindex="0" data-tip="FantasyFootballCalculator half-PPR average draft position. Lower numbers mean players are usually drafted earlier.">FFC</th>
+              <th tabindex="0" data-tip="Sleeper half-PPR average draft position. Lower numbers mean players are usually drafted earlier.">SLP</th>
+              <th tabindex="0" data-tip="Yahoo's default preseason pre-draft rank. This is independent from the FFC and Sleeper market ranks.">Y!</th>
+              <th tabindex="0" data-tip="Largest rank difference among FFC, Sleeper, and Yahoo. A larger number means the sources disagree more.">Δ</th>
+              <th tabindex="0" data-tip="Net boost or penalty from pasted analyst takes after applying each source's trust weight.">Intel</th>
+              <th tabindex="0" data-tip="Blended Best Pick score combining league-specific VOR, market ranks, roster need, and analyst intel using your selected weights.">Score</th>
+              <th tabindex="0" data-tip="Draft actions. In Draft Mode, mark a player as yours or taken by another manager.">Actions</th>
             </tr>
           </thead>
           <tbody id="boardBody"></tbody>
@@ -157,7 +162,7 @@
   <div id="intelTip" class="intel-tip" hidden></div>
   <div id="toast" class="toast" hidden></div>
 
-  <script type="module" src="js/app.js?v=10"></script>
+  <script type="module" src="js/app.js?v=11"></script>
   <script>
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));

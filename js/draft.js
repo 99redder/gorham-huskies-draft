@@ -99,6 +99,82 @@ export function runAlerts(available, need) {
   return alerts;
 }
 
+// Tunable, deterministic cutoffs for the compact "Why this pick?" explanation.
+// Scoring stays in blendedScore(); these thresholds only describe its inputs.
+export const EXPLANATION_THRESHOLDS = Object.freeze({
+  strongNeed: 1.18,
+  lowNeed: 0.82,
+  highVorNorm: 70,
+  intelBoost: 2,
+  intelConcern: -2,
+  adpDiscount: 5,
+  tierDrying: 2,
+  unlikelyToReturn: 0.35,
+  canWait: 0.65,
+});
+
+// Explain an already-ranked recommendation without changing its score.
+// Optional inputs let callers attach context that is not part of the player record:
+// available/runAlerts, returnProbability, intelSources, and byeConflictCount.
+export function explainPick(player, ctx, weights, options = {}) {
+  const t = { ...EXPLANATION_THRESHOLDS, ...(options.thresholds || {}) };
+  const reasons = [];
+  const warnings = [];
+  const need = needMultiplier(player.pos, ctx.need || {});
+  const pick = ctx.pickNumber || 1;
+  const add = (list, text) => { if (text && !list.includes(text)) list.push(text); };
+
+  if ((weights.need ?? 1) > 0 && need >= t.strongNeed)
+    add(reasons, `Biggest ${player.pos} roster need`);
+  else if ((weights.need ?? 1) > 0 && need <= t.lowNeed)
+    add(warnings, `Low ${player.pos} roster need`);
+
+  if ((weights.vor ?? 1) > 0 && (player.vorNorm || 0) >= t.highVorNorm)
+    add(reasons, "High VOR edge");
+
+  if ((weights.adp ?? 0) > 0 && Number.isFinite(player.adp) && pick - player.adp >= t.adpDiscount)
+    add(reasons, `ADP discount · ${Math.round(pick - player.adp)} picks`);
+
+  if ((weights.intel ?? 0) > 0 && (player.intelDelta || 0) >= t.intelBoost) {
+    const source = (options.intelSources || []).find(Boolean);
+    add(reasons, source ? `Intel boost · ${source}` : "Intel boost");
+  } else if ((weights.intel ?? 0) > 0 && (player.intelDelta || 0) <= t.intelConcern) {
+    add(warnings, "Analyst intel concern");
+  }
+
+  const alert = (options.runAlerts || []).find((a) =>
+    a.pos === player.pos && a.tier === player.tier && a.remaining <= t.tierDrying);
+  let tierRemaining = alert?.remaining;
+  if (tierRemaining == null && Array.isArray(options.available)) {
+    const positionPlayers = options.available.filter((p) => p.pos === player.pos);
+    const topTier = positionPlayers.length ? Math.min(...positionPlayers.map((p) => p.tier)) : null;
+    if (player.tier === topTier)
+      tierRemaining = positionPlayers.filter((p) => p.tier === player.tier).length;
+  }
+  if (tierRemaining != null && tierRemaining <= t.tierDrying && need > 1) {
+    add(reasons, tierRemaining === 1
+      ? `Last ${player.pos} in Tier ${player.tier}`
+      : `Only ${tierRemaining} ${player.pos}s left in Tier ${player.tier}`);
+  }
+
+  if (Number.isFinite(options.returnProbability)) {
+    if (options.returnProbability <= t.unlikelyToReturn)
+      add(reasons, "Likely gone before next pick");
+    else if (options.returnProbability >= t.canWait)
+      add(warnings, "Can probably wait");
+  }
+
+  if ((options.byeConflictCount || 0) > 0)
+    add(warnings, `Bye overlaps with ${options.byeConflictCount} starter${options.byeConflictCount === 1 ? "" : "s"}`);
+
+  const urgent = tierRemaining === 1 || options.returnProbability <= t.unlikelyToReturn;
+  const label = urgent ? "Take now"
+    : options.returnProbability >= t.canWait ? "Can wait"
+    : reasons.length >= 2 ? "Strong fit"
+    : "Consider";
+  return { label, reasons: reasons.slice(0, 4), warnings: warnings.slice(0, 2) };
+}
+
 // The starters (non-bench filled slots) of the optimal lineup from a set of
 // players — fillRoster slots highest projections into starters + FLEX.
 function starters(myPlayers, league) {

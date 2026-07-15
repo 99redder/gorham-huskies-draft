@@ -2,7 +2,7 @@
 import { readFileSync } from "node:fs";
 import { projectedPoints } from "../js/scoring.js";
 import { computeValues, replacementRanks } from "../js/value.js";
-import { blendedScore, sourceDisagreement } from "../js/draft.js";
+import { blendedScore, sourceDisagreement, explainPick } from "../js/draft.js";
 import { intelDelta } from "../js/intel.js";
 import { injuryFromSleeper, matchSleeperInjuries, injuryAbbreviation } from "../js/injuries.js";
 
@@ -52,6 +52,29 @@ eq("source disagreement", sourceDisagreement({ adp: 10, sleeperAdp: 25, yahooRan
   ok("fall past ADP beats a reach", fell > reach);
 }
 eq("analyst trust override", intelDelta({ source: "@analyst", magnitude: 10 }, { defaultTrust: 1 }, { "@analyst": 1.25 }), 12.5);
+
+// Recommendation explanations describe existing score inputs without reranking.
+{
+  const base = { id: "p1", name: "Test Runner", pos: "RB", tier: 2, vor: 40,
+    vorNorm: 75, adp: 10, intelDelta: 0 };
+  const weights = { vor: 1, adp: 1, sleeper: 0, yahoo: 0, need: 1, intel: 1 };
+  const needed = explainPick(base, { pickNumber: 10, need: { RB: 2, FLEX: 0 } }, weights);
+  ok("explanation strong roster need", needed.reasons.some((x) => x.includes("roster need")));
+
+  const intel = explainPick({ ...base, intelDelta: 3 }, { pickNumber: 10, need: {} }, weights,
+    { intelSources: ["@analyst"] });
+  ok("explanation positive intel", intel.reasons.some((x) => x.includes("Intel boost")));
+
+  const discount = explainPick(base, { pickNumber: 20, need: {} }, weights);
+  ok("explanation ADP discount", discount.reasons.some((x) => x.includes("ADP discount")));
+
+  const gone = explainPick(base, { pickNumber: 10, need: {} }, weights, { returnProbability: 0.2 });
+  ok("explanation unlikely to return", gone.reasons.includes("Likely gone before next pick") && gone.label === "Take now");
+
+  const tier = explainPick(base, { pickNumber: 10, need: { RB: 1, FLEX: 0 } }, weights,
+    { runAlerts: [{ pos: "RB", tier: 2, remaining: 1 }] });
+  ok("explanation tier drying up", tier.reasons.some((x) => x.includes("Last RB in Tier 2")));
+}
 
 // Sleeper injury normalization + suffix-tolerant matching.
 {

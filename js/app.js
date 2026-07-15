@@ -3,7 +3,7 @@ import { loadData } from "./data.js";
 import { computeValues, normalizeVor } from "./value.js";
 import { parseIntel, intelDelta, buildNameIndex, resolvePlayer } from "./intel.js";
 import { SLEEPER_PLAYERS_URL, matchSleeperInjuries, injuryAbbreviation } from "./injuries.js";
-import { fillRoster, positionNeeds, blendedScore, sourceDisagreement, runAlerts, recommend, attackNext, byeConflicts, optimalLineupPoints } from "./draft.js";
+import { fillRoster, positionNeeds, blendedScore, sourceDisagreement, runAlerts, explainPick, recommend, attackNext, byeConflicts, optimalLineupPoints } from "./draft.js";
 import { snakeOrder, botPick, strategyPick, availabilityAtMyPicks } from "./simulator.js";
 import * as store from "./storage.js";
 
@@ -192,14 +192,15 @@ function rowHtml(p, rank, isDrafted = false) {
 function renderSidebar() {
   const c = ctx();
   // Recommendations + alerts
-  const recs = recommend(availablePlayers(), c, S.weights, 6);
-  const alerts = runAlerts(availablePlayers(), c.need);
+  const available = availablePlayers();
+  const recs = recommend(available, c, S.weights, 6);
+  const alerts = runAlerts(available, c.need);
   $("#alerts").innerHTML = alerts.length
     ? alerts.map((a) => `<div class="alert">⚠ <b>${a.pos} run:</b> only ${a.remaining} left in Tier ${a.tier} — you still need ${a.pos}. Prioritize.</div>`).join("")
     : "";
 
   // Attack Next — which position adds the most to your optimal starting lineup
-  const an = attackNext(c.mine, availablePlayers(), S.league).filter((x) => x.gain > 0);
+  const an = attackNext(c.mine, available, S.league).filter((x) => x.gain > 0);
   const maxGain = an.length ? an[0].gain : 0;
   $("#attackNext").innerHTML = an.length
     ? `<h2>Attack Next <span class="sub-inline">value each position adds to your lineup</span></h2>
@@ -212,7 +213,11 @@ function renderSidebar() {
          </div>`).join("")}</div>`
     : "";
 
-  $("#recList").innerHTML = recs.map((p) => `
+  $("#recList").innerHTML = recs.map((p) => {
+    const intelSources = intelEntriesForPlayer(p.id).filter((x) => x.delta > 0).map((x) => x.source);
+    const byeConflictCount = p.bye ? c.slots.filter((s) => s.label !== "BN" && s.player?.bye === p.bye).length : 0;
+    const why = explainPick(p, c, S.weights, { available, runAlerts: alerts, intelSources, byeConflictCount });
+    return `
     <li>
       <div class="rec-main">
         <span class="pos-pill ${p.pos}">${p.pos}</span>
@@ -220,10 +225,19 @@ function renderSidebar() {
         ${intelBadgeHtml(p)}
       </div>
       <div class="rec-meta">Score ${p.blend} · VOR ${p.vor} · Tier ${p.tier} · ADP ${p.adp}</div>
+      <details class="rec-why">
+        <summary aria-label="Why this pick for ${escapeHtml(p.name)}?">Why this pick? <span class="why-label">${escapeHtml(why.label)}</span></summary>
+        <div class="why-chips">
+          ${why.reasons.map((reason) => `<span class="why-chip">${escapeHtml(reason)}</span>`).join("")}
+          ${why.warnings.map((warning) => `<span class="why-chip warning">${escapeHtml(warning)}</span>`).join("")}
+          ${!why.reasons.length && !why.warnings.length ? `<span class="why-chip neutral">Balanced with your current settings</span>` : ""}
+        </div>
+      </details>
       ${S.draftMode
         ? `<button class="mini mine" data-act="mine" data-id="${p.id}">＋ Draft to my team</button>`
         : `<span class="locked-hint">🔒 Start Draft to pick</span>`}
-    </li>`).join("");
+    </li>`;
+  }).join("");
 
   // My team
   const startPts = optimalLineupPoints(c.mine, S.league);

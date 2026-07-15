@@ -60,6 +60,37 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--accent2); o
 .table-wrap { overflow-x: auto; max-height: calc(100vh - 210px); overflow-y: auto; }
 table { width: 100%; border-collapse: collapse; }
 thead th { position: sticky; top: 0; background: var(--panel2); color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .5px; text-align: left; padding: 9px 8px; border-bottom: 1px solid var(--line); z-index: 2; }
+thead th[data-tip] { cursor: help; }
+thead th[data-tip]::after {
+  content: attr(data-tip);
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 8px;
+  width: max-content;
+  max-width: min(270px, calc(100vw - 32px));
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #0e1626;
+  box-shadow: var(--shadow);
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: normal;
+  text-align: left;
+  text-transform: none;
+  white-space: normal;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-3px);
+  transition: opacity .12s ease, transform .12s ease, visibility .12s;
+  pointer-events: none;
+  z-index: 30;
+}
+thead th[data-tip]:hover, thead th[data-tip]:focus { z-index: 20; outline: none; color: var(--text); }
+thead th[data-tip]:hover::after, thead th[data-tip]:focus::after { opacity: 1; visibility: visible; transform: translateY(0); }
+thead th:nth-last-child(-n+5)::after { right: 8px; left: auto; }
 tbody td { padding: 8px; border-bottom: 1px solid #1a2438; white-space: nowrap; }
 tbody tr:hover { background: #16203450; }
 td.nm { font-weight: 600; }
@@ -149,6 +180,16 @@ td.act { display: flex; gap: 5px; align-items: center; }
 .rec-list li { background: var(--panel2); border: 1px solid var(--line); border-radius: 9px; padding: 10px; }
 .rec-main { display: flex; align-items: center; gap: 7px; }
 .rec-meta { color: var(--muted); font-size: 12px; margin: 5px 0 8px; }
+.rec-why { margin: 0 0 8px; }
+.rec-why summary { display: flex; align-items: center; gap: 6px; width: fit-content; color: var(--accent2); font-size: 11px; font-weight: 700; cursor: pointer; list-style: none; }
+.rec-why summary::-webkit-details-marker { display: none; }
+.rec-why summary::before { content: "▸"; color: var(--muted); transition: transform .12s ease; }
+.rec-why[open] summary::before { transform: rotate(90deg); }
+.why-label { padding: 1px 6px; border-radius: 999px; background: #263149; color: var(--text); font-size: 10px; }
+.why-chips { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 7px; }
+.why-chip { padding: 3px 7px; border-radius: 999px; background: #10361f; color: var(--up); font-size: 10px; font-weight: 700; }
+.why-chip.warning { background: #3a2f10; color: var(--warn); }
+.why-chip.neutral { background: #263149; color: var(--muted); }
 .rec-list .mini.mine { width: 100%; }
 
 /* My team */
