@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-16T11:55:17.747Z",
+  "generatedAt": "2026-07-16T23:12:55.573Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -9,7 +9,7 @@
       "name": "Sleeper Trends",
       "url": "https://api.sleeper.app/v1/players/nfl/trending/add?lookback_hours=24&limit=50",
       "ok": true,
-      "matched": 2
+      "matched": 3
     },
     {
       "id": "espn-nfl",
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 2
+      "matched": 0
     },
     {
       "id": "cbs-nfl",
@@ -51,7 +51,7 @@
       "name": "r/fantasyfootball",
       "url": "https://www.reddit.com/r/fantasyfootball/.rss",
       "ok": true,
-      "matched": 1
+      "matched": 0
     },
     {
       "id": "pro-football-rumors",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-8 add over the last 24 hours (1,631 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-16T11:55:17.747Z",
+      "snippet": "Top-9 add over the last 24 hours (1,694 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-16T23:12:55.573Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,8 +99,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-15 add over the last 24 hours (1,296 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-16T11:55:17.747Z",
+      "snippet": "Top-13 add over the last 24 hours (1,278 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-16T23:12:55.573Z",
       "trust": 0.75,
       "matches": [
         {
@@ -111,68 +111,19 @@
       ]
     },
     {
-      "id": "alpha_751f4bc2c21607e7",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/patrick-mahomes-gets-candid-ambitious-045420756.html",
-      "title": "Patrick Mahomes gets candid about ambitious ‘goal’ in Chiefs injury recovery",
-      "snippet": "Consider Patrick Mahomes an optimist regarding his injury timeline.",
-      "publishedAt": "2026-07-16T04:54:20.000Z",
-      "trust": 1,
+      "id": "alpha_7bce3a02bb458463",
+      "source": "Sleeper Trends",
+      "publisher": "Sleeper",
+      "sourceUrl": "https://sleeper.com/",
+      "title": "Jake Bates is trending in Sleeper adds",
+      "snippet": "Top-30 add over the last 24 hours (736 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-16T23:12:55.573Z",
+      "trust": 0.75,
       "matches": [
         {
-          "playerId": "patrick-mahomes-kc-qb",
-          "name": "Patrick Mahomes",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_23cf480a2484847a",
-      "source": "r/fantasyfootball",
-      "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1uxm2lk/i_feel_like_dj_moore_and_michael_pittman_are_of/",
-      "title": "I feel like DJ Moore and Michael Pittman are of similar value and in similar positions. Do we think their value goes up, stays the same, or goes down from here?",
-      "snippet": "<!-- SC_OFF --><div class=\"md\"><p>Pretty much title. Moore is in the better situation for IRL football but in an offense that may distribute the ball and vulture touchdowns. Pittman is in a worse situation, has target competition with DK, b",
-      "publishedAt": "2026-07-15T23:29:03.000Z",
-      "trust": 0.65,
-      "matches": [
-        {
-          "playerId": "michael-pittman-jr-pit-wr",
-          "name": "Michael Pittman Jr.",
-          "delta": 6,
-          "injury": {
-            "status": "Questionable",
-            "note": "I feel like DJ Moore and Michael Pittman are of similar value and in similar positions. Do we think their value goes up, stays the same, or goes down from here?",
-            "sourceUpdatedAt": 1784158143000
-          }
-        },
-        {
-          "playerId": "dj-moore-buf-wr",
-          "name": "DJ Moore",
-          "delta": 6,
-          "injury": {
-            "status": "Questionable",
-            "note": "I feel like DJ Moore and Michael Pittman are of similar value and in similar positions. Do we think their value goes up, stays the same, or goes down from here?",
-            "sourceUpdatedAt": 1784158143000
-          }
-        }
-      ]
-    },
-    {
-      "id": "alpha_6bc3ec2bfb664115",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/chiefs-patrick-mahomes-gives-injury-204440458.html",
-      "title": "Chiefs' Patrick Mahomes gives injury update, 'goal' for return to field",
-      "snippet": "Patrick Mahomes remains hopeful that he will be able to return from a significant knee injury in Week 1 of the 2026 NFL season.",
-      "publishedAt": "2026-07-15T20:44:40.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "patrick-mahomes-kc-qb",
-          "name": "Patrick Mahomes",
-          "delta": -6
+          "playerId": "jake-bates-det-k",
+          "name": "Jake Bates",
+          "delta": 4.4
         }
       ]
     }
