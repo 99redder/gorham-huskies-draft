@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-16T23:12:55.573Z",
+  "generatedAt": "2026-07-17T11:42:45.343Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-9 add over the last 24 hours (1,694 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-16T23:12:55.573Z",
+      "snippet": "Top-10 add over the last 24 hours (1,568 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-17T11:42:45.343Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,14 +99,14 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-13 add over the last 24 hours (1,278 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-16T23:12:55.573Z",
+      "snippet": "Top-15 add over the last 24 hours (1,080 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-17T11:42:45.343Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "keaton-mitchell-lac-rb",
           "name": "Keaton Mitchell",
-          "delta": 4.6
+          "delta": 4.5
         }
       ]
     },
@@ -116,14 +116,14 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Jake Bates is trending in Sleeper adds",
-      "snippet": "Top-30 add over the last 24 hours (736 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-16T23:12:55.573Z",
+      "snippet": "Top-20 add over the last 24 hours (960 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-17T11:42:45.343Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "jake-bates-det-k",
           "name": "Jake Bates",
-          "delta": 4.4
+          "delta": 4.5
         }
       ]
     }
