@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-17T11:42:45.343Z",
+  "generatedAt": "2026-07-17T23:11:05.120Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 0
+      "matched": 1
     },
     {
       "id": "cbs-nfl",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-10 add over the last 24 hours (1,568 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-17T11:42:45.343Z",
+      "snippet": "Top-9 add over the last 24 hours (1,519 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-17T23:11:05.120Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,8 +99,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-15 add over the last 24 hours (1,080 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-17T11:42:45.343Z",
+      "snippet": "Top-17 add over the last 24 hours (1,017 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-17T23:11:05.120Z",
       "trust": 0.75,
       "matches": [
         {
@@ -116,14 +116,31 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Jake Bates is trending in Sleeper adds",
-      "snippet": "Top-20 add over the last 24 hours (960 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-17T11:42:45.343Z",
+      "snippet": "Top-21 add over the last 24 hours (848 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-17T23:11:05.120Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "jake-bates-det-k",
           "name": "Jake Bates",
-          "delta": 4.5
+          "delta": 4.4
+        }
+      ]
+    },
+    {
+      "id": "alpha_97e2c1c77a790b66",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/george-kittle-eases-injury-concerns-220415777.html",
+      "title": "George Kittle eases injury concerns by deadlifting a jaw-dropping 665 pounds",
+      "snippet": "George Kittle has worked hard to return from his torn Achilles. Here's how his progress is coming along in July.",
+      "publishedAt": "2026-07-17T22:04:15.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "george-kittle-sf-te",
+          "name": "George Kittle",
+          "delta": -6
         }
       ]
     }
