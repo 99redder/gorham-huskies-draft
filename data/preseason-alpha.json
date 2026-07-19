@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-19T11:32:55.798Z",
+  "generatedAt": "2026-07-19T23:14:24.986Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 1
+      "matched": 0
     },
     {
       "id": "cbs-nfl",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-12 add over the last 24 hours (1,428 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-19T11:32:55.798Z",
+      "snippet": "Top-10 add over the last 24 hours (1,631 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-19T23:14:24.986Z",
       "trust": 0.75,
       "matches": [
         {
@@ -94,58 +94,36 @@
       ]
     },
     {
+      "id": "alpha_7bce3a02bb458463",
+      "source": "Sleeper Trends",
+      "publisher": "Sleeper",
+      "sourceUrl": "https://sleeper.com/",
+      "title": "Jake Bates is trending in Sleeper adds",
+      "snippet": "Top-14 add over the last 24 hours (1,352 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-19T23:14:24.986Z",
+      "trust": 0.75,
+      "matches": [
+        {
+          "playerId": "jake-bates-det-k",
+          "name": "Jake Bates",
+          "delta": 4.6
+        }
+      ]
+    },
+    {
       "id": "alpha_fe3ddb7ed800ba6c",
       "source": "Sleeper Trends",
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-19 add over the last 24 hours (1,125 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-19T11:32:55.798Z",
+      "snippet": "Top-18 add over the last 24 hours (1,269 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-19T23:14:24.986Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "keaton-mitchell-lac-rb",
           "name": "Keaton Mitchell",
           "delta": 4.6
-        }
-      ]
-    },
-    {
-      "id": "alpha_7bce3a02bb458463",
-      "source": "Sleeper Trends",
-      "publisher": "Sleeper",
-      "sourceUrl": "https://sleeper.com/",
-      "title": "Jake Bates is trending in Sleeper adds",
-      "snippet": "Top-20 add over the last 24 hours (1,104 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-19T11:32:55.798Z",
-      "trust": 0.75,
-      "matches": [
-        {
-          "playerId": "jake-bates-det-k",
-          "name": "Jake Bates",
-          "delta": 4.5
-        }
-      ]
-    },
-    {
-      "id": "alpha_efaaf1bed61ffdcf",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/nfl-training-camp-storylines-patrick-191924894.html",
-      "title": "NFL training camp storylines: Patrick Mahomes injury update, Aaron Rodgers’ farewell tour and biggest QB battles",
-      "snippet": "Here are 10 storylines as NFL training camps get underway this week.",
-      "publishedAt": "2026-07-18T19:19:24.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "patrick-mahomes-kc-qb",
-          "name": "Patrick Mahomes",
-          "delta": -6
-        },
-        {
-          "playerId": "aaron-rodgers-pit-qb",
-          "name": "Aaron Rodgers",
-          "delta": -6
         }
       ]
     }
