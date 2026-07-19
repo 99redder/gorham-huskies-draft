@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-18T23:13:10.080Z",
+  "generatedAt": "2026-07-19T11:32:55.798Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -82,14 +82,14 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-13 add over the last 24 hours (1,232 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-18T23:13:10.080Z",
+      "snippet": "Top-12 add over the last 24 hours (1,428 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-19T11:32:55.798Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "malik-willis-mia-qb",
           "name": "Malik Willis",
-          "delta": 4.6
+          "delta": 4.7
         }
       ]
     },
@@ -99,14 +99,14 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-18 add over the last 24 hours (1,053 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-18T23:13:10.080Z",
+      "snippet": "Top-19 add over the last 24 hours (1,125 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-19T11:32:55.798Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "keaton-mitchell-lac-rb",
           "name": "Keaton Mitchell",
-          "delta": 4.5
+          "delta": 4.6
         }
       ]
     },
@@ -116,8 +116,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Jake Bates is trending in Sleeper adds",
-      "snippet": "Top-22 add over the last 24 hours (968 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-18T23:13:10.080Z",
+      "snippet": "Top-20 add over the last 24 hours (1,104 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-19T11:32:55.798Z",
       "trust": 0.75,
       "matches": [
         {
@@ -128,19 +128,24 @@
       ]
     },
     {
-      "id": "alpha_dc7eca5b9f2ede49",
+      "id": "alpha_efaaf1bed61ffdcf",
       "source": "Yahoo Sports NFL",
       "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/eagles-news-makai-lemon-says-132243476.html",
-      "title": "Eagles News: Makai Lemon says he’s healthy and ready for training camp",
-      "snippet": "Philadelphia Eagles news and links for 7/18/26.",
-      "publishedAt": "2026-07-18T13:22:43.000Z",
+      "sourceUrl": "https://sports.yahoo.com/articles/nfl-training-camp-storylines-patrick-191924894.html",
+      "title": "NFL training camp storylines: Patrick Mahomes injury update, Aaron Rodgers’ farewell tour and biggest QB battles",
+      "snippet": "Here are 10 storylines as NFL training camps get underway this week.",
+      "publishedAt": "2026-07-18T19:19:24.000Z",
       "trust": 1,
       "matches": [
         {
-          "playerId": "makai-lemon-phi-wr",
-          "name": "Makai Lemon",
-          "delta": 6
+          "playerId": "patrick-mahomes-kc-qb",
+          "name": "Patrick Mahomes",
+          "delta": -6
+        },
+        {
+          "playerId": "aaron-rodgers-pit-qb",
+          "name": "Aaron Rodgers",
+          "delta": -6
         }
       ]
     }
