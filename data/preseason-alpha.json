@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-20T12:26:47.350Z",
+  "generatedAt": "2026-07-20T23:17:15.860Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-10 add over the last 24 hours (1,848 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-20T12:26:47.350Z",
+      "snippet": "Top-11 add over the last 24 hours (1,897 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-20T23:17:15.860Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,8 +99,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-14 add over the last 24 hours (1,422 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-20T12:26:47.350Z",
+      "snippet": "Top-14 add over the last 24 hours (1,449 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-20T23:17:15.860Z",
       "trust": 0.75,
       "matches": [
         {
@@ -116,14 +116,14 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Jake Bates is trending in Sleeper adds",
-      "snippet": "Top-15 add over the last 24 hours (1,416 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-20T12:26:47.350Z",
+      "snippet": "Top-21 add over the last 24 hours (1,200 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-20T23:17:15.860Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "jake-bates-det-k",
           "name": "Jake Bates",
-          "delta": 4.7
+          "delta": 4.6
         }
       ]
     }
