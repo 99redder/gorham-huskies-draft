@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-20T23:17:15.860Z",
+  "generatedAt": "2026-07-21T12:02:01.694Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -58,7 +58,7 @@
       "name": "Pro Football Rumors",
       "url": "https://www.profootballrumors.com/feed",
       "ok": true,
-      "matched": 0
+      "matched": 1
     },
     {
       "id": "establish-the-run",
@@ -82,14 +82,14 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-11 add over the last 24 hours (1,897 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-20T23:17:15.860Z",
+      "snippet": "Top-10 add over the last 24 hours (1,729 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-21T12:02:01.694Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "malik-willis-mia-qb",
           "name": "Malik Willis",
-          "delta": 4.8
+          "delta": 4.7
         }
       ]
     },
@@ -99,14 +99,14 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-14 add over the last 24 hours (1,449 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-20T23:17:15.860Z",
+      "snippet": "Top-18 add over the last 24 hours (1,269 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-21T12:02:01.694Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "keaton-mitchell-lac-rb",
           "name": "Keaton Mitchell",
-          "delta": 4.7
+          "delta": 4.6
         }
       ]
     },
@@ -116,14 +116,31 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Jake Bates is trending in Sleeper adds",
-      "snippet": "Top-21 add over the last 24 hours (1,200 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-20T23:17:15.860Z",
+      "snippet": "Top-24 add over the last 24 hours (984 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-21T12:02:01.694Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "jake-bates-det-k",
           "name": "Jake Bates",
-          "delta": 4.6
+          "delta": 4.5
+        }
+      ]
+    },
+    {
+      "id": "alpha_1d2ad40cb1ec6ecf",
+      "source": "Pro Football Rumors",
+      "publisher": "Pro Football Rumors",
+      "sourceUrl": "https://www.profootballrumors.com/2026/07/bears-wr-rome-odunze-adjusting-to-new-normal-after-foot-injury",
+      "title": "Bears WR Rome Odunze Adjusting To ‘New Normal’ After Foot Injury",
+      "snippet": "After going ninth overall in the 2024 draft, Bears wide receiver Rome Odunze played a full 17-game rookie season. Teaming with rookie quarterback Caleb Williams, the first overall pick in the class, Odunze caught 54 of 101 targets for 734 y",
+      "publishedAt": "2026-07-21T02:18:29.000Z",
+      "trust": 0.9,
+      "matches": [
+        {
+          "playerId": "rome-odunze-chi-wr",
+          "name": "Rome Odunze",
+          "delta": -6
         }
       ]
     }
