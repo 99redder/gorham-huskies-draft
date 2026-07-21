@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-21T12:02:01.694Z",
+  "generatedAt": "2026-07-21T23:14:07.598Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -9,7 +9,7 @@
       "name": "Sleeper Trends",
       "url": "https://api.sleeper.app/v1/players/nfl/trending/add?lookback_hours=24&limit=50",
       "ok": true,
-      "matched": 3
+      "matched": 2
     },
     {
       "id": "espn-nfl",
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 0
+      "matched": 1
     },
     {
       "id": "cbs-nfl",
@@ -82,14 +82,14 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-10 add over the last 24 hours (1,729 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-21T12:02:01.694Z",
+      "snippet": "Top-11 add over the last 24 hours (1,876 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-21T23:14:07.598Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "malik-willis-mia-qb",
           "name": "Malik Willis",
-          "delta": 4.7
+          "delta": 4.8
         }
       ]
     },
@@ -99,31 +99,31 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-18 add over the last 24 hours (1,269 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-21T12:02:01.694Z",
+      "snippet": "Top-12 add over the last 24 hours (1,683 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-21T23:14:07.598Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "keaton-mitchell-lac-rb",
           "name": "Keaton Mitchell",
-          "delta": 4.6
+          "delta": 4.7
         }
       ]
     },
     {
-      "id": "alpha_7bce3a02bb458463",
-      "source": "Sleeper Trends",
-      "publisher": "Sleeper",
-      "sourceUrl": "https://sleeper.com/",
-      "title": "Jake Bates is trending in Sleeper adds",
-      "snippet": "Top-24 add over the last 24 hours (984 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-21T12:02:01.694Z",
-      "trust": 0.75,
+      "id": "alpha_13f40626d857541e",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/report-sam-laporta-fully-cleared-225218347.html",
+      "title": "Report: Sam LaPorta fully cleared from injury for Lions training camp",
+      "snippet": "Detroit Lions TE Sam LaPorta’s latest injury news suggest he’ll be a full go at the start of training camp.",
+      "publishedAt": "2026-07-21T22:52:18.000Z",
+      "trust": 1,
       "matches": [
         {
-          "playerId": "jake-bates-det-k",
-          "name": "Jake Bates",
-          "delta": 4.5
+          "playerId": "sam-laporta-det-te",
+          "name": "Sam LaPorta",
+          "delta": -6
         }
       ]
     },
