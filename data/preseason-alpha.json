@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-22T12:05:55.359Z",
+  "generatedAt": "2026-07-22T23:17:26.199Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 1
+      "matched": 0
     },
     {
       "id": "cbs-nfl",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-12 add over the last 24 hours (1,925 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-22T12:05:55.359Z",
+      "snippet": "Top-15 add over the last 24 hours (1,988 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-22T23:17:26.199Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,31 +99,14 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-13 add over the last 24 hours (1,863 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-22T12:05:55.359Z",
+      "snippet": "Top-17 add over the last 24 hours (1,827 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-22T23:17:26.199Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "keaton-mitchell-lac-rb",
           "name": "Keaton Mitchell",
           "delta": 4.8
-        }
-      ]
-    },
-    {
-      "id": "alpha_13f40626d857541e",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/report-sam-laporta-fully-cleared-225218347.html",
-      "title": "Report: Sam LaPorta fully cleared from injury for Lions training camp",
-      "snippet": "Detroit Lions TE Sam LaPorta’s latest injury news suggest he’ll be a full go at the start of training camp.",
-      "publishedAt": "2026-07-21T22:52:18.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "sam-laporta-det-te",
-          "name": "Sam LaPorta",
-          "delta": -6
         }
       ]
     }
