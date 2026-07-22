@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-21T23:14:07.598Z",
+  "generatedAt": "2026-07-22T12:05:55.359Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -58,7 +58,7 @@
       "name": "Pro Football Rumors",
       "url": "https://www.profootballrumors.com/feed",
       "ok": true,
-      "matched": 1
+      "matched": 0
     },
     {
       "id": "establish-the-run",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-11 add over the last 24 hours (1,876 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-21T23:14:07.598Z",
+      "snippet": "Top-12 add over the last 24 hours (1,925 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-22T12:05:55.359Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,14 +99,14 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-12 add over the last 24 hours (1,683 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-21T23:14:07.598Z",
+      "snippet": "Top-13 add over the last 24 hours (1,863 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-22T12:05:55.359Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "keaton-mitchell-lac-rb",
           "name": "Keaton Mitchell",
-          "delta": 4.7
+          "delta": 4.8
         }
       ]
     },
@@ -123,23 +123,6 @@
         {
           "playerId": "sam-laporta-det-te",
           "name": "Sam LaPorta",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_1d2ad40cb1ec6ecf",
-      "source": "Pro Football Rumors",
-      "publisher": "Pro Football Rumors",
-      "sourceUrl": "https://www.profootballrumors.com/2026/07/bears-wr-rome-odunze-adjusting-to-new-normal-after-foot-injury",
-      "title": "Bears WR Rome Odunze Adjusting To ‘New Normal’ After Foot Injury",
-      "snippet": "After going ninth overall in the 2024 draft, Bears wide receiver Rome Odunze played a full 17-game rookie season. Teaming with rookie quarterback Caleb Williams, the first overall pick in the class, Odunze caught 54 of 101 targets for 734 y",
-      "publishedAt": "2026-07-21T02:18:29.000Z",
-      "trust": 0.9,
-      "matches": [
-        {
-          "playerId": "rome-odunze-chi-wr",
-          "name": "Rome Odunze",
           "delta": -6
         }
       ]
