@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-22T23:17:26.199Z",
+  "generatedAt": "2026-07-23T12:04:18.516Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -77,36 +77,36 @@
   ],
   "entries": [
     {
-      "id": "alpha_9e25aba50d28296e",
-      "source": "Sleeper Trends",
-      "publisher": "Sleeper",
-      "sourceUrl": "https://sleeper.com/",
-      "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-15 add over the last 24 hours (1,988 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-22T23:17:26.199Z",
-      "trust": 0.75,
-      "matches": [
-        {
-          "playerId": "malik-willis-mia-qb",
-          "name": "Malik Willis",
-          "delta": 4.8
-        }
-      ]
-    },
-    {
       "id": "alpha_fe3ddb7ed800ba6c",
       "source": "Sleeper Trends",
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-17 add over the last 24 hours (1,827 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-22T23:17:26.199Z",
+      "snippet": "Top-16 add over the last 24 hours (1,692 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-23T12:04:18.516Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "keaton-mitchell-lac-rb",
           "name": "Keaton Mitchell",
-          "delta": 4.8
+          "delta": 4.7
+        }
+      ]
+    },
+    {
+      "id": "alpha_9e25aba50d28296e",
+      "source": "Sleeper Trends",
+      "publisher": "Sleeper",
+      "sourceUrl": "https://sleeper.com/",
+      "title": "Malik Willis is trending in Sleeper adds",
+      "snippet": "Top-17 add over the last 24 hours (1,673 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-23T12:04:18.516Z",
+      "trust": 0.75,
+      "matches": [
+        {
+          "playerId": "malik-willis-mia-qb",
+          "name": "Malik Willis",
+          "delta": 4.7
         }
       ]
     }
