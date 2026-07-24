@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-23T23:13:41.804Z",
+  "generatedAt": "2026-07-24T11:56:55.944Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 1
+      "matched": 2
     },
     {
       "id": "cbs-nfl",
@@ -77,30 +77,13 @@
   ],
   "entries": [
     {
-      "id": "alpha_9e25aba50d28296e",
-      "source": "Sleeper Trends",
-      "publisher": "Sleeper",
-      "sourceUrl": "https://sleeper.com/",
-      "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-18 add over the last 24 hours (1,666 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-23T23:13:41.804Z",
-      "trust": 0.75,
-      "matches": [
-        {
-          "playerId": "malik-willis-mia-qb",
-          "name": "Malik Willis",
-          "delta": 4.7
-        }
-      ]
-    },
-    {
       "id": "alpha_fe3ddb7ed800ba6c",
       "source": "Sleeper Trends",
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-19 add over the last 24 hours (1,638 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-23T23:13:41.804Z",
+      "snippet": "Top-18 add over the last 24 hours (1,773 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-24T11:56:55.944Z",
       "trust": 0.75,
       "matches": [
         {
@@ -111,13 +94,47 @@
       ]
     },
     {
-      "id": "alpha_f166bef76496c38c",
+      "id": "alpha_9e25aba50d28296e",
+      "source": "Sleeper Trends",
+      "publisher": "Sleeper",
+      "sourceUrl": "https://sleeper.com/",
+      "title": "Malik Willis is trending in Sleeper adds",
+      "snippet": "Top-25 add over the last 24 hours (1,400 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-24T11:56:55.944Z",
+      "trust": 0.75,
+      "matches": [
+        {
+          "playerId": "malik-willis-mia-qb",
+          "name": "Malik Willis",
+          "delta": 4.6
+        }
+      ]
+    },
+    {
+      "id": "alpha_76da19fb74c7ec9e",
       "source": "Yahoo Sports NFL",
       "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/giants-wr-malik-nabers-expected-192737687.html",
-      "title": "Giants WR Malik Nabers is expected to avoid PUP list",
-      "snippet": "The question remains about when Malik Nabers will return from rehab on his right knee, with the Giants hopeful he can play the season opener against the Cowboys.",
-      "publishedAt": "2026-07-23T19:27:37.000Z",
+      "sourceUrl": "https://sports.yahoo.com/articles/latest-malik-nabers-injury-good-233443783.html",
+      "title": "Latest Malik Nabers injury update is good news for Week 1 availability",
+      "snippet": "New York Giants WR Malik Nabers missed significant time in 2025 with a torn ACL. Here's the latest injury update heading into training camp.",
+      "publishedAt": "2026-07-23T23:34:43.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "malik-nabers-nyg-wr",
+          "name": "Malik Nabers",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_6aa058edbe3eb6f3",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/ny-giants-news-wr-malik-232631873.html",
+      "title": "NY Giants news: WR Malik Nabers will avoid the PUP list",
+      "snippet": "NY Giants star receiver Malik Nabers will avoid the PUP list to start training camp",
+      "publishedAt": "2026-07-23T23:26:31.000Z",
       "trust": 1,
       "matches": [
         {
@@ -126,8 +143,8 @@
           "delta": -6,
           "injury": {
             "status": "PUP",
-            "note": "Giants WR Malik Nabers is expected to avoid PUP list",
-            "sourceUpdatedAt": 1784834857000
+            "note": "NY Giants news: WR Malik Nabers will avoid the PUP list",
+            "sourceUpdatedAt": 1784849191000
           }
         }
       ]
