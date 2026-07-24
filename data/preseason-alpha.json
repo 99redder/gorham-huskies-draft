@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-24T11:56:55.944Z",
+  "generatedAt": "2026-07-24T23:18:20.965Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -9,7 +9,7 @@
       "name": "Sleeper Trends",
       "url": "https://api.sleeper.app/v1/players/nfl/trending/add?lookback_hours=24&limit=50",
       "ok": true,
-      "matched": 2
+      "matched": 3
     },
     {
       "id": "espn-nfl",
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 2
+      "matched": 1
     },
     {
       "id": "cbs-nfl",
@@ -77,75 +77,70 @@
   ],
   "entries": [
     {
-      "id": "alpha_fe3ddb7ed800ba6c",
-      "source": "Sleeper Trends",
-      "publisher": "Sleeper",
-      "sourceUrl": "https://sleeper.com/",
-      "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-18 add over the last 24 hours (1,773 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-24T11:56:55.944Z",
-      "trust": 0.75,
-      "matches": [
-        {
-          "playerId": "keaton-mitchell-lac-rb",
-          "name": "Keaton Mitchell",
-          "delta": 4.7
-        }
-      ]
-    },
-    {
       "id": "alpha_9e25aba50d28296e",
       "source": "Sleeper Trends",
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-25 add over the last 24 hours (1,400 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-24T11:56:55.944Z",
+      "snippet": "Top-19 add over the last 24 hours (1,421 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-24T23:18:20.965Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "malik-willis-mia-qb",
           "name": "Malik Willis",
+          "delta": 4.7
+        }
+      ]
+    },
+    {
+      "id": "alpha_fe3ddb7ed800ba6c",
+      "source": "Sleeper Trends",
+      "publisher": "Sleeper",
+      "sourceUrl": "https://sleeper.com/",
+      "title": "Keaton Mitchell is trending in Sleeper adds",
+      "snippet": "Top-20 add over the last 24 hours (1,395 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-24T23:18:20.965Z",
+      "trust": 0.75,
+      "matches": [
+        {
+          "playerId": "keaton-mitchell-lac-rb",
+          "name": "Keaton Mitchell",
           "delta": 4.6
         }
       ]
     },
     {
-      "id": "alpha_76da19fb74c7ec9e",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/latest-malik-nabers-injury-good-233443783.html",
-      "title": "Latest Malik Nabers injury update is good news for Week 1 availability",
-      "snippet": "New York Giants WR Malik Nabers missed significant time in 2025 with a torn ACL. Here's the latest injury update heading into training camp.",
-      "publishedAt": "2026-07-23T23:34:43.000Z",
-      "trust": 1,
+      "id": "alpha_7bce3a02bb458463",
+      "source": "Sleeper Trends",
+      "publisher": "Sleeper",
+      "sourceUrl": "https://sleeper.com/",
+      "title": "Jake Bates is trending in Sleeper adds",
+      "snippet": "Top-25 add over the last 24 hours (1,152 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-24T23:18:20.965Z",
+      "trust": 0.75,
       "matches": [
         {
-          "playerId": "malik-nabers-nyg-wr",
-          "name": "Malik Nabers",
-          "delta": -6
+          "playerId": "jake-bates-det-k",
+          "name": "Jake Bates",
+          "delta": 4.6
         }
       ]
     },
     {
-      "id": "alpha_6aa058edbe3eb6f3",
+      "id": "alpha_4ba53027e1632a81",
       "source": "Yahoo Sports NFL",
       "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/ny-giants-news-wr-malik-232631873.html",
-      "title": "NY Giants news: WR Malik Nabers will avoid the PUP list",
-      "snippet": "NY Giants star receiver Malik Nabers will avoid the PUP list to start training camp",
-      "publishedAt": "2026-07-23T23:26:31.000Z",
+      "sourceUrl": "https://sports.yahoo.com/articles/andy-reid-gives-6-chiefs-202920370.html",
+      "title": "Andy Reid gives 6 Chiefs injury updates; Patrick Mahomes cleared to practice",
+      "snippet": "Kansas City’s head coach gave insight on multiple key players.",
+      "publishedAt": "2026-07-24T20:29:20.000Z",
       "trust": 1,
       "matches": [
         {
-          "playerId": "malik-nabers-nyg-wr",
-          "name": "Malik Nabers",
-          "delta": -6,
-          "injury": {
-            "status": "PUP",
-            "note": "NY Giants news: WR Malik Nabers will avoid the PUP list",
-            "sourceUpdatedAt": 1784849191000
-          }
+          "playerId": "patrick-mahomes-kc-qb",
+          "name": "Patrick Mahomes",
+          "delta": -6
         }
       ]
     },
