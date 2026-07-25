@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-24T23:18:20.965Z",
+  "generatedAt": "2026-07-25T11:37:51.724Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 1
+      "matched": 0
     },
     {
       "id": "cbs-nfl",
@@ -51,7 +51,7 @@
       "name": "r/fantasyfootball",
       "url": "https://www.reddit.com/r/fantasyfootball/.rss",
       "ok": true,
-      "matched": 2
+      "matched": 1
     },
     {
       "id": "pro-football-rumors",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-19 add over the last 24 hours (1,421 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-24T23:18:20.965Z",
+      "snippet": "Top-14 add over the last 24 hours (1,554 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-25T11:37:51.724Z",
       "trust": 0.75,
       "matches": [
         {
@@ -94,30 +94,13 @@
       ]
     },
     {
-      "id": "alpha_fe3ddb7ed800ba6c",
-      "source": "Sleeper Trends",
-      "publisher": "Sleeper",
-      "sourceUrl": "https://sleeper.com/",
-      "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-20 add over the last 24 hours (1,395 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-24T23:18:20.965Z",
-      "trust": 0.75,
-      "matches": [
-        {
-          "playerId": "keaton-mitchell-lac-rb",
-          "name": "Keaton Mitchell",
-          "delta": 4.6
-        }
-      ]
-    },
-    {
       "id": "alpha_7bce3a02bb458463",
       "source": "Sleeper Trends",
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Jake Bates is trending in Sleeper adds",
-      "snippet": "Top-25 add over the last 24 hours (1,152 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-24T23:18:20.965Z",
+      "snippet": "Top-20 add over the last 24 hours (1,200 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-25T11:37:51.724Z",
       "trust": 0.75,
       "matches": [
         {
@@ -128,19 +111,19 @@
       ]
     },
     {
-      "id": "alpha_4ba53027e1632a81",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/andy-reid-gives-6-chiefs-202920370.html",
-      "title": "Andy Reid gives 6 Chiefs injury updates; Patrick Mahomes cleared to practice",
-      "snippet": "Kansas City’s head coach gave insight on multiple key players.",
-      "publishedAt": "2026-07-24T20:29:20.000Z",
-      "trust": 1,
+      "id": "alpha_fe3ddb7ed800ba6c",
+      "source": "Sleeper Trends",
+      "publisher": "Sleeper",
+      "sourceUrl": "https://sleeper.com/",
+      "title": "Keaton Mitchell is trending in Sleeper adds",
+      "snippet": "Top-22 add over the last 24 hours (1,161 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-25T11:37:51.724Z",
+      "trust": 0.75,
       "matches": [
         {
-          "playerId": "patrick-mahomes-kc-qb",
-          "name": "Patrick Mahomes",
-          "delta": -6
+          "playerId": "keaton-mitchell-lac-rb",
+          "name": "Keaton Mitchell",
+          "delta": 4.6
         }
       ]
     },
@@ -158,28 +141,6 @@
           "playerId": "jonathon-brooks-car-rb",
           "name": "Jonathon Brooks",
           "delta": 6
-        }
-      ]
-    },
-    {
-      "id": "alpha_bf440969224ba452",
-      "source": "r/fantasyfootball",
-      "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1v4jomu/malik_nabers_injury_should_avoid_reservepup_list/",
-      "title": "Malik Nabers Injury: Should avoid reserve/PUP list",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/Jschatt\"> /u/Jschatt </a> <br/> <span><a href=\"https://www.rotowire.com/football/headlines/malik-nabers-injury-should-avoid-reservepup-list-631803\">[link]</a></span> <span><a href=\"https://w",
-      "publishedAt": "2026-07-23T16:56:57.000Z",
-      "trust": 0.65,
-      "matches": [
-        {
-          "playerId": "malik-nabers-nyg-wr",
-          "name": "Malik Nabers",
-          "delta": -6,
-          "injury": {
-            "status": "PUP",
-            "note": "Malik Nabers Injury: Should avoid reserve/PUP list",
-            "sourceUpdatedAt": 1784825817000
-          }
         }
       ]
     }
