@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-25T11:37:51.724Z",
+  "generatedAt": "2026-07-25T23:15:03.179Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 0
+      "matched": 1
     },
     {
       "id": "cbs-nfl",
@@ -51,7 +51,7 @@
       "name": "r/fantasyfootball",
       "url": "https://www.reddit.com/r/fantasyfootball/.rss",
       "ok": true,
-      "matched": 1
+      "matched": 0
     },
     {
       "id": "pro-football-rumors",
@@ -82,13 +82,30 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-14 add over the last 24 hours (1,554 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-25T11:37:51.724Z",
+      "snippet": "Top-10 add over the last 24 hours (2,051 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-25T23:15:03.179Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "malik-willis-mia-qb",
           "name": "Malik Willis",
+          "delta": 4.8
+        }
+      ]
+    },
+    {
+      "id": "alpha_fe3ddb7ed800ba6c",
+      "source": "Sleeper Trends",
+      "publisher": "Sleeper",
+      "sourceUrl": "https://sleeper.com/",
+      "title": "Keaton Mitchell is trending in Sleeper adds",
+      "snippet": "Top-17 add over the last 24 hours (1,584 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-25T23:15:03.179Z",
+      "trust": 0.75,
+      "matches": [
+        {
+          "playerId": "keaton-mitchell-lac-rb",
+          "name": "Keaton Mitchell",
           "delta": 4.7
         }
       ]
@@ -99,48 +116,31 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Jake Bates is trending in Sleeper adds",
-      "snippet": "Top-20 add over the last 24 hours (1,200 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-25T11:37:51.724Z",
+      "snippet": "Top-19 add over the last 24 hours (1,520 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-25T23:15:03.179Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "jake-bates-det-k",
           "name": "Jake Bates",
-          "delta": 4.6
+          "delta": 4.7
         }
       ]
     },
     {
-      "id": "alpha_fe3ddb7ed800ba6c",
-      "source": "Sleeper Trends",
-      "publisher": "Sleeper",
-      "sourceUrl": "https://sleeper.com/",
-      "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-22 add over the last 24 hours (1,161 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-25T11:37:51.724Z",
-      "trust": 0.75,
+      "id": "alpha_417598daa82fe12b",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/nfl/live/nfl-news-live-updates-training-camp-2026-schedule-injury-news-163112222.html",
+      "title": "NFL training camp news, live updates: Kyle Shanahan injured in car wreck; Patriots make Christian Gonzalez a hefty offer; Patrick Mahomes cleared",
+      "snippet": "Follow along with the latest NFL news and updates as training camps around the league kick off.",
+      "publishedAt": "2026-07-21T16:31:12.000Z",
+      "trust": 1,
       "matches": [
         {
-          "playerId": "keaton-mitchell-lac-rb",
-          "name": "Keaton Mitchell",
-          "delta": 4.6
-        }
-      ]
-    },
-    {
-      "id": "alpha_008680288d62a51e",
-      "source": "r/fantasyfootball",
-      "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1v4k7tt/jonathon_brooks_seeing_firstteam_reps_in_training/",
-      "title": "Jonathon Brooks Seeing First-Team Reps in Training Camp [Kaye, Charlotte Observer]",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/ASmithFS\"> /u/ASmithFS </a> <br/> <span><a href=\"https://www.rotoballer.com/player-news/jonathon-brooks-seeing-first-team-reps-in-training-camp/1896294\">[link]</a></span> <span><a href=\"http",
-      "publishedAt": "2026-07-23T17:15:30.000Z",
-      "trust": 0.65,
-      "matches": [
-        {
-          "playerId": "jonathon-brooks-car-rb",
-          "name": "Jonathon Brooks",
-          "delta": 6
+          "playerId": "patrick-mahomes-kc-qb",
+          "name": "Patrick Mahomes",
+          "delta": -6
         }
       ]
     }
