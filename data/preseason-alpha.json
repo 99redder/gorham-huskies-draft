@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-27T13:22:44.284Z",
+  "generatedAt": "2026-07-27T23:29:13.470Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -30,7 +30,7 @@
       "name": "CBS Sports NFL",
       "url": "https://www.cbssports.com/rss/headlines/nfl/",
       "ok": true,
-      "matched": 0
+      "matched": 1
     },
     {
       "id": "rotoballer",
@@ -50,9 +50,8 @@
       "id": "reddit-fantasyfootball",
       "name": "r/fantasyfootball",
       "url": "https://www.reddit.com/r/fantasyfootball/.rss",
-      "ok": false,
-      "matched": 0,
-      "error": "HTTP 403"
+      "ok": true,
+      "matched": 0
     },
     {
       "id": "pro-football-rumors",
@@ -83,14 +82,14 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-13 add over the last 24 hours (2,688 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-27T13:22:44.284Z",
+      "snippet": "Top-14 add over the last 24 hours (3,052 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-27T23:29:13.470Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "malik-willis-mia-qb",
           "name": "Malik Willis",
-          "delta": 4.9
+          "delta": 5
         }
       ]
     },
@@ -100,8 +99,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Jake Bates is trending in Sleeper adds",
-      "snippet": "Top-17 add over the last 24 hours (2,560 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-27T13:22:44.284Z",
+      "snippet": "Top-19 add over the last 24 hours (2,472 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-27T23:29:13.470Z",
       "trust": 0.75,
       "matches": [
         {
@@ -117,14 +116,31 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-20 add over the last 24 hours (2,259 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-27T13:22:44.284Z",
+      "snippet": "Top-20 add over the last 24 hours (2,457 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-27T23:29:13.470Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "keaton-mitchell-lac-rb",
           "name": "Keaton Mitchell",
           "delta": 4.9
+        }
+      ]
+    },
+    {
+      "id": "alpha_92ab71922eacdd19",
+      "source": "CBS Sports NFL",
+      "publisher": "CBS Sports",
+      "sourceUrl": "https://www.cbssports.com/nfl/news/daniel-jones-injury-update-colts-qb-training-camp/",
+      "title": "Colts QB Daniel Jones declares himself ready for training camp after recovering from season-ending injury",
+      "snippet": "The Colts quarterback said he expects to participate in full-team drills when training camp opens Wednesday, marking a rapid recovery from the Achilles tear that ended his 2025 season",
+      "publishedAt": "2026-07-27T20:32:29.000Z",
+      "trust": 0.95,
+      "matches": [
+        {
+          "playerId": "daniel-jones-ind-qb",
+          "name": "Daniel Jones",
+          "delta": -6
         }
       ]
     }
