@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-28T12:15:39.810Z",
+  "generatedAt": "2026-07-28T23:17:21.142Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -9,7 +9,7 @@
       "name": "Sleeper Trends",
       "url": "https://api.sleeper.app/v1/players/nfl/trending/add?lookback_hours=24&limit=50",
       "ok": true,
-      "matched": 3
+      "matched": 2
     },
     {
       "id": "espn-nfl",
@@ -77,53 +77,36 @@
   ],
   "entries": [
     {
+      "id": "alpha_fe3ddb7ed800ba6c",
+      "source": "Sleeper Trends",
+      "publisher": "Sleeper",
+      "sourceUrl": "https://sleeper.com/",
+      "title": "Keaton Mitchell is trending in Sleeper adds",
+      "snippet": "Top-21 add over the last 24 hours (3,393 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-28T23:17:21.142Z",
+      "trust": 0.75,
+      "matches": [
+        {
+          "playerId": "keaton-mitchell-lac-rb",
+          "name": "Keaton Mitchell",
+          "delta": 5
+        }
+      ]
+    },
+    {
       "id": "alpha_9e25aba50d28296e",
       "source": "Sleeper Trends",
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-20 add over the last 24 hours (2,891 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-28T12:15:39.810Z",
+      "snippet": "Top-22 add over the last 24 hours (3,108 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-28T23:17:21.142Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "malik-willis-mia-qb",
           "name": "Malik Willis",
           "delta": 5
-        }
-      ]
-    },
-    {
-      "id": "alpha_fe3ddb7ed800ba6c",
-      "source": "Sleeper Trends",
-      "publisher": "Sleeper",
-      "sourceUrl": "https://sleeper.com/",
-      "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-22 add over the last 24 hours (2,655 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-28T12:15:39.810Z",
-      "trust": 0.75,
-      "matches": [
-        {
-          "playerId": "keaton-mitchell-lac-rb",
-          "name": "Keaton Mitchell",
-          "delta": 4.9
-        }
-      ]
-    },
-    {
-      "id": "alpha_7bce3a02bb458463",
-      "source": "Sleeper Trends",
-      "publisher": "Sleeper",
-      "sourceUrl": "https://sleeper.com/",
-      "title": "Jake Bates is trending in Sleeper adds",
-      "snippet": "Top-28 add over the last 24 hours (2,128 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-28T12:15:39.810Z",
-      "trust": 0.75,
-      "matches": [
-        {
-          "playerId": "jake-bates-det-k",
-          "name": "Jake Bates",
-          "delta": 4.8
         }
       ]
     },
