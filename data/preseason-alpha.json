@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-29T12:23:13.484Z",
+  "generatedAt": "2026-07-29T23:16:19.660Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -23,14 +23,14 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 0
+      "matched": 3
     },
     {
       "id": "cbs-nfl",
       "name": "CBS Sports NFL",
       "url": "https://www.cbssports.com/rss/headlines/nfl/",
       "ok": true,
-      "matched": 1
+      "matched": 3
     },
     {
       "id": "rotoballer",
@@ -51,7 +51,7 @@
       "name": "r/fantasyfootball",
       "url": "https://www.reddit.com/r/fantasyfootball/.rss",
       "ok": true,
-      "matched": 0
+      "matched": 3
     },
     {
       "id": "pro-football-rumors",
@@ -77,13 +77,30 @@
   ],
   "entries": [
     {
+      "id": "alpha_9e25aba50d28296e",
+      "source": "Sleeper Trends",
+      "publisher": "Sleeper",
+      "sourceUrl": "https://sleeper.com/",
+      "title": "Malik Willis is trending in Sleeper adds",
+      "snippet": "Top-27 add over the last 24 hours (2,982 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-29T23:16:19.660Z",
+      "trust": 0.75,
+      "matches": [
+        {
+          "playerId": "malik-willis-mia-qb",
+          "name": "Malik Willis",
+          "delta": 5
+        }
+      ]
+    },
+    {
       "id": "alpha_fe3ddb7ed800ba6c",
       "source": "Sleeper Trends",
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-23 add over the last 24 hours (3,123 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-29T12:23:13.484Z",
+      "snippet": "Top-30 add over the last 24 hours (2,835 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-29T23:16:19.660Z",
       "trust": 0.75,
       "matches": [
         {
@@ -94,19 +111,136 @@
       ]
     },
     {
-      "id": "alpha_9e25aba50d28296e",
-      "source": "Sleeper Trends",
-      "publisher": "Sleeper",
-      "sourceUrl": "https://sleeper.com/",
-      "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-25 add over the last 24 hours (2,975 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-29T12:23:13.484Z",
-      "trust": 0.75,
+      "id": "alpha_a28e89ff9d417df8",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/nfl/article/panthers-rookie-wr-chris-brazzell-to-miss-up-to-8-weeks-with-lcl-tear-after-training-camp-injury-212506664.html",
+      "title": "Panthers rookie WR Chris Brazzell to miss up to 8 weeks with LCL tear after training camp injury",
+      "snippet": "The Panthers selected Chris Brazzell in the third round of the NFL Draft earlier this year out of Tennessee.",
+      "publishedAt": "2026-07-29T21:25:06.000Z",
+      "trust": 1,
       "matches": [
         {
-          "playerId": "malik-willis-mia-qb",
-          "name": "Malik Willis",
-          "delta": 5
+          "playerId": "chris-brazzell-car-wr",
+          "name": "Chris Brazzell",
+          "delta": -4.8
+        }
+      ]
+    },
+    {
+      "id": "alpha_505d53dc3be97877",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/49ers-3-wide-receivers-ricky-211617699.html",
+      "title": "49ers work out 3 wide receivers after the Ricky Pearsall injury news",
+      "snippet": "The 49ers need bodies at wide receiver",
+      "publishedAt": "2026-07-29T21:16:17.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "ricky-pearsall-sf-wr",
+          "name": "Ricky Pearsall",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_9ba12bc446852a73",
+      "source": "CBS Sports NFL",
+      "publisher": "CBS Sports",
+      "sourceUrl": "https://www.cbssports.com/nfl/news/fight-breaks-out-bengals-training-camp-jamarr-chase/",
+      "title": "LOOK: Fight breaks out on Day 1 of Bengals training camp with Ja'Marr Chase at center of the scuffle",
+      "snippet": "Tempers flared as Cincinnati opened up training camp on Wednesday",
+      "publishedAt": "2026-07-29T17:50:13.000Z",
+      "trust": 0.95,
+      "matches": [
+        {
+          "playerId": "ja-marr-chase-cin-wr",
+          "name": "Ja'Marr Chase",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_c537ba43fe284e09",
+      "source": "r/fantasyfootball",
+      "publisher": "Reddit",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1va2s5k/ricky_pearsall_is_out_of_practice_with_a_knee/",
+      "title": "Ricky Pearsall is out of practice with a knee issue that’s related to last year’s PCL issue. It’s a concerning matter and the team is looking at all options, presumably including s",
+      "snippet": "submitted by <a href=\"https://www.reddit.com/user/mvanigan\"> /u/mvanigan </a> <br/> <span><a href=\"https://bsky.app/profile/mattbarrows.bsky.social/post/3mrsgtxixvk2y\">[link]</a></span> <span><a href=\"https://www.reddit.com/r/fantasyfootbal",
+      "publishedAt": "2026-07-29T17:23:27.000Z",
+      "trust": 0.65,
+      "matches": [
+        {
+          "playerId": "ricky-pearsall-sf-wr",
+          "name": "Ricky Pearsall",
+          "delta": -6,
+          "injury": {
+            "status": "Questionable",
+            "note": "Ricky Pearsall is out of practice with a knee issue that’s related to last year’s PCL issue. It’s a concerning matter and the team is looking at all options, presumably including s",
+            "sourceUpdatedAt": 1785345807000
+          }
+        }
+      ]
+    },
+    {
+      "id": "alpha_b7bcf75a95213b23",
+      "source": "CBS Sports NFL",
+      "publisher": "CBS Sports",
+      "sourceUrl": "https://www.cbssports.com/nfl/news/tua-tagovailoa-injury-update-falcons-sign-cooper-rush/",
+      "title": "Falcons sign veteran QB with Tua Tagovailoa working through injury, Michael Penix Jr. still out of team drills",
+      "snippet": "Tagovailoa is reportedly dealing with a back issue, but head coach Kevin Stefanski said he should be back \"sooner rather than later\"",
+      "publishedAt": "2026-07-29T15:51:45.000Z",
+      "trust": 0.95,
+      "matches": [
+        {
+          "playerId": "michael-penix-jr-atl-qb",
+          "name": "Michael Penix Jr.",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_1c2c5cd5fde142ad",
+      "source": "r/fantasyfootball",
+      "publisher": "Reddit",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1v9z886/panthers_wr_chris_brazzell_carted_off_after_going/",
+      "title": "Panthers WR Chris Brazzell carted off after going down in one-on-ones. The rookie WR had been out with some knee soreness but returned today.",
+      "snippet": "submitted by <a href=\"https://www.reddit.com/user/My_Chat_Account\"> /u/My_Chat_Account </a> <br/> <span><a href=\"https://bsky.app/profile/daringantt.bsky.social/post/3mrs776tgoc2c\">[link]</a></span> <span><a href=\"https://www.reddit.com/r/f",
+      "publishedAt": "2026-07-29T15:20:08.000Z",
+      "trust": 0.65,
+      "matches": [
+        {
+          "playerId": "chris-brazzell-car-wr",
+          "name": "Chris Brazzell",
+          "delta": -6,
+          "injury": {
+            "status": "Questionable",
+            "note": "Panthers WR Chris Brazzell carted off after going down in one-on-ones. The rookie WR had been out with some knee soreness but returned today.",
+            "sourceUpdatedAt": 1785338408000
+          }
+        }
+      ]
+    },
+    {
+      "id": "alpha_f56f7278fb71fb29",
+      "source": "r/fantasyfootball",
+      "publisher": "Reddit",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1v9v5dn/with_atlanta_qb_tua_tagovailoa_dealing_with_a/",
+      "title": "With Atlanta QB Tua Tagovailoa dealing with a tight back and Michael Penix still not practicing due to a knee injury, the Falcons are signing veteran quarterback Cooper Rush, per s",
+      "snippet": "submitted by <a href=\"https://www.reddit.com/user/mvanigan\"> /u/mvanigan </a> <br/> <span><a href=\"https://www.espn.com/contributor/adam-schefter/b3eb8f5043c9b?modifier=webview\">[link]</a></span> <span><a href=\"https://www.reddit.com/r/fant",
+      "publishedAt": "2026-07-29T12:44:46.000Z",
+      "trust": 0.65,
+      "matches": [
+        {
+          "playerId": "michael-penix-jr-atl-qb",
+          "name": "Michael Penix Jr.",
+          "delta": -6,
+          "injury": {
+            "status": "Questionable",
+            "note": "With Atlanta QB Tua Tagovailoa dealing with a tight back and Michael Penix still not practicing due to a knee injury, the Falcons are signing veteran quarterback Cooper Rush, per s",
+            "sourceUpdatedAt": 1785329086000
+          }
         }
       ]
     },
@@ -123,6 +257,28 @@
         {
           "playerId": "daniel-jones-ind-qb",
           "name": "Daniel Jones",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_bf219c5ae92fcc1a",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/nfl/live/nfl-news-live-updates-training-camp-2026-schedule-injury-news-174255317.html",
+      "title": "NFL news, live updates: Bijan Robinson, Jahmyr Gibbs sit out training camp practices, awaiting new contracts",
+      "snippet": "Follow along with the latest NFL news and updates as training camps around the league kick off.",
+      "publishedAt": "2026-07-27T17:42:55.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "bijan-robinson-atl-rb",
+          "name": "Bijan Robinson",
+          "delta": -6
+        },
+        {
+          "playerId": "jahmyr-gibbs-det-rb",
+          "name": "Jahmyr Gibbs",
           "delta": -6
         }
       ]
