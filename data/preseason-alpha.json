@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-29T23:16:19.660Z",
+  "generatedAt": "2026-07-30T12:06:11.295Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -9,7 +9,7 @@
       "name": "Sleeper Trends",
       "url": "https://api.sleeper.app/v1/players/nfl/trending/add?lookback_hours=24&limit=50",
       "ok": true,
-      "matched": 2
+      "matched": 1
     },
     {
       "id": "espn-nfl",
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 3
+      "matched": 0
     },
     {
       "id": "cbs-nfl",
@@ -82,65 +82,14 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-27 add over the last 24 hours (2,982 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-29T23:16:19.660Z",
+      "snippet": "Top-29 add over the last 24 hours (2,730 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-30T12:06:11.295Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "malik-willis-mia-qb",
           "name": "Malik Willis",
-          "delta": 5
-        }
-      ]
-    },
-    {
-      "id": "alpha_fe3ddb7ed800ba6c",
-      "source": "Sleeper Trends",
-      "publisher": "Sleeper",
-      "sourceUrl": "https://sleeper.com/",
-      "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-30 add over the last 24 hours (2,835 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-29T23:16:19.660Z",
-      "trust": 0.75,
-      "matches": [
-        {
-          "playerId": "keaton-mitchell-lac-rb",
-          "name": "Keaton Mitchell",
-          "delta": 5
-        }
-      ]
-    },
-    {
-      "id": "alpha_a28e89ff9d417df8",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/nfl/article/panthers-rookie-wr-chris-brazzell-to-miss-up-to-8-weeks-with-lcl-tear-after-training-camp-injury-212506664.html",
-      "title": "Panthers rookie WR Chris Brazzell to miss up to 8 weeks with LCL tear after training camp injury",
-      "snippet": "The Panthers selected Chris Brazzell in the third round of the NFL Draft earlier this year out of Tennessee.",
-      "publishedAt": "2026-07-29T21:25:06.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "chris-brazzell-car-wr",
-          "name": "Chris Brazzell",
-          "delta": -4.8
-        }
-      ]
-    },
-    {
-      "id": "alpha_505d53dc3be97877",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/49ers-3-wide-receivers-ricky-211617699.html",
-      "title": "49ers work out 3 wide receivers after the Ricky Pearsall injury news",
-      "snippet": "The 49ers need bodies at wide receiver",
-      "publishedAt": "2026-07-29T21:16:17.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "ricky-pearsall-sf-wr",
-          "name": "Ricky Pearsall",
-          "delta": -6
+          "delta": 4.9
         }
       ]
     },
@@ -257,28 +206,6 @@
         {
           "playerId": "daniel-jones-ind-qb",
           "name": "Daniel Jones",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_bf219c5ae92fcc1a",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/nfl/live/nfl-news-live-updates-training-camp-2026-schedule-injury-news-174255317.html",
-      "title": "NFL news, live updates: Bijan Robinson, Jahmyr Gibbs sit out training camp practices, awaiting new contracts",
-      "snippet": "Follow along with the latest NFL news and updates as training camps around the league kick off.",
-      "publishedAt": "2026-07-27T17:42:55.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "bijan-robinson-atl-rb",
-          "name": "Bijan Robinson",
-          "delta": -6
-        },
-        {
-          "playerId": "jahmyr-gibbs-det-rb",
-          "name": "Jahmyr Gibbs",
           "delta": -6
         }
       ]
