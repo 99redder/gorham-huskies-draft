@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-30T12:06:11.295Z",
+  "generatedAt": "2026-07-30T23:27:46.213Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -23,14 +23,14 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 0
+      "matched": 1
     },
     {
       "id": "cbs-nfl",
       "name": "CBS Sports NFL",
       "url": "https://www.cbssports.com/rss/headlines/nfl/",
       "ok": true,
-      "matched": 3
+      "matched": 2
     },
     {
       "id": "rotoballer",
@@ -51,7 +51,7 @@
       "name": "r/fantasyfootball",
       "url": "https://www.reddit.com/r/fantasyfootball/.rss",
       "ok": true,
-      "matched": 3
+      "matched": 1
     },
     {
       "id": "pro-football-rumors",
@@ -82,14 +82,36 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-29 add over the last 24 hours (2,730 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-30T12:06:11.295Z",
+      "snippet": "Top-23 add over the last 24 hours (2,702 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-30T23:27:46.213Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "malik-willis-mia-qb",
           "name": "Malik Willis",
           "delta": 4.9
+        }
+      ]
+    },
+    {
+      "id": "alpha_4e078d72aea224e2",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/report-ricky-pearsall-requires-surgery-191034734.html",
+      "title": "Report: If Ricky Pearsall requires surgery, it will keep him out for all of 2026",
+      "snippet": "49ers wide receiver Ricky Pearsall is out of practice due to swelling in his knee related to the PCL injury he suffered during the 2025 season and the 49ers said on Wednesday that they are considering all options to address the injury.",
+      "publishedAt": "2026-07-30T19:10:34.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "ricky-pearsall-sf-wr",
+          "name": "Ricky Pearsall",
+          "delta": -6,
+          "injury": {
+            "status": "Out",
+            "note": "Report: If Ricky Pearsall requires surgery, it will keep him out for all of 2026",
+            "sourceUpdatedAt": 1785438634000
+          }
         }
       ]
     },
@@ -145,67 +167,6 @@
         {
           "playerId": "michael-penix-jr-atl-qb",
           "name": "Michael Penix Jr.",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_1c2c5cd5fde142ad",
-      "source": "r/fantasyfootball",
-      "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1v9z886/panthers_wr_chris_brazzell_carted_off_after_going/",
-      "title": "Panthers WR Chris Brazzell carted off after going down in one-on-ones. The rookie WR had been out with some knee soreness but returned today.",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/My_Chat_Account\"> /u/My_Chat_Account </a> <br/> <span><a href=\"https://bsky.app/profile/daringantt.bsky.social/post/3mrs776tgoc2c\">[link]</a></span> <span><a href=\"https://www.reddit.com/r/f",
-      "publishedAt": "2026-07-29T15:20:08.000Z",
-      "trust": 0.65,
-      "matches": [
-        {
-          "playerId": "chris-brazzell-car-wr",
-          "name": "Chris Brazzell",
-          "delta": -6,
-          "injury": {
-            "status": "Questionable",
-            "note": "Panthers WR Chris Brazzell carted off after going down in one-on-ones. The rookie WR had been out with some knee soreness but returned today.",
-            "sourceUpdatedAt": 1785338408000
-          }
-        }
-      ]
-    },
-    {
-      "id": "alpha_f56f7278fb71fb29",
-      "source": "r/fantasyfootball",
-      "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1v9v5dn/with_atlanta_qb_tua_tagovailoa_dealing_with_a/",
-      "title": "With Atlanta QB Tua Tagovailoa dealing with a tight back and Michael Penix still not practicing due to a knee injury, the Falcons are signing veteran quarterback Cooper Rush, per s",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/mvanigan\"> /u/mvanigan </a> <br/> <span><a href=\"https://www.espn.com/contributor/adam-schefter/b3eb8f5043c9b?modifier=webview\">[link]</a></span> <span><a href=\"https://www.reddit.com/r/fant",
-      "publishedAt": "2026-07-29T12:44:46.000Z",
-      "trust": 0.65,
-      "matches": [
-        {
-          "playerId": "michael-penix-jr-atl-qb",
-          "name": "Michael Penix Jr.",
-          "delta": -6,
-          "injury": {
-            "status": "Questionable",
-            "note": "With Atlanta QB Tua Tagovailoa dealing with a tight back and Michael Penix still not practicing due to a knee injury, the Falcons are signing veteran quarterback Cooper Rush, per s",
-            "sourceUpdatedAt": 1785329086000
-          }
-        }
-      ]
-    },
-    {
-      "id": "alpha_92ab71922eacdd19",
-      "source": "CBS Sports NFL",
-      "publisher": "CBS Sports",
-      "sourceUrl": "https://www.cbssports.com/nfl/news/daniel-jones-injury-update-colts-qb-training-camp/",
-      "title": "Colts QB Daniel Jones declares himself ready for training camp after recovering from season-ending injury",
-      "snippet": "The Colts quarterback said he expects to participate in full-team drills when training camp opens Wednesday, marking a rapid recovery from the Achilles tear that ended his 2025 season",
-      "publishedAt": "2026-07-27T20:32:29.000Z",
-      "trust": 0.95,
-      "matches": [
-        {
-          "playerId": "daniel-jones-ind-qb",
-          "name": "Daniel Jones",
           "delta": -6
         }
       ]
