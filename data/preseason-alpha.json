@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-30T23:27:46.213Z",
+  "generatedAt": "2026-07-31T12:19:48.530Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -9,7 +9,7 @@
       "name": "Sleeper Trends",
       "url": "https://api.sleeper.app/v1/players/nfl/trending/add?lookback_hours=24&limit=50",
       "ok": true,
-      "matched": 1
+      "matched": 2
     },
     {
       "id": "espn-nfl",
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 1
+      "matched": 2
     },
     {
       "id": "cbs-nfl",
@@ -82,36 +82,82 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-23 add over the last 24 hours (2,702 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-30T23:27:46.213Z",
+      "snippet": "Top-23 add over the last 24 hours (2,877 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-31T12:19:48.530Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "malik-willis-mia-qb",
           "name": "Malik Willis",
+          "delta": 5
+        }
+      ]
+    },
+    {
+      "id": "alpha_fe3ddb7ed800ba6c",
+      "source": "Sleeper Trends",
+      "publisher": "Sleeper",
+      "sourceUrl": "https://sleeper.com/",
+      "title": "Keaton Mitchell is trending in Sleeper adds",
+      "snippet": "Top-25 add over the last 24 hours (2,664 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-31T12:19:48.530Z",
+      "trust": 0.75,
+      "matches": [
+        {
+          "playerId": "keaton-mitchell-lac-rb",
+          "name": "Keaton Mitchell",
           "delta": 4.9
         }
       ]
     },
     {
-      "id": "alpha_4e078d72aea224e2",
+      "id": "alpha_37c15b85580c2c95",
       "source": "Yahoo Sports NFL",
       "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/report-ricky-pearsall-requires-surgery-191034734.html",
-      "title": "Report: If Ricky Pearsall requires surgery, it will keep him out for all of 2026",
-      "snippet": "49ers wide receiver Ricky Pearsall is out of practice due to swelling in his knee related to the PCL injury he suffered during the 2025 season and the 49ers said on Wednesday that they are considering all options to address the injury.",
-      "publishedAt": "2026-07-30T19:10:34.000Z",
+      "sourceUrl": "https://sports.yahoo.com/articles/malik-nabers-eyeing-career-last-022732104.html",
+      "title": "Malik Nabers eyeing career year after last Giants’ season cut short with injury",
+      "snippet": "Malik Nabers is ready to take his production to the next level after missing the majority of last season recovering from ACL surgery.",
+      "publishedAt": "2026-07-31T02:27:32.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "malik-nabers-nyg-wr",
+          "name": "Malik Nabers",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_a3dd3a394a734921",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/deebo-samuel-reuniting-49ers-amid-012750643.html",
+      "title": "Deebo Samuel reuniting with 49ers amid Ricky Pearsall injury",
+      "snippet": "San Francisco 49ers wide receiver Deebo Samuel (19) celebrates after scoring against the Los Angeles Rams during the first half of an NFL football game in Santa Clara, Calif., Monday,...",
+      "publishedAt": "2026-07-31T01:27:50.000Z",
       "trust": 1,
       "matches": [
         {
           "playerId": "ricky-pearsall-sf-wr",
           "name": "Ricky Pearsall",
-          "delta": -6,
-          "injury": {
-            "status": "Out",
-            "note": "Report: If Ricky Pearsall requires surgery, it will keep him out for all of 2026",
-            "sourceUpdatedAt": 1785438634000
-          }
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_830518a26e320d3c",
+      "source": "r/fantasyfootball",
+      "publisher": "Reddit",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vbbwmv/cardinals_rb_jeremiyah_love_is_operating_as_the/",
+      "title": "Cardinals RB Jeremiyah Love is operating as the RB2 in first-team drills.",
+      "snippet": "submitted by <a href=\"https://www.reddit.com/user/haventmetyou\"> /u/haventmetyou </a> <br/> <span><a href=\"https://www.nbcsports.com/fantasy/football/player-news/2026-07-30/jeremiyah-love-currently-rb2-in-first-team-drills\">[link]</a></span",
+      "publishedAt": "2026-07-31T00:57:17.000Z",
+      "trust": 0.65,
+      "matches": [
+        {
+          "playerId": "jeremiyah-love-ari-rb",
+          "name": "Jeremiyah Love",
+          "delta": 6
         }
       ]
     },
@@ -129,28 +175,6 @@
           "playerId": "ja-marr-chase-cin-wr",
           "name": "Ja'Marr Chase",
           "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_c537ba43fe284e09",
-      "source": "r/fantasyfootball",
-      "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1va2s5k/ricky_pearsall_is_out_of_practice_with_a_knee/",
-      "title": "Ricky Pearsall is out of practice with a knee issue that’s related to last year’s PCL issue. It’s a concerning matter and the team is looking at all options, presumably including s",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/mvanigan\"> /u/mvanigan </a> <br/> <span><a href=\"https://bsky.app/profile/mattbarrows.bsky.social/post/3mrsgtxixvk2y\">[link]</a></span> <span><a href=\"https://www.reddit.com/r/fantasyfootbal",
-      "publishedAt": "2026-07-29T17:23:27.000Z",
-      "trust": 0.65,
-      "matches": [
-        {
-          "playerId": "ricky-pearsall-sf-wr",
-          "name": "Ricky Pearsall",
-          "delta": -6,
-          "injury": {
-            "status": "Questionable",
-            "note": "Ricky Pearsall is out of practice with a knee issue that’s related to last year’s PCL issue. It’s a concerning matter and the team is looking at all options, presumably including s",
-            "sourceUpdatedAt": 1785345807000
-          }
         }
       ]
     },
