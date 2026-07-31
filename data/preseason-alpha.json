@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-31T12:19:48.530Z",
+  "generatedAt": "2026-07-31T23:17:27.536Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 2
+      "matched": 1
     },
     {
       "id": "cbs-nfl",
@@ -51,7 +51,7 @@
       "name": "r/fantasyfootball",
       "url": "https://www.reddit.com/r/fantasyfootball/.rss",
       "ok": true,
-      "matched": 1
+      "matched": 2
     },
     {
       "id": "pro-football-rumors",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-23 add over the last 24 hours (2,877 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-31T12:19:48.530Z",
+      "snippet": "Top-22 add over the last 24 hours (3,010 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-31T23:17:27.536Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,25 +99,25 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-25 add over the last 24 hours (2,664 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-31T12:19:48.530Z",
+      "snippet": "Top-23 add over the last 24 hours (2,970 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-07-31T23:17:27.536Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "keaton-mitchell-lac-rb",
           "name": "Keaton Mitchell",
-          "delta": 4.9
+          "delta": 5
         }
       ]
     },
     {
-      "id": "alpha_37c15b85580c2c95",
+      "id": "alpha_5b43cc2212f6e7f8",
       "source": "Yahoo Sports NFL",
       "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/malik-nabers-eyeing-career-last-022732104.html",
-      "title": "Malik Nabers eyeing career year after last Giants’ season cut short with injury",
-      "snippet": "Malik Nabers is ready to take his production to the next level after missing the majority of last season recovering from ACL surgery.",
-      "publishedAt": "2026-07-31T02:27:32.000Z",
+      "sourceUrl": "https://sports.yahoo.com/articles/giants-malik-nabers-not-practicing-205422817.html",
+      "title": "Giants' Malik Nabers not practicing Friday is 'part of the process' as wideout continues injury recovery",
+      "snippet": "Giants star wide receiver Malik Nabers did not practice on Friday as he works his way back from a torn ACL and lateral meniscus that ended his 2025 season early.",
+      "publishedAt": "2026-07-31T20:54:22.000Z",
       "trust": 1,
       "matches": [
         {
@@ -128,19 +128,19 @@
       ]
     },
     {
-      "id": "alpha_a3dd3a394a734921",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/deebo-samuel-reuniting-49ers-amid-012750643.html",
-      "title": "Deebo Samuel reuniting with 49ers amid Ricky Pearsall injury",
-      "snippet": "San Francisco 49ers wide receiver Deebo Samuel (19) celebrates after scoring against the Los Angeles Rams during the first half of an NFL football game in Santa Clara, Calif., Monday,...",
-      "publishedAt": "2026-07-31T01:27:50.000Z",
-      "trust": 1,
+      "id": "alpha_4ea672c2a67dea19",
+      "source": "r/fantasyfootball",
+      "publisher": "Reddit",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vbrg35/jadarian_price_handled_the_opening_firstteam_rep/",
+      "title": "Jadarian Price handled the opening first-team rep in the Seahawks’ first full-team scrimmage on Thursday.",
+      "snippet": "submitted by <a href=\"https://www.reddit.com/user/haventmetyou\"> /u/haventmetyou </a> <br/> <span><a href=\"https://www.nbcsports.com/fantasy/football/player-news/2026-07-30/price-takes-opening-first-team-rep-in-scrimmage\">[link]</a></span> ",
+      "publishedAt": "2026-07-31T13:47:06.000Z",
+      "trust": 0.65,
       "matches": [
         {
-          "playerId": "ricky-pearsall-sf-wr",
-          "name": "Ricky Pearsall",
-          "delta": -6
+          "playerId": "jadarian-price-sea-rb",
+          "name": "Jadarian Price",
+          "delta": 6
         }
       ]
     },
