@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-31T23:17:27.536Z",
+  "generatedAt": "2026-08-01T11:36:05.571Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 1
+      "matched": 0
     },
     {
       "id": "cbs-nfl",
@@ -51,7 +51,7 @@
       "name": "r/fantasyfootball",
       "url": "https://www.reddit.com/r/fantasyfootball/.rss",
       "ok": true,
-      "matched": 2
+      "matched": 1
     },
     {
       "id": "pro-football-rumors",
@@ -82,14 +82,14 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-22 add over the last 24 hours (3,010 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-31T23:17:27.536Z",
+      "snippet": "Top-22 add over the last 24 hours (2,807 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-01T11:36:05.571Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "malik-willis-mia-qb",
           "name": "Malik Willis",
-          "delta": 5
+          "delta": 4.9
         }
       ]
     },
@@ -99,31 +99,14 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-23 add over the last 24 hours (2,970 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-07-31T23:17:27.536Z",
+      "snippet": "Top-25 add over the last 24 hours (2,556 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-01T11:36:05.571Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "keaton-mitchell-lac-rb",
           "name": "Keaton Mitchell",
-          "delta": 5
-        }
-      ]
-    },
-    {
-      "id": "alpha_5b43cc2212f6e7f8",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/giants-malik-nabers-not-practicing-205422817.html",
-      "title": "Giants' Malik Nabers not practicing Friday is 'part of the process' as wideout continues injury recovery",
-      "snippet": "Giants star wide receiver Malik Nabers did not practice on Friday as he works his way back from a torn ACL and lateral meniscus that ended his 2025 season early.",
-      "publishedAt": "2026-07-31T20:54:22.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "malik-nabers-nyg-wr",
-          "name": "Malik Nabers",
-          "delta": -6
+          "delta": 4.9
         }
       ]
     },
@@ -140,23 +123,6 @@
         {
           "playerId": "jadarian-price-sea-rb",
           "name": "Jadarian Price",
-          "delta": 6
-        }
-      ]
-    },
-    {
-      "id": "alpha_830518a26e320d3c",
-      "source": "r/fantasyfootball",
-      "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vbbwmv/cardinals_rb_jeremiyah_love_is_operating_as_the/",
-      "title": "Cardinals RB Jeremiyah Love is operating as the RB2 in first-team drills.",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/haventmetyou\"> /u/haventmetyou </a> <br/> <span><a href=\"https://www.nbcsports.com/fantasy/football/player-news/2026-07-30/jeremiyah-love-currently-rb2-in-first-team-drills\">[link]</a></span",
-      "publishedAt": "2026-07-31T00:57:17.000Z",
-      "trust": 0.65,
-      "matches": [
-        {
-          "playerId": "jeremiyah-love-ari-rb",
-          "name": "Jeremiyah Love",
           "delta": 6
         }
       ]
