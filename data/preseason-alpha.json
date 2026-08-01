@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-01T11:36:05.571Z",
+  "generatedAt": "2026-08-01T23:13:45.354Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -23,14 +23,14 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 0
+      "matched": 2
     },
     {
       "id": "cbs-nfl",
       "name": "CBS Sports NFL",
       "url": "https://www.cbssports.com/rss/headlines/nfl/",
       "ok": true,
-      "matched": 2
+      "matched": 1
     },
     {
       "id": "rotoballer",
@@ -51,7 +51,7 @@
       "name": "r/fantasyfootball",
       "url": "https://www.reddit.com/r/fantasyfootball/.rss",
       "ok": true,
-      "matched": 1
+      "matched": 2
     },
     {
       "id": "pro-football-rumors",
@@ -82,14 +82,14 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-22 add over the last 24 hours (2,807 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-01T11:36:05.571Z",
+      "snippet": "Top-20 add over the last 24 hours (4,361 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-01T23:13:45.354Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "malik-willis-mia-qb",
           "name": "Malik Willis",
-          "delta": 4.9
+          "delta": 5
         }
       ]
     },
@@ -99,14 +99,92 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-25 add over the last 24 hours (2,556 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-01T11:36:05.571Z",
+      "snippet": "Top-26 add over the last 24 hours (3,645 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-01T23:13:45.354Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "keaton-mitchell-lac-rb",
           "name": "Keaton Mitchell",
-          "delta": 4.9
+          "delta": 5
+        }
+      ]
+    },
+    {
+      "id": "alpha_a98e0250c11b51d4",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/steelers-training-camp-aaron-rodgers-200822501.html",
+      "title": "Steelers training camp: Aaron Rodgers lights up fourth practice",
+      "snippet": "News and notes from the Steelers’ fourth training camp practice.",
+      "publishedAt": "2026-08-01T20:08:22.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "aaron-rodgers-pit-qb",
+          "name": "Aaron Rodgers",
+          "delta": 6
+        }
+      ]
+    },
+    {
+      "id": "alpha_94fc569d23b7bc06",
+      "source": "CBS Sports NFL",
+      "publisher": "CBS Sports",
+      "sourceUrl": "https://www.cbssports.com/nfl/news/ricky-pearsall-injury-49ers-receiver-season-ending-surgery/",
+      "title": "Ricky Pearsall injury: 49ers receiver to undergo season-ending surgery on lingering PCL",
+      "snippet": "Pearsall has been dealing with the issue since last season",
+      "publishedAt": "2026-08-01T19:57:01.000Z",
+      "trust": 0.95,
+      "matches": [
+        {
+          "playerId": "ricky-pearsall-sf-wr",
+          "name": "Ricky Pearsall",
+          "delta": -6,
+          "injury": {
+            "status": "Out",
+            "note": "Ricky Pearsall injury: 49ers receiver to undergo season-ending surgery on lingering PCL",
+            "sourceUpdatedAt": 1785614221000
+          }
+        }
+      ]
+    },
+    {
+      "id": "alpha_09056649a889a535",
+      "source": "r/fantasyfootball",
+      "publisher": "Reddit",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vctvo5/xavier_worthy_left_chiefs_practice_with_a/",
+      "title": "Xavier Worthy left Chiefs practice with a shoulder injury",
+      "snippet": "submitted by <a href=\"https://www.reddit.com/user/SpongerPower\"> /u/SpongerPower </a> <br/> <span><a href=\"https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/xavier-worthy-left-chiefs-practice-with-a-shoulder-injury\">[link]</a></",
+      "publishedAt": "2026-08-01T17:52:17.000Z",
+      "trust": 0.65,
+      "matches": [
+        {
+          "playerId": "xavier-worthy-kc-wr",
+          "name": "Xavier Worthy",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_c1381236c5cffd0e",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/ricky-pearsall-injury-49ers-wide-174928876.html",
+      "title": "Ricky Pearsall injury update: 49ers wide receiver out for 2026 season",
+      "snippet": "The San Francisco 49ers will be without wide receiver Ricky Pearsall for the 2026 season. He was placed on season-ending IR.",
+      "publishedAt": "2026-08-01T17:49:28.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "ricky-pearsall-sf-wr",
+          "name": "Ricky Pearsall",
+          "delta": -6,
+          "injury": {
+            "status": "Out",
+            "note": "Ricky Pearsall injury update: 49ers wide receiver out for 2026 season",
+            "sourceUpdatedAt": 1785606568000
+          }
         }
       ]
     },
@@ -124,40 +202,6 @@
           "playerId": "jadarian-price-sea-rb",
           "name": "Jadarian Price",
           "delta": 6
-        }
-      ]
-    },
-    {
-      "id": "alpha_9ba12bc446852a73",
-      "source": "CBS Sports NFL",
-      "publisher": "CBS Sports",
-      "sourceUrl": "https://www.cbssports.com/nfl/news/fight-breaks-out-bengals-training-camp-jamarr-chase/",
-      "title": "LOOK: Fight breaks out on Day 1 of Bengals training camp with Ja'Marr Chase at center of the scuffle",
-      "snippet": "Tempers flared as Cincinnati opened up training camp on Wednesday",
-      "publishedAt": "2026-07-29T17:50:13.000Z",
-      "trust": 0.95,
-      "matches": [
-        {
-          "playerId": "ja-marr-chase-cin-wr",
-          "name": "Ja'Marr Chase",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_b7bcf75a95213b23",
-      "source": "CBS Sports NFL",
-      "publisher": "CBS Sports",
-      "sourceUrl": "https://www.cbssports.com/nfl/news/tua-tagovailoa-injury-update-falcons-sign-cooper-rush/",
-      "title": "Falcons sign veteran QB with Tua Tagovailoa working through injury, Michael Penix Jr. still out of team drills",
-      "snippet": "Tagovailoa is reportedly dealing with a back issue, but head coach Kevin Stefanski said he should be back \"sooner rather than later\"",
-      "publishedAt": "2026-07-29T15:51:45.000Z",
-      "trust": 0.95,
-      "matches": [
-        {
-          "playerId": "michael-penix-jr-atl-qb",
-          "name": "Michael Penix Jr.",
-          "delta": -6
         }
       ]
     }
