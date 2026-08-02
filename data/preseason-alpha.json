@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-02T11:35:56.633Z",
+  "generatedAt": "2026-08-02T23:14:37.673Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -30,7 +30,7 @@
       "name": "CBS Sports NFL",
       "url": "https://www.cbssports.com/rss/headlines/nfl/",
       "ok": true,
-      "matched": 1
+      "matched": 2
     },
     {
       "id": "rotoballer",
@@ -83,8 +83,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-20 add over the last 24 hours (4,914 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-02T11:35:56.633Z",
+      "snippet": "Top-17 add over the last 24 hours (4,886 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-02T23:14:37.673Z",
       "trust": 0.75,
       "matches": [
         {
@@ -100,8 +100,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-24 add over the last 24 hours (4,176 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-02T11:35:56.633Z",
+      "snippet": "Top-22 add over the last 24 hours (4,140 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-02T23:14:37.673Z",
       "trust": 0.75,
       "matches": [
         {
@@ -112,18 +112,18 @@
       ]
     },
     {
-      "id": "alpha_b8abcbe6b7cfe402",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/deebo-samuel-dre-greenlaw-offer-220529980.html",
-      "title": "Deebo Samuel, Dre Greenlaw offer advice to Ricky Pearsall after knee injury news",
-      "snippet": "San Francisco receiver Ricky Pearsall received uplifting messages after his knee injury from 49ers teammates Deebo Samuel and Dre Greenlaw.",
-      "publishedAt": "2026-08-01T22:05:29.000Z",
-      "trust": 1,
+      "id": "alpha_bd61433a4eeefc4d",
+      "source": "CBS Sports NFL",
+      "publisher": "CBS Sports",
+      "sourceUrl": "https://www.cbssports.com/nfl/news/bo-nix-injury-update-broncos-qb/",
+      "title": "Bo Nix says ankle injury won't limit him in 2026: 'Nothing's holding me back'",
+      "snippet": "Nix and Sean Payton both said the third-year quarterback is on schedule as Denver opens training camp",
+      "publishedAt": "2026-08-02T19:10:05.000Z",
+      "trust": 0.95,
       "matches": [
         {
-          "playerId": "ricky-pearsall-sf-wr",
-          "name": "Ricky Pearsall",
+          "playerId": "bo-nix-den-qb",
+          "name": "Bo Nix",
           "delta": -6
         }
       ]
@@ -146,6 +146,28 @@
             "status": "Out",
             "note": "Ricky Pearsall injury: 49ers receiver to undergo season-ending surgery on lingering PCL",
             "sourceUpdatedAt": 1785614221000
+          }
+        }
+      ]
+    },
+    {
+      "id": "alpha_eaacb4b684f794a1",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/nfl/live/nfl-news-live-updates-jadeveon-clowney-texans-reunite-myles-garrett-sits-out-another-practice-49ers-wr-ricky-pearsall-saints-bryan-bresee-out-for-season-120227168.html",
+      "title": "NFL news, live updates: Jadeveon Clowney, Texans reunite; Myles Garrett sits out another practice; 49ers WR Ricky Pearsall, Saints' Bryan Bresee out for season",
+      "snippet": "Follow along with the latest NFL news and updates from training camps around the league.",
+      "publishedAt": "2026-07-31T12:02:27.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "ricky-pearsall-sf-wr",
+          "name": "Ricky Pearsall",
+          "delta": -6,
+          "injury": {
+            "status": "Out",
+            "note": "NFL news, live updates: Jadeveon Clowney, Texans reunite; Myles Garrett sits out another practice; 49ers WR Ricky Pearsall, Saints' Bryan Bresee out for season",
+            "sourceUpdatedAt": 1785499347000
           }
         }
       ]
