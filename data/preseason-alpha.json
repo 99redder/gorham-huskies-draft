@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-01T23:13:45.354Z",
+  "generatedAt": "2026-08-02T11:35:56.633Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 2
+      "matched": 1
     },
     {
       "id": "cbs-nfl",
@@ -50,8 +50,9 @@
       "id": "reddit-fantasyfootball",
       "name": "r/fantasyfootball",
       "url": "https://www.reddit.com/r/fantasyfootball/.rss",
-      "ok": true,
-      "matched": 2
+      "ok": false,
+      "matched": 0,
+      "error": "HTTP 403"
     },
     {
       "id": "pro-football-rumors",
@@ -82,8 +83,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-20 add over the last 24 hours (4,361 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-01T23:13:45.354Z",
+      "snippet": "Top-20 add over the last 24 hours (4,914 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-02T11:35:56.633Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,8 +100,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-26 add over the last 24 hours (3,645 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-01T23:13:45.354Z",
+      "snippet": "Top-24 add over the last 24 hours (4,176 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-02T11:35:56.633Z",
       "trust": 0.75,
       "matches": [
         {
@@ -111,19 +112,19 @@
       ]
     },
     {
-      "id": "alpha_a98e0250c11b51d4",
+      "id": "alpha_b8abcbe6b7cfe402",
       "source": "Yahoo Sports NFL",
       "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/steelers-training-camp-aaron-rodgers-200822501.html",
-      "title": "Steelers training camp: Aaron Rodgers lights up fourth practice",
-      "snippet": "News and notes from the Steelers’ fourth training camp practice.",
-      "publishedAt": "2026-08-01T20:08:22.000Z",
+      "sourceUrl": "https://sports.yahoo.com/articles/deebo-samuel-dre-greenlaw-offer-220529980.html",
+      "title": "Deebo Samuel, Dre Greenlaw offer advice to Ricky Pearsall after knee injury news",
+      "snippet": "San Francisco receiver Ricky Pearsall received uplifting messages after his knee injury from 49ers teammates Deebo Samuel and Dre Greenlaw.",
+      "publishedAt": "2026-08-01T22:05:29.000Z",
       "trust": 1,
       "matches": [
         {
-          "playerId": "aaron-rodgers-pit-qb",
-          "name": "Aaron Rodgers",
-          "delta": 6
+          "playerId": "ricky-pearsall-sf-wr",
+          "name": "Ricky Pearsall",
+          "delta": -6
         }
       ]
     },
@@ -146,62 +147,6 @@
             "note": "Ricky Pearsall injury: 49ers receiver to undergo season-ending surgery on lingering PCL",
             "sourceUpdatedAt": 1785614221000
           }
-        }
-      ]
-    },
-    {
-      "id": "alpha_09056649a889a535",
-      "source": "r/fantasyfootball",
-      "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vctvo5/xavier_worthy_left_chiefs_practice_with_a/",
-      "title": "Xavier Worthy left Chiefs practice with a shoulder injury",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/SpongerPower\"> /u/SpongerPower </a> <br/> <span><a href=\"https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/xavier-worthy-left-chiefs-practice-with-a-shoulder-injury\">[link]</a></",
-      "publishedAt": "2026-08-01T17:52:17.000Z",
-      "trust": 0.65,
-      "matches": [
-        {
-          "playerId": "xavier-worthy-kc-wr",
-          "name": "Xavier Worthy",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_c1381236c5cffd0e",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/ricky-pearsall-injury-49ers-wide-174928876.html",
-      "title": "Ricky Pearsall injury update: 49ers wide receiver out for 2026 season",
-      "snippet": "The San Francisco 49ers will be without wide receiver Ricky Pearsall for the 2026 season. He was placed on season-ending IR.",
-      "publishedAt": "2026-08-01T17:49:28.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "ricky-pearsall-sf-wr",
-          "name": "Ricky Pearsall",
-          "delta": -6,
-          "injury": {
-            "status": "Out",
-            "note": "Ricky Pearsall injury update: 49ers wide receiver out for 2026 season",
-            "sourceUpdatedAt": 1785606568000
-          }
-        }
-      ]
-    },
-    {
-      "id": "alpha_4ea672c2a67dea19",
-      "source": "r/fantasyfootball",
-      "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vbrg35/jadarian_price_handled_the_opening_firstteam_rep/",
-      "title": "Jadarian Price handled the opening first-team rep in the Seahawks’ first full-team scrimmage on Thursday.",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/haventmetyou\"> /u/haventmetyou </a> <br/> <span><a href=\"https://www.nbcsports.com/fantasy/football/player-news/2026-07-30/price-takes-opening-first-team-rep-in-scrimmage\">[link]</a></span> ",
-      "publishedAt": "2026-07-31T13:47:06.000Z",
-      "trust": 0.65,
-      "matches": [
-        {
-          "playerId": "jadarian-price-sea-rb",
-          "name": "Jadarian Price",
-          "delta": 6
         }
       ]
     }
