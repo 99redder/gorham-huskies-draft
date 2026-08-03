@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-02T23:14:37.673Z",
+  "generatedAt": "2026-08-03T13:21:45.725Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -83,8 +83,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-17 add over the last 24 hours (4,886 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-02T23:14:37.673Z",
+      "snippet": "Top-12 add over the last 24 hours (6,489 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-03T13:21:45.725Z",
       "trust": 0.75,
       "matches": [
         {
@@ -100,14 +100,31 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-22 add over the last 24 hours (4,140 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-02T23:14:37.673Z",
+      "snippet": "Top-16 add over the last 24 hours (4,824 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-03T13:21:45.725Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "keaton-mitchell-lac-rb",
           "name": "Keaton Mitchell",
           "delta": 5
+        }
+      ]
+    },
+    {
+      "id": "alpha_d985cecd985d201e",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/bears-rb-kyle-monangai-day-125611765.html",
+      "title": "Bears RB Kyle Monangai day-to-day with soft tissue injury",
+      "snippet": "Bears running back Kyle Monangai has been out of practice since the first day of training camp and head coach Ben Johnson gave an update on his condition at a Monday press conference.",
+      "publishedAt": "2026-08-03T12:56:11.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "kyle-monangai-chi-rb",
+          "name": "Kyle Monangai",
+          "delta": -6
         }
       ]
     },
@@ -146,28 +163,6 @@
             "status": "Out",
             "note": "Ricky Pearsall injury: 49ers receiver to undergo season-ending surgery on lingering PCL",
             "sourceUpdatedAt": 1785614221000
-          }
-        }
-      ]
-    },
-    {
-      "id": "alpha_eaacb4b684f794a1",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/nfl/live/nfl-news-live-updates-jadeveon-clowney-texans-reunite-myles-garrett-sits-out-another-practice-49ers-wr-ricky-pearsall-saints-bryan-bresee-out-for-season-120227168.html",
-      "title": "NFL news, live updates: Jadeveon Clowney, Texans reunite; Myles Garrett sits out another practice; 49ers WR Ricky Pearsall, Saints' Bryan Bresee out for season",
-      "snippet": "Follow along with the latest NFL news and updates from training camps around the league.",
-      "publishedAt": "2026-07-31T12:02:27.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "ricky-pearsall-sf-wr",
-          "name": "Ricky Pearsall",
-          "delta": -6,
-          "injury": {
-            "status": "Out",
-            "note": "NFL news, live updates: Jadeveon Clowney, Texans reunite; Myles Garrett sits out another practice; 49ers WR Ricky Pearsall, Saints' Bryan Bresee out for season",
-            "sourceUpdatedAt": 1785499347000
           }
         }
       ]
