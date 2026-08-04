@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-03T23:28:41.266Z",
+  "generatedAt": "2026-08-04T12:20:32.499Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-11 add over the last 24 hours (6,580 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-03T23:28:41.266Z",
+      "snippet": "Top-13 add over the last 24 hours (5,250 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-04T12:20:32.499Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,8 +99,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-17 add over the last 24 hours (5,094 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-03T23:28:41.266Z",
+      "snippet": "Top-17 add over the last 24 hours (4,428 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-04T12:20:32.499Z",
       "trust": 0.75,
       "matches": [
         {
@@ -111,18 +111,35 @@
       ]
     },
     {
-      "id": "alpha_ce516f6fd0fd0a44",
+      "id": "alpha_af147c5e28a6d073",
       "source": "Yahoo Sports NFL",
       "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/report-mike-evans-quad-injury-205001677.html",
-      "title": "Report: Mike Evans quad injury \"could get resolved relatively quickly\"",
-      "snippet": "The 49ers receiving corps has been hit by several injuries early on in camp, but one veteran may be back on the field sooner rather than later.",
-      "publishedAt": "2026-08-03T20:50:01.000Z",
+      "sourceUrl": "https://sports.yahoo.com/articles/matthew-stafford-practice-high-quality-114605653.html",
+      "title": "Matthew Stafford: Practice is as high quality as I've been around",
+      "snippet": "The Rams opened up their offseason by making a pair of moves to improve their cornerback group and the impact was on display during Monday's practice.",
+      "publishedAt": "2026-08-04T11:46:05.000Z",
       "trust": 1,
       "matches": [
         {
-          "playerId": "mike-evans-sf-wr",
-          "name": "Mike Evans",
+          "playerId": "matthew-stafford-lar-qb",
+          "name": "Matthew Stafford",
+          "delta": 6
+        }
+      ]
+    },
+    {
+      "id": "alpha_40f40ec024929cc0",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/j-brown-dislocates-thumb-patriots-022949120.html",
+      "title": "A.J. Brown dislocates thumb at Patriots training camp — but is completely unfazed",
+      "snippet": "The injury happened during a one-on-one red zone drill that A.J. Brown was going up against Pro Bowl corner Christian Gonzalez.",
+      "publishedAt": "2026-08-04T02:29:49.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "a-j-brown-ne-wr",
+          "name": "A.J. Brown",
           "delta": -6
         }
       ]
@@ -218,28 +235,6 @@
             "status": "Out",
             "note": "Ricky Pearsall injury: 49ers receiver to undergo season-ending surgery on lingering PCL",
             "sourceUpdatedAt": 1785614221000
-          }
-        }
-      ]
-    },
-    {
-      "id": "alpha_7b59b47f307501ed",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/nfl/live/nfl-news-live-updates-mike-evans-sidelined-as-49ers-injury-woes-continue-bears-coby-bryant-expected-to-miss-8-10-weeks-with-knee-120227168.html",
-      "title": "NFL news, live updates: Mike Evans sidelined as 49ers' injury woes continue; Bears' Coby Bryant expected to miss 8-10 weeks with knee injury",
-      "snippet": "Follow along with the latest NFL news and updates from training camps around the league.",
-      "publishedAt": "2026-07-31T12:02:27.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "mike-evans-sf-wr",
-          "name": "Mike Evans",
-          "delta": -6,
-          "injury": {
-            "status": "Questionable",
-            "note": "NFL news, live updates: Mike Evans sidelined as 49ers' injury woes continue; Bears' Coby Bryant expected to miss 8-10 weeks with knee injury",
-            "sourceUpdatedAt": 1785499347000
           }
         }
       ]
