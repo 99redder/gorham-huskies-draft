@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-04T12:20:32.499Z",
+  "generatedAt": "2026-08-04T23:27:36.482Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 2
+      "matched": 1
     },
     {
       "id": "cbs-nfl",
@@ -51,7 +51,7 @@
       "name": "r/fantasyfootball",
       "url": "https://www.reddit.com/r/fantasyfootball/.rss",
       "ok": true,
-      "matched": 3
+      "matched": 0
     },
     {
       "id": "pro-football-rumors",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-13 add over the last 24 hours (5,250 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-04T12:20:32.499Z",
+      "snippet": "Top-14 add over the last 24 hours (5,397 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-04T23:27:36.482Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,8 +99,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-17 add over the last 24 hours (4,428 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-04T12:20:32.499Z",
+      "snippet": "Top-16 add over the last 24 hours (5,139 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-04T23:27:36.482Z",
       "trust": 0.75,
       "matches": [
         {
@@ -111,92 +111,19 @@
       ]
     },
     {
-      "id": "alpha_af147c5e28a6d073",
+      "id": "alpha_3b6ae2d8ac4882cf",
       "source": "Yahoo Sports NFL",
       "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/matthew-stafford-practice-high-quality-114605653.html",
-      "title": "Matthew Stafford: Practice is as high quality as I've been around",
-      "snippet": "The Rams opened up their offseason by making a pair of moves to improve their cornerback group and the impact was on display during Monday's practice.",
-      "publishedAt": "2026-08-04T11:46:05.000Z",
+      "sourceUrl": "https://sports.yahoo.com/articles/jonathon-brooks-injury-panthers-rb-223000078.html",
+      "title": "Jonathon Brooks Injury Update: Will Panthers RB Return for NFL Preseason Opener?",
+      "snippet": "We break down the latest Jonathon Brooks injury update and whether we can expect to see the Carolina Panthers running back return before NFL Week 1.",
+      "publishedAt": "2026-08-04T22:30:00.000Z",
       "trust": 1,
       "matches": [
         {
-          "playerId": "matthew-stafford-lar-qb",
-          "name": "Matthew Stafford",
-          "delta": 6
-        }
-      ]
-    },
-    {
-      "id": "alpha_40f40ec024929cc0",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/j-brown-dislocates-thumb-patriots-022949120.html",
-      "title": "A.J. Brown dislocates thumb at Patriots training camp — but is completely unfazed",
-      "snippet": "The injury happened during a one-on-one red zone drill that A.J. Brown was going up against Pro Bowl corner Christian Gonzalez.",
-      "publishedAt": "2026-08-04T02:29:49.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "a-j-brown-ne-wr",
-          "name": "A.J. Brown",
+          "playerId": "jonathon-brooks-car-rb",
+          "name": "Jonathon Brooks",
           "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_43ed019447134b90",
-      "source": "r/fantasyfootball",
-      "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vep3ki/aj_brown_on_injury_thumb_out_of_place_you_keep/",
-      "title": "A.J. Brown on injury: 'Thumb out of place, you keep going'",
-      "snippet": "<!-- SC_OFF --><div class=\"md\"><p>AJ Brown dislocated his thumb this morning during practice. It doesn’t seem like there is too much concern at the moment but a thumb recovery typically takes 4-6 weeks to recover depending on severity which",
-      "publishedAt": "2026-08-03T20:33:07.000Z",
-      "trust": 0.65,
-      "matches": [
-        {
-          "playerId": "a-j-brown-ne-wr",
-          "name": "A.J. Brown",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_566142aa19a21472",
-      "source": "r/fantasyfootball",
-      "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1veh1bd/connor_hughes_said_its_clear_cam_skattebo_is_the/",
-      "title": "Connor Hughes said it’s “clear Cam Skattebo is the top back” for the Giants in training camp.",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/haventmetyou\"> /u/haventmetyou </a> <br/> <span><a href=\"https://www.nbcsports.com/fantasy/football/player-news/2026-08-03/hughes-clear-skattebo-is-the-top-back\">[link]</a></span> <span><a h",
-      "publishedAt": "2026-08-03T15:42:34.000Z",
-      "trust": 0.65,
-      "matches": [
-        {
-          "playerId": "cam-skattebo-nyg-rb",
-          "name": "Cam Skattebo",
-          "delta": 6
-        }
-      ]
-    },
-    {
-      "id": "alpha_935c83546622204b",
-      "source": "r/fantasyfootball",
-      "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1veczq3/bears_head_coach_ben_johnson_says_kyle_monangai/",
-      "title": "Bears head coach Ben Johnson says Kyle Monangai is dealing with a soft tissue injury and his timeline should be on the \"shorter side.\"",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/My_Chat_Account\"> /u/My_Chat_Account </a> <br/> <span><a href=\"https://bsky.app/profile/kfishbain.bsky.social/post/3ms6jymhegc2f\">[link]</a></span> <span><a href=\"https://www.reddit.com/r/fa",
-      "publishedAt": "2026-08-03T13:09:41.000Z",
-      "trust": 0.65,
-      "matches": [
-        {
-          "playerId": "kyle-monangai-chi-rb",
-          "name": "Kyle Monangai",
-          "delta": -6,
-          "injury": {
-            "status": "Questionable",
-            "note": "Bears head coach Ben Johnson says Kyle Monangai is dealing with a soft tissue injury and his timeline should be on the \"shorter side.\"",
-            "sourceUpdatedAt": 1785762581000
-          }
         }
       ]
     },
