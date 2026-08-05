@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-05T12:18:51.888Z",
+  "generatedAt": "2026-08-05T23:19:00.994Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -23,14 +23,14 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 0
+      "matched": 1
     },
     {
       "id": "cbs-nfl",
       "name": "CBS Sports NFL",
       "url": "https://www.cbssports.com/rss/headlines/nfl/",
       "ok": true,
-      "matched": 2
+      "matched": 0
     },
     {
       "id": "rotoballer",
@@ -77,30 +77,13 @@
   ],
   "entries": [
     {
-      "id": "alpha_fe3ddb7ed800ba6c",
-      "source": "Sleeper Trends",
-      "publisher": "Sleeper",
-      "sourceUrl": "https://sleeper.com/",
-      "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-14 add over the last 24 hours (5,427 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-05T12:18:51.888Z",
-      "trust": 0.75,
-      "matches": [
-        {
-          "playerId": "keaton-mitchell-lac-rb",
-          "name": "Keaton Mitchell",
-          "delta": 5
-        }
-      ]
-    },
-    {
       "id": "alpha_9e25aba50d28296e",
       "source": "Sleeper Trends",
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-15 add over the last 24 hours (5,215 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-05T12:18:51.888Z",
+      "snippet": "Top-17 add over the last 24 hours (5,026 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-05T23:19:00.994Z",
       "trust": 0.75,
       "matches": [
         {
@@ -111,40 +94,40 @@
       ]
     },
     {
-      "id": "alpha_bd61433a4eeefc4d",
-      "source": "CBS Sports NFL",
-      "publisher": "CBS Sports",
-      "sourceUrl": "https://www.cbssports.com/nfl/news/bo-nix-injury-update-broncos-qb/",
-      "title": "Bo Nix says ankle injury won't limit him in 2026: 'Nothing's holding me back'",
-      "snippet": "Nix and Sean Payton both said the third-year quarterback is on schedule as Denver opens training camp",
-      "publishedAt": "2026-08-02T19:10:05.000Z",
-      "trust": 0.95,
+      "id": "alpha_fe3ddb7ed800ba6c",
+      "source": "Sleeper Trends",
+      "publisher": "Sleeper",
+      "sourceUrl": "https://sleeper.com/",
+      "title": "Keaton Mitchell is trending in Sleeper adds",
+      "snippet": "Top-18 add over the last 24 hours (4,932 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-05T23:19:00.994Z",
+      "trust": 0.75,
       "matches": [
         {
-          "playerId": "bo-nix-den-qb",
-          "name": "Bo Nix",
-          "delta": -6
+          "playerId": "keaton-mitchell-lac-rb",
+          "name": "Keaton Mitchell",
+          "delta": 5
         }
       ]
     },
     {
-      "id": "alpha_94fc569d23b7bc06",
-      "source": "CBS Sports NFL",
-      "publisher": "CBS Sports",
-      "sourceUrl": "https://www.cbssports.com/nfl/news/ricky-pearsall-injury-49ers-receiver-season-ending-surgery/",
-      "title": "Ricky Pearsall injury: 49ers receiver to undergo season-ending surgery on lingering PCL",
-      "snippet": "Pearsall has been dealing with the issue since last season",
-      "publishedAt": "2026-08-01T19:57:01.000Z",
-      "trust": 0.95,
+      "id": "alpha_a81f475476928ecd",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/nfl/article/mike-evans-remains-sidelined-at-training-camp-as-injury-woes-mount-on-offense-for-49ers-193453120.html",
+      "title": "Mike Evans remains sidelined at training camp as injury woes mount on offense for 49ers",
+      "snippet": "Ricky Pearsall's out for the season. George Kittle's recovering from an Achilles tear. Christian Kirk, De'Zhaun Stribling and Kyle Juszczyk are all sidelined from practice.",
+      "publishedAt": "2026-08-05T19:34:53.000Z",
+      "trust": 1,
       "matches": [
         {
-          "playerId": "ricky-pearsall-sf-wr",
-          "name": "Ricky Pearsall",
+          "playerId": "mike-evans-sf-wr",
+          "name": "Mike Evans",
           "delta": -6,
           "injury": {
-            "status": "Out",
-            "note": "Ricky Pearsall injury: 49ers receiver to undergo season-ending surgery on lingering PCL",
-            "sourceUpdatedAt": 1785614221000
+            "status": "Questionable",
+            "note": "Mike Evans remains sidelined at training camp as injury woes mount on offense for 49ers",
+            "sourceUpdatedAt": 1785958493000
           }
         }
       ]
