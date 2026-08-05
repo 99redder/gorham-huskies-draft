@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-04T23:27:36.482Z",
+  "generatedAt": "2026-08-05T12:18:51.888Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 1
+      "matched": 0
     },
     {
       "id": "cbs-nfl",
@@ -77,30 +77,13 @@
   ],
   "entries": [
     {
-      "id": "alpha_9e25aba50d28296e",
-      "source": "Sleeper Trends",
-      "publisher": "Sleeper",
-      "sourceUrl": "https://sleeper.com/",
-      "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-14 add over the last 24 hours (5,397 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-04T23:27:36.482Z",
-      "trust": 0.75,
-      "matches": [
-        {
-          "playerId": "malik-willis-mia-qb",
-          "name": "Malik Willis",
-          "delta": 5
-        }
-      ]
-    },
-    {
       "id": "alpha_fe3ddb7ed800ba6c",
       "source": "Sleeper Trends",
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-16 add over the last 24 hours (5,139 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-04T23:27:36.482Z",
+      "snippet": "Top-14 add over the last 24 hours (5,427 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-05T12:18:51.888Z",
       "trust": 0.75,
       "matches": [
         {
@@ -111,19 +94,19 @@
       ]
     },
     {
-      "id": "alpha_3b6ae2d8ac4882cf",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/jonathon-brooks-injury-panthers-rb-223000078.html",
-      "title": "Jonathon Brooks Injury Update: Will Panthers RB Return for NFL Preseason Opener?",
-      "snippet": "We break down the latest Jonathon Brooks injury update and whether we can expect to see the Carolina Panthers running back return before NFL Week 1.",
-      "publishedAt": "2026-08-04T22:30:00.000Z",
-      "trust": 1,
+      "id": "alpha_9e25aba50d28296e",
+      "source": "Sleeper Trends",
+      "publisher": "Sleeper",
+      "sourceUrl": "https://sleeper.com/",
+      "title": "Malik Willis is trending in Sleeper adds",
+      "snippet": "Top-15 add over the last 24 hours (5,215 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-05T12:18:51.888Z",
+      "trust": 0.75,
       "matches": [
         {
-          "playerId": "jonathon-brooks-car-rb",
-          "name": "Jonathon Brooks",
-          "delta": -6
+          "playerId": "malik-willis-mia-qb",
+          "name": "Malik Willis",
+          "delta": 5
         }
       ]
     },
