@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-05T23:19:00.994Z",
+  "generatedAt": "2026-08-06T12:20:38.175Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 1
+      "matched": 0
     },
     {
       "id": "cbs-nfl",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-17 add over the last 24 hours (5,026 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-05T23:19:00.994Z",
+      "snippet": "Top-16 add over the last 24 hours (5,054 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-06T12:20:38.175Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,36 +99,14 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-18 add over the last 24 hours (4,932 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-05T23:19:00.994Z",
+      "snippet": "Top-18 add over the last 24 hours (4,599 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-06T12:20:38.175Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "keaton-mitchell-lac-rb",
           "name": "Keaton Mitchell",
           "delta": 5
-        }
-      ]
-    },
-    {
-      "id": "alpha_a81f475476928ecd",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/nfl/article/mike-evans-remains-sidelined-at-training-camp-as-injury-woes-mount-on-offense-for-49ers-193453120.html",
-      "title": "Mike Evans remains sidelined at training camp as injury woes mount on offense for 49ers",
-      "snippet": "Ricky Pearsall's out for the season. George Kittle's recovering from an Achilles tear. Christian Kirk, De'Zhaun Stribling and Kyle Juszczyk are all sidelined from practice.",
-      "publishedAt": "2026-08-05T19:34:53.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "mike-evans-sf-wr",
-          "name": "Mike Evans",
-          "delta": -6,
-          "injury": {
-            "status": "Questionable",
-            "note": "Mike Evans remains sidelined at training camp as injury woes mount on offense for 49ers",
-            "sourceUpdatedAt": 1785958493000
-          }
         }
       ]
     }
