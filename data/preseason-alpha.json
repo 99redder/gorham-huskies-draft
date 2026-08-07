@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-07T11:09:26.121Z",
+  "generatedAt": "2026-08-07T22:56:43.125Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 0
+      "matched": 1
     },
     {
       "id": "cbs-nfl",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-17 add over the last 24 hours (4,774 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-07T11:09:26.121Z",
+      "snippet": "Top-17 add over the last 24 hours (4,459 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-07T22:56:43.125Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,14 +99,36 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-22 add over the last 24 hours (3,852 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-07T11:09:26.121Z",
+      "snippet": "Top-21 add over the last 24 hours (3,780 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-07T22:56:43.125Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "keaton-mitchell-lac-rb",
           "name": "Keaton Mitchell",
           "delta": 5
+        }
+      ]
+    },
+    {
+      "id": "alpha_8a602e42245e46b5",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/giants-injuries-malik-nabers-progressing-210235858.html",
+      "title": "Giants injuries: Malik Nabers progressing; Brian Burns limited; JMS leaves practice",
+      "snippet": "Nabers could soon ramp up in practice.",
+      "publishedAt": "2026-08-07T22:05:41.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "malik-nabers-nyg-wr",
+          "name": "Malik Nabers",
+          "delta": -6,
+          "injury": {
+            "status": "Questionable",
+            "note": "Giants injuries: Malik Nabers progressing; Brian Burns limited; JMS leaves practice",
+            "sourceUpdatedAt": 1786140341000
+          }
         }
       ]
     }
