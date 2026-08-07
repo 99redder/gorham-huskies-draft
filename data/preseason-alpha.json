@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-06T12:20:38.175Z",
+  "generatedAt": "2026-08-07T01:34:03.667Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-16 add over the last 24 hours (5,054 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-06T12:20:38.175Z",
+      "snippet": "Top-16 add over the last 24 hours (4,690 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-07T01:34:03.667Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,8 +99,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-18 add over the last 24 hours (4,599 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-06T12:20:38.175Z",
+      "snippet": "Top-20 add over the last 24 hours (3,915 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-07T01:34:03.667Z",
       "trust": 0.75,
       "matches": [
         {
