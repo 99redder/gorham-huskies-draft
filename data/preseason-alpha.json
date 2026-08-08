@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-07T22:56:43.125Z",
+  "generatedAt": "2026-08-08T10:52:57.159Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -50,8 +50,9 @@
       "id": "reddit-fantasyfootball",
       "name": "r/fantasyfootball",
       "url": "https://www.reddit.com/r/fantasyfootball/.rss",
-      "ok": true,
-      "matched": 0
+      "ok": false,
+      "matched": 0,
+      "error": "HTTP 403"
     },
     {
       "id": "pro-football-rumors",
@@ -82,8 +83,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-17 add over the last 24 hours (4,459 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-07T22:56:43.125Z",
+      "snippet": "Top-18 add over the last 24 hours (3,948 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-08T10:52:57.159Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,8 +100,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-21 add over the last 24 hours (3,780 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-07T22:56:43.125Z",
+      "snippet": "Top-20 add over the last 24 hours (3,618 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-08T10:52:57.159Z",
       "trust": 0.75,
       "matches": [
         {
