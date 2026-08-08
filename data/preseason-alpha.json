@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-08T10:52:57.159Z",
+  "generatedAt": "2026-08-08T22:49:38.164Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -9,7 +9,7 @@
       "name": "Sleeper Trends",
       "url": "https://api.sleeper.app/v1/players/nfl/trending/add?lookback_hours=24&limit=50",
       "ok": true,
-      "matched": 2
+      "matched": 3
     },
     {
       "id": "espn-nfl",
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 1
+      "matched": 2
     },
     {
       "id": "cbs-nfl",
@@ -83,8 +83,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-18 add over the last 24 hours (3,948 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-08T10:52:57.159Z",
+      "snippet": "Top-15 add over the last 24 hours (4,333 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-08T22:49:38.164Z",
       "trust": 0.75,
       "matches": [
         {
@@ -100,8 +100,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-20 add over the last 24 hours (3,618 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-08T10:52:57.159Z",
+      "snippet": "Top-18 add over the last 24 hours (3,537 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-08T22:49:38.164Z",
       "trust": 0.75,
       "matches": [
         {
@@ -112,24 +112,53 @@
       ]
     },
     {
-      "id": "alpha_8a602e42245e46b5",
+      "id": "alpha_cecfe361906f26b4",
+      "source": "Sleeper Trends",
+      "publisher": "Sleeper",
+      "sourceUrl": "https://sleeper.com/",
+      "title": "Parker Washington is trending in Sleeper adds",
+      "snippet": "Top-28 add over the last 24 hours (2,286 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-08T22:49:38.164Z",
+      "trust": 0.75,
+      "matches": [
+        {
+          "playerId": "parker-washington-jax-wr",
+          "name": "Parker Washington",
+          "delta": 4.9
+        }
+      ]
+    },
+    {
+      "id": "alpha_449b1e0e444c537f",
       "source": "Yahoo Sports NFL",
       "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/giants-injuries-malik-nabers-progressing-210235858.html",
-      "title": "Giants injuries: Malik Nabers progressing; Brian Burns limited; JMS leaves practice",
-      "snippet": "Nabers could soon ramp up in practice.",
-      "publishedAt": "2026-08-07T22:05:41.000Z",
+      "sourceUrl": "https://sports.yahoo.com/articles/ravens-wr-zay-flowers-day-193527208.html",
+      "title": "Ravens WR Zay Flowers ‘day-to-day’ with quad injury",
+      "snippet": "The Ravens had a minor scare when Zay Flowers went down on Saturday, but the Pro Bowl wideout avoided a major injury.",
+      "publishedAt": "2026-08-08T19:35:27.000Z",
       "trust": 1,
       "matches": [
         {
-          "playerId": "malik-nabers-nyg-wr",
-          "name": "Malik Nabers",
-          "delta": -6,
-          "injury": {
-            "status": "Questionable",
-            "note": "Giants injuries: Malik Nabers progressing; Brian Burns limited; JMS leaves practice",
-            "sourceUpdatedAt": 1786140341000
-          }
+          "playerId": "zay-flowers-bal-wr",
+          "name": "Zay Flowers",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_4bd71f8f5bfb22fa",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/luther-burden-injury-bears-wr-163708457.html",
+      "title": "Luther Burden injury update after Bears WR limps off field at practice",
+      "snippet": "Luther Burden III suffered an injury during the Bears' training camp practice on Aug. 8. Here's what to know about his status.",
+      "publishedAt": "2026-08-08T16:37:08.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "luther-burden-iii-chi-wr",
+          "name": "Luther Burden III",
+          "delta": -6
         }
       ]
     }
