@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-08T22:49:38.164Z",
+  "generatedAt": "2026-08-09T10:54:19.706Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -50,9 +50,8 @@
       "id": "reddit-fantasyfootball",
       "name": "r/fantasyfootball",
       "url": "https://www.reddit.com/r/fantasyfootball/.rss",
-      "ok": false,
-      "matched": 0,
-      "error": "HTTP 403"
+      "ok": true,
+      "matched": 1
     },
     {
       "id": "pro-football-rumors",
@@ -83,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-15 add over the last 24 hours (4,333 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-08T22:49:38.164Z",
+      "snippet": "Top-14 add over the last 24 hours (4,753 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-09T10:54:19.706Z",
       "trust": 0.75,
       "matches": [
         {
@@ -100,8 +99,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-18 add over the last 24 hours (3,537 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-08T22:49:38.164Z",
+      "snippet": "Top-18 add over the last 24 hours (4,113 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-09T10:54:19.706Z",
       "trust": 0.75,
       "matches": [
         {
@@ -112,52 +111,69 @@
       ]
     },
     {
-      "id": "alpha_cecfe361906f26b4",
+      "id": "alpha_7bce3a02bb458463",
       "source": "Sleeper Trends",
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
-      "title": "Parker Washington is trending in Sleeper adds",
-      "snippet": "Top-28 add over the last 24 hours (2,286 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-08T22:49:38.164Z",
+      "title": "Jake Bates is trending in Sleeper adds",
+      "snippet": "Top-23 add over the last 24 hours (3,376 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-09T10:54:19.706Z",
       "trust": 0.75,
       "matches": [
         {
-          "playerId": "parker-washington-jax-wr",
-          "name": "Parker Washington",
-          "delta": 4.9
+          "playerId": "jake-bates-det-k",
+          "name": "Jake Bates",
+          "delta": 5
         }
       ]
     },
     {
-      "id": "alpha_449b1e0e444c537f",
+      "id": "alpha_93b581ca2a4ee2f1",
       "source": "Yahoo Sports NFL",
       "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/ravens-wr-zay-flowers-day-193527208.html",
-      "title": "Ravens WR Zay Flowers ‘day-to-day’ with quad injury",
-      "snippet": "The Ravens had a minor scare when Zay Flowers went down on Saturday, but the Pro Bowl wideout avoided a major injury.",
-      "publishedAt": "2026-08-08T19:35:27.000Z",
+      "sourceUrl": "https://sports.yahoo.com/articles/jadarian-price-injury-seahawks-rookie-081414299.html",
+      "title": "Jadarian Price injury update: Seahawks rookie RB expected back in ‘a matter of days’",
+      "snippet": "It doesn’t sound like a long-term injury for the Seahawks rookie running back.",
+      "publishedAt": "2026-08-09T08:14:14.000Z",
       "trust": 1,
       "matches": [
         {
-          "playerId": "zay-flowers-bal-wr",
-          "name": "Zay Flowers",
+          "playerId": "jadarian-price-sea-rb",
+          "name": "Jadarian Price",
           "delta": -6
         }
       ]
     },
     {
-      "id": "alpha_4bd71f8f5bfb22fa",
+      "id": "alpha_427af947fd8adb50",
       "source": "Yahoo Sports NFL",
       "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/luther-burden-injury-bears-wr-163708457.html",
-      "title": "Luther Burden injury update after Bears WR limps off field at practice",
-      "snippet": "Luther Burden III suffered an injury during the Bears' training camp practice on Aug. 8. Here's what to know about his status.",
-      "publishedAt": "2026-08-08T16:37:08.000Z",
+      "sourceUrl": "https://sports.yahoo.com/articles/mike-evans-injury-49ers-being-225614723.html",
+      "title": "Mike Evans injury update: 49ers 'being smart' with vet's health but expect WR to be ready",
+      "snippet": "San Francisco 49ers veteran wide receiver Mike Evans didn't practice Saturday, but here's why that's not a concern for head coach Kyle Shanahan.",
+      "publishedAt": "2026-08-08T22:56:14.000Z",
       "trust": 1,
       "matches": [
         {
-          "playerId": "luther-burden-iii-chi-wr",
-          "name": "Luther Burden III",
+          "playerId": "mike-evans-sf-wr",
+          "name": "Mike Evans",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_ced32c0c5a4e6b9b",
+      "source": "r/fantasyfootball",
+      "publisher": "Reddit",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vizhh7/indianapolis_colts_wide_receiver_josh_downs_did/",
+      "title": "Indianapolis Colts wide receiver Josh Downs did not participate in Saturday's training camp practice due to a groin injury.",
+      "snippet": "submitted by <a href=\"https://www.reddit.com/user/kzqmfkkr\"> /u/kzqmfkkr </a> <br/> <span><a href=\"https://bsky.app/profile/fptrack.com/post/3msle7qrob62o\">[link]</a></span> <span><a href=\"https://www.reddit.com/r/fantasyfootball/comments/1",
+      "publishedAt": "2026-08-08T15:53:58.000Z",
+      "trust": 0.65,
+      "matches": [
+        {
+          "playerId": "josh-downs-ind-wr",
+          "name": "Josh Downs",
           "delta": -6
         }
       ]
