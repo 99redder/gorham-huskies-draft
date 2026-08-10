@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-10T11:28:01.330Z",
+  "generatedAt": "2026-08-10T22:58:30.555Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -9,7 +9,7 @@
       "name": "Sleeper Trends",
       "url": "https://api.sleeper.app/v1/players/nfl/trending/add?lookback_hours=24&limit=50",
       "ok": true,
-      "matched": 4
+      "matched": 3
     },
     {
       "id": "espn-nfl",
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 1
+      "matched": 2
     },
     {
       "id": "cbs-nfl",
@@ -51,7 +51,7 @@
       "name": "r/fantasyfootball",
       "url": "https://www.reddit.com/r/fantasyfootball/.rss",
       "ok": true,
-      "matched": 2
+      "matched": 1
     },
     {
       "id": "pro-football-rumors",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-9 add over the last 24 hours (7,805 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-10T11:28:01.330Z",
+      "snippet": "Top-10 add over the last 24 hours (7,938 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-10T22:58:30.555Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,8 +99,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-14 add over the last 24 hours (6,390 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-10T11:28:01.330Z",
+      "snippet": "Top-12 add over the last 24 hours (6,984 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-10T22:58:30.555Z",
       "trust": 0.75,
       "matches": [
         {
@@ -116,8 +116,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Jake Bates is trending in Sleeper adds",
-      "snippet": "Top-18 add over the last 24 hours (5,512 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-10T11:28:01.330Z",
+      "snippet": "Top-20 add over the last 24 hours (5,264 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-10T22:58:30.555Z",
       "trust": 0.75,
       "matches": [
         {
@@ -128,19 +128,36 @@
       ]
     },
     {
-      "id": "alpha_cecfe361906f26b4",
-      "source": "Sleeper Trends",
-      "publisher": "Sleeper",
-      "sourceUrl": "https://sleeper.com/",
-      "title": "Parker Washington is trending in Sleeper adds",
-      "snippet": "Top-30 add over the last 24 hours (3,402 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-10T11:28:01.330Z",
-      "trust": 0.75,
+      "id": "alpha_780ac192cc6cd74d",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/giants-training-camp-8-10-204148926.html",
+      "title": "Giants training camp, 8/10, practice report: Abdul Carter, Jaxson Dart injured",
+      "snippet": "Abdul Carter, Jaxson Dart suffer minor injuries",
+      "publishedAt": "2026-08-10T20:41:48.000Z",
+      "trust": 1,
       "matches": [
         {
-          "playerId": "parker-washington-jax-wr",
-          "name": "Parker Washington",
-          "delta": 5
+          "playerId": "jaxson-dart-nyg-qb",
+          "name": "Jaxson Dart",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_b816b00ab706c1f3",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/49ers-christian-mccaffrey-sitting-practice-180359112.html",
+      "title": "49ers’ Christian McCaffrey is sitting out of practice due to ‘tightness’; Deebo Samuel gets running back reps",
+      "snippet": "Still no Mike Evans at practice, either",
+      "publishedAt": "2026-08-10T19:27:07.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "christian-mccaffrey-sf-rb",
+          "name": "Christian McCaffrey",
+          "delta": -6
         }
       ]
     },
@@ -158,45 +175,6 @@
           "playerId": "luther-burden-iii-chi-wr",
           "name": "Luther Burden III",
           "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_3198f74647970d6e",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/bears-wr-luther-burden-iii-042059634.html",
-      "title": "Bears WR Luther Burden III to miss a month with groin injury, Week 1 return possible",
-      "snippet": "Luther Burden will miss the preseason with his groin injury, but a Week 1 return is possible.",
-      "publishedAt": "2026-08-10T04:20:59.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "luther-burden-iii-chi-wr",
-          "name": "Luther Burden III",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_59bb3fc3e4b960c1",
-      "source": "r/fantasyfootball",
-      "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vjwhib/rapoport_bears_wr_luther_burden_iii_suffered/",
-      "title": "Rapoport: Bears WR Luther Burden III suffered groin injury and will miss time.",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/V_T_H\"> /u/V_T_H </a> <br/> <span><a href=\"https://sleeper.com/topic/170000000000000000/1392237328893767680\">[link]</a></span> <span><a href=\"https://www.reddit.com/r/fantasyfootball/comment",
-      "publishedAt": "2026-08-09T17:56:02.000Z",
-      "trust": 0.65,
-      "matches": [
-        {
-          "playerId": "luther-burden-iii-chi-wr",
-          "name": "Luther Burden III",
-          "delta": -6,
-          "injury": {
-            "status": "Out",
-            "note": "Rapoport: Bears WR Luther Burden III suffered groin injury and will miss time.",
-            "sourceUpdatedAt": 1786298162000
-          }
         }
       ]
     }
