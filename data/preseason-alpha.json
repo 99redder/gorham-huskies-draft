@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-09T22:52:25.441Z",
+  "generatedAt": "2026-08-10T11:28:01.330Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -9,7 +9,7 @@
       "name": "Sleeper Trends",
       "url": "https://api.sleeper.app/v1/players/nfl/trending/add?lookback_hours=24&limit=50",
       "ok": true,
-      "matched": 3
+      "matched": 4
     },
     {
       "id": "espn-nfl",
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 4
+      "matched": 1
     },
     {
       "id": "cbs-nfl",
@@ -51,7 +51,7 @@
       "name": "r/fantasyfootball",
       "url": "https://www.reddit.com/r/fantasyfootball/.rss",
       "ok": true,
-      "matched": 1
+      "matched": 2
     },
     {
       "id": "pro-football-rumors",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-12 add over the last 24 hours (5,677 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-09T22:52:25.441Z",
+      "snippet": "Top-9 add over the last 24 hours (7,805 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-10T11:28:01.330Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,8 +99,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-14 add over the last 24 hours (5,193 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-09T22:52:25.441Z",
+      "snippet": "Top-14 add over the last 24 hours (6,390 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-10T11:28:01.330Z",
       "trust": 0.75,
       "matches": [
         {
@@ -116,8 +116,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Jake Bates is trending in Sleeper adds",
-      "snippet": "Top-19 add over the last 24 hours (4,312 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-09T22:52:25.441Z",
+      "snippet": "Top-18 add over the last 24 hours (5,512 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-10T11:28:01.330Z",
       "trust": 0.75,
       "matches": [
         {
@@ -128,84 +128,52 @@
       ]
     },
     {
-      "id": "alpha_62045d4167965699",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/alec-pierce-injury-colts-wr-213802193.html",
-      "title": "Alec Pierce injury update as Colts WR continues to remain sidelined",
-      "snippet": "When will Alec Pierce return? That's a question the Indianapolis Colts are struggling to answer as the WR deals with an ankle injury.",
-      "publishedAt": "2026-08-09T21:38:02.000Z",
-      "trust": 1,
+      "id": "alpha_cecfe361906f26b4",
+      "source": "Sleeper Trends",
+      "publisher": "Sleeper",
+      "sourceUrl": "https://sleeper.com/",
+      "title": "Parker Washington is trending in Sleeper adds",
+      "snippet": "Top-30 add over the last 24 hours (3,402 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-10T11:28:01.330Z",
+      "trust": 0.75,
       "matches": [
         {
-          "playerId": "alec-pierce-ind-wr",
-          "name": "Alec Pierce",
-          "delta": -6,
-          "injury": {
-            "status": "Questionable",
-            "note": "Alec Pierce injury update as Colts WR continues to remain sidelined",
-            "sourceUpdatedAt": 1786311482000
-          }
+          "playerId": "parker-washington-jax-wr",
+          "name": "Parker Washington",
+          "delta": 5
         }
       ]
     },
     {
-      "id": "alpha_b31e6aa0092f0a2f",
+      "id": "alpha_991ff2b9ab18ed83",
+      "source": "r/fantasyfootball",
+      "publisher": "Reddit",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vkax2j/bears_wr_luther_burden_iii_to_miss_a_month_with/",
+      "title": "Bears WR Luther Burden III to miss a month with groin injury, Week 1 return possible",
+      "snippet": "<!-- SC_OFF --><div class=\"md\"><p>Original source is Matt Zenitz:</p> <p>Bears wide receiver Luther Burden, who suffered a groin injury Saturday, is currently expected to miss about a month, sources tell CBSSports. </p> <p>The hope is that ",
+      "publishedAt": "2026-08-10T04:30:16.000Z",
+      "trust": 0.65,
+      "matches": [
+        {
+          "playerId": "luther-burden-iii-chi-wr",
+          "name": "Luther Burden III",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_3198f74647970d6e",
       "source": "Yahoo Sports NFL",
       "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/nfl/article/luther-burden-iii-set-to-miss-time-with-groin-injury-depleting-bears-already-thin-wr-depth-181214206.html",
-      "title": "Luther Burden III set to miss time with groin injury, depleting Bears' already-thin WR depth",
-      "snippet": "Between trading away DJ Moore this offseason and the Burden III injury, Chicago's WR depth is looking very thin early.",
-      "publishedAt": "2026-08-09T18:12:14.000Z",
+      "sourceUrl": "https://sports.yahoo.com/articles/bears-wr-luther-burden-iii-042059634.html",
+      "title": "Bears WR Luther Burden III to miss a month with groin injury, Week 1 return possible",
+      "snippet": "Luther Burden will miss the preseason with his groin injury, but a Week 1 return is possible.",
+      "publishedAt": "2026-08-10T04:20:59.000Z",
       "trust": 1,
       "matches": [
         {
           "playerId": "luther-burden-iii-chi-wr",
           "name": "Luther Burden III",
-          "delta": -6,
-          "injury": {
-            "status": "Out",
-            "note": "Luther Burden III set to miss time with groin injury, depleting Bears' already-thin WR depth",
-            "sourceUpdatedAt": 1786299134000
-          }
-        }
-      ]
-    },
-    {
-      "id": "alpha_e83b73f1b8ceec8f",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/report-luther-burden-miss-time-180647410.html",
-      "title": "Report: Luther Burden to miss time with groin injury",
-      "snippet": "Bears receiver Luther Burden exited practice early on Saturday, and now there is more information about his status.",
-      "publishedAt": "2026-08-09T18:06:47.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "luther-burden-iii-chi-wr",
-          "name": "Luther Burden III",
-          "delta": -6,
-          "injury": {
-            "status": "Out",
-            "note": "Report: Luther Burden to miss time with groin injury",
-            "sourceUpdatedAt": 1786298807000
-          }
-        }
-      ]
-    },
-    {
-      "id": "alpha_b488c908b7fb6a58",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/josh-downs-groin-injury-not-175818003.html",
-      "title": "Josh Downs' groin injury is not considered serious",
-      "snippet": "There is some positive news on the injury front for the Colts.",
-      "publishedAt": "2026-08-09T17:58:18.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "josh-downs-ind-wr",
-          "name": "Josh Downs",
           "delta": -6
         }
       ]
