@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-10T22:58:30.555Z",
+  "generatedAt": "2026-08-11T11:06:46.317Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -77,30 +77,13 @@
   ],
   "entries": [
     {
-      "id": "alpha_9e25aba50d28296e",
-      "source": "Sleeper Trends",
-      "publisher": "Sleeper",
-      "sourceUrl": "https://sleeper.com/",
-      "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-10 add over the last 24 hours (7,938 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-10T22:58:30.555Z",
-      "trust": 0.75,
-      "matches": [
-        {
-          "playerId": "malik-willis-mia-qb",
-          "name": "Malik Willis",
-          "delta": 5
-        }
-      ]
-    },
-    {
       "id": "alpha_fe3ddb7ed800ba6c",
       "source": "Sleeper Trends",
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-12 add over the last 24 hours (6,984 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-10T22:58:30.555Z",
+      "snippet": "Top-12 add over the last 24 hours (6,750 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-11T11:06:46.317Z",
       "trust": 0.75,
       "matches": [
         {
@@ -111,13 +94,30 @@
       ]
     },
     {
+      "id": "alpha_9e25aba50d28296e",
+      "source": "Sleeper Trends",
+      "publisher": "Sleeper",
+      "sourceUrl": "https://sleeper.com/",
+      "title": "Malik Willis is trending in Sleeper adds",
+      "snippet": "Top-14 add over the last 24 hours (6,160 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-11T11:06:46.317Z",
+      "trust": 0.75,
+      "matches": [
+        {
+          "playerId": "malik-willis-mia-qb",
+          "name": "Malik Willis",
+          "delta": 5
+        }
+      ]
+    },
+    {
       "id": "alpha_7bce3a02bb458463",
       "source": "Sleeper Trends",
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Jake Bates is trending in Sleeper adds",
-      "snippet": "Top-20 add over the last 24 hours (5,264 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-10T22:58:30.555Z",
+      "snippet": "Top-25 add over the last 24 hours (3,840 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-11T11:06:46.317Z",
       "trust": 0.75,
       "matches": [
         {
@@ -128,35 +128,45 @@
       ]
     },
     {
-      "id": "alpha_780ac192cc6cd74d",
+      "id": "alpha_02d9a0adbf3c9632",
       "source": "Yahoo Sports NFL",
       "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/giants-training-camp-8-10-204148926.html",
-      "title": "Giants training camp, 8/10, practice report: Abdul Carter, Jaxson Dart injured",
-      "snippet": "Abdul Carter, Jaxson Dart suffer minor injuries",
-      "publishedAt": "2026-08-10T20:41:48.000Z",
+      "sourceUrl": "https://sports.yahoo.com/articles/fantasy-football-injury-updates-patrick-100715657.html",
+      "title": "Fantasy football injury updates for Patrick Mahomes, Malik Nabers, more",
+      "snippet": "Plenty of top-tier fantasy football producers are dealing with injuries ahead of the 2026 NFL season. Here are the latest updates on them.",
+      "publishedAt": "2026-08-11T10:07:15.000Z",
       "trust": 1,
       "matches": [
         {
-          "playerId": "jaxson-dart-nyg-qb",
-          "name": "Jaxson Dart",
+          "playerId": "patrick-mahomes-kc-qb",
+          "name": "Patrick Mahomes",
+          "delta": -6
+        },
+        {
+          "playerId": "malik-nabers-nyg-wr",
+          "name": "Malik Nabers",
           "delta": -6
         }
       ]
     },
     {
-      "id": "alpha_b816b00ab706c1f3",
+      "id": "alpha_02d9a0adbf3c9632",
       "source": "Yahoo Sports NFL",
       "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/49ers-christian-mccaffrey-sitting-practice-180359112.html",
-      "title": "49ers’ Christian McCaffrey is sitting out of practice due to ‘tightness’; Deebo Samuel gets running back reps",
-      "snippet": "Still no Mike Evans at practice, either",
-      "publishedAt": "2026-08-10T19:27:07.000Z",
+      "sourceUrl": "https://sports.yahoo.com/articles/fantasy-football-injury-updates-patrick-100715657.html",
+      "title": "Fantasy football injury updates for Patrick Mahomes, Malik Nabers, more",
+      "snippet": "Plenty of top-tier fantasy football producers are dealing with injuries ahead of the 2026 NFL season. Here are the latest updates on them.",
+      "publishedAt": "2026-08-11T10:07:15.000Z",
       "trust": 1,
       "matches": [
         {
-          "playerId": "christian-mccaffrey-sf-rb",
-          "name": "Christian McCaffrey",
+          "playerId": "patrick-mahomes-kc-qb",
+          "name": "Patrick Mahomes",
+          "delta": -6
+        },
+        {
+          "playerId": "malik-nabers-nyg-wr",
+          "name": "Malik Nabers",
           "delta": -6
         }
       ]
