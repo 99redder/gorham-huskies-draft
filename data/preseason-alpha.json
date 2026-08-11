@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T11:06:46.317Z",
+  "generatedAt": "2026-08-11T23:05:39.421Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -9,7 +9,7 @@
       "name": "Sleeper Trends",
       "url": "https://api.sleeper.app/v1/players/nfl/trending/add?lookback_hours=24&limit=50",
       "ok": true,
-      "matched": 3
+      "matched": 4
     },
     {
       "id": "espn-nfl",
@@ -51,7 +51,7 @@
       "name": "r/fantasyfootball",
       "url": "https://www.reddit.com/r/fantasyfootball/.rss",
       "ok": true,
-      "matched": 1
+      "matched": 2
     },
     {
       "id": "pro-football-rumors",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-12 add over the last 24 hours (6,750 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-11T11:06:46.317Z",
+      "snippet": "Top-14 add over the last 24 hours (6,786 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-11T23:05:39.421Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,8 +99,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-14 add over the last 24 hours (6,160 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-11T11:06:46.317Z",
+      "snippet": "Top-16 add over the last 24 hours (6,069 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-11T23:05:39.421Z",
       "trust": 0.75,
       "matches": [
         {
@@ -111,13 +111,30 @@
       ]
     },
     {
+      "id": "alpha_dcd8c9c95c4e503e",
+      "source": "Sleeper Trends",
+      "publisher": "Sleeper",
+      "sourceUrl": "https://sleeper.com/",
+      "title": "Kyler Murray is trending in Sleeper adds",
+      "snippet": "Top-26 add over the last 24 hours (3,896 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-11T23:05:39.421Z",
+      "trust": 0.75,
+      "matches": [
+        {
+          "playerId": "kyler-murray-ari-qb",
+          "name": "Kyler Murray",
+          "delta": 5
+        }
+      ]
+    },
+    {
       "id": "alpha_7bce3a02bb458463",
       "source": "Sleeper Trends",
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Jake Bates is trending in Sleeper adds",
-      "snippet": "Top-25 add over the last 24 hours (3,840 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-11T11:06:46.317Z",
+      "snippet": "Top-30 add over the last 24 hours (3,560 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-11T23:05:39.421Z",
       "trust": 0.75,
       "matches": [
         {
@@ -128,63 +145,80 @@
       ]
     },
     {
-      "id": "alpha_02d9a0adbf3c9632",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/fantasy-football-injury-updates-patrick-100715657.html",
-      "title": "Fantasy football injury updates for Patrick Mahomes, Malik Nabers, more",
-      "snippet": "Plenty of top-tier fantasy football producers are dealing with injuries ahead of the 2026 NFL season. Here are the latest updates on them.",
-      "publishedAt": "2026-08-11T10:07:15.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "patrick-mahomes-kc-qb",
-          "name": "Patrick Mahomes",
-          "delta": -6
-        },
-        {
-          "playerId": "malik-nabers-nyg-wr",
-          "name": "Malik Nabers",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_02d9a0adbf3c9632",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/fantasy-football-injury-updates-patrick-100715657.html",
-      "title": "Fantasy football injury updates for Patrick Mahomes, Malik Nabers, more",
-      "snippet": "Plenty of top-tier fantasy football producers are dealing with injuries ahead of the 2026 NFL season. Here are the latest updates on them.",
-      "publishedAt": "2026-08-11T10:07:15.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "patrick-mahomes-kc-qb",
-          "name": "Patrick Mahomes",
-          "delta": -6
-        },
-        {
-          "playerId": "malik-nabers-nyg-wr",
-          "name": "Malik Nabers",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_991ff2b9ab18ed83",
+      "id": "alpha_760c31f452aeb2d3",
       "source": "r/fantasyfootball",
       "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vkax2j/bears_wr_luther_burden_iii_to_miss_a_month_with/",
-      "title": "Bears WR Luther Burden III to miss a month with groin injury, Week 1 return possible",
-      "snippet": "<!-- SC_OFF --><div class=\"md\"><p>Original source is Matt Zenitz:</p> <p>Bears wide receiver Luther Burden, who suffered a groin injury Saturday, is currently expected to miss about a month, sources tell CBSSports. </p> <p>The hope is that ",
-      "publishedAt": "2026-08-10T04:30:16.000Z",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vlward/puka_nacua_left_practice_out_of_precaution/",
+      "title": "Puka Nacua left practice “out of precaution” because of a minor injury concern",
+      "snippet": "submitted by <a href=\"https://www.reddit.com/user/lotofhotdogs\"> /u/lotofhotdogs </a> <br/> <span><a href=\"https://nypost.com/2026/08/11/sports/puka-nacua-exit-rams-practice-tied-injury-concern/?sr_share=twitter&amp;utm_medium=social&amp;ut",
+      "publishedAt": "2026-08-11T22:34:32.000Z",
       "trust": 0.65,
       "matches": [
         {
-          "playerId": "luther-burden-iii-chi-wr",
-          "name": "Luther Burden III",
+          "playerId": "puka-nacua-lar-wr",
+          "name": "Puka Nacua",
           "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_0f50f3d4e7fb231d",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/matthew-stafford-doesnt-think-puka-205839571.html",
+      "title": "Matthew Stafford doesn't think Puka Nacua's injury was \"anything too major\"",
+      "snippet": "Matthew Stafford is neither a trainer nor a doctor.",
+      "publishedAt": "2026-08-11T20:58:39.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "matthew-stafford-lar-qb",
+          "name": "Matthew Stafford",
+          "delta": -6
+        },
+        {
+          "playerId": "puka-nacua-lar-wr",
+          "name": "Puka Nacua",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_34f9d89af1db122a",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/puka-nacua-injury-know-rams-200641780.html",
+      "title": "Puka Nacua injury update: What we know after Rams star exits joint practice early",
+      "snippet": "Puka Nacua walked off the field with team training staff midway through the Rams' joint practice with the Cowboys on Tuesday. Here's what we know.",
+      "publishedAt": "2026-08-11T20:06:41.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "puka-nacua-lar-wr",
+          "name": "Puka Nacua",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_ebb876bdd37fe4ed",
+      "source": "r/fantasyfootball",
+      "publisher": "Reddit",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vlm34j/espn_sources_the_vikings_have_named_kyler_murray/",
+      "title": "ESPN sources: the Vikings have named Kyler Murray their starting QB",
+      "snippet": "submitted by <a href=\"https://www.reddit.com/user/mvanigan\"> /u/mvanigan </a> <br/> <span><a href=\"https://bsky.app/profile/insidenflnews.bsky.social/post/3msszer6gis2y\">[link]</a></span> <span><a href=\"https://www.reddit.com/r/fantasyfootb",
+      "publishedAt": "2026-08-11T16:19:35.000Z",
+      "trust": 0.65,
+      "matches": [
+        {
+          "playerId": "kyler-murray-ari-qb",
+          "name": "Kyler Murray",
+          "delta": 6,
+          "injury": {
+            "status": "Questionable",
+            "note": "ESPN sources: the Vikings have named Kyler Murray their starting QB",
+            "sourceUpdatedAt": 1786465175000
+          }
         }
       ]
     }
