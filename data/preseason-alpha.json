@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T23:05:39.421Z",
+  "generatedAt": "2026-08-12T11:11:46.765Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -9,7 +9,7 @@
       "name": "Sleeper Trends",
       "url": "https://api.sleeper.app/v1/players/nfl/trending/add?lookback_hours=24&limit=50",
       "ok": true,
-      "matched": 4
+      "matched": 3
     },
     {
       "id": "espn-nfl",
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 2
+      "matched": 1
     },
     {
       "id": "cbs-nfl",
@@ -77,30 +77,13 @@
   ],
   "entries": [
     {
-      "id": "alpha_fe3ddb7ed800ba6c",
-      "source": "Sleeper Trends",
-      "publisher": "Sleeper",
-      "sourceUrl": "https://sleeper.com/",
-      "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-14 add over the last 24 hours (6,786 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-11T23:05:39.421Z",
-      "trust": 0.75,
-      "matches": [
-        {
-          "playerId": "keaton-mitchell-lac-rb",
-          "name": "Keaton Mitchell",
-          "delta": 5
-        }
-      ]
-    },
-    {
       "id": "alpha_9e25aba50d28296e",
       "source": "Sleeper Trends",
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-16 add over the last 24 hours (6,069 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-11T23:05:39.421Z",
+      "snippet": "Top-14 add over the last 24 hours (6,489 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-12T11:11:46.765Z",
       "trust": 0.75,
       "matches": [
         {
@@ -111,13 +94,30 @@
       ]
     },
     {
+      "id": "alpha_fe3ddb7ed800ba6c",
+      "source": "Sleeper Trends",
+      "publisher": "Sleeper",
+      "sourceUrl": "https://sleeper.com/",
+      "title": "Keaton Mitchell is trending in Sleeper adds",
+      "snippet": "Top-16 add over the last 24 hours (5,589 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-12T11:11:46.765Z",
+      "trust": 0.75,
+      "matches": [
+        {
+          "playerId": "keaton-mitchell-lac-rb",
+          "name": "Keaton Mitchell",
+          "delta": 5
+        }
+      ]
+    },
+    {
       "id": "alpha_dcd8c9c95c4e503e",
       "source": "Sleeper Trends",
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Kyler Murray is trending in Sleeper adds",
-      "snippet": "Top-26 add over the last 24 hours (3,896 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-11T23:05:39.421Z",
+      "snippet": "Top-25 add over the last 24 hours (4,584 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-12T11:11:46.765Z",
       "trust": 0.75,
       "matches": [
         {
@@ -128,19 +128,19 @@
       ]
     },
     {
-      "id": "alpha_7bce3a02bb458463",
-      "source": "Sleeper Trends",
-      "publisher": "Sleeper",
-      "sourceUrl": "https://sleeper.com/",
-      "title": "Jake Bates is trending in Sleeper adds",
-      "snippet": "Top-30 add over the last 24 hours (3,560 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-11T23:05:39.421Z",
-      "trust": 0.75,
+      "id": "alpha_db3f944328fbe3cf",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/vikings-coach-speaks-j-j-001151185.html",
+      "title": "Vikings coach speaks out on J.J. McCarthy’s future as Kyler Murray takes starting job",
+      "snippet": "Vikings coach Kevin O'Connell named Kyler Murray the starting QB, but stressed that J.J. McCarthy's development is still a work in progress.",
+      "publishedAt": "2026-08-12T00:11:51.000Z",
+      "trust": 1,
       "matches": [
         {
-          "playerId": "jake-bates-det-k",
-          "name": "Jake Bates",
-          "delta": 5
+          "playerId": "kyler-murray-ari-qb",
+          "name": "Kyler Murray",
+          "delta": 6
         }
       ]
     },
@@ -153,45 +153,6 @@
       "snippet": "submitted by <a href=\"https://www.reddit.com/user/lotofhotdogs\"> /u/lotofhotdogs </a> <br/> <span><a href=\"https://nypost.com/2026/08/11/sports/puka-nacua-exit-rams-practice-tied-injury-concern/?sr_share=twitter&amp;utm_medium=social&amp;ut",
       "publishedAt": "2026-08-11T22:34:32.000Z",
       "trust": 0.65,
-      "matches": [
-        {
-          "playerId": "puka-nacua-lar-wr",
-          "name": "Puka Nacua",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_0f50f3d4e7fb231d",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/matthew-stafford-doesnt-think-puka-205839571.html",
-      "title": "Matthew Stafford doesn't think Puka Nacua's injury was \"anything too major\"",
-      "snippet": "Matthew Stafford is neither a trainer nor a doctor.",
-      "publishedAt": "2026-08-11T20:58:39.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "matthew-stafford-lar-qb",
-          "name": "Matthew Stafford",
-          "delta": -6
-        },
-        {
-          "playerId": "puka-nacua-lar-wr",
-          "name": "Puka Nacua",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_34f9d89af1db122a",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/puka-nacua-injury-know-rams-200641780.html",
-      "title": "Puka Nacua injury update: What we know after Rams star exits joint practice early",
-      "snippet": "Puka Nacua walked off the field with team training staff midway through the Rams' joint practice with the Cowboys on Tuesday. Here's what we know.",
-      "publishedAt": "2026-08-11T20:06:41.000Z",
-      "trust": 1,
       "matches": [
         {
           "playerId": "puka-nacua-lar-wr",
