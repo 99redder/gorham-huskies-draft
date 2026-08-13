@@ -3,14 +3,14 @@ import { loadData } from "./data.js";
 import { computeValues, normalizeVor } from "./value.js";
 import { parseIntel, intelDelta, alphaDelta, buildNameIndex, resolvePlayer } from "./intel.js";
 import { SLEEPER_PLAYERS_URL, matchSleeperInjuries, injuryAbbreviation, injuryImpact } from "./injuries.js";
-import { fillRoster, positionNeeds, blendedScore, sourceDisagreement, defaultSortDirection, compareDraftPlayers, runAlerts, opponentDemand, planNextTwoPicks, playerRiskProfile, explainPick, recommend, attackNext, byeConflicts, optimalLineupPoints } from "./draft.js";
+import { fillRoster, positionNeeds, blendedScore, sourceDisagreement, consensusMarketRank, defaultSortDirection, compareDraftPlayers, runAlerts, opponentDemand, planNextTwoPicks, playerRiskProfile, explainPick, recommend, attackNext, byeConflicts, optimalLineupPoints } from "./draft.js";
 import { snakeOrder, pickNumbersForSlot, botPick, strategyPick, availabilityAtMyPicks } from "./simulator.js";
 import * as store from "./storage.js";
 
 const STATE_KEYS = ["drafted", "intelLog", "weights", "sourceTrust", "injuries", "injuryRefreshedAt", "pickNumber", "draftSlot", "draftMode"];
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
-const DEFAULT_WEIGHTS = { vor: 1, adp: 0.45, sleeper: 0.45, yahoo: 0.3, need: 1, intel: 1, injury: 1 };
+const DEFAULT_WEIGHTS = { vor: 1, vegas: 0.7, adp: 0.45, sleeper: 0.45, yahoo: 0.3, need: 1, intel: 1, injury: 1 };
 
 const S = {
   league: null, players: [], lexicon: null, dataMeta: null, seedIntel: { version: 0, entries: [] },
@@ -26,7 +26,7 @@ const S = {
   pickNumber: store.load("pickNumber", 1),
   draftSlot: store.load("draftSlot", 2),
   draftMode: store.load("draftMode", false),      // must be enabled before any pick can be marked
-  filterPos: "ALL", query: "", sortBy: "blend", sortDir: "desc", hideDrafted: true,
+  filterPos: "ALL", query: "", sortBy: "vegas", sortDir: "asc", hideDrafted: true,
   pendingReview: [],
 };
 
@@ -233,6 +233,11 @@ function rowHtml(p, rank, isDrafted = false) {
   const ownerLabel = who === "mine" ? "✓ MINE" : owner == null ? "TAKEN" : `TEAM ${owner + 1}`;
   const teamAtPick = snakeOrder(S.league.teams, S.league.roster.total)[S.pickNumber - 1];
   const gap = sourceDisagreement(p);
+  const composite = consensusMarketRank(p);
+  const compositeText = composite == null ? "—" : (Math.round(composite * 10) / 10);
+  const vegasTitle = p.vegasRank != null
+    ? `Vegas rank ${p.vegasRank}${p.vegasPoints != null ? ` · ${p.vegasPoints} implied pts` : ""}`
+    : "No Vegas rank (subscription-gated)";
   const rankTitle = `FFC ${p.adp ?? "—"} · Sleeper ${p.sleeperAdp ?? "—"} · Yahoo ${p.yahooRank ?? "—"}`;
   const draftCls = isDrafted ? `drafted-row ${who === "mine" ? "mine-row" : "other-row"}` : "";
   return `<tr class="${draftCls} pos-${p.pos}" data-id="${p.id}">
@@ -244,9 +249,11 @@ function rowHtml(p, rank, isDrafted = false) {
     <td>${p.proj}</td>
     <td class="vor">${p.vor}</td>
     <td><span class="tier ${tierCls}">${p.tier}</span></td>
+    <td class="veg" title="${vegasTitle}">${p.vegasRank != null ? `<span class="vegas-rank">${p.vegasRank}</span>` : "—"}</td>
     <td class="adp">${p.adp ?? "—"}</td>
     <td class="adp">${p.sleeperAdp ?? "—"}</td>
     <td class="adp">${p.yahooRank ?? "—"}</td>
+    <td class="cmp" title="${rankTitle}">${compositeText}</td>
     <td title="${rankTitle}">${gap == null ? "—" : `<span class="source-gap ${gap >= 20 ? "hot" : ""}">${gap}</span>`}</td>
     <td>${intel}</td>
     <td class="score">${p.blend != null ? p.blend : ""}</td>
@@ -432,7 +439,10 @@ function renderProvenance() {
   const marketDate = S.dataMeta.rankingsGeneratedAt ? new Date(S.dataMeta.rankingsGeneratedAt).toLocaleDateString() : "not loaded";
   const injuryDate = S.injuryRefreshedAt ? new Date(S.injuryRefreshedAt).toLocaleString() : "not refreshed";
   const alphaDate = S.alphaDoc.generatedAt ? new Date(S.alphaDoc.generatedAt).toLocaleString() : "not loaded";
-  $("#provenance").innerHTML = `Projections: ${escapeHtml(S.dataMeta.source)}. Yahoo + Sleeper ranks captured ${marketDate}. Preseason alpha: 10 public sources (${alphaDate}). Injuries: <a href="https://sleeper.com/" target="_blank" rel="noopener">Sleeper</a> (${injuryDate}).`;
+  const vegasCount = S.players.filter((p) => p.vegasRank != null).length;
+  const vegasDate = S.dataMeta.vegasGeneratedAt ? new Date(S.dataMeta.vegasGeneratedAt).toLocaleDateString() : "not loaded";
+  const vegas = `Vegas rank (primary): ${vegasCount} player${vegasCount === 1 ? "" : "s"} from The Betting Insider (${vegasDate})${vegasCount <= 3 ? " — free preview only; full list is subscription-gated" : ""}.`;
+  $("#provenance").innerHTML = `${vegas} Projections: ${escapeHtml(S.dataMeta.source)}. Yahoo + Sleeper ranks captured ${marketDate}. Preseason alpha: 10 public sources (${alphaDate}). Injuries: <a href="https://sleeper.com/" target="_blank" rel="noopener">Sleeper</a> (${injuryDate}).`;
 }
 
 // ---- intel review flow --------------------------------------------------
@@ -665,7 +675,7 @@ function wireEvents() {
   $("#draftSlot").addEventListener("change", (e) => { S.draftSlot = Math.max(0, Math.min(S.league.teams - 1, +e.target.value || 0)); persist(); render(); });
 
   // weight sliders
-  for (const [id, key] of [["wVor", "vor"], ["wAdp", "adp"], ["wSleeper", "sleeper"], ["wYahoo", "yahoo"], ["wNeed", "need"], ["wIntel", "intel"], ["wInjury", "injury"]]) {
+  for (const [id, key] of [["wVor", "vor"], ["wVegas", "vegas"], ["wAdp", "adp"], ["wSleeper", "sleeper"], ["wYahoo", "yahoo"], ["wNeed", "need"], ["wIntel", "intel"], ["wInjury", "injury"]]) {
     const el = $("#" + id); el.value = S.weights[key];
     $(`[data-out="${id}"]`).textContent = (+el.value).toFixed(2);
     el.addEventListener("input", (e) => { S.weights[key] = +e.target.value; $(`[data-out="${id}"]`).textContent = (+e.target.value).toFixed(2); persist(); render(); });

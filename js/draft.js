@@ -68,6 +68,7 @@ export function blendedScore(p, ctx, weights) {
   };
   const need = needMultiplier(p.pos, ctx.need);
   const base = w.vor * (p.vorNorm || 0)
+    + (w.vegas ?? 0.7) * rankValue(p.vegasRank)
     + w.adp * rankValue(p.adp)
     + (w.sleeper ?? 0.45) * rankValue(p.sleeperAdp)
     + (w.yahoo ?? 0.3) * rankValue(p.yahooRank)
@@ -84,7 +85,7 @@ export function sourceDisagreement(p) {
 
 export const SORT_DEFAULT_DIRECTIONS = Object.freeze({
   name: "asc", pos: "asc", team: "asc", bye: "asc", tier: "asc",
-  adp: "asc", sleeperAdp: "asc", yahoo: "asc",
+  vegas: "asc", adp: "asc", sleeperAdp: "asc", yahoo: "asc", composite: "asc",
   proj: "desc", vor: "desc", disagree: "desc", intel: "desc", blend: "desc",
 });
 
@@ -102,9 +103,11 @@ export function compareDraftPlayers(a, b, sortBy, direction = defaultSortDirecti
     proj: (p) => p.proj,
     vor: (p) => p.vor,
     tier: (p) => p.tier,
+    vegas: (p) => p.vegasRank,
     adp: (p) => p.adp,
     sleeperAdp: (p) => p.sleeperAdp,
     yahoo: (p) => p.yahooRank,
+    composite: (p) => consensusMarketRank(p),
     disagree: (p) => sourceDisagreement(p),
     intel: (p) => p.intelDelta,
     blend: (p) => p.blend,

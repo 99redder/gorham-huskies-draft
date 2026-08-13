@@ -104,7 +104,9 @@ td.nm { font-weight: 600; }
 td.rk { color: var(--muted); }
 td.vor { color: var(--accent); font-weight: 700; }
 td.score { font-weight: 800; color: var(--accent2); }
-td.adp, td.tm, td.bye { color: var(--muted); }
+td.adp, td.tm, td.bye, td.cmp { color: var(--muted); }
+td.veg { font-weight: 800; color: var(--accent2); }
+.vegas-rank { display: inline-block; min-width: 22px; text-align: center; }
 .source-gap { display: inline-block; min-width: 25px; text-align: center; padding: 2px 5px; border-radius: 5px; background: #263149; color: var(--muted); font-size: 11px; font-weight: 800; }
 .source-gap.hot { background: #3a2f10; color: var(--warn); }
 .drafted-row.other-row { opacity: .4; }

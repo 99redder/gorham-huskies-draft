@@ -70,6 +70,26 @@ Yahoo's public rank is its default preseason/pre-draft rank, not its separate
 Expert Rank. Sleeper ADP is calculated from recent 8-team, 1-QB, half-PPR redraft
 pick distributions published by YAFSB, the closest public format to this 6-team league.
 
+**Vegas rankings (primary):** The board's primary ranking source is The Betting
+Insider's Vegas implied-point rankings, shown in the **VEG** column and used as the
+default sort and the top-weighted market input to the Best Pick blend. The existing
+FFC/Sleeper/Yahoo consensus is preserved unchanged in its own **CMP** (composite)
+column — the average of those three sources. Refresh Vegas ranks (this writes
+[`data/vegas-rankings.json`](data/vegas-rankings.json)):
+
+```bash
+node scripts/refresh-vegas-rankings.mjs
+```
+
+The public page only unlocks a few top players; ranks past the free preview require a
+paid subscription and come back with their fields stripped, so a plain fetch imports
+only the unlocked rows. If you're a subscriber, open the ranking page while signed in,
+save the full HTML, and pass it as an argument to import the complete list:
+
+```bash
+node scripts/refresh-vegas-rankings.mjs path/to/saved-page.html
+```
+
 Refresh preseason reports (this writes [`data/preseason-alpha.json`](data/preseason-alpha.json)):
 
 ```bash

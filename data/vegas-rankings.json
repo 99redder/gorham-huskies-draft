@@ -1,0 +1,26 @@
+{
+  "generatedAt": "2026-08-13T11:56:47.734Z",
+  "source": {
+    "label": "The Betting Insider — Vegas rankings",
+    "url": "https://www.thebettinginsider.com/vegas-rankings",
+    "capturedAt": "2026-08-13T11:56:47.734Z",
+    "note": "Vegas implied-point rankings. Ranks past the free preview require a paid subscription; unlocked rows only."
+  },
+  "players": {
+    "jahmyr-gibbs-det-rb": {
+      "vegasRank": 1,
+      "vegasPoints": 327,
+      "vegasAdp": 1.6
+    },
+    "bijan-robinson-atl-rb": {
+      "vegasRank": 2,
+      "vegasPoints": 312,
+      "vegasAdp": 2.6
+    },
+    "ja-marr-chase-cin-wr": {
+      "vegasRank": 3,
+      "vegasPoints": 306,
+      "vegasAdp": 4.7
+    }
+  }
+}
