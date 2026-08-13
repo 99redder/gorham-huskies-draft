@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T11:12:09.734Z",
+  "generatedAt": "2026-08-13T23:05:05.360Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 1
+      "matched": 2
     },
     {
       "id": "cbs-nfl",
@@ -51,7 +51,7 @@
       "name": "r/fantasyfootball",
       "url": "https://www.reddit.com/r/fantasyfootball/.rss",
       "ok": true,
-      "matched": 1
+      "matched": 4
     },
     {
       "id": "pro-football-rumors",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-17 add over the last 24 hours (5,761 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-13T11:12:09.734Z",
+      "snippet": "Top-14 add over the last 24 hours (5,397 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-13T23:05:05.360Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,8 +99,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-26 add over the last 24 hours (4,302 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-13T11:12:09.734Z",
+      "snippet": "Top-26 add over the last 24 hours (3,789 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-13T23:05:05.360Z",
       "trust": 0.75,
       "matches": [
         {
@@ -111,57 +111,130 @@
       ]
     },
     {
-      "id": "alpha_545f6d96acb884d5",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/tampa-bay-buccaneers-news-emeka-110000356.html",
-      "title": "Tampa Bay Buccaneers news: Emeka Egbuka injury update sparks concern",
-      "snippet": "Tampa Bay Buccaneers wide receiver Emeka Egbuka is likely going to need some time away after his latest injury.",
-      "publishedAt": "2026-08-13T11:00:00.000Z",
-      "trust": 1,
+      "id": "alpha_e1e7dca84d383c3a",
+      "source": "Pro Football Rumors",
+      "publisher": "Pro Football Rumors",
+      "sourceUrl": "https://www.profootballrumors.com/2026/08/malachi-fields-making-strides-toward-giants-starting-role-latest-on-malik-nabers",
+      "title": "Malachi Fields Making Strides Toward Giants Starting Role; Latest On Malik Nabers",
+      "snippet": "John Harbaugh‘s first Giants offseason brought several wide receiver investments. Most of them came via low-cost free agency additions. Darnell Mooney and Calvin Austin arrived in March, while summer FA fliers Odell Beckham Jr., JuJu Smith-",
+      "publishedAt": "2026-08-13T21:31:33.000Z",
+      "trust": 0.9,
       "matches": [
         {
-          "playerId": "emeka-egbuka-tb-wr",
-          "name": "Emeka Egbuka",
+          "playerId": "malik-nabers-nyg-wr",
+          "name": "Malik Nabers",
+          "delta": 6
+        }
+      ]
+    },
+    {
+      "id": "alpha_ad4b80345e727c56",
+      "source": "r/fantasyfootball",
+      "publisher": "Reddit",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vnl656/saquon_barkley_gets_left_footankle_checked_out_at/",
+      "title": "Saquon Barkley gets left foot/ankle checked out at Eagles practice",
+      "snippet": "submitted by <a href=\"https://www.reddit.com/user/_hiddenscout\"> /u/_hiddenscout </a> <br/> <span><a href=\"https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/saquon-barkley-gets-left-foot-ankle-checked-out-at-eagles-practice\">[li",
+      "publishedAt": "2026-08-13T19:44:51.000Z",
+      "trust": 0.65,
+      "matches": [
+        {
+          "playerId": "saquon-barkley-phi-rb",
+          "name": "Saquon Barkley",
           "delta": -6
         }
       ]
     },
     {
-      "id": "alpha_35bde066ea9cff62",
-      "source": "Pro Football Rumors",
-      "publisher": "Pro Football Rumors",
-      "sourceUrl": "https://www.profootballrumors.com/2026/08/bears-lt-ozzy-trapilo-nearing-return-luther-burden-likely-out-for-preseason",
-      "title": "Bears LT Ozzy Trapilo Nearing Return? WR Luther Burden Likely Out For Preseason",
-      "snippet": "The Bears knocked off the archrival Packers in the wild-card round last January, but they lost starting left tackle Ozzy Trapilo to a ruptured patellar in his knee that night. Not only did the injury shelve Trapilo for the Bears’ Round 2 lo",
-      "publishedAt": "2026-08-13T03:38:44.000Z",
-      "trust": 0.9,
+      "id": "alpha_3443ae8a1a63369f",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/saquon-barkley-gets-left-foot-191854285.html",
+      "title": "Saquon Barkley gets left foot/ankle checked out at Eagles practice",
+      "snippet": "Eagles running back Saquon Barkley was the subject of a number of dispatches from media members at Thursday's practice.",
+      "publishedAt": "2026-08-13T19:18:54.000Z",
+      "trust": 1,
       "matches": [
         {
-          "playerId": "luther-burden-iii-chi-wr",
-          "name": "Luther Burden III",
+          "playerId": "saquon-barkley-phi-rb",
+          "name": "Saquon Barkley",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_ef9d3496bfac9d6a",
+      "source": "r/fantasyfootball",
+      "publisher": "Reddit",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vnihc6/rams_puka_nacua_suffers_unlikely_glassinduced/",
+      "title": "Rams' Puka Nacua suffers unlikely, glass-induced injury at party",
+      "snippet": "<!-- SC_OFF --><div class=\"md\"><p>Puka injured himself after slamming with glass at a party. </p> </div><!-- SC_ON --> submitted by <a href=\"https://www.reddit.com/user/sotolord\"> /u/sotolord </a> <br/> <span><a href=\"https://sports.yahoo.c",
+      "publishedAt": "2026-08-13T18:09:28.000Z",
+      "trust": 0.65,
+      "matches": [
+        {
+          "playerId": "puka-nacua-lar-wr",
+          "name": "Puka Nacua",
           "delta": -6,
           "injury": {
-            "status": "Out",
-            "note": "Bears LT Ozzy Trapilo Nearing Return? WR Luther Burden Likely Out For Preseason",
-            "sourceUpdatedAt": 1786592324000
+            "status": "Questionable",
+            "note": "Rams' Puka Nacua suffers unlikely, glass-induced injury at party",
+            "sourceUpdatedAt": 1786644568000
           }
         }
       ]
     },
     {
-      "id": "alpha_7a820546cdb2d163",
+      "id": "alpha_a532e41f6498442b",
       "source": "r/fantasyfootball",
       "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vmncd0/emeka_egbukas_toe_injury_considered_minor/",
-      "title": "Emeka Egbuka's toe injury considered minor.",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/mvanigan\"> /u/mvanigan </a> <br/> <span><a href=\"https://bsky.app/profile/rotowirenfl.bsky.social/post/3msvsw4h77a2n\">[link]</a></span> <span><a href=\"https://www.reddit.com/r/fantasyfootbal",
-      "publishedAt": "2026-08-12T19:02:15.000Z",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vnfk4q/saints_wr_jordyn_tyson_left_practice_on_thursday/",
+      "title": "Saints WR Jordyn Tyson left practice on Thursday with a leg injury.",
+      "snippet": "submitted by <a href=\"https://www.reddit.com/user/SpeedyGonzales78\"> /u/SpeedyGonzales78 </a> <br/> <span><a href=\"https://bsky.app/profile/rodwalkernola.bsky.social/post/3msy2b7xq322o\">[link]</a></span> <span><a href=\"https://www.reddit.co",
+      "publishedAt": "2026-08-13T16:25:53.000Z",
       "trust": 0.65,
       "matches": [
         {
-          "playerId": "emeka-egbuka-tb-wr",
-          "name": "Emeka Egbuka",
+          "playerId": "jordyn-tyson-no-wr",
+          "name": "Jordyn Tyson",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_967634c042b3a6a4",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/nfl/live/nfl-news-preseason-schedule-whos-playing-live-updates-today-152512676.html",
+      "title": "NFL news, live updates: Joe Burrow, Ja'Marr Chase expected to play in Thursday's preseason game; Carson Beck to miss Raiders game with injury",
+      "snippet": "Follow along with the latest NFL news and updates as the preseason plays out.",
+      "publishedAt": "2026-08-13T15:25:12.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "ja-marr-chase-cin-wr",
+          "name": "Ja'Marr Chase",
+          "delta": -6
+        },
+        {
+          "playerId": "joe-burrow-cin-qb",
+          "name": "Joe Burrow",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_dad3414a00cc1ac5",
+      "source": "r/fantasyfootball",
+      "publisher": "Reddit",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vndsqx/chuba_hubbard_considered_weektoweek_with/",
+      "title": "Chuba Hubbard considered week-to-week with hamstring injury.",
+      "snippet": "submitted by <a href=\"https://www.reddit.com/user/mvanigan\"> /u/mvanigan </a> <br/> <span><a href=\"https://bsky.app/profile/insidenflnews.bsky.social/post/3msxx6h5r6c2c\">[link]</a></span> <span><a href=\"https://www.reddit.com/r/fantasyfootb",
+      "publishedAt": "2026-08-13T15:23:39.000Z",
+      "trust": 0.65,
+      "matches": [
+        {
+          "playerId": "chuba-hubbard-car-rb",
+          "name": "Chuba Hubbard",
           "delta": -6
         }
       ]
