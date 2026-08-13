@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T23:03:47.378Z",
+  "generatedAt": "2026-08-13T11:12:09.734Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 2
+      "matched": 1
     },
     {
       "id": "cbs-nfl",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-15 add over the last 24 hours (6,363 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-12T23:03:47.378Z",
+      "snippet": "Top-17 add over the last 24 hours (5,761 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-13T11:12:09.734Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,8 +99,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-20 add over the last 24 hours (4,806 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-12T23:03:47.378Z",
+      "snippet": "Top-26 add over the last 24 hours (4,302 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-13T11:12:09.734Z",
       "trust": 0.75,
       "matches": [
         {
@@ -111,36 +111,41 @@
       ]
     },
     {
-      "id": "alpha_388e48603d7716c1",
+      "id": "alpha_545f6d96acb884d5",
       "source": "Yahoo Sports NFL",
       "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/puka-nacua-injury-214206670.html",
-      "title": "Puka Nacua injury update",
-      "snippet": "The Rams don’t expect to have Nacua for the next few practices, at least",
-      "publishedAt": "2026-08-12T21:42:06.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "puka-nacua-lar-wr",
-          "name": "Puka Nacua",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_e7459da7d369d1ef",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/report-emeka-egbuka-minor-toe-190726022.html",
-      "title": "Report: Emeka Egbuka has a minor toe injury",
-      "snippet": "Buccaneers head coach Todd Bowles didn't have an update on wide receiver Emeka Egbuka after Wednesday's practice, but it looks like Egbuka avoided a serious injury.",
-      "publishedAt": "2026-08-12T19:07:26.000Z",
+      "sourceUrl": "https://sports.yahoo.com/articles/tampa-bay-buccaneers-news-emeka-110000356.html",
+      "title": "Tampa Bay Buccaneers news: Emeka Egbuka injury update sparks concern",
+      "snippet": "Tampa Bay Buccaneers wide receiver Emeka Egbuka is likely going to need some time away after his latest injury.",
+      "publishedAt": "2026-08-13T11:00:00.000Z",
       "trust": 1,
       "matches": [
         {
           "playerId": "emeka-egbuka-tb-wr",
           "name": "Emeka Egbuka",
           "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_35bde066ea9cff62",
+      "source": "Pro Football Rumors",
+      "publisher": "Pro Football Rumors",
+      "sourceUrl": "https://www.profootballrumors.com/2026/08/bears-lt-ozzy-trapilo-nearing-return-luther-burden-likely-out-for-preseason",
+      "title": "Bears LT Ozzy Trapilo Nearing Return? WR Luther Burden Likely Out For Preseason",
+      "snippet": "The Bears knocked off the archrival Packers in the wild-card round last January, but they lost starting left tackle Ozzy Trapilo to a ruptured patellar in his knee that night. Not only did the injury shelve Trapilo for the Bears’ Round 2 lo",
+      "publishedAt": "2026-08-13T03:38:44.000Z",
+      "trust": 0.9,
+      "matches": [
+        {
+          "playerId": "luther-burden-iii-chi-wr",
+          "name": "Luther Burden III",
+          "delta": -6,
+          "injury": {
+            "status": "Out",
+            "note": "Bears LT Ozzy Trapilo Nearing Return? WR Luther Burden Likely Out For Preseason",
+            "sourceUpdatedAt": 1786592324000
+          }
         }
       ]
     },
@@ -158,28 +163,6 @@
           "playerId": "emeka-egbuka-tb-wr",
           "name": "Emeka Egbuka",
           "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_35bde066ea9cff62",
-      "source": "Pro Football Rumors",
-      "publisher": "Pro Football Rumors",
-      "sourceUrl": "https://www.profootballrumors.com/2026/08/bears-lt-ozzy-trapilo-nearing-return-luther-burden-likely-out-for-preseason",
-      "title": "Bears LT Ozzy Trapilo Nearing Return? WR Luther Burden Likely Out For Preseason",
-      "snippet": "The Bears knocked off the archrival Packers in the wild-card round last January, but they lost starting left tackle Ozzy Trapilo to a ruptured patellar in his knee that night. Not only did the injury shelve Trapilo for the Bears’ Round 2 lo",
-      "publishedAt": "2026-08-12T18:38:44.000Z",
-      "trust": 0.9,
-      "matches": [
-        {
-          "playerId": "luther-burden-iii-chi-wr",
-          "name": "Luther Burden III",
-          "delta": -6,
-          "injury": {
-            "status": "Out",
-            "note": "Bears LT Ozzy Trapilo Nearing Return? WR Luther Burden Likely Out For Preseason",
-            "sourceUpdatedAt": 1786559924000
-          }
         }
       ]
     }
