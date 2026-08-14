@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T11:10:04.485Z",
+  "generatedAt": "2026-08-14T22:42:57.907Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -23,14 +23,14 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 0
+      "matched": 2
     },
     {
       "id": "cbs-nfl",
       "name": "CBS Sports NFL",
       "url": "https://www.cbssports.com/rss/headlines/nfl/",
       "ok": true,
-      "matched": 0
+      "matched": 1
     },
     {
       "id": "rotoballer",
@@ -51,14 +51,14 @@
       "name": "r/fantasyfootball",
       "url": "https://www.reddit.com/r/fantasyfootball/.rss",
       "ok": true,
-      "matched": 3
+      "matched": 1
     },
     {
       "id": "pro-football-rumors",
       "name": "Pro Football Rumors",
       "url": "https://www.profootballrumors.com/feed",
       "ok": true,
-      "matched": 1
+      "matched": 0
     },
     {
       "id": "establish-the-run",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-14 add over the last 24 hours (5,411 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-14T11:10:04.485Z",
+      "snippet": "Top-14 add over the last 24 hours (5,495 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-14T22:42:57.907Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,8 +99,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-22 add over the last 24 hours (3,969 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-14T11:10:04.485Z",
+      "snippet": "Top-17 add over the last 24 hours (4,986 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-14T22:42:57.907Z",
       "trust": 0.75,
       "matches": [
         {
@@ -111,47 +111,57 @@
       ]
     },
     {
-      "id": "alpha_e1e7dca84d383c3a",
-      "source": "Pro Football Rumors",
-      "publisher": "Pro Football Rumors",
-      "sourceUrl": "https://www.profootballrumors.com/2026/08/malachi-fields-making-strides-toward-giants-starting-role-latest-on-malik-nabers",
-      "title": "Malachi Fields Making Strides Toward Giants Starting Role; Latest On Malik Nabers",
-      "snippet": "John Harbaugh‘s first Giants offseason brought several wide receiver investments. Most of them came via low-cost free agency additions. Darnell Mooney and Calvin Austin arrived in March, while summer FA fliers Odell Beckham Jr., JuJu Smith-",
-      "publishedAt": "2026-08-13T21:31:33.000Z",
-      "trust": 0.9,
+      "id": "alpha_b757e2d07b2db27e",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/jets-qb-geno-smith-fridays-221550116.html",
+      "title": "Jets QB Geno Smith out for Friday's preseason game vs. Buccaneers with foot soreness",
+      "snippet": "Jets QB Geno Smith will not play in the team's first preseason game on Friday against the Tampa Bay Buccaneers due to foot soreness.",
+      "publishedAt": "2026-08-14T22:15:50.000Z",
+      "trust": 1,
       "matches": [
         {
-          "playerId": "malik-nabers-nyg-wr",
-          "name": "Malik Nabers",
-          "delta": 6
+          "playerId": "geno-smith-lv-qb",
+          "name": "Geno Smith",
+          "delta": -6,
+          "injury": {
+            "status": "Out",
+            "note": "Jets QB Geno Smith out for Friday's preseason game vs. Buccaneers with foot soreness",
+            "sourceUpdatedAt": 1786745750000
+          }
         }
       ]
     },
     {
-      "id": "alpha_ad4b80345e727c56",
-      "source": "r/fantasyfootball",
-      "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vnl656/saquon_barkley_gets_left_footankle_checked_out_at/",
-      "title": "Saquon Barkley gets left foot/ankle checked out at Eagles practice",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/_hiddenscout\"> /u/_hiddenscout </a> <br/> <span><a href=\"https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/saquon-barkley-gets-left-foot-ankle-checked-out-at-eagles-practice\">[li",
-      "publishedAt": "2026-08-13T19:44:51.000Z",
-      "trust": 0.65,
+      "id": "alpha_64609740ed0d0bf7",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/jordyn-tyson-injury-saints-wr-211657580.html",
+      "title": "Jordyn Tyson injury update as Saints WR (hamstring) set to miss time",
+      "snippet": "Saints WR Jordyn Tyson is dealing with a hamstring injury. Here's what to know about its severity and how long the first-round rookie may be out.",
+      "publishedAt": "2026-08-14T21:16:57.000Z",
+      "trust": 1,
       "matches": [
         {
-          "playerId": "saquon-barkley-phi-rb",
-          "name": "Saquon Barkley",
-          "delta": -6
+          "playerId": "jordyn-tyson-no-wr",
+          "name": "Jordyn Tyson",
+          "delta": -6,
+          "injury": {
+            "status": "Out",
+            "note": "Jordyn Tyson injury update as Saints WR (hamstring) set to miss time",
+            "sourceUpdatedAt": 1786742217000
+          }
         }
       ]
     },
     {
-      "id": "alpha_a532e41f6498442b",
+      "id": "alpha_8fccbf76dd7104ca",
       "source": "r/fantasyfootball",
       "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vnfk4q/saints_wr_jordyn_tyson_left_practice_on_thursday/",
-      "title": "Saints WR Jordyn Tyson left practice on Thursday with a leg injury.",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/SpeedyGonzales78\"> /u/SpeedyGonzales78 </a> <br/> <span><a href=\"https://bsky.app/profile/rodwalkernola.bsky.social/post/3msy2b7xq322o\">[link]</a></span> <span><a href=\"https://www.reddit.co",
-      "publishedAt": "2026-08-13T16:25:53.000Z",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1voeeuj/jordyn_tysons_hamstring_injury_confirmed_timeline/",
+      "title": "Jordyn Tyson's Hamstring Injury Confirmed, Timeline Unclear [Underhill]",
+      "snippet": "submitted by <a href=\"https://www.reddit.com/user/jsparks50\"> /u/jsparks50 </a> <br/> <span><a href=\"https://www.rotoballer.com/player-news/jordyn-tysons-hamstring-injury-confirmed-timeline-unclear/1908925\">[link]</a></span> <span><a href=\"",
+      "publishedAt": "2026-08-14T17:56:05.000Z",
       "trust": 0.65,
       "matches": [
         {
@@ -162,18 +172,18 @@
       ]
     },
     {
-      "id": "alpha_dad3414a00cc1ac5",
-      "source": "r/fantasyfootball",
-      "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vndsqx/chuba_hubbard_considered_weektoweek_with/",
-      "title": "Chuba Hubbard considered week-to-week with hamstring injury.",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/mvanigan\"> /u/mvanigan </a> <br/> <span><a href=\"https://bsky.app/profile/insidenflnews.bsky.social/post/3msxx6h5r6c2c\">[link]</a></span> <span><a href=\"https://www.reddit.com/r/fantasyfootb",
-      "publishedAt": "2026-08-13T15:23:39.000Z",
-      "trust": 0.65,
+      "id": "alpha_ae735770bfced6df",
+      "source": "CBS Sports NFL",
+      "publisher": "CBS Sports",
+      "sourceUrl": "https://www.cbssports.com/nfl/news/rams-puka-nacua-reveals-injury-he-suffered-at-michael-rubin-party/",
+      "title": "Rams' Puka Nacua reveals injury he suffered at Michael Rubin party",
+      "snippet": "Nacua ran into a glass window while looking for teammate Davante Adams",
+      "publishedAt": "2026-08-14T15:23:19.000Z",
+      "trust": 0.95,
       "matches": [
         {
-          "playerId": "chuba-hubbard-car-rb",
-          "name": "Chuba Hubbard",
+          "playerId": "puka-nacua-lar-wr",
+          "name": "Puka Nacua",
           "delta": -6
         }
       ]
