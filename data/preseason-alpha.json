@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T22:42:57.907Z",
+  "generatedAt": "2026-08-15T10:41:53.027Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 2
+      "matched": 1
     },
     {
       "id": "cbs-nfl",
@@ -58,7 +58,7 @@
       "name": "Pro Football Rumors",
       "url": "https://www.profootballrumors.com/feed",
       "ok": true,
-      "matched": 0
+      "matched": 1
     },
     {
       "id": "establish-the-run",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-14 add over the last 24 hours (5,495 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-14T22:42:57.907Z",
+      "snippet": "Top-16 add over the last 24 hours (5,761 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-15T10:41:53.027Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,8 +99,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-17 add over the last 24 hours (4,986 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-14T22:42:57.907Z",
+      "snippet": "Top-17 add over the last 24 hours (5,202 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-15T10:41:53.027Z",
       "trust": 0.75,
       "matches": [
         {
@@ -111,35 +111,13 @@
       ]
     },
     {
-      "id": "alpha_b757e2d07b2db27e",
+      "id": "alpha_c83efc9cd0034d26",
       "source": "Yahoo Sports NFL",
       "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/jets-qb-geno-smith-fridays-221550116.html",
-      "title": "Jets QB Geno Smith out for Friday's preseason game vs. Buccaneers with foot soreness",
-      "snippet": "Jets QB Geno Smith will not play in the team's first preseason game on Friday against the Tampa Bay Buccaneers due to foot soreness.",
-      "publishedAt": "2026-08-14T22:15:50.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "geno-smith-lv-qb",
-          "name": "Geno Smith",
-          "delta": -6,
-          "injury": {
-            "status": "Out",
-            "note": "Jets QB Geno Smith out for Friday's preseason game vs. Buccaneers with foot soreness",
-            "sourceUpdatedAt": 1786745750000
-          }
-        }
-      ]
-    },
-    {
-      "id": "alpha_64609740ed0d0bf7",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/jordyn-tyson-injury-saints-wr-211657580.html",
-      "title": "Jordyn Tyson injury update as Saints WR (hamstring) set to miss time",
-      "snippet": "Saints WR Jordyn Tyson is dealing with a hamstring injury. Here's what to know about its severity and how long the first-round rookie may be out.",
-      "publishedAt": "2026-08-14T21:16:57.000Z",
+      "sourceUrl": "https://sports.yahoo.com/articles/saints-first-rounder-jordyn-tyson-003418958.html",
+      "title": "Saints first-rounder Jordyn Tyson suffers hamstring injury in brutal blow",
+      "snippet": "The Saints will be without their first-round wide receiver for an undetermined amount of time.",
+      "publishedAt": "2026-08-15T00:34:18.000Z",
       "trust": 1,
       "matches": [
         {
@@ -147,10 +125,27 @@
           "name": "Jordyn Tyson",
           "delta": -6,
           "injury": {
-            "status": "Out",
-            "note": "Jordyn Tyson injury update as Saints WR (hamstring) set to miss time",
-            "sourceUpdatedAt": 1786742217000
+            "status": "Questionable",
+            "note": "Saints first-rounder Jordyn Tyson suffers hamstring injury in brutal blow",
+            "sourceUpdatedAt": 1786754058000
           }
+        }
+      ]
+    },
+    {
+      "id": "alpha_a9a52aca352f8bc2",
+      "source": "Pro Football Rumors",
+      "publisher": "Pro Football Rumors",
+      "sourceUrl": "https://www.profootballrumors.com/2026/08/saints-jordyn-tyson-uncertain-for-week-1-after-hamstring-injury",
+      "title": "Saints’ Jordyn Tyson Uncertain For Week 1 After Hamstring Injury",
+      "snippet": "The Saints bolstered their receiving corps by using their top offseason asset — the No. 8 overall pick — to add Jordyn Tyson. The former Arizona State and Colorado pass catcher is primed to complement the recently extended Chris Olave in Ne",
+      "publishedAt": "2026-08-14T22:50:28.000Z",
+      "trust": 0.9,
+      "matches": [
+        {
+          "playerId": "jordyn-tyson-no-wr",
+          "name": "Jordyn Tyson",
+          "delta": -6
         }
       ]
     },
