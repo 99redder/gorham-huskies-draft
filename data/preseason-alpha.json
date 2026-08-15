@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-15T10:41:53.027Z",
+  "generatedAt": "2026-08-15T22:40:43.592Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -9,7 +9,7 @@
       "name": "Sleeper Trends",
       "url": "https://api.sleeper.app/v1/players/nfl/trending/add?lookback_hours=24&limit=50",
       "ok": true,
-      "matched": 2
+      "matched": 4
     },
     {
       "id": "espn-nfl",
@@ -58,7 +58,7 @@
       "name": "Pro Football Rumors",
       "url": "https://www.profootballrumors.com/feed",
       "ok": true,
-      "matched": 1
+      "matched": 0
     },
     {
       "id": "establish-the-run",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-16 add over the last 24 hours (5,761 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-15T10:41:53.027Z",
+      "snippet": "Top-12 add over the last 24 hours (6,706 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-15T22:40:43.592Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,8 +99,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-17 add over the last 24 hours (5,202 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-15T10:41:53.027Z",
+      "snippet": "Top-17 add over the last 24 hours (5,616 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-15T22:40:43.592Z",
       "trust": 0.75,
       "matches": [
         {
@@ -111,58 +111,80 @@
       ]
     },
     {
-      "id": "alpha_c83efc9cd0034d26",
+      "id": "alpha_1f92ada5c4f06be1",
+      "source": "Sleeper Trends",
+      "publisher": "Sleeper",
+      "sourceUrl": "https://sleeper.com/",
+      "title": "Keon Coleman is trending in Sleeper adds",
+      "snippet": "Top-26 add over the last 24 hours (3,627 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-15T22:40:43.592Z",
+      "trust": 0.75,
+      "matches": [
+        {
+          "playerId": "keon-coleman-buf-wr",
+          "name": "Keon Coleman",
+          "delta": 5
+        }
+      ]
+    },
+    {
+      "id": "alpha_7bce3a02bb458463",
+      "source": "Sleeper Trends",
+      "publisher": "Sleeper",
+      "sourceUrl": "https://sleeper.com/",
+      "title": "Jake Bates is trending in Sleeper adds",
+      "snippet": "Top-30 add over the last 24 hours (3,152 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-15T22:40:43.592Z",
+      "trust": 0.75,
+      "matches": [
+        {
+          "playerId": "jake-bates-det-k",
+          "name": "Jake Bates",
+          "delta": 5
+        }
+      ]
+    },
+    {
+      "id": "alpha_62f44ab65706cc85",
       "source": "Yahoo Sports NFL",
       "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/saints-first-rounder-jordyn-tyson-003418958.html",
-      "title": "Saints first-rounder Jordyn Tyson suffers hamstring injury in brutal blow",
-      "snippet": "The Saints will be without their first-round wide receiver for an undetermined amount of time.",
-      "publishedAt": "2026-08-15T00:34:18.000Z",
+      "sourceUrl": "https://sports.yahoo.com/articles/49ers-change-left-guard-rotation-210241790.html",
+      "title": "49ers change up their left guard rotation; Mike Evans and Jacob Cowing return",
+      "snippet": "Carver Willis and Connor Colby took snaps at left guard with the starters during Saturday’s practice",
+      "publishedAt": "2026-08-15T21:02:41.000Z",
       "trust": 1,
       "matches": [
         {
-          "playerId": "jordyn-tyson-no-wr",
-          "name": "Jordyn Tyson",
-          "delta": -6,
+          "playerId": "mike-evans-sf-wr",
+          "name": "Mike Evans",
+          "delta": 6,
           "injury": {
             "status": "Questionable",
-            "note": "Saints first-rounder Jordyn Tyson suffers hamstring injury in brutal blow",
-            "sourceUpdatedAt": 1786754058000
+            "note": "49ers change up their left guard rotation; Mike Evans and Jacob Cowing return",
+            "sourceUpdatedAt": 1786827761000
           }
         }
       ]
     },
     {
-      "id": "alpha_a9a52aca352f8bc2",
-      "source": "Pro Football Rumors",
-      "publisher": "Pro Football Rumors",
-      "sourceUrl": "https://www.profootballrumors.com/2026/08/saints-jordyn-tyson-uncertain-for-week-1-after-hamstring-injury",
-      "title": "Saints’ Jordyn Tyson Uncertain For Week 1 After Hamstring Injury",
-      "snippet": "The Saints bolstered their receiving corps by using their top offseason asset — the No. 8 overall pick — to add Jordyn Tyson. The former Arizona State and Colorado pass catcher is primed to complement the recently extended Chris Olave in Ne",
-      "publishedAt": "2026-08-14T22:50:28.000Z",
-      "trust": 0.9,
-      "matches": [
-        {
-          "playerId": "jordyn-tyson-no-wr",
-          "name": "Jordyn Tyson",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_8fccbf76dd7104ca",
+      "id": "alpha_bc4732db6b2db6e0",
       "source": "r/fantasyfootball",
       "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1voeeuj/jordyn_tysons_hamstring_injury_confirmed_timeline/",
-      "title": "Jordyn Tyson's Hamstring Injury Confirmed, Timeline Unclear [Underhill]",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/jsparks50\"> /u/jsparks50 </a> <br/> <span><a href=\"https://www.rotoballer.com/player-news/jordyn-tysons-hamstring-injury-confirmed-timeline-unclear/1908925\">[link]</a></span> <span><a href=\"",
-      "publishedAt": "2026-08-14T17:56:05.000Z",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vpczi2/bills_star_dj_moore_suffers_injury_during/",
+      "title": "Bills Star DJ Moore Suffers Injury During Preseason Debut - concern for high ankle sprain",
+      "snippet": "submitted by <a href=\"https://www.reddit.com/user/My_Chat_Account\"> /u/My_Chat_Account </a> <br/> <span><a href=\"https://thespun.com/nfl/bills-star-dj-moore-suffers-injury-during-preseason-debut\">[link]</a></span> <span><a href=\"https://www",
+      "publishedAt": "2026-08-15T20:17:40.000Z",
       "trust": 0.65,
       "matches": [
         {
-          "playerId": "jordyn-tyson-no-wr",
-          "name": "Jordyn Tyson",
-          "delta": -6
+          "playerId": "dj-moore-buf-wr",
+          "name": "DJ Moore",
+          "delta": -6,
+          "injury": {
+            "status": "Questionable",
+            "note": "Bills Star DJ Moore Suffers Injury During Preseason Debut - concern for high ankle sprain",
+            "sourceUpdatedAt": 1786825060000
+          }
         }
       ]
     },
