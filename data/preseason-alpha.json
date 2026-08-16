@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-16T10:42:25.993Z",
+  "generatedAt": "2026-08-16T22:39:41.336Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -9,7 +9,7 @@
       "name": "Sleeper Trends",
       "url": "https://api.sleeper.app/v1/players/nfl/trending/add?lookback_hours=24&limit=50",
       "ok": true,
-      "matched": 4
+      "matched": 3
     },
     {
       "id": "espn-nfl",
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 0
+      "matched": 1
     },
     {
       "id": "cbs-nfl",
@@ -51,7 +51,7 @@
       "name": "r/fantasyfootball",
       "url": "https://www.reddit.com/r/fantasyfootball/.rss",
       "ok": true,
-      "matched": 1
+      "matched": 2
     },
     {
       "id": "pro-football-rumors",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-14 add over the last 24 hours (7,133 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-16T10:42:25.993Z",
+      "snippet": "Top-15 add over the last 24 hours (8,148 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-16T22:39:41.336Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,8 +99,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-17 add over the last 24 hours (6,687 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-16T10:42:25.993Z",
+      "snippet": "Top-19 add over the last 24 hours (7,038 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-16T22:39:41.336Z",
       "trust": 0.75,
       "matches": [
         {
@@ -111,36 +111,53 @@
       ]
     },
     {
-      "id": "alpha_1f92ada5c4f06be1",
-      "source": "Sleeper Trends",
-      "publisher": "Sleeper",
-      "sourceUrl": "https://sleeper.com/",
-      "title": "Keon Coleman is trending in Sleeper adds",
-      "snippet": "Top-22 add over the last 24 hours (5,517 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-16T10:42:25.993Z",
-      "trust": 0.75,
-      "matches": [
-        {
-          "playerId": "keon-coleman-buf-wr",
-          "name": "Keon Coleman",
-          "delta": 5
-        }
-      ]
-    },
-    {
       "id": "alpha_7bce3a02bb458463",
       "source": "Sleeper Trends",
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Jake Bates is trending in Sleeper adds",
-      "snippet": "Top-24 add over the last 24 hours (4,816 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-16T10:42:25.993Z",
+      "snippet": "Top-27 add over the last 24 hours (5,424 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-16T22:39:41.336Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "jake-bates-det-k",
           "name": "Jake Bates",
           "delta": 5
+        }
+      ]
+    },
+    {
+      "id": "alpha_b2db05a358299daa",
+      "source": "r/fantasyfootball",
+      "publisher": "Reddit",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vq95bq/bears_rb_kyle_monangai_leaves_practice_with_a/",
+      "title": "Bears RB Kyle Monangai leaves practice with a knee injury",
+      "snippet": "submitted by <a href=\"https://www.reddit.com/user/Famous-Egg-6136\"> /u/Famous-Egg-6136 </a> <br/> <span><a href=\"https://www.chicagotribune.com/2026/08/16/chicago-bears-kyle-monangai-knee-injury/\">[link]</a></span> <span><a href=\"https://ww",
+      "publishedAt": "2026-08-16T21:26:28.000Z",
+      "trust": 0.65,
+      "matches": [
+        {
+          "playerId": "kyle-monangai-chi-rb",
+          "name": "Kyle Monangai",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_d79f80d7ea8c1dc7",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/detroit-lions-injury-updates-jameson-172058306.html",
+      "title": "Detroit Lions injury updates: Jameson Williams absent Sunday",
+      "snippet": "Detroit Lions WR Jameson Williams was missing from Sunday’s training camp practice.",
+      "publishedAt": "2026-08-16T17:20:58.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "jameson-williams-det-wr",
+          "name": "Jameson Williams",
+          "delta": -6
         }
       ]
     },
