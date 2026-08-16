@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-15T22:40:43.592Z",
+  "generatedAt": "2026-08-16T10:42:25.993Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 1
+      "matched": 0
     },
     {
       "id": "cbs-nfl",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-12 add over the last 24 hours (6,706 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-15T22:40:43.592Z",
+      "snippet": "Top-14 add over the last 24 hours (7,133 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-16T10:42:25.993Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,8 +99,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-17 add over the last 24 hours (5,616 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-15T22:40:43.592Z",
+      "snippet": "Top-17 add over the last 24 hours (6,687 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-16T10:42:25.993Z",
       "trust": 0.75,
       "matches": [
         {
@@ -116,8 +116,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keon Coleman is trending in Sleeper adds",
-      "snippet": "Top-26 add over the last 24 hours (3,627 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-15T22:40:43.592Z",
+      "snippet": "Top-22 add over the last 24 hours (5,517 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-16T10:42:25.993Z",
       "trust": 0.75,
       "matches": [
         {
@@ -133,36 +133,14 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Jake Bates is trending in Sleeper adds",
-      "snippet": "Top-30 add over the last 24 hours (3,152 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-15T22:40:43.592Z",
+      "snippet": "Top-24 add over the last 24 hours (4,816 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-16T10:42:25.993Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "jake-bates-det-k",
           "name": "Jake Bates",
           "delta": 5
-        }
-      ]
-    },
-    {
-      "id": "alpha_62f44ab65706cc85",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/49ers-change-left-guard-rotation-210241790.html",
-      "title": "49ers change up their left guard rotation; Mike Evans and Jacob Cowing return",
-      "snippet": "Carver Willis and Connor Colby took snaps at left guard with the starters during Saturday’s practice",
-      "publishedAt": "2026-08-15T21:02:41.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "mike-evans-sf-wr",
-          "name": "Mike Evans",
-          "delta": 6,
-          "injury": {
-            "status": "Questionable",
-            "note": "49ers change up their left guard rotation; Mike Evans and Jacob Cowing return",
-            "sourceUpdatedAt": 1786827761000
-          }
         }
       ]
     },
