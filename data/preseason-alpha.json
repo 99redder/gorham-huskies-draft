@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-17T10:49:45.533Z",
+  "generatedAt": "2026-08-17T22:43:44.044Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -9,7 +9,7 @@
       "name": "Sleeper Trends",
       "url": "https://api.sleeper.app/v1/players/nfl/trending/add?lookback_hours=24&limit=50",
       "ok": true,
-      "matched": 3
+      "matched": 2
     },
     {
       "id": "espn-nfl",
@@ -23,14 +23,14 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 3
+      "matched": 5
     },
     {
       "id": "cbs-nfl",
       "name": "CBS Sports NFL",
       "url": "https://www.cbssports.com/rss/headlines/nfl/",
       "ok": true,
-      "matched": 2
+      "matched": 3
     },
     {
       "id": "rotoballer",
@@ -51,7 +51,7 @@
       "name": "r/fantasyfootball",
       "url": "https://www.reddit.com/r/fantasyfootball/.rss",
       "ok": true,
-      "matched": 1
+      "matched": 2
     },
     {
       "id": "pro-football-rumors",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-11 add over the last 24 hours (10,444 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-17T10:49:45.533Z",
+      "snippet": "Top-14 add over the last 24 hours (10,766 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-17T22:43:44.044Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,8 +99,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-18 add over the last 24 hours (8,343 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-17T10:49:45.533Z",
+      "snippet": "Top-19 add over the last 24 hours (9,144 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-17T22:43:44.044Z",
       "trust": 0.75,
       "matches": [
         {
@@ -111,36 +111,126 @@
       ]
     },
     {
-      "id": "alpha_7bce3a02bb458463",
-      "source": "Sleeper Trends",
-      "publisher": "Sleeper",
-      "sourceUrl": "https://sleeper.com/",
-      "title": "Jake Bates is trending in Sleeper adds",
-      "snippet": "Top-28 add over the last 24 hours (5,872 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-17T10:49:45.533Z",
-      "trust": 0.75,
+      "id": "alpha_20f50eb768451559",
+      "source": "CBS Sports NFL",
+      "publisher": "CBS Sports",
+      "sourceUrl": "https://www.cbssports.com/nfl/news/nfl-training-camp-injury-tracker/",
+      "title": "NFL preseason injuries tracker: Breece Hall's status, Jeremiyah Love update",
+      "snippet": "We track the biggest injury updates and recovery timelines as teams navigate a brutal start to the NFL preseason",
+      "publishedAt": "2026-08-17T22:34:45.000Z",
+      "trust": 0.95,
       "matches": [
         {
-          "playerId": "jake-bates-det-k",
-          "name": "Jake Bates",
-          "delta": 5
+          "playerId": "jeremiyah-love-ari-rb",
+          "name": "Jeremiyah Love",
+          "delta": 6
+        },
+        {
+          "playerId": "breece-hall-nyj-rb",
+          "name": "Breece Hall",
+          "delta": 6
         }
       ]
     },
     {
-      "id": "alpha_8bf88b1eab9205d3",
+      "id": "alpha_4652c6545b31a9b7",
       "source": "Yahoo Sports NFL",
       "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/bear-den-ozzy-trapilo-back-100000200.html",
-      "title": "The Bear’s Den: Ozzy Trapilo is back, and Kyle Monangai was hurt Sunday in practice",
-      "snippet": "Bears New & Updates: Ozzy Trapilo is back, and Kyle Monangai was hurt Sunday in practice",
-      "publishedAt": "2026-08-17T10:00:00.000Z",
+      "sourceUrl": "https://sports.yahoo.com/nfl/breaking-news/article/saints-rookie-wr-jordyn-tyson-reportedly-expected-to-miss-about-2-months-due-to-training-camp-hamstring-injury-223230593.html",
+      "title": "Saints rookie WR Jordyn Tyson reportedly expected to miss about 2 months due to training camp hamstring injury",
+      "snippet": "Tyson had hamstring issues last year at Arizona State, but New Orleans head coach Kellen Moore told reporters that the wideout's latest setback isn't related to his injury history.",
+      "publishedAt": "2026-08-17T22:32:30.000Z",
       "trust": 1,
       "matches": [
         {
-          "playerId": "kyle-monangai-chi-rb",
-          "name": "Kyle Monangai",
+          "playerId": "jordyn-tyson-no-wr",
+          "name": "Jordyn Tyson",
           "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_34902607966ca7d4",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/lions-injury-updates-good-news-221701414.html",
+      "title": "Lions injury updates: Good news for Jameson Williams",
+      "snippet": "Detroit Lions WR Jameson Williams has a shoulder injury, but it isn’t expected to be serious.",
+      "publishedAt": "2026-08-17T22:17:01.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "jameson-williams-det-wr",
+          "name": "Jameson Williams",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_0dd26303bca6d528",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/report-confirms-breece-halls-groin-220938189.html",
+      "title": "Report: Follow-up confirms Breece Hall's groin injury is minor",
+      "snippet": "Jets running back Breece Hall received good news Monday: A follow-up confirmed his groin injury is minor, Connor Hughes of SNY TV reports.",
+      "publishedAt": "2026-08-17T22:09:38.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "breece-hall-nyj-rb",
+          "name": "Breece Hall",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_181d1f65bc61da62",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/jets-breece-hall-undergo-further-143144406.html",
+      "title": "Testing confirms Breece Hall's groin injury is minor, Jets to be cautious with RB",
+      "snippet": "The Jets had a bit of a scare during Monday’s practice, as star running back Breece Hall strained his groin. But by day's end were breathing a big sigh of relief.",
+      "publishedAt": "2026-08-17T22:05:00.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "breece-hall-nyj-rb",
+          "name": "Breece Hall",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_2df913277d7d689a",
+      "source": "r/fantasyfootball",
+      "publisher": "Reddit",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vqvppa/buccaneers_emeka_egbuka_considered_daytoday/",
+      "title": "Buccaneers' Emeka Egbuka: Considered 'day-to-day, week-to-week' with toe injury",
+      "snippet": "submitted by <a href=\"https://www.reddit.com/user/My_Chat_Account\"> /u/My_Chat_Account </a> <br/> <span><a href=\"https://www.cbssports.com/fantasy/football/news/buccaneers-emeka-egbuka-considered-day-to-day-week-to-week/\">[link]</a></span> ",
+      "publishedAt": "2026-08-17T15:35:00.000Z",
+      "trust": 0.65,
+      "matches": [
+        {
+          "playerId": "emeka-egbuka-tb-wr",
+          "name": "Emeka Egbuka",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_0e335d8310f10ba5",
+      "source": "r/fantasyfootball",
+      "publisher": "Reddit",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vqsu80/jets_rb_breece_hall_came_up_after_a_screen_pass/",
+      "title": "Jets RB Breece Hall came up after a screen pass and is leaving practice. Looks like a groin injury",
+      "snippet": "submitted by <a href=\"https://www.reddit.com/user/mvanigan\"> /u/mvanigan </a> <br/> <span><a href=\"https://bsky.app/profile/nflnewsposter.bsky.social/post/3mtbtjfqqmc2i\">[link]</a></span> <span><a href=\"https://www.reddit.com/r/fantasyfootb",
+      "publishedAt": "2026-08-17T13:47:48.000Z",
+      "trust": 0.65,
+      "matches": [
+        {
+          "playerId": "breece-hall-nyj-rb",
+          "name": "Breece Hall",
+          "delta": 6
         }
       ]
     },
@@ -162,57 +252,6 @@
       ]
     },
     {
-      "id": "alpha_e132f023db0294b4",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/bears-injury-kyle-monangai-ozzy-235716971.html",
-      "title": "Bears Injury Update for Kyle Monangai and some Ozzy Trapilo video",
-      "snippet": "Another Chicago Bears injury today as Kyle Monangai left with a knee issue. @wiltfongjr with that, plus all the latest news from today’s practice.",
-      "publishedAt": "2026-08-16T23:57:16.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "kyle-monangai-chi-rb",
-          "name": "Kyle Monangai",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_5ce22f8fcf61754c",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/report-kyle-monangai-mri-knee-223607237.html",
-      "title": "Report: Kyle Monangai to have MRI on knee, Bears believe he avoided serious injury",
-      "snippet": "Running back Kyle Monangai made an early exit from Bears practice on Sunday after hurting his knee, but the team's current belief is that he avoided a major injury.",
-      "publishedAt": "2026-08-16T22:36:07.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "kyle-monangai-chi-rb",
-          "name": "Kyle Monangai",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_b2db05a358299daa",
-      "source": "r/fantasyfootball",
-      "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vq95bq/bears_rb_kyle_monangai_leaves_practice_with_a/",
-      "title": "Bears RB Kyle Monangai leaves practice with a knee injury",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/Famous-Egg-6136\"> /u/Famous-Egg-6136 </a> <br/> <span><a href=\"https://www.chicagotribune.com/2026/08/16/chicago-bears-kyle-monangai-knee-injury/\">[link]</a></span> <span><a href=\"https://ww",
-      "publishedAt": "2026-08-16T21:26:28.000Z",
-      "trust": 0.65,
-      "matches": [
-        {
-          "playerId": "kyle-monangai-chi-rb",
-          "name": "Kyle Monangai",
-          "delta": -6
-        }
-      ]
-    },
-    {
       "id": "alpha_ae735770bfced6df",
       "source": "CBS Sports NFL",
       "publisher": "CBS Sports",
@@ -226,6 +265,28 @@
           "playerId": "puka-nacua-lar-wr",
           "name": "Puka Nacua",
           "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_59525f559b31a7f3",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/nfl/live/nfl-news-preseason-schedule-whos-playing-live-updates-today-152512676.html",
+      "title": "NFL news, live updates: Breece Hall suffers groin injury; Von Miller to sign with Cowboys",
+      "snippet": "Follow along with the latest NFL news and updates as the preseason plays out.",
+      "publishedAt": "2026-08-13T15:25:12.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "breece-hall-nyj-rb",
+          "name": "Breece Hall",
+          "delta": -6,
+          "injury": {
+            "status": "Questionable",
+            "note": "NFL news, live updates: Breece Hall suffers groin injury; Von Miller to sign with Cowboys",
+            "sourceUpdatedAt": 1786634712000
+          }
         }
       ]
     }
