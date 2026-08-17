@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-16T22:39:41.336Z",
+  "generatedAt": "2026-08-17T10:49:45.533Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -23,14 +23,14 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 1
+      "matched": 3
     },
     {
       "id": "cbs-nfl",
       "name": "CBS Sports NFL",
       "url": "https://www.cbssports.com/rss/headlines/nfl/",
       "ok": true,
-      "matched": 1
+      "matched": 2
     },
     {
       "id": "rotoballer",
@@ -51,7 +51,7 @@
       "name": "r/fantasyfootball",
       "url": "https://www.reddit.com/r/fantasyfootball/.rss",
       "ok": true,
-      "matched": 2
+      "matched": 1
     },
     {
       "id": "pro-football-rumors",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-15 add over the last 24 hours (8,148 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-16T22:39:41.336Z",
+      "snippet": "Top-11 add over the last 24 hours (10,444 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-17T10:49:45.533Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,8 +99,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-19 add over the last 24 hours (7,038 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-16T22:39:41.336Z",
+      "snippet": "Top-18 add over the last 24 hours (8,343 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-17T10:49:45.533Z",
       "trust": 0.75,
       "matches": [
         {
@@ -116,14 +116,82 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Jake Bates is trending in Sleeper adds",
-      "snippet": "Top-27 add over the last 24 hours (5,424 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-16T22:39:41.336Z",
+      "snippet": "Top-28 add over the last 24 hours (5,872 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-17T10:49:45.533Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "jake-bates-det-k",
           "name": "Jake Bates",
           "delta": 5
+        }
+      ]
+    },
+    {
+      "id": "alpha_8bf88b1eab9205d3",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/bear-den-ozzy-trapilo-back-100000200.html",
+      "title": "The Bear’s Den: Ozzy Trapilo is back, and Kyle Monangai was hurt Sunday in practice",
+      "snippet": "Bears New & Updates: Ozzy Trapilo is back, and Kyle Monangai was hurt Sunday in practice",
+      "publishedAt": "2026-08-17T10:00:00.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "kyle-monangai-chi-rb",
+          "name": "Kyle Monangai",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_e8457e6d65e656a3",
+      "source": "CBS Sports NFL",
+      "publisher": "CBS Sports",
+      "sourceUrl": "https://www.cbssports.com/nfl/news/jeremiyah-love-injury-update-cardinals-rookie-has-high-ankle-sprain/",
+      "title": "Jeremiyah Love injury update: Cardinals rookie has high ankle sprain, team hoping for Week 1 return",
+      "snippet": "Love shined in a big role in preseason Week 1 but didn't leave unscathed",
+      "publishedAt": "2026-08-17T01:35:06.000Z",
+      "trust": 0.95,
+      "matches": [
+        {
+          "playerId": "jeremiyah-love-ari-rb",
+          "name": "Jeremiyah Love",
+          "delta": 6
+        }
+      ]
+    },
+    {
+      "id": "alpha_e132f023db0294b4",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/bears-injury-kyle-monangai-ozzy-235716971.html",
+      "title": "Bears Injury Update for Kyle Monangai and some Ozzy Trapilo video",
+      "snippet": "Another Chicago Bears injury today as Kyle Monangai left with a knee issue. @wiltfongjr with that, plus all the latest news from today’s practice.",
+      "publishedAt": "2026-08-16T23:57:16.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "kyle-monangai-chi-rb",
+          "name": "Kyle Monangai",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_5ce22f8fcf61754c",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/report-kyle-monangai-mri-knee-223607237.html",
+      "title": "Report: Kyle Monangai to have MRI on knee, Bears believe he avoided serious injury",
+      "snippet": "Running back Kyle Monangai made an early exit from Bears practice on Sunday after hurting his knee, but the team's current belief is that he avoided a major injury.",
+      "publishedAt": "2026-08-16T22:36:07.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "kyle-monangai-chi-rb",
+          "name": "Kyle Monangai",
+          "delta": -6
         }
       ]
     },
@@ -141,45 +209,6 @@
           "playerId": "kyle-monangai-chi-rb",
           "name": "Kyle Monangai",
           "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_d79f80d7ea8c1dc7",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/detroit-lions-injury-updates-jameson-172058306.html",
-      "title": "Detroit Lions injury updates: Jameson Williams absent Sunday",
-      "snippet": "Detroit Lions WR Jameson Williams was missing from Sunday’s training camp practice.",
-      "publishedAt": "2026-08-16T17:20:58.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "jameson-williams-det-wr",
-          "name": "Jameson Williams",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_bc4732db6b2db6e0",
-      "source": "r/fantasyfootball",
-      "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vpczi2/bills_star_dj_moore_suffers_injury_during/",
-      "title": "Bills Star DJ Moore Suffers Injury During Preseason Debut - concern for high ankle sprain",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/My_Chat_Account\"> /u/My_Chat_Account </a> <br/> <span><a href=\"https://thespun.com/nfl/bills-star-dj-moore-suffers-injury-during-preseason-debut\">[link]</a></span> <span><a href=\"https://www",
-      "publishedAt": "2026-08-15T20:17:40.000Z",
-      "trust": 0.65,
-      "matches": [
-        {
-          "playerId": "dj-moore-buf-wr",
-          "name": "DJ Moore",
-          "delta": -6,
-          "injury": {
-            "status": "Questionable",
-            "note": "Bills Star DJ Moore Suffers Injury During Preseason Debut - concern for high ankle sprain",
-            "sourceUpdatedAt": 1786825060000
-          }
         }
       ]
     },
