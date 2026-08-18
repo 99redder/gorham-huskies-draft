@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T10:48:52.358Z",
+  "generatedAt": "2026-08-18T22:43:57.460Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 4
+      "matched": 5
     },
     {
       "id": "cbs-nfl",
@@ -51,7 +51,7 @@
       "name": "r/fantasyfootball",
       "url": "https://www.reddit.com/r/fantasyfootball/.rss",
       "ok": true,
-      "matched": 2
+      "matched": 4
     },
     {
       "id": "pro-football-rumors",
@@ -77,30 +77,13 @@
   ],
   "entries": [
     {
-      "id": "alpha_9e25aba50d28296e",
-      "source": "Sleeper Trends",
-      "publisher": "Sleeper",
-      "sourceUrl": "https://sleeper.com/",
-      "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-18 add over the last 24 hours (8,169 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-18T10:48:52.358Z",
-      "trust": 0.75,
-      "matches": [
-        {
-          "playerId": "malik-willis-mia-qb",
-          "name": "Malik Willis",
-          "delta": 5
-        }
-      ]
-    },
-    {
       "id": "alpha_fe3ddb7ed800ba6c",
       "source": "Sleeper Trends",
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-20 add over the last 24 hours (7,893 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-18T10:48:52.358Z",
+      "snippet": "Top-17 add over the last 24 hours (8,550 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-18T22:43:57.460Z",
       "trust": 0.75,
       "matches": [
         {
@@ -111,18 +94,164 @@
       ]
     },
     {
-      "id": "alpha_8d6984ef72b87be3",
+      "id": "alpha_9e25aba50d28296e",
+      "source": "Sleeper Trends",
+      "publisher": "Sleeper",
+      "sourceUrl": "https://sleeper.com/",
+      "title": "Malik Willis is trending in Sleeper adds",
+      "snippet": "Top-18 add over the last 24 hours (8,323 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-18T22:43:57.460Z",
+      "trust": 0.75,
+      "matches": [
+        {
+          "playerId": "malik-willis-mia-qb",
+          "name": "Malik Willis",
+          "delta": 5
+        }
+      ]
+    },
+    {
+      "id": "alpha_fc5bfa8427d8db43",
       "source": "Yahoo Sports NFL",
       "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/cam-skattebo-won-t-let-034453328.html",
-      "title": "Cam Skattebo won’t let gruesome injury change his Giants game",
-      "snippet": "Cam Skattebo is looking to add to his game, not subtract from it.",
-      "publishedAt": "2026-08-18T03:44:53.000Z",
+      "sourceUrl": "https://sports.yahoo.com/articles/expect-jordyn-tyson-return-injury-203321944.html",
+      "title": "When should we expect Jordyn Tyson to return from his injury?",
+      "snippet": "A set timetable is good, but things could change.",
+      "publishedAt": "2026-08-18T20:33:21.000Z",
       "trust": 1,
       "matches": [
         {
-          "playerId": "cam-skattebo-nyg-rb",
-          "name": "Cam Skattebo",
+          "playerId": "jordyn-tyson-no-wr",
+          "name": "Jordyn Tyson",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_a19bd88ae2323558",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/broncos-bo-nix-center-training-202437705.html",
+      "title": "Broncos' Bo Nix at center of training camp fight: 'I love it'",
+      "snippet": "The Broncos quarterback reportedly pulled another player off a scrum, but exited the fight without any issues.",
+      "publishedAt": "2026-08-18T20:24:37.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "bo-nix-den-qb",
+          "name": "Bo Nix",
+          "delta": 6
+        }
+      ]
+    },
+    {
+      "id": "alpha_09d00fa833d74abc",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/nfl/article/bo-nix-after-chippy-broncos-practice-includes-scuffle-qb-on-ground-i-love-it-200125590.html",
+      "title": "Bo Nix after chippy Broncos practice includes scuffle, QB on ground: 'I love it'",
+      "snippet": "\"I'm glad that we're fiery, I love the competition out here,\" offensive coordinator Davis Webb said. But \"we can't cross that line, and that's offense and defense.\"",
+      "publishedAt": "2026-08-18T20:01:25.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "bo-nix-den-qb",
+          "name": "Bo Nix",
+          "delta": 6
+        }
+      ]
+    },
+    {
+      "id": "alpha_561f21aa82a9c8eb",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/nfl/article/breece-hall-emeka-egbuka-among-top-20-injury-situations-that-matter-most-heading-into-the-season-195341472.html",
+      "title": "Breece Hall, Emeka Egbuka among top 20 injury situations that matter most heading into the season",
+      "snippet": "There are numerous injuries affecting NFL teams less than a month before the regular season.",
+      "publishedAt": "2026-08-18T19:53:41.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "emeka-egbuka-tb-wr",
+          "name": "Emeka Egbuka",
+          "delta": -4.8
+        },
+        {
+          "playerId": "breece-hall-nyj-rb",
+          "name": "Breece Hall",
+          "delta": -4.8
+        }
+      ]
+    },
+    {
+      "id": "alpha_d0cd59a14be76875",
+      "source": "r/fantasyfootball",
+      "publisher": "Reddit",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vrxy51/mike_evans_leaves_practice_with_a_footankle_injury/",
+      "title": "Mike Evans leaves practice with a foot/ankle injury",
+      "snippet": "submitted by <a href=\"https://www.reddit.com/user/Famous-Egg-6136\"> /u/Famous-Egg-6136 </a> <br/> <span><a href=\"https://www.rotowire.com/football/player/mike-evans-9253?nid=634069\">[link]</a></span> <span><a href=\"https://www.reddit.com/r/",
+      "publishedAt": "2026-08-18T18:39:22.000Z",
+      "trust": 0.65,
+      "matches": [
+        {
+          "playerId": "mike-evans-sf-wr",
+          "name": "Mike Evans",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_c7e766451c5c8181",
+      "source": "r/fantasyfootball",
+      "publisher": "Reddit",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vrwux3/texans_receiver_jayden_higgins_injured_in/",
+      "title": "Texans receiver Jayden Higgins injured in practice session with Raiders",
+      "snippet": "submitted by <a href=\"https://www.reddit.com/user/Famous-Egg-6136\"> /u/Famous-Egg-6136 </a> <br/> <span><a href=\"https://www.houstonchronicle.com/sports/texans/article/houston-jayden-higgins-injury-22393027.php\">[link]</a></span> <span><a h",
+      "publishedAt": "2026-08-18T18:01:09.000Z",
+      "trust": 0.65,
+      "matches": [
+        {
+          "playerId": "jayden-higgins-hou-wr",
+          "name": "Jayden Higgins",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_462ac6e482f80666",
+      "source": "r/fantasyfootball",
+      "publisher": "Reddit",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vruwr1/mike_lafleur_confirmed_jeremiyah_love_ankle_wont/",
+      "title": "Mike LaFleur confirmed Jeremiyah Love (ankle) won't need surgery.",
+      "snippet": "submitted by <a href=\"https://www.reddit.com/user/spotlightdan\"> /u/spotlightdan </a> <br/> <span><a href=\"https://bsky.app/profile/insidenflnews.bsky.social/post/3mtemmehins2q\">[link]</a></span> <span><a href=\"https://www.reddit.com/r/fant",
+      "publishedAt": "2026-08-18T16:53:16.000Z",
+      "trust": 0.65,
+      "matches": [
+        {
+          "playerId": "jeremiyah-love-ari-rb",
+          "name": "Jeremiyah Love",
+          "delta": 6,
+          "injury": {
+            "status": "Questionable",
+            "note": "Mike LaFleur confirmed Jeremiyah Love (ankle) won't need surgery.",
+            "sourceUpdatedAt": 1787071996000
+          }
+        }
+      ]
+    },
+    {
+      "id": "alpha_616bd46889dddf87",
+      "source": "CBS Sports NFL",
+      "publisher": "CBS Sports",
+      "sourceUrl": "https://www.cbssports.com/nfl/news/breece-hall-groin-injury-jets-aaron-glenn/",
+      "title": "Jets' Breece Hall could be on track for Week 1 after groin injury",
+      "snippet": "Hall is expected to miss two to three weeks after suffering a minor groin injury, putting him on track to return for the regular-season opener",
+      "publishedAt": "2026-08-18T16:17:57.000Z",
+      "trust": 0.95,
+      "matches": [
+        {
+          "playerId": "breece-hall-nyj-rb",
+          "name": "Breece Hall",
           "delta": -6
         }
       ]
@@ -134,7 +263,7 @@
       "sourceUrl": "https://www.cbssports.com/nfl/news/saints-rookie-jordyn-tyson-out-two-months-what-will-new-orleans-do-at-wr/",
       "title": "Saints rookie Jordyn Tyson reportedly out months with hamstring injury: What New Orleans can do at WR",
       "snippet": "Tyson suffered a hamstring injury last week and could start the year on injured reserve",
-      "publishedAt": "2026-08-18T02:42:18.000Z",
+      "publishedAt": "2026-08-18T14:26:53.000Z",
       "trust": 0.95,
       "matches": [
         {
@@ -145,35 +274,18 @@
       ]
     },
     {
-      "id": "alpha_fb04359f66c83247",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/george-kittle-eye-popping-injury-022029314.html",
-      "title": "George Kittle has ‘eye popping’ update from injury recovery",
-      "snippet": "It’s been seven months since George Kittle ruptured his Achilles against the Philadelphia Eagles in the NFC Wild Card, and he’s already making significant progress on returning to the field....",
-      "publishedAt": "2026-08-18T02:20:29.000Z",
-      "trust": 1,
+      "id": "alpha_af1a2a92ee8f2579",
+      "source": "r/fantasyfootball",
+      "publisher": "Reddit",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vrp1jc/jaguars_wr_parker_washington_is_daytoday_with_an/",
+      "title": "Jaguars WR Parker Washington is day-to-day with an undisclosed injury, reports Ryan O’Halloran of the Florida Times-Union.",
+      "snippet": "submitted by <a href=\"https://www.reddit.com/user/haventmetyou\"> /u/haventmetyou </a> <br/> <span><a href=\"https://www.nbcsports.com/fantasy/football/player-news/2026-08-18/parker-washington-undisclosed-day-to-day\">[link]</a></span> <span><",
+      "publishedAt": "2026-08-18T13:22:05.000Z",
+      "trust": 0.65,
       "matches": [
         {
-          "playerId": "george-kittle-sf-te",
-          "name": "George Kittle",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_21ee30b34edcd1ba",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/christian-mccaffrey-tightness-injury-revealed-010939810.html",
-      "title": "Christian McCaffrey tightness injury revealed to be true as other veteran RB released",
-      "snippet": "The San Francisco 49ers running back room might’ve received some good news when it comes to Christian McCaffrey’s mystery tightness. Or maybe it’s not good news. It depends on where...",
-      "publishedAt": "2026-08-18T01:09:39.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "christian-mccaffrey-sf-rb",
-          "name": "Christian McCaffrey",
+          "playerId": "parker-washington-jax-wr",
+          "name": "Parker Washington",
           "delta": -6
         }
       ]
@@ -201,40 +313,6 @@
       ]
     },
     {
-      "id": "alpha_2df913277d7d689a",
-      "source": "r/fantasyfootball",
-      "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vqvppa/buccaneers_emeka_egbuka_considered_daytoday/",
-      "title": "Buccaneers' Emeka Egbuka: Considered 'day-to-day, week-to-week' with toe injury",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/My_Chat_Account\"> /u/My_Chat_Account </a> <br/> <span><a href=\"https://www.cbssports.com/fantasy/football/news/buccaneers-emeka-egbuka-considered-day-to-day-week-to-week/\">[link]</a></span> ",
-      "publishedAt": "2026-08-17T15:35:00.000Z",
-      "trust": 0.65,
-      "matches": [
-        {
-          "playerId": "emeka-egbuka-tb-wr",
-          "name": "Emeka Egbuka",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_0e335d8310f10ba5",
-      "source": "r/fantasyfootball",
-      "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vqsu80/jets_rb_breece_hall_came_up_after_a_screen_pass/",
-      "title": "Jets RB Breece Hall came up after a screen pass and is leaving practice. Looks like a groin injury",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/mvanigan\"> /u/mvanigan </a> <br/> <span><a href=\"https://bsky.app/profile/nflnewsposter.bsky.social/post/3mtbtjfqqmc2i\">[link]</a></span> <span><a href=\"https://www.reddit.com/r/fantasyfootb",
-      "publishedAt": "2026-08-17T13:47:48.000Z",
-      "trust": 0.65,
-      "matches": [
-        {
-          "playerId": "breece-hall-nyj-rb",
-          "name": "Breece Hall",
-          "delta": 6
-        }
-      ]
-    },
-    {
       "id": "alpha_e8457e6d65e656a3",
       "source": "CBS Sports NFL",
       "publisher": "CBS Sports",
@@ -252,41 +330,29 @@
       ]
     },
     {
-      "id": "alpha_ae735770bfced6df",
-      "source": "CBS Sports NFL",
-      "publisher": "CBS Sports",
-      "sourceUrl": "https://www.cbssports.com/nfl/news/rams-puka-nacua-reveals-injury-he-suffered-at-michael-rubin-party/",
-      "title": "Rams' Puka Nacua reveals injury he suffered at Michael Rubin party",
-      "snippet": "Nacua ran into a glass window while looking for teammate Davante Adams",
-      "publishedAt": "2026-08-14T15:23:19.000Z",
-      "trust": 0.95,
-      "matches": [
-        {
-          "playerId": "puka-nacua-lar-wr",
-          "name": "Puka Nacua",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_59525f559b31a7f3",
+      "id": "alpha_7909e3816266b4f0",
       "source": "Yahoo Sports NFL",
       "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/nfl/live/nfl-news-preseason-schedule-whos-playing-live-updates-today-152512676.html",
-      "title": "NFL news, live updates: Breece Hall suffers groin injury; Von Miller to sign with Cowboys",
+      "sourceUrl": "https://sports.yahoo.com/nfl/live/nfl-news-injury-updates-preseason-schedule-whos-playing-152512676.html",
+      "title": "NFL news, live updates: Bo Nix involved in Broncos practice fight; Jets RB Breece Hall to miss 2-3 weeks with injury, Saints rookie Jordyn Tyson out 2 months; Giants sign RB Najee ",
       "snippet": "Follow along with the latest NFL news and updates as the preseason plays out.",
       "publishedAt": "2026-08-13T15:25:12.000Z",
       "trust": 1,
       "matches": [
         {
+          "playerId": "jordyn-tyson-no-wr",
+          "name": "Jordyn Tyson",
+          "delta": -6
+        },
+        {
           "playerId": "breece-hall-nyj-rb",
           "name": "Breece Hall",
-          "delta": -6,
-          "injury": {
-            "status": "Questionable",
-            "note": "NFL news, live updates: Breece Hall suffers groin injury; Von Miller to sign with Cowboys",
-            "sourceUpdatedAt": 1786634712000
-          }
+          "delta": -6
+        },
+        {
+          "playerId": "bo-nix-den-qb",
+          "name": "Bo Nix",
+          "delta": -6
         }
       ]
     }
