@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-17T22:43:44.044Z",
+  "generatedAt": "2026-08-18T10:48:52.358Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -23,14 +23,14 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 5
+      "matched": 4
     },
     {
       "id": "cbs-nfl",
       "name": "CBS Sports NFL",
       "url": "https://www.cbssports.com/rss/headlines/nfl/",
       "ok": true,
-      "matched": 3
+      "matched": 4
     },
     {
       "id": "rotoballer",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-14 add over the last 24 hours (10,766 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-17T22:43:44.044Z",
+      "snippet": "Top-18 add over the last 24 hours (8,169 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-18T10:48:52.358Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,14 +99,82 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-19 add over the last 24 hours (9,144 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-17T22:43:44.044Z",
+      "snippet": "Top-20 add over the last 24 hours (7,893 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-18T10:48:52.358Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "keaton-mitchell-lac-rb",
           "name": "Keaton Mitchell",
           "delta": 5
+        }
+      ]
+    },
+    {
+      "id": "alpha_8d6984ef72b87be3",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/cam-skattebo-won-t-let-034453328.html",
+      "title": "Cam Skattebo won’t let gruesome injury change his Giants game",
+      "snippet": "Cam Skattebo is looking to add to his game, not subtract from it.",
+      "publishedAt": "2026-08-18T03:44:53.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "cam-skattebo-nyg-rb",
+          "name": "Cam Skattebo",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_a4e25b6c300c6ae5",
+      "source": "CBS Sports NFL",
+      "publisher": "CBS Sports",
+      "sourceUrl": "https://www.cbssports.com/nfl/news/saints-rookie-jordyn-tyson-out-two-months-what-will-new-orleans-do-at-wr/",
+      "title": "Saints rookie Jordyn Tyson reportedly out months with hamstring injury: What New Orleans can do at WR",
+      "snippet": "Tyson suffered a hamstring injury last week and could start the year on injured reserve",
+      "publishedAt": "2026-08-18T02:42:18.000Z",
+      "trust": 0.95,
+      "matches": [
+        {
+          "playerId": "jordyn-tyson-no-wr",
+          "name": "Jordyn Tyson",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_fb04359f66c83247",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/george-kittle-eye-popping-injury-022029314.html",
+      "title": "George Kittle has ‘eye popping’ update from injury recovery",
+      "snippet": "It’s been seven months since George Kittle ruptured his Achilles against the Philadelphia Eagles in the NFC Wild Card, and he’s already making significant progress on returning to the field....",
+      "publishedAt": "2026-08-18T02:20:29.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "george-kittle-sf-te",
+          "name": "George Kittle",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_21ee30b34edcd1ba",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/christian-mccaffrey-tightness-injury-revealed-010939810.html",
+      "title": "Christian McCaffrey tightness injury revealed to be true as other veteran RB released",
+      "snippet": "The San Francisco 49ers running back room might’ve received some good news when it comes to Christian McCaffrey’s mystery tightness. Or maybe it’s not good news. It depends on where...",
+      "publishedAt": "2026-08-18T01:09:39.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "christian-mccaffrey-sf-rb",
+          "name": "Christian McCaffrey",
+          "delta": -6
         }
       ]
     },
@@ -129,74 +197,6 @@
           "playerId": "breece-hall-nyj-rb",
           "name": "Breece Hall",
           "delta": 6
-        }
-      ]
-    },
-    {
-      "id": "alpha_4652c6545b31a9b7",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/nfl/breaking-news/article/saints-rookie-wr-jordyn-tyson-reportedly-expected-to-miss-about-2-months-due-to-training-camp-hamstring-injury-223230593.html",
-      "title": "Saints rookie WR Jordyn Tyson reportedly expected to miss about 2 months due to training camp hamstring injury",
-      "snippet": "Tyson had hamstring issues last year at Arizona State, but New Orleans head coach Kellen Moore told reporters that the wideout's latest setback isn't related to his injury history.",
-      "publishedAt": "2026-08-17T22:32:30.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "jordyn-tyson-no-wr",
-          "name": "Jordyn Tyson",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_34902607966ca7d4",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/lions-injury-updates-good-news-221701414.html",
-      "title": "Lions injury updates: Good news for Jameson Williams",
-      "snippet": "Detroit Lions WR Jameson Williams has a shoulder injury, but it isn’t expected to be serious.",
-      "publishedAt": "2026-08-17T22:17:01.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "jameson-williams-det-wr",
-          "name": "Jameson Williams",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_0dd26303bca6d528",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/report-confirms-breece-halls-groin-220938189.html",
-      "title": "Report: Follow-up confirms Breece Hall's groin injury is minor",
-      "snippet": "Jets running back Breece Hall received good news Monday: A follow-up confirmed his groin injury is minor, Connor Hughes of SNY TV reports.",
-      "publishedAt": "2026-08-17T22:09:38.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "breece-hall-nyj-rb",
-          "name": "Breece Hall",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_181d1f65bc61da62",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/jets-breece-hall-undergo-further-143144406.html",
-      "title": "Testing confirms Breece Hall's groin injury is minor, Jets to be cautious with RB",
-      "snippet": "The Jets had a bit of a scare during Monday’s practice, as star running back Breece Hall strained his groin. But by day's end were breathing a big sigh of relief.",
-      "publishedAt": "2026-08-17T22:05:00.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "breece-hall-nyj-rb",
-          "name": "Breece Hall",
-          "delta": -6
         }
       ]
     },
