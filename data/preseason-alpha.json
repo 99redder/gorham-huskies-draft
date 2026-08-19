@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-19T10:48:22.402Z",
+  "generatedAt": "2026-08-19T22:44:15.669Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -9,7 +9,7 @@
       "name": "Sleeper Trends",
       "url": "https://api.sleeper.app/v1/players/nfl/trending/add?lookback_hours=24&limit=50",
       "ok": true,
-      "matched": 2
+      "matched": 3
     },
     {
       "id": "espn-nfl",
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 3
+      "matched": 5
     },
     {
       "id": "cbs-nfl",
@@ -77,18 +77,18 @@
   ],
   "entries": [
     {
-      "id": "alpha_9e25aba50d28296e",
+      "id": "alpha_cb6919d856bf1cd0",
       "source": "Sleeper Trends",
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
-      "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-17 add over the last 24 hours (8,274 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-19T10:48:22.402Z",
+      "title": "Tre Tucker is trending in Sleeper adds",
+      "snippet": "Top-18 add over the last 24 hours (9,210 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-19T22:44:15.669Z",
       "trust": 0.75,
       "matches": [
         {
-          "playerId": "malik-willis-mia-qb",
-          "name": "Malik Willis",
+          "playerId": "tre-tucker-lv-wr",
+          "name": "Tre Tucker",
           "delta": 5
         }
       ]
@@ -99,8 +99,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-18 add over the last 24 hours (8,028 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-19T10:48:22.402Z",
+      "snippet": "Top-19 add over the last 24 hours (9,045 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-19T22:44:15.669Z",
       "trust": 0.75,
       "matches": [
         {
@@ -111,35 +111,164 @@
       ]
     },
     {
-      "id": "alpha_8191988c862c65a4",
+      "id": "alpha_9e25aba50d28296e",
+      "source": "Sleeper Trends",
+      "publisher": "Sleeper",
+      "sourceUrl": "https://sleeper.com/",
+      "title": "Malik Willis is trending in Sleeper adds",
+      "snippet": "Top-24 add over the last 24 hours (8,407 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-19T22:44:15.669Z",
+      "trust": 0.75,
+      "matches": [
+        {
+          "playerId": "malik-willis-mia-qb",
+          "name": "Malik Willis",
+          "delta": 5
+        }
+      ]
+    },
+    {
+      "id": "alpha_24f9391006812a39",
       "source": "Yahoo Sports NFL",
       "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/mike-evans-tightness-49ers-injury-231733756.html",
-      "title": "Mike Evans ‘tightness’ and the 49ers’ injury woes that won’t go away",
-      "snippet": "Uh oh. There’s that dreaded word again. Tightness. The mysterious and seemingly contagious condition that has also kept Christian McCaffrey out of San Francisco 49ers training camp cropped up again...",
-      "publishedAt": "2026-08-18T23:17:33.000Z",
+      "sourceUrl": "https://sports.yahoo.com/nfl/article/colts-offense-takes-another-hit-as-te-tyler-warren-picks-up-groin-injury-221859645.html",
+      "title": "Colts offense takes another hit as TE Tyler Warren picks up groin injury",
+      "snippet": "Warren joins Alec Pierce as two important members of the Colts' offense dealing with injuries.",
+      "publishedAt": "2026-08-19T22:18:59.000Z",
       "trust": 1,
       "matches": [
         {
-          "playerId": "mike-evans-sf-wr",
-          "name": "Mike Evans",
+          "playerId": "tyler-warren-ind-te",
+          "name": "Tyler Warren",
+          "delta": -4.8
+        }
+      ]
+    },
+    {
+      "id": "alpha_c4bdd1b25d0c419d",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/colts-te-tyler-warren-exits-200701131.html",
+      "title": "Colts TE Tyler Warren exits practice with an injury",
+      "snippet": "Colts tight end Tyler Warren left practice early after going down on a route in 11-on-11 drills.",
+      "publishedAt": "2026-08-19T20:07:01.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "tyler-warren-ind-te",
+          "name": "Tyler Warren",
           "delta": -6
         }
       ]
     },
     {
-      "id": "alpha_744d5ff678fbc6bc",
+      "id": "alpha_46e73c3b32a7a179",
       "source": "Yahoo Sports NFL",
       "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/christian-mccaffrey-injury-shanahan-explains-224543892.html",
-      "title": "Christian McCaffrey injury update: Shanahan explains why RB's missing practice",
-      "snippet": "49ers' star Christian McCaffrey continues to deal with an injury. Kyle Shanahan clears the air on the star's absence as contract speculation grows.",
-      "publishedAt": "2026-08-18T22:45:43.000Z",
+      "sourceUrl": "https://sports.yahoo.com/articles/detroit-lions-injury-news-jameson-194704123.html",
+      "title": "Detroit Lions injury news: Jameson Williams returns, Sam LaPorta out",
+      "snippet": "Detroit Lions’ Jameson Williams was back at training camp after a couple days off, but Sam LaPorta was out",
+      "publishedAt": "2026-08-19T19:47:04.000Z",
       "trust": 1,
       "matches": [
         {
-          "playerId": "christian-mccaffrey-sf-rb",
-          "name": "Christian McCaffrey",
+          "playerId": "jameson-williams-det-wr",
+          "name": "Jameson Williams",
+          "delta": -6
+        },
+        {
+          "playerId": "sam-laporta-det-te",
+          "name": "Sam LaPorta",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_17db00a97f8448f2",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/j-brown-didn-t-speak-185401701.html",
+      "title": "A.J. Brown didn’t speak with Jalen Hurts or DeVonta Smith during Eagles-Patriots practice",
+      "snippet": "The former friends are all out of words for, and about, each other.",
+      "publishedAt": "2026-08-19T18:54:01.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "a-j-brown-ne-wr",
+          "name": "A.J. Brown",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_07e02f2d77ce303c",
+      "source": "r/fantasyfootball",
+      "publisher": "Reddit",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vstn1m/jadarian_price_has_returned_to_firstteam_work_and/",
+      "title": "Jadarian Price has returned to first-team work and is building momentum as Seattle's lead-back candidate, but his workload remains unsettled. Beat coverage still projects a shared ",
+      "snippet": "submitted by <a href=\"https://www.reddit.com/user/mochajoesdynsaty\"> /u/mochajoesdynsaty </a> <br/> <span><a href=\"https://dynastypulse.com/player/2358280d-265c-4b80-93b8-05ee77aab4e1/snapshot/4b71ec10-ac42-421d-9bbe-b8ffc7bcebe6\">[link]</a",
+      "publishedAt": "2026-08-19T17:48:02.000Z",
+      "trust": 0.65,
+      "matches": [
+        {
+          "playerId": "jadarian-price-sea-rb",
+          "name": "Jadarian Price",
+          "delta": 6
+        }
+      ]
+    },
+    {
+      "id": "alpha_bde8bb44ad7218e3",
+      "source": "CBS Sports NFL",
+      "publisher": "CBS Sports",
+      "sourceUrl": "https://www.cbssports.com/nfl/news/nfl-training-camp-injury-tracker/",
+      "title": "NFL preseason injuries tracker: Updates on Breece Hall, Jeremiyah Love, Alvin Kamara",
+      "snippet": "We track the biggest injury updates and recovery timelines as teams navigate a brutal start to the NFL preseason",
+      "publishedAt": "2026-08-19T16:57:52.000Z",
+      "trust": 0.95,
+      "matches": [
+        {
+          "playerId": "jeremiyah-love-ari-rb",
+          "name": "Jeremiyah Love",
+          "delta": 6
+        },
+        {
+          "playerId": "breece-hall-nyj-rb",
+          "name": "Breece Hall",
+          "delta": 6
+        }
+      ]
+    },
+    {
+      "id": "alpha_27d65e8df614bb01",
+      "source": "CBS Sports NFL",
+      "publisher": "CBS Sports",
+      "sourceUrl": "https://www.cbssports.com/nfl/news/jayden-higgins-injury-texans-torn-acl/",
+      "title": "Texans lose promising second-year WR Jayden Higgins to season-ending injury",
+      "snippet": "The Texans will be without one of C.J. Stroud's top young targets after Higgins reportedly tore his ACL and was ruled out for the season",
+      "publishedAt": "2026-08-19T16:55:25.000Z",
+      "trust": 0.95,
+      "matches": [
+        {
+          "playerId": "jayden-higgins-hou-wr",
+          "name": "Jayden Higgins",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_90354ce7b0e9af08",
+      "source": "r/fantasyfootball",
+      "publisher": "Reddit",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vsq5wk/commanders_rb_rachaad_white_is_not_practicing_due/",
+      "title": "Commanders RB Rachaad White is not practicing due to undisclosed injury",
+      "snippet": "submitted by <a href=\"https://www.reddit.com/user/Famous-Egg-6136\"> /u/Famous-Egg-6136 </a> <br/> <span><a href=\"https://www.rotowire.com/football/player/rachaad-white-15802\">[link]</a></span> <span><a href=\"https://www.reddit.com/r/fantasy",
+      "publishedAt": "2026-08-19T15:46:22.000Z",
+      "trust": 0.65,
+      "matches": [
+        {
+          "playerId": "rachaad-white-was-rb",
+          "name": "Rachaad White",
           "delta": -6
         }
       ]
@@ -158,28 +287,6 @@
           "playerId": "mike-evans-sf-wr",
           "name": "Mike Evans",
           "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_462ac6e482f80666",
-      "source": "r/fantasyfootball",
-      "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vruwr1/mike_lafleur_confirmed_jeremiyah_love_ankle_wont/",
-      "title": "Mike LaFleur confirmed Jeremiyah Love (ankle) won't need surgery.",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/spotlightdan\"> /u/spotlightdan </a> <br/> <span><a href=\"https://bsky.app/profile/insidenflnews.bsky.social/post/3mtemmehins2q\">[link]</a></span> <span><a href=\"https://www.reddit.com/r/fant",
-      "publishedAt": "2026-08-18T16:53:16.000Z",
-      "trust": 0.65,
-      "matches": [
-        {
-          "playerId": "jeremiyah-love-ari-rb",
-          "name": "Jeremiyah Love",
-          "delta": 6,
-          "injury": {
-            "status": "Questionable",
-            "note": "Mike LaFleur confirmed Jeremiyah Love (ankle) won't need surgery.",
-            "sourceUpdatedAt": 1787071996000
-          }
         }
       ]
     },
@@ -218,84 +325,18 @@
       ]
     },
     {
-      "id": "alpha_af1a2a92ee8f2579",
-      "source": "r/fantasyfootball",
-      "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vrp1jc/jaguars_wr_parker_washington_is_daytoday_with_an/",
-      "title": "Jaguars WR Parker Washington is day-to-day with an undisclosed injury, reports Ryan O’Halloran of the Florida Times-Union.",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/haventmetyou\"> /u/haventmetyou </a> <br/> <span><a href=\"https://www.nbcsports.com/fantasy/football/player-news/2026-08-18/parker-washington-undisclosed-day-to-day\">[link]</a></span> <span><",
-      "publishedAt": "2026-08-18T13:22:05.000Z",
-      "trust": 0.65,
-      "matches": [
-        {
-          "playerId": "parker-washington-jax-wr",
-          "name": "Parker Washington",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_20f50eb768451559",
-      "source": "CBS Sports NFL",
-      "publisher": "CBS Sports",
-      "sourceUrl": "https://www.cbssports.com/nfl/news/nfl-training-camp-injury-tracker/",
-      "title": "NFL preseason injuries tracker: Breece Hall's status, Jeremiyah Love update",
-      "snippet": "We track the biggest injury updates and recovery timelines as teams navigate a brutal start to the NFL preseason",
-      "publishedAt": "2026-08-17T22:34:45.000Z",
-      "trust": 0.95,
-      "matches": [
-        {
-          "playerId": "jeremiyah-love-ari-rb",
-          "name": "Jeremiyah Love",
-          "delta": 6
-        },
-        {
-          "playerId": "breece-hall-nyj-rb",
-          "name": "Breece Hall",
-          "delta": 6
-        }
-      ]
-    },
-    {
-      "id": "alpha_e8457e6d65e656a3",
-      "source": "CBS Sports NFL",
-      "publisher": "CBS Sports",
-      "sourceUrl": "https://www.cbssports.com/nfl/news/jeremiyah-love-injury-update-cardinals-rookie-has-high-ankle-sprain/",
-      "title": "Jeremiyah Love injury update: Cardinals rookie has high ankle sprain, team hoping for Week 1 return",
-      "snippet": "Love shined in a big role in preseason Week 1 but didn't leave unscathed",
-      "publishedAt": "2026-08-17T01:35:06.000Z",
-      "trust": 0.95,
-      "matches": [
-        {
-          "playerId": "jeremiyah-love-ari-rb",
-          "name": "Jeremiyah Love",
-          "delta": 6
-        }
-      ]
-    },
-    {
-      "id": "alpha_7909e3816266b4f0",
+      "id": "alpha_6e8923387a75d032",
       "source": "Yahoo Sports NFL",
       "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/nfl/live/nfl-news-injury-updates-preseason-schedule-whos-playing-152512676.html",
-      "title": "NFL news, live updates: Bo Nix involved in Broncos practice fight; Jets RB Breece Hall to miss 2-3 weeks with injury, Saints rookie Jordyn Tyson out 2 months; Giants sign RB Najee ",
+      "sourceUrl": "https://sports.yahoo.com/nfl/live/nfl-news-injury-updates-preseason-week-2-schedule-whos-playing-starters-152512676.html",
+      "title": "NFL news, live updates: Saints' Alvin Kamara out at least 1 month, Chargers C Tyler Biadasz out indefinitely with knee injuries; Texans WR Jayden Higgins reportedly tears ACL",
       "snippet": "Follow along with the latest NFL news and updates as the preseason plays out.",
       "publishedAt": "2026-08-13T15:25:12.000Z",
       "trust": 1,
       "matches": [
         {
-          "playerId": "jordyn-tyson-no-wr",
-          "name": "Jordyn Tyson",
-          "delta": -6
-        },
-        {
-          "playerId": "breece-hall-nyj-rb",
-          "name": "Breece Hall",
-          "delta": -6
-        },
-        {
-          "playerId": "bo-nix-den-qb",
-          "name": "Bo Nix",
+          "playerId": "jayden-higgins-hou-wr",
+          "name": "Jayden Higgins",
           "delta": -6
         }
       ]
