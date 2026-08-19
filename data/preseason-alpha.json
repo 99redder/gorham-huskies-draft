@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T22:43:57.460Z",
+  "generatedAt": "2026-08-19T10:48:22.402Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 5
+      "matched": 3
     },
     {
       "id": "cbs-nfl",
@@ -51,7 +51,7 @@
       "name": "r/fantasyfootball",
       "url": "https://www.reddit.com/r/fantasyfootball/.rss",
       "ok": true,
-      "matched": 4
+      "matched": 3
     },
     {
       "id": "pro-football-rumors",
@@ -77,30 +77,13 @@
   ],
   "entries": [
     {
-      "id": "alpha_fe3ddb7ed800ba6c",
-      "source": "Sleeper Trends",
-      "publisher": "Sleeper",
-      "sourceUrl": "https://sleeper.com/",
-      "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-17 add over the last 24 hours (8,550 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-18T22:43:57.460Z",
-      "trust": 0.75,
-      "matches": [
-        {
-          "playerId": "keaton-mitchell-lac-rb",
-          "name": "Keaton Mitchell",
-          "delta": 5
-        }
-      ]
-    },
-    {
       "id": "alpha_9e25aba50d28296e",
       "source": "Sleeper Trends",
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-18 add over the last 24 hours (8,323 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-18T22:43:57.460Z",
+      "snippet": "Top-17 add over the last 24 hours (8,274 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-19T10:48:22.402Z",
       "trust": 0.75,
       "matches": [
         {
@@ -111,75 +94,53 @@
       ]
     },
     {
-      "id": "alpha_fc5bfa8427d8db43",
+      "id": "alpha_fe3ddb7ed800ba6c",
+      "source": "Sleeper Trends",
+      "publisher": "Sleeper",
+      "sourceUrl": "https://sleeper.com/",
+      "title": "Keaton Mitchell is trending in Sleeper adds",
+      "snippet": "Top-18 add over the last 24 hours (8,028 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-19T10:48:22.402Z",
+      "trust": 0.75,
+      "matches": [
+        {
+          "playerId": "keaton-mitchell-lac-rb",
+          "name": "Keaton Mitchell",
+          "delta": 5
+        }
+      ]
+    },
+    {
+      "id": "alpha_8191988c862c65a4",
       "source": "Yahoo Sports NFL",
       "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/expect-jordyn-tyson-return-injury-203321944.html",
-      "title": "When should we expect Jordyn Tyson to return from his injury?",
-      "snippet": "A set timetable is good, but things could change.",
-      "publishedAt": "2026-08-18T20:33:21.000Z",
+      "sourceUrl": "https://sports.yahoo.com/articles/mike-evans-tightness-49ers-injury-231733756.html",
+      "title": "Mike Evans ‘tightness’ and the 49ers’ injury woes that won’t go away",
+      "snippet": "Uh oh. There’s that dreaded word again. Tightness. The mysterious and seemingly contagious condition that has also kept Christian McCaffrey out of San Francisco 49ers training camp cropped up again...",
+      "publishedAt": "2026-08-18T23:17:33.000Z",
       "trust": 1,
       "matches": [
         {
-          "playerId": "jordyn-tyson-no-wr",
-          "name": "Jordyn Tyson",
+          "playerId": "mike-evans-sf-wr",
+          "name": "Mike Evans",
           "delta": -6
         }
       ]
     },
     {
-      "id": "alpha_a19bd88ae2323558",
+      "id": "alpha_744d5ff678fbc6bc",
       "source": "Yahoo Sports NFL",
       "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/broncos-bo-nix-center-training-202437705.html",
-      "title": "Broncos' Bo Nix at center of training camp fight: 'I love it'",
-      "snippet": "The Broncos quarterback reportedly pulled another player off a scrum, but exited the fight without any issues.",
-      "publishedAt": "2026-08-18T20:24:37.000Z",
+      "sourceUrl": "https://sports.yahoo.com/articles/christian-mccaffrey-injury-shanahan-explains-224543892.html",
+      "title": "Christian McCaffrey injury update: Shanahan explains why RB's missing practice",
+      "snippet": "49ers' star Christian McCaffrey continues to deal with an injury. Kyle Shanahan clears the air on the star's absence as contract speculation grows.",
+      "publishedAt": "2026-08-18T22:45:43.000Z",
       "trust": 1,
       "matches": [
         {
-          "playerId": "bo-nix-den-qb",
-          "name": "Bo Nix",
-          "delta": 6
-        }
-      ]
-    },
-    {
-      "id": "alpha_09d00fa833d74abc",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/nfl/article/bo-nix-after-chippy-broncos-practice-includes-scuffle-qb-on-ground-i-love-it-200125590.html",
-      "title": "Bo Nix after chippy Broncos practice includes scuffle, QB on ground: 'I love it'",
-      "snippet": "\"I'm glad that we're fiery, I love the competition out here,\" offensive coordinator Davis Webb said. But \"we can't cross that line, and that's offense and defense.\"",
-      "publishedAt": "2026-08-18T20:01:25.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "bo-nix-den-qb",
-          "name": "Bo Nix",
-          "delta": 6
-        }
-      ]
-    },
-    {
-      "id": "alpha_561f21aa82a9c8eb",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/nfl/article/breece-hall-emeka-egbuka-among-top-20-injury-situations-that-matter-most-heading-into-the-season-195341472.html",
-      "title": "Breece Hall, Emeka Egbuka among top 20 injury situations that matter most heading into the season",
-      "snippet": "There are numerous injuries affecting NFL teams less than a month before the regular season.",
-      "publishedAt": "2026-08-18T19:53:41.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "emeka-egbuka-tb-wr",
-          "name": "Emeka Egbuka",
-          "delta": -4.8
-        },
-        {
-          "playerId": "breece-hall-nyj-rb",
-          "name": "Breece Hall",
-          "delta": -4.8
+          "playerId": "christian-mccaffrey-sf-rb",
+          "name": "Christian McCaffrey",
+          "delta": -6
         }
       ]
     },
@@ -196,23 +157,6 @@
         {
           "playerId": "mike-evans-sf-wr",
           "name": "Mike Evans",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_c7e766451c5c8181",
-      "source": "r/fantasyfootball",
-      "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vrwux3/texans_receiver_jayden_higgins_injured_in/",
-      "title": "Texans receiver Jayden Higgins injured in practice session with Raiders",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/Famous-Egg-6136\"> /u/Famous-Egg-6136 </a> <br/> <span><a href=\"https://www.houstonchronicle.com/sports/texans/article/houston-jayden-higgins-injury-22393027.php\">[link]</a></span> <span><a h",
-      "publishedAt": "2026-08-18T18:01:09.000Z",
-      "trust": 0.65,
-      "matches": [
-        {
-          "playerId": "jayden-higgins-hou-wr",
-          "name": "Jayden Higgins",
           "delta": -6
         }
       ]
