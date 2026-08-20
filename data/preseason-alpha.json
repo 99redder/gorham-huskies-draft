@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-19T22:44:15.669Z",
+  "generatedAt": "2026-08-20T10:49:36.753Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -9,7 +9,7 @@
       "name": "Sleeper Trends",
       "url": "https://api.sleeper.app/v1/players/nfl/trending/add?lookback_hours=24&limit=50",
       "ok": true,
-      "matched": 3
+      "matched": 4
     },
     {
       "id": "espn-nfl",
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 5
+      "matched": 3
     },
     {
       "id": "cbs-nfl",
@@ -51,7 +51,7 @@
       "name": "r/fantasyfootball",
       "url": "https://www.reddit.com/r/fantasyfootball/.rss",
       "ok": true,
-      "matched": 3
+      "matched": 2
     },
     {
       "id": "pro-football-rumors",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Tre Tucker is trending in Sleeper adds",
-      "snippet": "Top-18 add over the last 24 hours (9,210 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-19T22:44:15.669Z",
+      "snippet": "Top-18 add over the last 24 hours (11,040 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-20T10:49:36.753Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,8 +99,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-19 add over the last 24 hours (9,045 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-19T22:44:15.669Z",
+      "snippet": "Top-21 add over the last 24 hours (8,946 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-20T10:49:36.753Z",
       "trust": 0.75,
       "matches": [
         {
@@ -116,8 +116,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-24 add over the last 24 hours (8,407 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-19T22:44:15.669Z",
+      "snippet": "Top-26 add over the last 24 hours (7,189 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-20T10:49:36.753Z",
       "trust": 0.75,
       "matches": [
         {
@@ -128,74 +128,52 @@
       ]
     },
     {
-      "id": "alpha_24f9391006812a39",
+      "id": "alpha_0a9aaccebc1fbf26",
+      "source": "Sleeper Trends",
+      "publisher": "Sleeper",
+      "sourceUrl": "https://sleeper.com/",
+      "title": "Jaylin Noel is trending in Sleeper adds",
+      "snippet": "Top-28 add over the last 24 hours (7,034 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-20T10:49:36.753Z",
+      "trust": 0.75,
+      "matches": [
+        {
+          "playerId": "jaylin-noel-hou-wr",
+          "name": "Jaylin Noel",
+          "delta": 5
+        }
+      ]
+    },
+    {
+      "id": "alpha_4135c6fa7822b526",
       "source": "Yahoo Sports NFL",
       "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/nfl/article/colts-offense-takes-another-hit-as-te-tyler-warren-picks-up-groin-injury-221859645.html",
-      "title": "Colts offense takes another hit as TE Tyler Warren picks up groin injury",
-      "snippet": "Warren joins Alec Pierce as two important members of the Colts' offense dealing with injuries.",
-      "publishedAt": "2026-08-19T22:18:59.000Z",
+      "sourceUrl": "https://sports.yahoo.com/articles/colts-reportedly-receive-positive-news-021646520.html",
+      "title": "Colts reportedly receive positive news on TE Tyler Warren’s groin injury",
+      "snippet": "According to NFL Insider Jordan Schultz, the Indianapolis Colts have received positive news on Tyler Warren’s groin injury suffered during Wednesday’s joint training camp practice against the Atlanta Falcons at Grand Park: The Colts’ 2nd-ye",
+      "publishedAt": "2026-08-20T02:16:46.000Z",
       "trust": 1,
       "matches": [
         {
           "playerId": "tyler-warren-ind-te",
           "name": "Tyler Warren",
-          "delta": -4.8
+          "delta": -6
         }
       ]
     },
     {
-      "id": "alpha_c4bdd1b25d0c419d",
+      "id": "alpha_66ec89d7fb51469d",
       "source": "Yahoo Sports NFL",
       "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/colts-te-tyler-warren-exits-200701131.html",
-      "title": "Colts TE Tyler Warren exits practice with an injury",
-      "snippet": "Colts tight end Tyler Warren left practice early after going down on a route in 11-on-11 drills.",
-      "publishedAt": "2026-08-19T20:07:01.000Z",
+      "sourceUrl": "https://sports.yahoo.com/articles/tyler-warren-groin-injury-012244747.html",
+      "title": "Tyler Warren has groin injury",
+      "snippet": "Colts tight end Tyler Warren left practice on Wednesday with an injury.",
+      "publishedAt": "2026-08-20T01:22:44.000Z",
       "trust": 1,
       "matches": [
         {
           "playerId": "tyler-warren-ind-te",
           "name": "Tyler Warren",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_46e73c3b32a7a179",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/detroit-lions-injury-news-jameson-194704123.html",
-      "title": "Detroit Lions injury news: Jameson Williams returns, Sam LaPorta out",
-      "snippet": "Detroit Lions’ Jameson Williams was back at training camp after a couple days off, but Sam LaPorta was out",
-      "publishedAt": "2026-08-19T19:47:04.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "jameson-williams-det-wr",
-          "name": "Jameson Williams",
-          "delta": -6
-        },
-        {
-          "playerId": "sam-laporta-det-te",
-          "name": "Sam LaPorta",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_17db00a97f8448f2",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/j-brown-didn-t-speak-185401701.html",
-      "title": "A.J. Brown didn’t speak with Jalen Hurts or DeVonta Smith during Eagles-Patriots practice",
-      "snippet": "The former friends are all out of words for, and about, each other.",
-      "publishedAt": "2026-08-19T18:54:01.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "a-j-brown-ne-wr",
-          "name": "A.J. Brown",
           "delta": -6
         }
       ]
@@ -269,23 +247,6 @@
         {
           "playerId": "rachaad-white-was-rb",
           "name": "Rachaad White",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_d0cd59a14be76875",
-      "source": "r/fantasyfootball",
-      "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vrxy51/mike_evans_leaves_practice_with_a_footankle_injury/",
-      "title": "Mike Evans leaves practice with a foot/ankle injury",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/Famous-Egg-6136\"> /u/Famous-Egg-6136 </a> <br/> <span><a href=\"https://www.rotowire.com/football/player/mike-evans-9253?nid=634069\">[link]</a></span> <span><a href=\"https://www.reddit.com/r/",
-      "publishedAt": "2026-08-18T18:39:22.000Z",
-      "trust": 0.65,
-      "matches": [
-        {
-          "playerId": "mike-evans-sf-wr",
-          "name": "Mike Evans",
           "delta": -6
         }
       ]
