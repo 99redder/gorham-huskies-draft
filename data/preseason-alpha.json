@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-20T10:49:36.753Z",
+  "generatedAt": "2026-08-20T22:47:11.974Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -9,7 +9,7 @@
       "name": "Sleeper Trends",
       "url": "https://api.sleeper.app/v1/players/nfl/trending/add?lookback_hours=24&limit=50",
       "ok": true,
-      "matched": 4
+      "matched": 3
     },
     {
       "id": "espn-nfl",
@@ -23,14 +23,14 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 3
+      "matched": 2
     },
     {
       "id": "cbs-nfl",
       "name": "CBS Sports NFL",
       "url": "https://www.cbssports.com/rss/headlines/nfl/",
       "ok": true,
-      "matched": 4
+      "matched": 2
     },
     {
       "id": "rotoballer",
@@ -51,7 +51,7 @@
       "name": "r/fantasyfootball",
       "url": "https://www.reddit.com/r/fantasyfootball/.rss",
       "ok": true,
-      "matched": 2
+      "matched": 3
     },
     {
       "id": "pro-football-rumors",
@@ -77,30 +77,13 @@
   ],
   "entries": [
     {
-      "id": "alpha_cb6919d856bf1cd0",
-      "source": "Sleeper Trends",
-      "publisher": "Sleeper",
-      "sourceUrl": "https://sleeper.com/",
-      "title": "Tre Tucker is trending in Sleeper adds",
-      "snippet": "Top-18 add over the last 24 hours (11,040 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-20T10:49:36.753Z",
-      "trust": 0.75,
-      "matches": [
-        {
-          "playerId": "tre-tucker-lv-wr",
-          "name": "Tre Tucker",
-          "delta": 5
-        }
-      ]
-    },
-    {
       "id": "alpha_fe3ddb7ed800ba6c",
       "source": "Sleeper Trends",
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-21 add over the last 24 hours (8,946 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-20T10:49:36.753Z",
+      "snippet": "Top-21 add over the last 24 hours (7,119 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-20T22:47:11.974Z",
       "trust": 0.75,
       "matches": [
         {
@@ -111,13 +94,30 @@
       ]
     },
     {
+      "id": "alpha_cb6919d856bf1cd0",
+      "source": "Sleeper Trends",
+      "publisher": "Sleeper",
+      "sourceUrl": "https://sleeper.com/",
+      "title": "Tre Tucker is trending in Sleeper adds",
+      "snippet": "Top-23 add over the last 24 hours (6,438 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-20T22:47:11.974Z",
+      "trust": 0.75,
+      "matches": [
+        {
+          "playerId": "tre-tucker-lv-wr",
+          "name": "Tre Tucker",
+          "delta": 5
+        }
+      ]
+    },
+    {
       "id": "alpha_9e25aba50d28296e",
       "source": "Sleeper Trends",
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-26 add over the last 24 hours (7,189 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-20T10:49:36.753Z",
+      "snippet": "Top-25 add over the last 24 hours (5,936 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-20T22:47:11.974Z",
       "trust": 0.75,
       "matches": [
         {
@@ -128,70 +128,87 @@
       ]
     },
     {
-      "id": "alpha_0a9aaccebc1fbf26",
-      "source": "Sleeper Trends",
-      "publisher": "Sleeper",
-      "sourceUrl": "https://sleeper.com/",
-      "title": "Jaylin Noel is trending in Sleeper adds",
-      "snippet": "Top-28 add over the last 24 hours (7,034 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-20T10:49:36.753Z",
-      "trust": 0.75,
-      "matches": [
-        {
-          "playerId": "jaylin-noel-hou-wr",
-          "name": "Jaylin Noel",
-          "delta": 5
-        }
-      ]
-    },
-    {
-      "id": "alpha_4135c6fa7822b526",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/colts-reportedly-receive-positive-news-021646520.html",
-      "title": "Colts reportedly receive positive news on TE Tyler Warren’s groin injury",
-      "snippet": "According to NFL Insider Jordan Schultz, the Indianapolis Colts have received positive news on Tyler Warren’s groin injury suffered during Wednesday’s joint training camp practice against the Atlanta Falcons at Grand Park: The Colts’ 2nd-ye",
-      "publishedAt": "2026-08-20T02:16:46.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "tyler-warren-ind-te",
-          "name": "Tyler Warren",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_66ec89d7fb51469d",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/tyler-warren-groin-injury-012244747.html",
-      "title": "Tyler Warren has groin injury",
-      "snippet": "Colts tight end Tyler Warren left practice on Wednesday with an injury.",
-      "publishedAt": "2026-08-20T01:22:44.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "tyler-warren-ind-te",
-          "name": "Tyler Warren",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_07e02f2d77ce303c",
+      "id": "alpha_532ccd576ff5891e",
       "source": "r/fantasyfootball",
       "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vstn1m/jadarian_price_has_returned_to_firstteam_work_and/",
-      "title": "Jadarian Price has returned to first-team work and is building momentum as Seattle's lead-back candidate, but his workload remains unsettled. Beat coverage still projects a shared ",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/mochajoesdynsaty\"> /u/mochajoesdynsaty </a> <br/> <span><a href=\"https://dynastypulse.com/player/2358280d-265c-4b80-93b8-05ee77aab4e1/snapshot/4b71ec10-ac42-421d-9bbe-b8ffc7bcebe6\">[link]</a",
-      "publishedAt": "2026-08-19T17:48:02.000Z",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vtttk3/monken_quinshon_judkins_held_out_of_practice/",
+      "title": "Monken: Quinshon Judkins held out of practice Thursday due to \"nagging injury,\" via Scott Petrak.",
+      "snippet": "submitted by <a href=\"https://www.reddit.com/user/kzqmfkkr\"> /u/kzqmfkkr </a> <br/> <span><a href=\"https://bsky.app/profile/insidenflnews.bsky.social/post/3mtjyudvge22j\">[link]</a></span> <span><a href=\"https://www.reddit.com/r/fantasyfootb",
+      "publishedAt": "2026-08-20T19:42:59.000Z",
       "trust": 0.65,
       "matches": [
         {
-          "playerId": "jadarian-price-sea-rb",
-          "name": "Jadarian Price",
+          "playerId": "quinshon-judkins-cle-rb",
+          "name": "Quinshon Judkins",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_f3276a767bb1ef1f",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/jalen-hurts-j-brown-share-193155674.html",
+      "title": "Jalen Hurts, A.J. Brown share a moment after Eagles-Patriots practice",
+      "snippet": "A meeting of the Eagles’ quarterback and his former top target.",
+      "publishedAt": "2026-08-20T19:31:55.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "a-j-brown-ne-wr",
+          "name": "A.J. Brown",
           "delta": 6
+        }
+      ]
+    },
+    {
+      "id": "alpha_26531a40ab1d5fee",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/nfl/article/jalen-hurts-aj-brown-share-hug-chat-after-patriots-eagles-second-joint-practice-192238945.html",
+      "title": "Jalen Hurts, A.J. Brown share hug, chat after Patriots-Eagles' second joint practice",
+      "snippet": "There's no bad blood between A.J. Brown and Jalen Hurts.",
+      "publishedAt": "2026-08-20T19:22:38.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "a-j-brown-ne-wr",
+          "name": "A.J. Brown",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_2757889821378ee9",
+      "source": "r/fantasyfootball",
+      "publisher": "Reddit",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vtog9o/lions_te_sam_laporta_suffered_a_hip_injury_per_hc/",
+      "title": "Lions TE Sam LaPorta suffered a hip injury, per HC Dan Campbell. Campbell says LaPorta could be ready by the start of the season, but doesn't know “for sure”.",
+      "snippet": "submitted by <a href=\"https://www.reddit.com/user/jloadin3\"> /u/jloadin3 </a> <br/> <span><a href=\"https://sleeper.com/topic/170000000000000000/1396203959940546560\">[link]</a></span> <span><a href=\"https://www.reddit.com/r/fantasyfootball/c",
+      "publishedAt": "2026-08-20T16:33:18.000Z",
+      "trust": 0.65,
+      "matches": [
+        {
+          "playerId": "sam-laporta-det-te",
+          "name": "Sam LaPorta",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_0b3efe1ec20616cf",
+      "source": "r/fantasyfootball",
+      "publisher": "Reddit",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vtl903/colts_te_tyler_warren_is_expected_to_miss_about_a/",
+      "title": "Colts TE Tyler Warren is expected to miss about a week with a minor groin injury suffered in training camp, source says. No worries for Week 1.",
+      "snippet": "submitted by <a href=\"https://www.reddit.com/user/mvanigan\"> /u/mvanigan </a> <br/> <span><a href=\"https://bsky.app/profile/rotowirenfl.bsky.social/post/3mtjhqdkvas22\">[link]</a></span> <span><a href=\"https://www.reddit.com/r/fantasyfootbal",
+      "publishedAt": "2026-08-20T14:35:12.000Z",
+      "trust": 0.65,
+      "matches": [
+        {
+          "playerId": "tyler-warren-ind-te",
+          "name": "Tyler Warren",
+          "delta": -6
         }
       ]
     },
@@ -226,74 +243,6 @@
       "snippet": "The Texans will be without one of C.J. Stroud's top young targets after Higgins reportedly tore his ACL and was ruled out for the season",
       "publishedAt": "2026-08-19T16:55:25.000Z",
       "trust": 0.95,
-      "matches": [
-        {
-          "playerId": "jayden-higgins-hou-wr",
-          "name": "Jayden Higgins",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_90354ce7b0e9af08",
-      "source": "r/fantasyfootball",
-      "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vsq5wk/commanders_rb_rachaad_white_is_not_practicing_due/",
-      "title": "Commanders RB Rachaad White is not practicing due to undisclosed injury",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/Famous-Egg-6136\"> /u/Famous-Egg-6136 </a> <br/> <span><a href=\"https://www.rotowire.com/football/player/rachaad-white-15802\">[link]</a></span> <span><a href=\"https://www.reddit.com/r/fantasy",
-      "publishedAt": "2026-08-19T15:46:22.000Z",
-      "trust": 0.65,
-      "matches": [
-        {
-          "playerId": "rachaad-white-was-rb",
-          "name": "Rachaad White",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_616bd46889dddf87",
-      "source": "CBS Sports NFL",
-      "publisher": "CBS Sports",
-      "sourceUrl": "https://www.cbssports.com/nfl/news/breece-hall-groin-injury-jets-aaron-glenn/",
-      "title": "Jets' Breece Hall could be on track for Week 1 after groin injury",
-      "snippet": "Hall is expected to miss two to three weeks after suffering a minor groin injury, putting him on track to return for the regular-season opener",
-      "publishedAt": "2026-08-18T16:17:57.000Z",
-      "trust": 0.95,
-      "matches": [
-        {
-          "playerId": "breece-hall-nyj-rb",
-          "name": "Breece Hall",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_a4e25b6c300c6ae5",
-      "source": "CBS Sports NFL",
-      "publisher": "CBS Sports",
-      "sourceUrl": "https://www.cbssports.com/nfl/news/saints-rookie-jordyn-tyson-out-two-months-what-will-new-orleans-do-at-wr/",
-      "title": "Saints rookie Jordyn Tyson reportedly out months with hamstring injury: What New Orleans can do at WR",
-      "snippet": "Tyson suffered a hamstring injury last week and could start the year on injured reserve",
-      "publishedAt": "2026-08-18T14:26:53.000Z",
-      "trust": 0.95,
-      "matches": [
-        {
-          "playerId": "jordyn-tyson-no-wr",
-          "name": "Jordyn Tyson",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_6e8923387a75d032",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/nfl/live/nfl-news-injury-updates-preseason-week-2-schedule-whos-playing-starters-152512676.html",
-      "title": "NFL news, live updates: Saints' Alvin Kamara out at least 1 month, Chargers C Tyler Biadasz out indefinitely with knee injuries; Texans WR Jayden Higgins reportedly tears ACL",
-      "snippet": "Follow along with the latest NFL news and updates as the preseason plays out.",
-      "publishedAt": "2026-08-13T15:25:12.000Z",
-      "trust": 1,
       "matches": [
         {
           "playerId": "jayden-higgins-hou-wr",
