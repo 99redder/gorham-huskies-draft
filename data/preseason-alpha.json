@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-21T10:50:09.082Z",
+  "generatedAt": "2026-08-21T22:44:04.168Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -9,7 +9,7 @@
       "name": "Sleeper Trends",
       "url": "https://api.sleeper.app/v1/players/nfl/trending/add?lookback_hours=24&limit=50",
       "ok": true,
-      "matched": 3
+      "matched": 2
     },
     {
       "id": "espn-nfl",
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 1
+      "matched": 0
     },
     {
       "id": "cbs-nfl",
@@ -77,30 +77,13 @@
   ],
   "entries": [
     {
-      "id": "alpha_fe3ddb7ed800ba6c",
-      "source": "Sleeper Trends",
-      "publisher": "Sleeper",
-      "sourceUrl": "https://sleeper.com/",
-      "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-23 add over the last 24 hours (6,561 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-21T10:50:09.082Z",
-      "trust": 0.75,
-      "matches": [
-        {
-          "playerId": "keaton-mitchell-lac-rb",
-          "name": "Keaton Mitchell",
-          "delta": 5
-        }
-      ]
-    },
-    {
       "id": "alpha_9e25aba50d28296e",
       "source": "Sleeper Trends",
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-25 add over the last 24 hours (5,866 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-21T10:50:09.082Z",
+      "snippet": "Top-22 add over the last 24 hours (6,202 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-21T22:44:04.168Z",
       "trust": 0.75,
       "matches": [
         {
@@ -111,98 +94,64 @@
       ]
     },
     {
-      "id": "alpha_cb6919d856bf1cd0",
+      "id": "alpha_fe3ddb7ed800ba6c",
       "source": "Sleeper Trends",
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
-      "title": "Tre Tucker is trending in Sleeper adds",
-      "snippet": "Top-28 add over the last 24 hours (4,974 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-21T10:50:09.082Z",
+      "title": "Keaton Mitchell is trending in Sleeper adds",
+      "snippet": "Top-25 add over the last 24 hours (5,652 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-21T22:44:04.168Z",
       "trust": 0.75,
       "matches": [
         {
-          "playerId": "tre-tucker-lv-wr",
-          "name": "Tre Tucker",
+          "playerId": "keaton-mitchell-lac-rb",
+          "name": "Keaton Mitchell",
           "delta": 5
         }
       ]
     },
     {
-      "id": "alpha_70605ab1bb3a70f8",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/george-kittle-ahead-schedule-achilles-031900431.html",
-      "title": "George Kittle 'ahead of schedule' in Achilles injury return. Will he play Week 1?",
-      "snippet": "San Francisco 49ers tight end George Kittle has a chance to return to the team and play during Week 1. Here's what we know.",
-      "publishedAt": "2026-08-21T03:19:00.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "george-kittle-sf-te",
-          "name": "George Kittle",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_532ccd576ff5891e",
+      "id": "alpha_bbe2855bcfa36442",
       "source": "r/fantasyfootball",
       "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vtttk3/monken_quinshon_judkins_held_out_of_practice/",
-      "title": "Monken: Quinshon Judkins held out of practice Thursday due to \"nagging injury,\" via Scott Petrak.",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/kzqmfkkr\"> /u/kzqmfkkr </a> <br/> <span><a href=\"https://bsky.app/profile/insidenflnews.bsky.social/post/3mtjyudvge22j\">[link]</a></span> <span><a href=\"https://www.reddit.com/r/fantasyfootb",
-      "publishedAt": "2026-08-20T19:42:59.000Z",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vurlo6/adamschefter_texans_jayden_higgins_on/",
+      "title": "[adamschefter] (Texans) Jayden Higgins on season-ending injured reserve",
+      "snippet": "<!-- SC_OFF --><div class=\"md\"><p>Don’t know if the official post has been submitted.</p> <p>Kai’mi Fairbairn might actually be a league winner lol</p> </div><!-- SC_ON --> submitted by <a href=\"https://www.reddit.com/user/Shaneski101\"> /u/",
+      "publishedAt": "2026-08-21T20:24:42.000Z",
       "trust": 0.65,
       "matches": [
         {
-          "playerId": "quinshon-judkins-cle-rb",
-          "name": "Quinshon Judkins",
+          "playerId": "jayden-higgins-hou-wr",
+          "name": "Jayden Higgins",
           "delta": -6
         }
       ]
     },
     {
-      "id": "alpha_2757889821378ee9",
+      "id": "alpha_a35ef5a6432902ac",
       "source": "r/fantasyfootball",
       "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vtog9o/lions_te_sam_laporta_suffered_a_hip_injury_per_hc/",
-      "title": "Lions TE Sam LaPorta suffered a hip injury, per HC Dan Campbell. Campbell says LaPorta could be ready by the start of the season, but doesn't know “for sure”.",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/jloadin3\"> /u/jloadin3 </a> <br/> <span><a href=\"https://sleeper.com/topic/170000000000000000/1396203959940546560\">[link]</a></span> <span><a href=\"https://www.reddit.com/r/fantasyfootball/c",
-      "publishedAt": "2026-08-20T16:33:18.000Z",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vujb8h/kenneth_walker_iii_training_camp_update_getting/",
+      "title": "Kenneth Walker III training camp update: • Getting the ball \"all the time\" • Used as the main guy in the red zone • Has been the primary target in screen-game",
+      "snippet": "submitted by <a href=\"https://www.reddit.com/user/BreakfastTop6899\"> /u/BreakfastTop6899 </a> <br/> <span><a href=\"https://bsky.app/profile/insidenflnews.bsky.social/post/3mtlwvq6e2s2q\">[link]</a></span> <span><a href=\"https://www.reddit.co",
+      "publishedAt": "2026-08-21T15:20:13.000Z",
       "trust": 0.65,
       "matches": [
         {
-          "playerId": "sam-laporta-det-te",
-          "name": "Sam LaPorta",
-          "delta": -6
+          "playerId": "kenneth-walker-iii-kc-rb",
+          "name": "Kenneth Walker III",
+          "delta": 6
         }
       ]
     },
     {
-      "id": "alpha_0b3efe1ec20616cf",
-      "source": "r/fantasyfootball",
-      "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vtl903/colts_te_tyler_warren_is_expected_to_miss_about_a/",
-      "title": "Colts TE Tyler Warren is expected to miss about a week with a minor groin injury suffered in training camp, source says. No worries for Week 1.",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/mvanigan\"> /u/mvanigan </a> <br/> <span><a href=\"https://bsky.app/profile/rotowirenfl.bsky.social/post/3mtjhqdkvas22\">[link]</a></span> <span><a href=\"https://www.reddit.com/r/fantasyfootbal",
-      "publishedAt": "2026-08-20T14:35:12.000Z",
-      "trust": 0.65,
-      "matches": [
-        {
-          "playerId": "tyler-warren-ind-te",
-          "name": "Tyler Warren",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_bde8bb44ad7218e3",
+      "id": "alpha_a2650c920bf2174d",
       "source": "CBS Sports NFL",
       "publisher": "CBS Sports",
       "sourceUrl": "https://www.cbssports.com/nfl/news/nfl-training-camp-injury-tracker/",
-      "title": "NFL preseason injuries tracker: Updates on Breece Hall, Jeremiyah Love, Alvin Kamara",
+      "title": "NFL preseason injuries tracker: Updates on Sam LaPorta, Breece Hall, Jeremiyah Love, Alvin Kamara",
       "snippet": "We track the biggest injury updates and recovery timelines as teams navigate a brutal start to the NFL preseason",
-      "publishedAt": "2026-08-19T16:57:52.000Z",
+      "publishedAt": "2026-08-21T13:43:57.000Z",
       "trust": 0.95,
       "matches": [
         {
@@ -214,6 +163,33 @@
           "playerId": "breece-hall-nyj-rb",
           "name": "Breece Hall",
           "delta": 6
+        },
+        {
+          "playerId": "sam-laporta-det-te",
+          "name": "Sam LaPorta",
+          "delta": 6
+        }
+      ]
+    },
+    {
+      "id": "alpha_8e787262cb0593bb",
+      "source": "r/fantasyfootball",
+      "publisher": "Reddit",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vugqve/schefter_parker_washington_expected_to_return_to/",
+      "title": "Schefter: Parker Washington expected to return to practice next week after being sidelined with an undisclosed injury.",
+      "snippet": "submitted by <a href=\"https://www.reddit.com/user/pvh0601\"> /u/pvh0601 </a> <br/> <span><a href=\"https://bsky.app/profile/insidenflnews.bsky.social/post/3mtluqmm3ms2o\">[link]</a></span> <span><a href=\"https://www.reddit.com/r/fantasyfootbal",
+      "publishedAt": "2026-08-21T13:42:24.000Z",
+      "trust": 0.65,
+      "matches": [
+        {
+          "playerId": "parker-washington-jax-wr",
+          "name": "Parker Washington",
+          "delta": -6,
+          "injury": {
+            "status": "Questionable",
+            "note": "Schefter: Parker Washington expected to return to practice next week after being sidelined with an undisclosed injury.",
+            "sourceUpdatedAt": 1787319744000
+          }
         }
       ]
     },
