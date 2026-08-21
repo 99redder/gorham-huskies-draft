@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-20T22:47:11.974Z",
+  "generatedAt": "2026-08-21T10:50:09.082Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 2
+      "matched": 1
     },
     {
       "id": "cbs-nfl",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-21 add over the last 24 hours (7,119 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-20T22:47:11.974Z",
+      "snippet": "Top-23 add over the last 24 hours (6,561 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-21T10:50:09.082Z",
       "trust": 0.75,
       "matches": [
         {
@@ -94,13 +94,30 @@
       ]
     },
     {
+      "id": "alpha_9e25aba50d28296e",
+      "source": "Sleeper Trends",
+      "publisher": "Sleeper",
+      "sourceUrl": "https://sleeper.com/",
+      "title": "Malik Willis is trending in Sleeper adds",
+      "snippet": "Top-25 add over the last 24 hours (5,866 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-21T10:50:09.082Z",
+      "trust": 0.75,
+      "matches": [
+        {
+          "playerId": "malik-willis-mia-qb",
+          "name": "Malik Willis",
+          "delta": 5
+        }
+      ]
+    },
+    {
       "id": "alpha_cb6919d856bf1cd0",
       "source": "Sleeper Trends",
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Tre Tucker is trending in Sleeper adds",
-      "snippet": "Top-23 add over the last 24 hours (6,438 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-20T22:47:11.974Z",
+      "snippet": "Top-28 add over the last 24 hours (4,974 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-21T10:50:09.082Z",
       "trust": 0.75,
       "matches": [
         {
@@ -111,19 +128,19 @@
       ]
     },
     {
-      "id": "alpha_9e25aba50d28296e",
-      "source": "Sleeper Trends",
-      "publisher": "Sleeper",
-      "sourceUrl": "https://sleeper.com/",
-      "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-25 add over the last 24 hours (5,936 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-20T22:47:11.974Z",
-      "trust": 0.75,
+      "id": "alpha_70605ab1bb3a70f8",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/george-kittle-ahead-schedule-achilles-031900431.html",
+      "title": "George Kittle 'ahead of schedule' in Achilles injury return. Will he play Week 1?",
+      "snippet": "San Francisco 49ers tight end George Kittle has a chance to return to the team and play during Week 1. Here's what we know.",
+      "publishedAt": "2026-08-21T03:19:00.000Z",
+      "trust": 1,
       "matches": [
         {
-          "playerId": "malik-willis-mia-qb",
-          "name": "Malik Willis",
-          "delta": 5
+          "playerId": "george-kittle-sf-te",
+          "name": "George Kittle",
+          "delta": -6
         }
       ]
     },
@@ -140,40 +157,6 @@
         {
           "playerId": "quinshon-judkins-cle-rb",
           "name": "Quinshon Judkins",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_f3276a767bb1ef1f",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/jalen-hurts-j-brown-share-193155674.html",
-      "title": "Jalen Hurts, A.J. Brown share a moment after Eagles-Patriots practice",
-      "snippet": "A meeting of the Eagles’ quarterback and his former top target.",
-      "publishedAt": "2026-08-20T19:31:55.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "a-j-brown-ne-wr",
-          "name": "A.J. Brown",
-          "delta": 6
-        }
-      ]
-    },
-    {
-      "id": "alpha_26531a40ab1d5fee",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/nfl/article/jalen-hurts-aj-brown-share-hug-chat-after-patriots-eagles-second-joint-practice-192238945.html",
-      "title": "Jalen Hurts, A.J. Brown share hug, chat after Patriots-Eagles' second joint practice",
-      "snippet": "There's no bad blood between A.J. Brown and Jalen Hurts.",
-      "publishedAt": "2026-08-20T19:22:38.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "a-j-brown-ne-wr",
-          "name": "A.J. Brown",
           "delta": -6
         }
       ]
