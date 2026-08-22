@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-22T10:42:47.624Z",
+  "generatedAt": "2026-08-22T22:41:18.600Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -23,14 +23,14 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 1
+      "matched": 0
     },
     {
       "id": "cbs-nfl",
       "name": "CBS Sports NFL",
       "url": "https://www.cbssports.com/rss/headlines/nfl/",
       "ok": true,
-      "matched": 2
+      "matched": 1
     },
     {
       "id": "rotoballer",
@@ -51,7 +51,7 @@
       "name": "r/fantasyfootball",
       "url": "https://www.reddit.com/r/fantasyfootball/.rss",
       "ok": true,
-      "matched": 3
+      "matched": 2
     },
     {
       "id": "pro-football-rumors",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-20 add over the last 24 hours (6,538 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-22T10:42:47.624Z",
+      "snippet": "Top-19 add over the last 24 hours (7,581 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-22T22:41:18.600Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,31 +99,14 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-24 add over the last 24 hours (5,526 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-22T10:42:47.624Z",
+      "snippet": "Top-23 add over the last 24 hours (6,633 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-22T22:41:18.600Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "keaton-mitchell-lac-rb",
           "name": "Keaton Mitchell",
           "delta": 5
-        }
-      ]
-    },
-    {
-      "id": "alpha_e88af3f3eeba9b48",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/geno-smith-assuages-jets-training-031406883.html",
-      "title": "Geno Smith assuages Jets training camp concerns with perfect passing night",
-      "snippet": "Smith missed last week's preseason opener with a sore ankle but he looked 100 percent healthy and ready for the regular season in his brief appearance against the Steelers.",
-      "publishedAt": "2026-08-22T03:14:06.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "geno-smith-lv-qb",
-          "name": "Geno Smith",
-          "delta": -6
         }
       ]
     },
@@ -185,45 +168,6 @@
           "playerId": "sam-laporta-det-te",
           "name": "Sam LaPorta",
           "delta": 6
-        }
-      ]
-    },
-    {
-      "id": "alpha_8e787262cb0593bb",
-      "source": "r/fantasyfootball",
-      "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vugqve/schefter_parker_washington_expected_to_return_to/",
-      "title": "Schefter: Parker Washington expected to return to practice next week after being sidelined with an undisclosed injury.",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/pvh0601\"> /u/pvh0601 </a> <br/> <span><a href=\"https://bsky.app/profile/insidenflnews.bsky.social/post/3mtluqmm3ms2o\">[link]</a></span> <span><a href=\"https://www.reddit.com/r/fantasyfootbal",
-      "publishedAt": "2026-08-21T13:42:24.000Z",
-      "trust": 0.65,
-      "matches": [
-        {
-          "playerId": "parker-washington-jax-wr",
-          "name": "Parker Washington",
-          "delta": -6,
-          "injury": {
-            "status": "Questionable",
-            "note": "Schefter: Parker Washington expected to return to practice next week after being sidelined with an undisclosed injury.",
-            "sourceUpdatedAt": 1787319744000
-          }
-        }
-      ]
-    },
-    {
-      "id": "alpha_27d65e8df614bb01",
-      "source": "CBS Sports NFL",
-      "publisher": "CBS Sports",
-      "sourceUrl": "https://www.cbssports.com/nfl/news/jayden-higgins-injury-texans-torn-acl/",
-      "title": "Texans lose promising second-year WR Jayden Higgins to season-ending injury",
-      "snippet": "The Texans will be without one of C.J. Stroud's top young targets after Higgins reportedly tore his ACL and was ruled out for the season",
-      "publishedAt": "2026-08-19T16:55:25.000Z",
-      "trust": 0.95,
-      "matches": [
-        {
-          "playerId": "jayden-higgins-hou-wr",
-          "name": "Jayden Higgins",
-          "delta": -6
         }
       ]
     }
