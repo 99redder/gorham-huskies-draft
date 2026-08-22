@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-21T22:44:04.168Z",
+  "generatedAt": "2026-08-22T10:42:47.624Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 0
+      "matched": 1
     },
     {
       "id": "cbs-nfl",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-22 add over the last 24 hours (6,202 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-21T22:44:04.168Z",
+      "snippet": "Top-20 add over the last 24 hours (6,538 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-22T10:42:47.624Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,14 +99,31 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-25 add over the last 24 hours (5,652 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-21T22:44:04.168Z",
+      "snippet": "Top-24 add over the last 24 hours (5,526 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-22T10:42:47.624Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "keaton-mitchell-lac-rb",
           "name": "Keaton Mitchell",
           "delta": 5
+        }
+      ]
+    },
+    {
+      "id": "alpha_e88af3f3eeba9b48",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/geno-smith-assuages-jets-training-031406883.html",
+      "title": "Geno Smith assuages Jets training camp concerns with perfect passing night",
+      "snippet": "Smith missed last week's preseason opener with a sore ankle but he looked 100 percent healthy and ready for the regular season in his brief appearance against the Steelers.",
+      "publishedAt": "2026-08-22T03:14:06.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "geno-smith-lv-qb",
+          "name": "Geno Smith",
+          "delta": -6
         }
       ]
     },
