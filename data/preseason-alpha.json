@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-23T10:43:40.083Z",
+  "generatedAt": "2026-08-23T22:40:56.515Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -23,14 +23,14 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 0
+      "matched": 5
     },
     {
       "id": "cbs-nfl",
       "name": "CBS Sports NFL",
       "url": "https://www.cbssports.com/rss/headlines/nfl/",
       "ok": true,
-      "matched": 1
+      "matched": 3
     },
     {
       "id": "rotoballer",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-16 add over the last 24 hours (8,701 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-23T10:43:40.083Z",
+      "snippet": "Top-19 add over the last 24 hours (10,430 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-23T22:40:56.515Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,14 +99,133 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-20 add over the last 24 hours (7,893 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-23T10:43:40.083Z",
+      "snippet": "Top-20 add over the last 24 hours (9,999 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-23T22:40:56.515Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "keaton-mitchell-lac-rb",
           "name": "Keaton Mitchell",
           "delta": 5
+        }
+      ]
+    },
+    {
+      "id": "alpha_1ddf5dd4540993ac",
+      "source": "CBS Sports NFL",
+      "publisher": "CBS Sports",
+      "sourceUrl": "https://www.cbssports.com/nfl/news/raiders-ashton-jeanty-injured-helped-off-practice-field/",
+      "title": "Raiders' Ashton Jeanty injured, helped off practice field after landing awkwardly",
+      "snippet": "The second-year running back was unable to put any weight on his right leg",
+      "publishedAt": "2026-08-23T22:24:57.000Z",
+      "trust": 0.95,
+      "matches": [
+        {
+          "playerId": "ashton-jeanty-lv-rb",
+          "name": "Ashton Jeanty",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_38ddc92b43c16afc",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/raiders-news-ashton-jeanty-injured-220226064.html",
+      "title": "Raiders news: Ashton Jeanty injured",
+      "snippet": "2nd year running back suffered right leg injury",
+      "publishedAt": "2026-08-23T22:02:26.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "ashton-jeanty-lv-rb",
+          "name": "Ashton Jeanty",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_6f5bfaa727242b6a",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/ashton-jeanty-exits-sundays-practice-214326605.html",
+      "title": "Ashton Jeanty exits Sunday's practice with apparent leg injury",
+      "snippet": "Jeanty went down after diving to make a catch during the day's session.",
+      "publishedAt": "2026-08-23T21:43:26.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "ashton-jeanty-lv-rb",
+          "name": "Ashton Jeanty",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_d8d6454b555dff1e",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/ashton-jeanty-injury-raiders-rb-214028229.html",
+      "title": "Ashton Jeanty injury update as Raiders RB leaves practice after awkward landing",
+      "snippet": "Raiders running back Ashton Jeanty suffered an injury during the team's practice on Sunday, Aug. 23. Here's the latest on his status moving forward.",
+      "publishedAt": "2026-08-23T21:40:28.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "ashton-jeanty-lv-rb",
+          "name": "Ashton Jeanty",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_700a91c92928b7c1",
+      "source": "r/fantasyfootball",
+      "publisher": "Reddit",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vwjiqa/ashton_jeanty_got_hurt_in_practice_today_could/",
+      "title": "Ashton Jeanty got hurt in practice today, could not put pressure on his leg when leaving the field. Afterward, the Raiders gathered as a team to acknowledge the injury with a momen",
+      "snippet": "submitted by <a href=\"https://www.reddit.com/user/My_Chat_Account\"> /u/My_Chat_Account </a> <br/> <span><a href=\"https://bsky.app/profile/news.optimusfantasy.com/post/3mtrq3kzinc2f\">[link]</a></span> <span><a href=\"https://www.reddit.com/r/",
+      "publishedAt": "2026-08-23T21:26:29.000Z",
+      "trust": 0.65,
+      "matches": [
+        {
+          "playerId": "ashton-jeanty-lv-rb",
+          "name": "Ashton Jeanty",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_c88ba19958477824",
+      "source": "CBS Sports NFL",
+      "publisher": "CBS Sports",
+      "sourceUrl": "https://www.cbssports.com/nfl/news/george-kittle-injury-update-latest-on-49ers-stars-status-potential-return/",
+      "title": "George Kittle injury update: Latest on 49ers star's status, potential return",
+      "snippet": "Kittle has been working his way back from a torn Achilles",
+      "publishedAt": "2026-08-23T19:41:04.000Z",
+      "trust": 0.95,
+      "matches": [
+        {
+          "playerId": "george-kittle-sf-te",
+          "name": "George Kittle",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_0d90cf3f1d5fe7a9",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/christian-mccaffrey-takes-encouraging-injury-175851199.html",
+      "title": "Christian McCaffrey takes encouraging injury step toward 49ers return at practice",
+      "snippet": "The 49ers’ star-studded offense seems to be getting its stars healthy. George Kittle was activated from the Physically Unable to Perform list on Sunday, and superstar running back Christian McCaffrey...",
+      "publishedAt": "2026-08-23T17:58:51.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "christian-mccaffrey-sf-rb",
+          "name": "Christian McCaffrey",
+          "delta": -6
         }
       ]
     },
@@ -129,23 +248,6 @@
           "playerId": "kenneth-walker-iii-kc-rb",
           "name": "Kenneth Walker III",
           "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_a35ef5a6432902ac",
-      "source": "r/fantasyfootball",
-      "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vujb8h/kenneth_walker_iii_training_camp_update_getting/",
-      "title": "Kenneth Walker III training camp update: • Getting the ball \"all the time\" • Used as the main guy in the red zone • Has been the primary target in screen-game",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/BreakfastTop6899\"> /u/BreakfastTop6899 </a> <br/> <span><a href=\"https://bsky.app/profile/insidenflnews.bsky.social/post/3mtlwvq6e2s2q\">[link]</a></span> <span><a href=\"https://www.reddit.co",
-      "publishedAt": "2026-08-21T15:20:13.000Z",
-      "trust": 0.65,
-      "matches": [
-        {
-          "playerId": "kenneth-walker-iii-kc-rb",
-          "name": "Kenneth Walker III",
-          "delta": 6
         }
       ]
     },
@@ -173,6 +275,23 @@
           "playerId": "sam-laporta-det-te",
           "name": "Sam LaPorta",
           "delta": 6
+        }
+      ]
+    },
+    {
+      "id": "alpha_dc26344c525ee89b",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/nfl/live/nfl-news-injury-updates-preseason-week-2-schedule-whos-playing-starters-143714619.html",
+      "title": "NFL news, live updates: Raiders RB Ashton Jeanty hurt in practice; Titans QB Cam Ward gets shot to calm nerves; Browns to announce QB1 on Monday",
+      "snippet": "Follow along with the latest NFL news and updates as the preseason plays out.",
+      "publishedAt": "2026-08-20T14:37:14.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "ashton-jeanty-lv-rb",
+          "name": "Ashton Jeanty",
+          "delta": -6
         }
       ]
     }
