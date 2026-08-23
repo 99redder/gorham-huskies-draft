@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-22T22:41:18.600Z",
+  "generatedAt": "2026-08-23T10:43:40.083Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-19 add over the last 24 hours (7,581 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-22T22:41:18.600Z",
+      "snippet": "Top-16 add over the last 24 hours (8,701 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-23T10:43:40.083Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,8 +99,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-23 add over the last 24 hours (6,633 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-22T22:41:18.600Z",
+      "snippet": "Top-20 add over the last 24 hours (7,893 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-23T10:43:40.083Z",
       "trust": 0.75,
       "matches": [
         {
@@ -111,18 +111,23 @@
       ]
     },
     {
-      "id": "alpha_bbe2855bcfa36442",
+      "id": "alpha_e9834cfdb51423ea",
       "source": "r/fantasyfootball",
       "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vurlo6/adamschefter_texans_jayden_higgins_on/",
-      "title": "[adamschefter] (Texans) Jayden Higgins on season-ending injured reserve",
-      "snippet": "<!-- SC_OFF --><div class=\"md\"><p>Don’t know if the official post has been submitted.</p> <p>Kai’mi Fairbairn might actually be a league winner lol</p> </div><!-- SC_ON --> submitted by <a href=\"https://www.reddit.com/user/Shaneski101\"> /u/",
-      "publishedAt": "2026-08-21T20:24:42.000Z",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vvtwie/kenneth_walker_achane_20_in_preseason_interview/",
+      "title": "Kenneth Walker, Achane 2.0: In preseason interview regarding knee injury, Patrick Mahomes make a point to name drop Kenneth Walker and talked about checkdowns- here’s why it matter",
+      "snippet": "<!-- SC_OFF --><div class=\"md\"><p>In 2025-2026, Patrick Mahomes ranked 35th in checkdown passes, the only QBs ranked lower are Michael Penix, JJ McCarthy, and Marcus Mariota. </p> <p>Mahomes is now on record stating multiple times that the ",
+      "publishedAt": "2026-08-23T01:33:24.000Z",
       "trust": 0.65,
       "matches": [
         {
-          "playerId": "jayden-higgins-hou-wr",
-          "name": "Jayden Higgins",
+          "playerId": "patrick-mahomes-kc-qb",
+          "name": "Patrick Mahomes",
+          "delta": -6
+        },
+        {
+          "playerId": "kenneth-walker-iii-kc-rb",
+          "name": "Kenneth Walker III",
           "delta": -6
         }
       ]
