@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-24T22:46:30.399Z",
+  "generatedAt": "2026-08-25T10:51:58.433Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -9,7 +9,7 @@
       "name": "Sleeper Trends",
       "url": "https://api.sleeper.app/v1/players/nfl/trending/add?lookback_hours=24&limit=50",
       "ok": true,
-      "matched": 2
+      "matched": 3
     },
     {
       "id": "espn-nfl",
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 1
+      "matched": 0
     },
     {
       "id": "cbs-nfl",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-17 add over the last 24 hours (14,686 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-24T22:46:30.399Z",
+      "snippet": "Top-16 add over the last 24 hours (10,962 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-25T10:51:58.433Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,8 +99,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-18 add over the last 24 hours (13,977 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-24T22:46:30.399Z",
+      "snippet": "Top-21 add over the last 24 hours (9,621 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-25T10:51:58.433Z",
       "trust": 0.75,
       "matches": [
         {
@@ -111,19 +111,19 @@
       ]
     },
     {
-      "id": "alpha_742382f7d8c83fdc",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/treveyon-henderson-injury-patriots-rb-203235968.html",
-      "title": "TreVeyon Henderson injury update after Patriots RB leaves practice early",
-      "snippet": "New England Patriots running back TreVeyon Henderson left practice early on Monday, Aug. 24. Here's what we know so far:",
-      "publishedAt": "2026-08-24T20:32:35.000Z",
-      "trust": 1,
+      "id": "alpha_cb6919d856bf1cd0",
+      "source": "Sleeper Trends",
+      "publisher": "Sleeper",
+      "sourceUrl": "https://sleeper.com/",
+      "title": "Tre Tucker is trending in Sleeper adds",
+      "snippet": "Top-28 add over the last 24 hours (8,490 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-25T10:51:58.433Z",
+      "trust": 0.75,
       "matches": [
         {
-          "playerId": "treveyon-henderson-ne-rb",
-          "name": "TreVeyon Henderson",
-          "delta": -6
+          "playerId": "tre-tucker-lv-wr",
+          "name": "Tre Tucker",
+          "delta": 5
         }
       ]
     },
