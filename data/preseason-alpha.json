@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-25T22:47:42.774Z",
+  "generatedAt": "2026-08-26T10:53:12.167Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 1
+      "matched": 2
     },
     {
       "id": "cbs-nfl",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Tre Tucker is trending in Sleeper adds",
-      "snippet": "Top-19 add over the last 24 hours (10,488 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-25T22:47:42.774Z",
+      "snippet": "Top-18 add over the last 24 hours (12,528 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-26T10:53:12.167Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,8 +99,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-20 add over the last 24 hours (10,164 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-25T22:47:42.774Z",
+      "snippet": "Top-23 add over the last 24 hours (9,688 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-26T10:53:12.167Z",
       "trust": 0.75,
       "matches": [
         {
@@ -116,8 +116,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-23 add over the last 24 hours (8,766 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-25T22:47:42.774Z",
+      "snippet": "Top-26 add over the last 24 hours (8,802 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-26T10:53:12.167Z",
       "trust": 0.75,
       "matches": [
         {
@@ -128,23 +128,35 @@
       ]
     },
     {
-      "id": "alpha_78b222a9190f3794",
+      "id": "alpha_ffdcc6385b4abe77",
       "source": "Yahoo Sports NFL",
       "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/49ers-injury-updates-latest-george-212049348.html",
-      "title": "49ers injury updates: Latest on George Kittle, Mike Evans, Nick Bosa",
-      "snippet": "The San Francisco 49ers have some good and bad news pertaining to the team's injuries. Here's what to know.",
-      "publishedAt": "2026-08-25T21:20:49.000Z",
+      "sourceUrl": "https://sports.yahoo.com/articles/giants-news-calvin-austin-injury-100000632.html",
+      "title": "Giants news: Calvin Austin injury, Malik Nabers, more headlines",
+      "snippet": "New York Giants headlines for Wednesday.",
+      "publishedAt": "2026-08-26T10:00:00.000Z",
       "trust": 1,
       "matches": [
         {
-          "playerId": "george-kittle-sf-te",
-          "name": "George Kittle",
+          "playerId": "malik-nabers-nyg-wr",
+          "name": "Malik Nabers",
           "delta": -6
-        },
+        }
+      ]
+    },
+    {
+      "id": "alpha_7cb21c2bde6d48b3",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/ja-marr-chase-says-fine-043713909.html",
+      "title": "Ja’Marr Chase says he’s ‘fine’ after scary Bengals practice injury",
+      "snippet": "The Bengals and Ja’Marr Chase appear to have avoided the worst.",
+      "publishedAt": "2026-08-26T04:37:13.000Z",
+      "trust": 1,
+      "matches": [
         {
-          "playerId": "mike-evans-sf-wr",
-          "name": "Mike Evans",
+          "playerId": "ja-marr-chase-cin-wr",
+          "name": "Ja'Marr Chase",
           "delta": -6
         }
       ]
