@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-26T10:53:12.167Z",
+  "generatedAt": "2026-08-27T03:21:12.732Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 2
+      "matched": 1
     },
     {
       "id": "cbs-nfl",
@@ -51,7 +51,7 @@
       "name": "r/fantasyfootball",
       "url": "https://www.reddit.com/r/fantasyfootball/.rss",
       "ok": true,
-      "matched": 3
+      "matched": 1
     },
     {
       "id": "pro-football-rumors",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Tre Tucker is trending in Sleeper adds",
-      "snippet": "Top-18 add over the last 24 hours (12,528 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-26T10:53:12.167Z",
+      "snippet": "Top-15 add over the last 24 hours (11,598 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-27T03:21:12.732Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,8 +99,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-23 add over the last 24 hours (9,688 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-26T10:53:12.167Z",
+      "snippet": "Top-19 add over the last 24 hours (8,876 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-27T03:21:12.732Z",
       "trust": 0.75,
       "matches": [
         {
@@ -116,8 +116,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-26 add over the last 24 hours (8,802 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-26T10:53:12.167Z",
+      "snippet": "Top-23 add over the last 24 hours (8,406 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-27T03:21:12.732Z",
       "trust": 0.75,
       "matches": [
         {
@@ -128,13 +128,13 @@
       ]
     },
     {
-      "id": "alpha_ffdcc6385b4abe77",
+      "id": "alpha_b5eff0304e9a3601",
       "source": "Yahoo Sports NFL",
       "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/giants-news-calvin-austin-injury-100000632.html",
-      "title": "Giants news: Calvin Austin injury, Malik Nabers, more headlines",
-      "snippet": "New York Giants headlines for Wednesday.",
-      "publishedAt": "2026-08-26T10:00:00.000Z",
+      "sourceUrl": "https://sports.yahoo.com/articles/giants-downplay-malik-nabers-injury-220005526.html",
+      "title": "Giants downplay Malik Nabers injury scare after final practice drill",
+      "snippet": "Observations from Wednesday's Giants practice.",
+      "publishedAt": "2026-08-26T22:00:05.000Z",
       "trust": 1,
       "matches": [
         {
@@ -145,18 +145,57 @@
       ]
     },
     {
-      "id": "alpha_7cb21c2bde6d48b3",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/ja-marr-chase-says-fine-043713909.html",
-      "title": "Ja’Marr Chase says he’s ‘fine’ after scary Bengals practice injury",
-      "snippet": "The Bengals and Ja’Marr Chase appear to have avoided the worst.",
-      "publishedAt": "2026-08-26T04:37:13.000Z",
-      "trust": 1,
+      "id": "alpha_c3a86f12db8ca541",
+      "source": "r/fantasyfootball",
+      "publisher": "Reddit",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vz09n0/colts_wr_josh_downs_is_dealing_with_a_calf_injury/",
+      "title": "Colts WR Josh Downs is dealing with a calf injury. Per Mike Chappell.",
+      "snippet": "submitted by <a href=\"https://www.reddit.com/user/kzqmfkkr\"> /u/kzqmfkkr </a> <br/> <span><a href=\"https://bsky.app/profile/news.optimusfantasy.com/post/3mtynekxl4s2x\">[link]</a></span> <span><a href=\"https://www.reddit.com/r/fantasyfootbal",
+      "publishedAt": "2026-08-26T15:27:52.000Z",
+      "trust": 0.65,
       "matches": [
         {
-          "playerId": "ja-marr-chase-cin-wr",
-          "name": "Ja'Marr Chase",
+          "playerId": "josh-downs-ind-wr",
+          "name": "Josh Downs",
+          "delta": -6,
+          "injury": {
+            "status": "Questionable",
+            "note": "Colts WR Josh Downs is dealing with a calf injury. Per Mike Chappell.",
+            "sourceUpdatedAt": 1787758072000
+          }
+        }
+      ]
+    },
+    {
+      "id": "alpha_aea80bde1f756296",
+      "source": "CBS Sports NFL",
+      "publisher": "CBS Sports",
+      "sourceUrl": "https://www.cbssports.com/nfl/news/what-should-vikings-do-with-j-j-mccarthy/",
+      "title": "What should Vikings do with J.J. McCarthy? Divorce seems inevitable after losing starting job to Kyler Murray",
+      "snippet": "After being the No. 10 overall pick in 2024, J.J. McCarthy's time in Minnesota could be over",
+      "publishedAt": "2026-08-26T15:21:35.000Z",
+      "trust": 0.95,
+      "matches": [
+        {
+          "playerId": "kyler-murray-ari-qb",
+          "name": "Kyler Murray",
+          "delta": 6
+        }
+      ]
+    },
+    {
+      "id": "alpha_81bb26d618745bf4",
+      "source": "CBS Sports NFL",
+      "publisher": "CBS Sports",
+      "sourceUrl": "https://www.cbssports.com/nfl/news/latest-nfl-injury-updates/",
+      "title": "Latest NFL injury updates: Ashton Jeanty avoids major injury, other running backs uncertain for Week 1",
+      "snippet": "Who will be ready for season openers, and who's trying to get there?",
+      "publishedAt": "2026-08-26T13:49:15.000Z",
+      "trust": 0.95,
+      "matches": [
+        {
+          "playerId": "ashton-jeanty-lv-rb",
+          "name": "Ashton Jeanty",
           "delta": -6
         }
       ]
@@ -174,74 +213,6 @@
         {
           "playerId": "ja-marr-chase-cin-wr",
           "name": "Ja'Marr Chase",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_81bb26d618745bf4",
-      "source": "CBS Sports NFL",
-      "publisher": "CBS Sports",
-      "sourceUrl": "https://www.cbssports.com/nfl/news/latest-nfl-injury-updates/",
-      "title": "Latest NFL injury updates: Ashton Jeanty avoids major injury, other running backs uncertain for Week 1",
-      "snippet": "Who will be ready for season openers, and who's trying to get there?",
-      "publishedAt": "2026-08-25T19:09:32.000Z",
-      "trust": 0.95,
-      "matches": [
-        {
-          "playerId": "ashton-jeanty-lv-rb",
-          "name": "Ashton Jeanty",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_7c798287aa23854e",
-      "source": "r/fantasyfootball",
-      "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vy7mzt/mike_evans_is_not_practicing_due_to_a_groin_injury/",
-      "title": "Mike Evans is not practicing due to a groin injury",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/Famous-Egg-6136\"> /u/Famous-Egg-6136 </a> <br/> <span><a href=\"https://www.49erswebzone.com/articles/202656-injury-several-players-practicing-tuesday/\">[link]</a></span> <span><a href=\"https",
-      "publishedAt": "2026-08-25T18:12:13.000Z",
-      "trust": 0.65,
-      "matches": [
-        {
-          "playerId": "mike-evans-sf-wr",
-          "name": "Mike Evans",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_f3063ec2a49294f9",
-      "source": "r/fantasyfootball",
-      "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vy6jgr/kenneth_walker_is_not_expected_to_practice/",
-      "title": "Kenneth Walker is not expected to practice Tuesday due to a foot injury",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/bigaudra\"> /u/bigaudra </a> <br/> <span><a href=\"https://www.rotowire.com/football/player/kenneth-walker-15909\">[link]</a></span> <span><a href=\"https://www.reddit.com/r/fantasyfootball/comm",
-      "publishedAt": "2026-08-25T17:33:53.000Z",
-      "trust": 0.65,
-      "matches": [
-        {
-          "playerId": "kenneth-walker-iii-kc-rb",
-          "name": "Kenneth Walker III",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_b5497cce5d5f4a73",
-      "source": "r/fantasyfootball",
-      "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vy59ce/jaguars_head_coach_liam_coen_said_he_thinks_brian/",
-      "title": "Jaguars head coach Liam Coen said he thinks Brian Thomas is “alright” after an injury scare in Tuesday’s practice.",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/haventmetyou\"> /u/haventmetyou </a> <br/> <span><a href=\"https://www.nbcsports.com/fantasy/football/player-news/2026-08-25/coen-btj-alright-after-injury-scare\">[link]</a></span> <span><a hre",
-      "publishedAt": "2026-08-25T16:48:42.000Z",
-      "trust": 0.65,
-      "matches": [
-        {
-          "playerId": "brian-thomas-jr-jax-wr",
-          "name": "Brian Thomas Jr.",
           "delta": -6
         }
       ]
@@ -270,23 +241,6 @@
           "playerId": "sam-laporta-det-te",
           "name": "Sam LaPorta",
           "delta": 6
-        }
-      ]
-    },
-    {
-      "id": "alpha_da738d8eb4327dd3",
-      "source": "CBS Sports NFL",
-      "publisher": "CBS Sports",
-      "sourceUrl": "https://www.cbssports.com/nfl/news/raiders-ashton-jeanty-injured-helped-off-practice-field/",
-      "title": "Raiders' Ashton Jeanty injured after landing awkwardly, has sprained ankle according to reports",
-      "snippet": "The second-year running back was unable to put any weight on his right leg",
-      "publishedAt": "2026-08-24T03:18:57.000Z",
-      "trust": 0.95,
-      "matches": [
-        {
-          "playerId": "ashton-jeanty-lv-rb",
-          "name": "Ashton Jeanty",
-          "delta": -6
         }
       ]
     }
