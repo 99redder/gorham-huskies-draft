@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-27T03:21:12.732Z",
+  "generatedAt": "2026-08-27T20:33:45.527Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -23,14 +23,14 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 1
+      "matched": 0
     },
     {
       "id": "cbs-nfl",
       "name": "CBS Sports NFL",
       "url": "https://www.cbssports.com/rss/headlines/nfl/",
       "ok": true,
-      "matched": 4
+      "matched": 3
     },
     {
       "id": "rotoballer",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Tre Tucker is trending in Sleeper adds",
-      "snippet": "Top-15 add over the last 24 hours (11,598 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-27T03:21:12.732Z",
+      "snippet": "Top-18 add over the last 24 hours (9,456 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-27T20:33:45.527Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,8 +99,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-19 add over the last 24 hours (8,876 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-27T03:21:12.732Z",
+      "snippet": "Top-19 add over the last 24 hours (8,106 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-27T20:33:45.527Z",
       "trust": 0.75,
       "matches": [
         {
@@ -116,8 +116,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-23 add over the last 24 hours (8,406 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-27T03:21:12.732Z",
+      "snippet": "Top-22 add over the last 24 hours (7,335 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-27T20:33:45.527Z",
       "trust": 0.75,
       "matches": [
         {
@@ -128,41 +128,58 @@
       ]
     },
     {
-      "id": "alpha_b5eff0304e9a3601",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/giants-downplay-malik-nabers-injury-220005526.html",
-      "title": "Giants downplay Malik Nabers injury scare after final practice drill",
-      "snippet": "Observations from Wednesday's Giants practice.",
-      "publishedAt": "2026-08-26T22:00:05.000Z",
-      "trust": 1,
+      "id": "alpha_abb852c6124bf020",
+      "source": "CBS Sports NFL",
+      "publisher": "CBS Sports",
+      "sourceUrl": "https://www.cbssports.com/nfl/news/patrick-mahomes-status-week-1-chiefs-qb/",
+      "title": "Patrick Mahomes' status for Week 1 is still up in the air: Why Chiefs QB isn't a lock to play vs. the Broncos",
+      "snippet": "Patrick Mahomes is still waiting for full medical clearance after a December knee injury, leaving Justin Fields in line to start if he is not ready for Week 1",
+      "publishedAt": "2026-08-27T16:40:09.000Z",
+      "trust": 0.95,
       "matches": [
         {
-          "playerId": "malik-nabers-nyg-wr",
-          "name": "Malik Nabers",
-          "delta": -6
+          "playerId": "patrick-mahomes-kc-qb",
+          "name": "Patrick Mahomes",
+          "delta": 6,
+          "injury": {
+            "status": "Questionable",
+            "note": "Patrick Mahomes' status for Week 1 is still up in the air: Why Chiefs QB isn't a lock to play vs. the Broncos",
+            "sourceUpdatedAt": 1787848809000
+          }
         }
       ]
     },
     {
-      "id": "alpha_c3a86f12db8ca541",
+      "id": "alpha_a5de978eb10e16c0",
       "source": "r/fantasyfootball",
       "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vz09n0/colts_wr_josh_downs_is_dealing_with_a_calf_injury/",
-      "title": "Colts WR Josh Downs is dealing with a calf injury. Per Mike Chappell.",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/kzqmfkkr\"> /u/kzqmfkkr </a> <br/> <span><a href=\"https://bsky.app/profile/news.optimusfantasy.com/post/3mtynekxl4s2x\">[link]</a></span> <span><a href=\"https://www.reddit.com/r/fantasyfootbal",
-      "publishedAt": "2026-08-26T15:27:52.000Z",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vzxjo0/ashton_jeantys_more_low_than_high_ankle_injury/",
+      "title": "Ashton Jeanty's \"More Low Than High\" Ankle Injury Analysis",
+      "snippet": "<!-- SC_OFF --><div class=\"md\"><p>Hey everyone, I really appreciated your feedback and questions last week. I apologize that it's been a minute, but I just finished my 2nd video. This one looks at what's quite possibly the most dramatic ank",
+      "publishedAt": "2026-08-27T15:41:59.000Z",
       "trust": 0.65,
       "matches": [
         {
-          "playerId": "josh-downs-ind-wr",
-          "name": "Josh Downs",
-          "delta": -6,
-          "injury": {
-            "status": "Questionable",
-            "note": "Colts WR Josh Downs is dealing with a calf injury. Per Mike Chappell.",
-            "sourceUpdatedAt": 1787758072000
-          }
+          "playerId": "ashton-jeanty-lv-rb",
+          "name": "Ashton Jeanty",
+          "delta": -4.8
+        }
+      ]
+    },
+    {
+      "id": "alpha_81bb26d618745bf4",
+      "source": "CBS Sports NFL",
+      "publisher": "CBS Sports",
+      "sourceUrl": "https://www.cbssports.com/nfl/news/latest-nfl-injury-updates/",
+      "title": "Latest NFL injury updates: Ashton Jeanty avoids major injury, other running backs uncertain for Week 1",
+      "snippet": "Who will be ready for season openers, and who's trying to get there?",
+      "publishedAt": "2026-08-27T12:28:46.000Z",
+      "trust": 0.95,
+      "matches": [
+        {
+          "playerId": "ashton-jeanty-lv-rb",
+          "name": "Ashton Jeanty",
+          "delta": -6
         }
       ]
     },
@@ -179,67 +196,6 @@
         {
           "playerId": "kyler-murray-ari-qb",
           "name": "Kyler Murray",
-          "delta": 6
-        }
-      ]
-    },
-    {
-      "id": "alpha_81bb26d618745bf4",
-      "source": "CBS Sports NFL",
-      "publisher": "CBS Sports",
-      "sourceUrl": "https://www.cbssports.com/nfl/news/latest-nfl-injury-updates/",
-      "title": "Latest NFL injury updates: Ashton Jeanty avoids major injury, other running backs uncertain for Week 1",
-      "snippet": "Who will be ready for season openers, and who's trying to get there?",
-      "publishedAt": "2026-08-26T13:49:15.000Z",
-      "trust": 0.95,
-      "matches": [
-        {
-          "playerId": "ashton-jeanty-lv-rb",
-          "name": "Ashton Jeanty",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_cc143073df073d8b",
-      "source": "CBS Sports NFL",
-      "publisher": "CBS Sports",
-      "sourceUrl": "https://www.cbssports.com/nfl/news/jamarr-chase-injury-scare-bengals-all-pro-goes-down-awkwardly-in-practice-eventually-walks-off-on-his-own/",
-      "title": "Ja'Marr Chase injury scare: Bengals All-Pro goes down awkwardly in practice, OK after 'hyperextension'",
-      "snippet": "The Bengals had a scare today at practice, but their star receiver confirmed he avoided a serious injury",
-      "publishedAt": "2026-08-25T20:13:16.000Z",
-      "trust": 0.95,
-      "matches": [
-        {
-          "playerId": "ja-marr-chase-cin-wr",
-          "name": "Ja'Marr Chase",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_a2650c920bf2174d",
-      "source": "CBS Sports NFL",
-      "publisher": "CBS Sports",
-      "sourceUrl": "https://www.cbssports.com/nfl/news/nfl-training-camp-injury-tracker/",
-      "title": "NFL preseason injuries tracker: Updates on Sam LaPorta, Breece Hall, Jeremiyah Love, Alvin Kamara",
-      "snippet": "We track the biggest injury updates and recovery timelines as teams navigate a brutal start to the NFL preseason",
-      "publishedAt": "2026-08-25T15:54:46.000Z",
-      "trust": 0.95,
-      "matches": [
-        {
-          "playerId": "jeremiyah-love-ari-rb",
-          "name": "Jeremiyah Love",
-          "delta": 6
-        },
-        {
-          "playerId": "breece-hall-nyj-rb",
-          "name": "Breece Hall",
-          "delta": 6
-        },
-        {
-          "playerId": "sam-laporta-det-te",
-          "name": "Sam LaPorta",
           "delta": 6
         }
       ]
