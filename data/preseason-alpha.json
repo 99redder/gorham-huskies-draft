@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-27T20:33:45.527Z",
+  "generatedAt": "2026-08-28T06:09:39.836Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -9,7 +9,7 @@
       "name": "Sleeper Trends",
       "url": "https://api.sleeper.app/v1/players/nfl/trending/add?lookback_hours=24&limit=50",
       "ok": true,
-      "matched": 3
+      "matched": 4
     },
     {
       "id": "espn-nfl",
@@ -51,7 +51,7 @@
       "name": "r/fantasyfootball",
       "url": "https://www.reddit.com/r/fantasyfootball/.rss",
       "ok": true,
-      "matched": 1
+      "matched": 0
     },
     {
       "id": "pro-football-rumors",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Tre Tucker is trending in Sleeper adds",
-      "snippet": "Top-18 add over the last 24 hours (9,456 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-27T20:33:45.527Z",
+      "snippet": "Top-15 add over the last 24 hours (9,798 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-28T06:09:39.836Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,8 +99,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-19 add over the last 24 hours (8,106 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-27T20:33:45.527Z",
+      "snippet": "Top-23 add over the last 24 hours (7,336 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-28T06:09:39.836Z",
       "trust": 0.75,
       "matches": [
         {
@@ -116,14 +116,48 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-22 add over the last 24 hours (7,335 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-27T20:33:45.527Z",
+      "snippet": "Top-24 add over the last 24 hours (7,290 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-28T06:09:39.836Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "keaton-mitchell-lac-rb",
           "name": "Keaton Mitchell",
           "delta": 5
+        }
+      ]
+    },
+    {
+      "id": "alpha_dcd8c9c95c4e503e",
+      "source": "Sleeper Trends",
+      "publisher": "Sleeper",
+      "sourceUrl": "https://sleeper.com/",
+      "title": "Kyler Murray is trending in Sleeper adds",
+      "snippet": "Top-30 add over the last 24 hours (6,056 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-28T06:09:39.836Z",
+      "trust": 0.75,
+      "matches": [
+        {
+          "playerId": "kyler-murray-ari-qb",
+          "name": "Kyler Murray",
+          "delta": 5
+        }
+      ]
+    },
+    {
+      "id": "alpha_81bb26d618745bf4",
+      "source": "CBS Sports NFL",
+      "publisher": "CBS Sports",
+      "sourceUrl": "https://www.cbssports.com/nfl/news/latest-nfl-injury-updates/",
+      "title": "Latest NFL injury updates: Ashton Jeanty avoids major injury, other running backs uncertain for Week 1",
+      "snippet": "Who will be ready for season openers, and who's trying to get there?",
+      "publishedAt": "2026-08-27T23:03:55.000Z",
+      "trust": 0.95,
+      "matches": [
+        {
+          "playerId": "ashton-jeanty-lv-rb",
+          "name": "Ashton Jeanty",
+          "delta": -6
         }
       ]
     },
@@ -146,40 +180,6 @@
             "note": "Patrick Mahomes' status for Week 1 is still up in the air: Why Chiefs QB isn't a lock to play vs. the Broncos",
             "sourceUpdatedAt": 1787848809000
           }
-        }
-      ]
-    },
-    {
-      "id": "alpha_a5de978eb10e16c0",
-      "source": "r/fantasyfootball",
-      "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1vzxjo0/ashton_jeantys_more_low_than_high_ankle_injury/",
-      "title": "Ashton Jeanty's \"More Low Than High\" Ankle Injury Analysis",
-      "snippet": "<!-- SC_OFF --><div class=\"md\"><p>Hey everyone, I really appreciated your feedback and questions last week. I apologize that it's been a minute, but I just finished my 2nd video. This one looks at what's quite possibly the most dramatic ank",
-      "publishedAt": "2026-08-27T15:41:59.000Z",
-      "trust": 0.65,
-      "matches": [
-        {
-          "playerId": "ashton-jeanty-lv-rb",
-          "name": "Ashton Jeanty",
-          "delta": -4.8
-        }
-      ]
-    },
-    {
-      "id": "alpha_81bb26d618745bf4",
-      "source": "CBS Sports NFL",
-      "publisher": "CBS Sports",
-      "sourceUrl": "https://www.cbssports.com/nfl/news/latest-nfl-injury-updates/",
-      "title": "Latest NFL injury updates: Ashton Jeanty avoids major injury, other running backs uncertain for Week 1",
-      "snippet": "Who will be ready for season openers, and who's trying to get there?",
-      "publishedAt": "2026-08-27T12:28:46.000Z",
-      "trust": 0.95,
-      "matches": [
-        {
-          "playerId": "ashton-jeanty-lv-rb",
-          "name": "Ashton Jeanty",
-          "delta": -6
         }
       ]
     },
