@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-28T06:09:39.836Z",
+  "generatedAt": "2026-08-28T21:11:18.043Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -9,7 +9,7 @@
       "name": "Sleeper Trends",
       "url": "https://api.sleeper.app/v1/players/nfl/trending/add?lookback_hours=24&limit=50",
       "ok": true,
-      "matched": 4
+      "matched": 3
     },
     {
       "id": "espn-nfl",
@@ -30,7 +30,7 @@
       "name": "CBS Sports NFL",
       "url": "https://www.cbssports.com/rss/headlines/nfl/",
       "ok": true,
-      "matched": 3
+      "matched": 2
     },
     {
       "id": "rotoballer",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Tre Tucker is trending in Sleeper adds",
-      "snippet": "Top-15 add over the last 24 hours (9,798 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-28T06:09:39.836Z",
+      "snippet": "Top-18 add over the last 24 hours (9,924 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-28T21:11:18.043Z",
       "trust": 0.75,
       "matches": [
         {
@@ -94,30 +94,13 @@
       ]
     },
     {
-      "id": "alpha_9e25aba50d28296e",
-      "source": "Sleeper Trends",
-      "publisher": "Sleeper",
-      "sourceUrl": "https://sleeper.com/",
-      "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-23 add over the last 24 hours (7,336 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-28T06:09:39.836Z",
-      "trust": 0.75,
-      "matches": [
-        {
-          "playerId": "malik-willis-mia-qb",
-          "name": "Malik Willis",
-          "delta": 5
-        }
-      ]
-    },
-    {
       "id": "alpha_fe3ddb7ed800ba6c",
       "source": "Sleeper Trends",
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-24 add over the last 24 hours (7,290 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-28T06:09:39.836Z",
+      "snippet": "Top-24 add over the last 24 hours (7,533 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-28T21:11:18.043Z",
       "trust": 0.75,
       "matches": [
         {
@@ -128,18 +111,18 @@
       ]
     },
     {
-      "id": "alpha_dcd8c9c95c4e503e",
+      "id": "alpha_9e25aba50d28296e",
       "source": "Sleeper Trends",
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
-      "title": "Kyler Murray is trending in Sleeper adds",
-      "snippet": "Top-30 add over the last 24 hours (6,056 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-28T06:09:39.836Z",
+      "title": "Malik Willis is trending in Sleeper adds",
+      "snippet": "Top-27 add over the last 24 hours (7,168 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-28T21:11:18.043Z",
       "trust": 0.75,
       "matches": [
         {
-          "playerId": "kyler-murray-ari-qb",
-          "name": "Kyler Murray",
+          "playerId": "malik-willis-mia-qb",
+          "name": "Malik Willis",
           "delta": 5
         }
       ]
@@ -180,23 +163,6 @@
             "note": "Patrick Mahomes' status for Week 1 is still up in the air: Why Chiefs QB isn't a lock to play vs. the Broncos",
             "sourceUpdatedAt": 1787848809000
           }
-        }
-      ]
-    },
-    {
-      "id": "alpha_aea80bde1f756296",
-      "source": "CBS Sports NFL",
-      "publisher": "CBS Sports",
-      "sourceUrl": "https://www.cbssports.com/nfl/news/what-should-vikings-do-with-j-j-mccarthy/",
-      "title": "What should Vikings do with J.J. McCarthy? Divorce seems inevitable after losing starting job to Kyler Murray",
-      "snippet": "After being the No. 10 overall pick in 2024, J.J. McCarthy's time in Minnesota could be over",
-      "publishedAt": "2026-08-26T15:21:35.000Z",
-      "trust": 0.95,
-      "matches": [
-        {
-          "playerId": "kyler-murray-ari-qb",
-          "name": "Kyler Murray",
-          "delta": 6
         }
       ]
     }
