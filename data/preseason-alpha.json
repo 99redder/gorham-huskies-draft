@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-29T03:43:44.499Z",
+  "generatedAt": "2026-08-29T15:05:52.474Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Tre Tucker is trending in Sleeper adds",
-      "snippet": "Top-22 add over the last 24 hours (8,586 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-29T03:43:44.499Z",
+      "snippet": "Top-22 add over the last 24 hours (8,580 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-29T15:05:52.474Z",
       "trust": 0.75,
       "matches": [
         {
@@ -94,35 +94,35 @@
       ]
     },
     {
-      "id": "alpha_9e25aba50d28296e",
-      "source": "Sleeper Trends",
-      "publisher": "Sleeper",
-      "sourceUrl": "https://sleeper.com/",
-      "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-28 add over the last 24 hours (7,140 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-29T03:43:44.499Z",
-      "trust": 0.75,
-      "matches": [
-        {
-          "playerId": "malik-willis-mia-qb",
-          "name": "Malik Willis",
-          "delta": 5
-        }
-      ]
-    },
-    {
       "id": "alpha_fe3ddb7ed800ba6c",
       "source": "Sleeper Trends",
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-29 add over the last 24 hours (7,119 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-29T03:43:44.499Z",
+      "snippet": "Top-25 add over the last 24 hours (7,749 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-29T15:05:52.474Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "keaton-mitchell-lac-rb",
           "name": "Keaton Mitchell",
+          "delta": 5
+        }
+      ]
+    },
+    {
+      "id": "alpha_9e25aba50d28296e",
+      "source": "Sleeper Trends",
+      "publisher": "Sleeper",
+      "sourceUrl": "https://sleeper.com/",
+      "title": "Malik Willis is trending in Sleeper adds",
+      "snippet": "Top-27 add over the last 24 hours (7,574 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-29T15:05:52.474Z",
+      "trust": 0.75,
+      "matches": [
+        {
+          "playerId": "malik-willis-mia-qb",
+          "name": "Malik Willis",
           "delta": 5
         }
       ]
