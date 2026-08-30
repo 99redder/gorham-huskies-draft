@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-29T15:05:52.474Z",
+  "generatedAt": "2026-08-30T00:23:41.516Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -9,7 +9,7 @@
       "name": "Sleeper Trends",
       "url": "https://api.sleeper.app/v1/players/nfl/trending/add?lookback_hours=24&limit=50",
       "ok": true,
-      "matched": 3
+      "matched": 5
     },
     {
       "id": "espn-nfl",
@@ -77,13 +77,30 @@
   ],
   "entries": [
     {
+      "id": "alpha_9e25aba50d28296e",
+      "source": "Sleeper Trends",
+      "publisher": "Sleeper",
+      "sourceUrl": "https://sleeper.com/",
+      "title": "Malik Willis is trending in Sleeper adds",
+      "snippet": "Top-23 add over the last 24 hours (10,759 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-30T00:23:41.516Z",
+      "trust": 0.75,
+      "matches": [
+        {
+          "playerId": "malik-willis-mia-qb",
+          "name": "Malik Willis",
+          "delta": 5
+        }
+      ]
+    },
+    {
       "id": "alpha_cb6919d856bf1cd0",
       "source": "Sleeper Trends",
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Tre Tucker is trending in Sleeper adds",
-      "snippet": "Top-22 add over the last 24 hours (8,580 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-29T15:05:52.474Z",
+      "snippet": "Top-25 add over the last 24 hours (9,630 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-30T00:23:41.516Z",
       "trust": 0.75,
       "matches": [
         {
@@ -94,13 +111,30 @@
       ]
     },
     {
+      "id": "alpha_3a8a55d8cbee6878",
+      "source": "Sleeper Trends",
+      "publisher": "Sleeper",
+      "sourceUrl": "https://sleeper.com/",
+      "title": "Chase McLaughlin is trending in Sleeper adds",
+      "snippet": "Top-26 add over the last 24 hours (9,544 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-30T00:23:41.516Z",
+      "trust": 0.75,
+      "matches": [
+        {
+          "playerId": "chase-mclaughlin-tb-k",
+          "name": "Chase McLaughlin",
+          "delta": 5
+        }
+      ]
+    },
+    {
       "id": "alpha_fe3ddb7ed800ba6c",
       "source": "Sleeper Trends",
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-25 add over the last 24 hours (7,749 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-29T15:05:52.474Z",
+      "snippet": "Top-27 add over the last 24 hours (9,504 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-30T00:23:41.516Z",
       "trust": 0.75,
       "matches": [
         {
@@ -111,18 +145,18 @@
       ]
     },
     {
-      "id": "alpha_9e25aba50d28296e",
+      "id": "alpha_dcd8c9c95c4e503e",
       "source": "Sleeper Trends",
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
-      "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-27 add over the last 24 hours (7,574 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-29T15:05:52.474Z",
+      "title": "Kyler Murray is trending in Sleeper adds",
+      "snippet": "Top-30 add over the last 24 hours (8,016 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-30T00:23:41.516Z",
       "trust": 0.75,
       "matches": [
         {
-          "playerId": "malik-willis-mia-qb",
-          "name": "Malik Willis",
+          "playerId": "kyler-murray-ari-qb",
+          "name": "Kyler Murray",
           "delta": 5
         }
       ]
