@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-30T14:53:02.979Z",
+  "generatedAt": "2026-08-31T00:38:53.305Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -9,7 +9,7 @@
       "name": "Sleeper Trends",
       "url": "https://api.sleeper.app/v1/players/nfl/trending/add?lookback_hours=24&limit=50",
       "ok": true,
-      "matched": 5
+      "matched": 4
     },
     {
       "id": "espn-nfl",
@@ -30,7 +30,7 @@
       "name": "CBS Sports NFL",
       "url": "https://www.cbssports.com/rss/headlines/nfl/",
       "ok": true,
-      "matched": 2
+      "matched": 0
     },
     {
       "id": "rotoballer",
@@ -51,7 +51,7 @@
       "name": "r/fantasyfootball",
       "url": "https://www.reddit.com/r/fantasyfootball/.rss",
       "ok": true,
-      "matched": 0
+      "matched": 1
     },
     {
       "id": "pro-football-rumors",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Tre Tucker is trending in Sleeper adds",
-      "snippet": "Top-16 add over the last 24 hours (14,850 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-30T14:53:02.979Z",
+      "snippet": "Top-11 add over the last 24 hours (47,052 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-31T00:38:53.305Z",
       "trust": 0.75,
       "matches": [
         {
@@ -94,13 +94,30 @@
       ]
     },
     {
+      "id": "alpha_fe3ddb7ed800ba6c",
+      "source": "Sleeper Trends",
+      "publisher": "Sleeper",
+      "sourceUrl": "https://sleeper.com/",
+      "title": "Keaton Mitchell is trending in Sleeper adds",
+      "snippet": "Top-16 add over the last 24 hours (27,549 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-31T00:38:53.305Z",
+      "trust": 0.75,
+      "matches": [
+        {
+          "playerId": "keaton-mitchell-lac-rb",
+          "name": "Keaton Mitchell",
+          "delta": 5
+        }
+      ]
+    },
+    {
       "id": "alpha_9e25aba50d28296e",
       "source": "Sleeper Trends",
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-18 add over the last 24 hours (13,748 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-30T14:53:02.979Z",
+      "snippet": "Top-21 add over the last 24 hours (22,582 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-31T00:38:53.305Z",
       "trust": 0.75,
       "matches": [
         {
@@ -116,8 +133,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Chase McLaughlin is trending in Sleeper adds",
-      "snippet": "Top-20 add over the last 24 hours (12,528 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-30T14:53:02.979Z",
+      "snippet": "Top-26 add over the last 24 hours (20,768 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-31T00:38:53.305Z",
       "trust": 0.75,
       "matches": [
         {
@@ -128,75 +145,19 @@
       ]
     },
     {
-      "id": "alpha_fe3ddb7ed800ba6c",
-      "source": "Sleeper Trends",
-      "publisher": "Sleeper",
-      "sourceUrl": "https://sleeper.com/",
-      "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-22 add over the last 24 hours (11,259 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-30T14:53:02.979Z",
-      "trust": 0.75,
-      "matches": [
-        {
-          "playerId": "keaton-mitchell-lac-rb",
-          "name": "Keaton Mitchell",
-          "delta": 5
-        }
-      ]
-    },
-    {
-      "id": "alpha_dcd8c9c95c4e503e",
-      "source": "Sleeper Trends",
-      "publisher": "Sleeper",
-      "sourceUrl": "https://sleeper.com/",
-      "title": "Kyler Murray is trending in Sleeper adds",
-      "snippet": "Top-23 add over the last 24 hours (10,776 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-30T14:53:02.979Z",
-      "trust": 0.75,
-      "matches": [
-        {
-          "playerId": "kyler-murray-ari-qb",
-          "name": "Kyler Murray",
-          "delta": 5
-        }
-      ]
-    },
-    {
-      "id": "alpha_81bb26d618745bf4",
-      "source": "CBS Sports NFL",
-      "publisher": "CBS Sports",
-      "sourceUrl": "https://www.cbssports.com/nfl/news/latest-nfl-injury-updates/",
-      "title": "Latest NFL injury updates: Ashton Jeanty avoids major injury, other running backs uncertain for Week 1",
-      "snippet": "Who will be ready for season openers, and who's trying to get there?",
-      "publishedAt": "2026-08-27T23:03:55.000Z",
-      "trust": 0.95,
+      "id": "alpha_45cf28fe2881251a",
+      "source": "r/fantasyfootball",
+      "publisher": "Reddit",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1w2x9vt/reminder_there_has_been_no_official_injury/",
+      "title": "Reminder: There has been no official injury diagnosis for Ashton Jeanty",
+      "snippet": "<!-- SC_OFF --><div class=\"md\"><p>Keep seeing confused comments all over this and other fantasy subreddits around why people are still knocking Jeanty down their rankings even though he is fine.</p> <p>There has been NO official report on A",
+      "publishedAt": "2026-08-30T23:48:01.000Z",
+      "trust": 0.65,
       "matches": [
         {
           "playerId": "ashton-jeanty-lv-rb",
           "name": "Ashton Jeanty",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_abb852c6124bf020",
-      "source": "CBS Sports NFL",
-      "publisher": "CBS Sports",
-      "sourceUrl": "https://www.cbssports.com/nfl/news/patrick-mahomes-status-week-1-chiefs-qb/",
-      "title": "Patrick Mahomes' status for Week 1 is still up in the air: Why Chiefs QB isn't a lock to play vs. the Broncos",
-      "snippet": "Patrick Mahomes is still waiting for full medical clearance after a December knee injury, leaving Justin Fields in line to start if he is not ready for Week 1",
-      "publishedAt": "2026-08-27T16:40:09.000Z",
-      "trust": 0.95,
-      "matches": [
-        {
-          "playerId": "patrick-mahomes-kc-qb",
-          "name": "Patrick Mahomes",
-          "delta": 6,
-          "injury": {
-            "status": "Questionable",
-            "note": "Patrick Mahomes' status for Week 1 is still up in the air: Why Chiefs QB isn't a lock to play vs. the Broncos",
-            "sourceUpdatedAt": 1787848809000
-          }
+          "delta": 6
         }
       ]
     }
