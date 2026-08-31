@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-31T00:38:53.305Z",
+  "generatedAt": "2026-08-31T17:38:10.244Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Tre Tucker is trending in Sleeper adds",
-      "snippet": "Top-11 add over the last 24 hours (47,052 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-31T00:38:53.305Z",
+      "snippet": "Top-9 add over the last 24 hours (85,056 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-31T17:38:10.244Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,8 +99,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-16 add over the last 24 hours (27,549 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-31T00:38:53.305Z",
+      "snippet": "Top-17 add over the last 24 hours (45,135 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-31T17:38:10.244Z",
       "trust": 0.75,
       "matches": [
         {
@@ -116,8 +116,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-21 add over the last 24 hours (22,582 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-31T00:38:53.305Z",
+      "snippet": "Top-26 add over the last 24 hours (30,331 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-31T17:38:10.244Z",
       "trust": 0.75,
       "matches": [
         {
@@ -133,8 +133,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Chase McLaughlin is trending in Sleeper adds",
-      "snippet": "Top-26 add over the last 24 hours (20,768 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-31T00:38:53.305Z",
+      "snippet": "Top-30 add over the last 24 hours (28,520 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-08-31T17:38:10.244Z",
       "trust": 0.75,
       "matches": [
         {
