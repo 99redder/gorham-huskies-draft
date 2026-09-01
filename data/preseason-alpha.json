@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-31T17:38:10.244Z",
+  "generatedAt": "2026-09-01T01:18:36.715Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -51,7 +51,7 @@
       "name": "r/fantasyfootball",
       "url": "https://www.reddit.com/r/fantasyfootball/.rss",
       "ok": true,
-      "matched": 1
+      "matched": 0
     },
     {
       "id": "pro-football-rumors",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Tre Tucker is trending in Sleeper adds",
-      "snippet": "Top-9 add over the last 24 hours (85,056 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-31T17:38:10.244Z",
+      "snippet": "Top-9 add over the last 24 hours (72,102 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-09-01T01:18:36.715Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,8 +99,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-17 add over the last 24 hours (45,135 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-31T17:38:10.244Z",
+      "snippet": "Top-17 add over the last 24 hours (37,071 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-09-01T01:18:36.715Z",
       "trust": 0.75,
       "matches": [
         {
@@ -116,8 +116,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-26 add over the last 24 hours (30,331 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-31T17:38:10.244Z",
+      "snippet": "Top-26 add over the last 24 hours (25,501 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-09-01T01:18:36.715Z",
       "trust": 0.75,
       "matches": [
         {
@@ -133,31 +133,14 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Chase McLaughlin is trending in Sleeper adds",
-      "snippet": "Top-30 add over the last 24 hours (28,520 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-08-31T17:38:10.244Z",
+      "snippet": "Top-29 add over the last 24 hours (23,352 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-09-01T01:18:36.715Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "chase-mclaughlin-tb-k",
           "name": "Chase McLaughlin",
           "delta": 5
-        }
-      ]
-    },
-    {
-      "id": "alpha_45cf28fe2881251a",
-      "source": "r/fantasyfootball",
-      "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1w2x9vt/reminder_there_has_been_no_official_injury/",
-      "title": "Reminder: There has been no official injury diagnosis for Ashton Jeanty",
-      "snippet": "<!-- SC_OFF --><div class=\"md\"><p>Keep seeing confused comments all over this and other fantasy subreddits around why people are still knocking Jeanty down their rankings even though he is fine.</p> <p>There has been NO official report on A",
-      "publishedAt": "2026-08-30T23:48:01.000Z",
-      "trust": 0.65,
-      "matches": [
-        {
-          "playerId": "ashton-jeanty-lv-rb",
-          "name": "Ashton Jeanty",
-          "delta": 6
         }
       ]
     }
