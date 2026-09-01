@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-01T01:18:36.715Z",
+  "generatedAt": "2026-09-01T14:56:30.523Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -9,7 +9,7 @@
       "name": "Sleeper Trends",
       "url": "https://api.sleeper.app/v1/players/nfl/trending/add?lookback_hours=24&limit=50",
       "ok": true,
-      "matched": 4
+      "matched": 3
     },
     {
       "id": "espn-nfl",
@@ -51,7 +51,7 @@
       "name": "r/fantasyfootball",
       "url": "https://www.reddit.com/r/fantasyfootball/.rss",
       "ok": true,
-      "matched": 0
+      "matched": 1
     },
     {
       "id": "pro-football-rumors",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Tre Tucker is trending in Sleeper adds",
-      "snippet": "Top-9 add over the last 24 hours (72,102 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-09-01T01:18:36.715Z",
+      "snippet": "Top-9 add over the last 24 hours (49,824 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-09-01T14:56:30.523Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,8 +99,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-17 add over the last 24 hours (37,071 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-09-01T01:18:36.715Z",
+      "snippet": "Top-19 add over the last 24 hours (27,207 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-09-01T14:56:30.523Z",
       "trust": 0.75,
       "matches": [
         {
@@ -116,8 +116,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-26 add over the last 24 hours (25,501 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-09-01T01:18:36.715Z",
+      "snippet": "Top-26 add over the last 24 hours (18,431 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-09-01T14:56:30.523Z",
       "trust": 0.75,
       "matches": [
         {
@@ -128,19 +128,19 @@
       ]
     },
     {
-      "id": "alpha_3a8a55d8cbee6878",
-      "source": "Sleeper Trends",
-      "publisher": "Sleeper",
-      "sourceUrl": "https://sleeper.com/",
-      "title": "Chase McLaughlin is trending in Sleeper adds",
-      "snippet": "Top-29 add over the last 24 hours (23,352 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-09-01T01:18:36.715Z",
-      "trust": 0.75,
+      "id": "alpha_df78d862d24ba564",
+      "source": "r/fantasyfootball",
+      "publisher": "Reddit",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1w4cdlv/zay_flowers_who_is_recovering_from_a_lowerbody/",
+      "title": "Zay Flowers, who is recovering from a lower-body injury, is expected to return to practice in full capacity next week and suit up for the Ravens' Sept. 13 season opener versus the ",
+      "snippet": "submitted by <a href=\"https://www.reddit.com/user/My_Chat_Account\"> /u/My_Chat_Account </a> <br/> <span><a href=\"https://www.rotowire.com/football/player/zay-flowers-16919\">[link]</a></span> <span><a href=\"https://www.reddit.com/r/fantasyfo",
+      "publishedAt": "2026-09-01T13:42:37.000Z",
+      "trust": 0.65,
       "matches": [
         {
-          "playerId": "chase-mclaughlin-tb-k",
-          "name": "Chase McLaughlin",
-          "delta": 5
+          "playerId": "zay-flowers-bal-wr",
+          "name": "Zay Flowers",
+          "delta": -4.8
         }
       ]
     }
