@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-01T14:56:30.523Z",
+  "generatedAt": "2026-09-02T00:17:46.956Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -23,14 +23,14 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 0
+      "matched": 1
     },
     {
       "id": "cbs-nfl",
       "name": "CBS Sports NFL",
       "url": "https://www.cbssports.com/rss/headlines/nfl/",
       "ok": true,
-      "matched": 0
+      "matched": 1
     },
     {
       "id": "rotoballer",
@@ -51,7 +51,7 @@
       "name": "r/fantasyfootball",
       "url": "https://www.reddit.com/r/fantasyfootball/.rss",
       "ok": true,
-      "matched": 1
+      "matched": 3
     },
     {
       "id": "pro-football-rumors",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Tre Tucker is trending in Sleeper adds",
-      "snippet": "Top-9 add over the last 24 hours (49,824 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-09-01T14:56:30.523Z",
+      "snippet": "Top-8 add over the last 24 hours (46,386 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-09-02T00:17:46.956Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,8 +99,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-19 add over the last 24 hours (27,207 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-09-01T14:56:30.523Z",
+      "snippet": "Top-22 add over the last 24 hours (23,877 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-09-02T00:17:46.956Z",
       "trust": 0.75,
       "matches": [
         {
@@ -116,8 +116,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-26 add over the last 24 hours (18,431 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-09-01T14:56:30.523Z",
+      "snippet": "Top-29 add over the last 24 hours (17,605 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-09-02T00:17:46.956Z",
       "trust": 0.75,
       "matches": [
         {
@@ -128,19 +128,117 @@
       ]
     },
     {
-      "id": "alpha_df78d862d24ba564",
+      "id": "alpha_bbd41935ee17ad49",
+      "source": "CBS Sports NFL",
+      "publisher": "CBS Sports",
+      "sourceUrl": "https://www.cbssports.com/nfl/news/malik-nabers-injury-status-giants-wr-shares-honest-assessment-of-progress-week-1-availability/",
+      "title": "Malik Nabers injury status: Giants WR shares honest assessment of progress, Week 1 availability",
+      "snippet": "Nabers' availability for Week 1 is still up in the air",
+      "publishedAt": "2026-09-01T20:37:13.000Z",
+      "trust": 0.95,
+      "matches": [
+        {
+          "playerId": "malik-nabers-nyg-wr",
+          "name": "Malik Nabers",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_e60c6eefb164cb5e",
       "source": "r/fantasyfootball",
       "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1w4cdlv/zay_flowers_who_is_recovering_from_a_lowerbody/",
-      "title": "Zay Flowers, who is recovering from a lower-body injury, is expected to return to practice in full capacity next week and suit up for the Ravens' Sept. 13 season opener versus the ",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/My_Chat_Account\"> /u/My_Chat_Account </a> <br/> <span><a href=\"https://www.rotowire.com/football/player/zay-flowers-16919\">[link]</a></span> <span><a href=\"https://www.reddit.com/r/fantasyfo",
-      "publishedAt": "2026-09-01T13:42:37.000Z",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1w4jx6q/rb_treveyon_henderson_continues_to_rehabilitate/",
+      "title": "RB TreVeyon Henderson continues to rehabilitate an ankle injury (from him slipping during a cut last week in practice). He was present in the locker room today and walking normally",
+      "snippet": "submitted by <a href=\"https://www.reddit.com/user/kzqmfkkr\"> /u/kzqmfkkr </a> <br/> <span><a href=\"https://bsky.app/profile/news.optimusfantasy.com/post/3muhz5rsudc2l\">[link]</a></span> <span><a href=\"https://www.reddit.com/r/fantasyfootbal",
+      "publishedAt": "2026-09-01T18:08:37.000Z",
       "trust": 0.65,
       "matches": [
         {
-          "playerId": "zay-flowers-bal-wr",
-          "name": "Zay Flowers",
-          "delta": -4.8
+          "playerId": "treveyon-henderson-ne-rb",
+          "name": "TreVeyon Henderson",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_e32bed9d92ea0823",
+      "source": "r/fantasyfootball",
+      "publisher": "Reddit",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1w4j6le/jamarr_chase_will_be_limited_through_this_week/",
+      "title": "Ja’Marr Chase will be limited through this week, but Bengals HC Zac Taylor “feels good about him.” WR Tee Higgins is dealing with a heel contusion, but it is not a major concern fo",
+      "snippet": "submitted by <a href=\"https://www.reddit.com/user/kzqmfkkr\"> /u/kzqmfkkr </a> <br/> <span><a href=\"https://bsky.app/profile/news.optimusfantasy.com/post/3muhxffiifk2l\">[link]</a></span> <span><a href=\"https://www.reddit.com/r/fantasyfootbal",
+      "publishedAt": "2026-09-01T17:43:36.000Z",
+      "trust": 0.65,
+      "matches": [
+        {
+          "playerId": "ja-marr-chase-cin-wr",
+          "name": "Ja'Marr Chase",
+          "delta": -6,
+          "injury": {
+            "status": "Questionable",
+            "note": "Ja’Marr Chase will be limited through this week, but Bengals HC Zac Taylor “feels good about him.” WR Tee Higgins is dealing with a heel contusion, but it is not a major concern fo",
+            "sourceUpdatedAt": 1788284616000
+          }
+        },
+        {
+          "playerId": "tee-higgins-cin-wr",
+          "name": "Tee Higgins",
+          "delta": -6,
+          "injury": {
+            "status": "Questionable",
+            "note": "Ja’Marr Chase will be limited through this week, but Bengals HC Zac Taylor “feels good about him.” WR Tee Higgins is dealing with a heel contusion, but it is not a major concern fo",
+            "sourceUpdatedAt": 1788284616000
+          }
+        }
+      ]
+    },
+    {
+      "id": "alpha_e4357cc056e1e0cb",
+      "source": "r/fantasyfootball",
+      "publisher": "Reddit",
+      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1w4gnjg/ashton_jeanty_injury_working_with_trainers_tuesday/",
+      "title": "Ashton Jeanty Injury: Working with trainers Tuesday",
+      "snippet": "submitted by <a href=\"https://www.reddit.com/user/ZebraPuzzleheaded422\"> /u/ZebraPuzzleheaded422 </a> <br/> <span><a href=\"https://www.rotowire.com/football/headlines/ashton-jeanty-injury-working-with-trainers-tuesday-635810\">[link]</a></sp",
+      "publishedAt": "2026-09-01T16:16:58.000Z",
+      "trust": 0.65,
+      "matches": [
+        {
+          "playerId": "ashton-jeanty-lv-rb",
+          "name": "Ashton Jeanty",
+          "delta": -6
+        }
+      ]
+    },
+    {
+      "id": "alpha_adbc93040ba5c524",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/nfl/live/nfl-news-injury-updates-roster-cuts-waiver-claims-prior-to-week-1-143714619.html",
+      "title": "NFL news, live updates: Ja'Marr Chase limited with knee issue; Packers haven't seen surveillance video in Josh Jacobs case; Tony Romo pleads 'no contest' in OWI case",
+      "snippet": "Follow along with the latest NFL news and injury updates after the preseason wrapped up.",
+      "publishedAt": "2026-08-20T14:37:14.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "ja-marr-chase-cin-wr",
+          "name": "Ja'Marr Chase",
+          "delta": -6,
+          "injury": {
+            "status": "Questionable",
+            "note": "NFL news, live updates: Ja'Marr Chase limited with knee issue; Packers haven't seen surveillance video in Josh Jacobs case; Tony Romo pleads 'no contest' in OWI case",
+            "sourceUpdatedAt": 1787236634000
+          }
+        },
+        {
+          "playerId": "josh-jacobs-gb-rb",
+          "name": "Josh Jacobs",
+          "delta": -6,
+          "injury": {
+            "status": "Questionable",
+            "note": "NFL news, live updates: Ja'Marr Chase limited with knee issue; Packers haven't seen surveillance video in Josh Jacobs case; Tony Romo pleads 'no contest' in OWI case",
+            "sourceUpdatedAt": 1787236634000
+          }
         }
       ]
     }
