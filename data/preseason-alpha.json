@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-03T00:19:31.899Z",
+  "generatedAt": "2026-09-03T14:36:30.226Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -51,7 +51,7 @@
       "name": "r/fantasyfootball",
       "url": "https://www.reddit.com/r/fantasyfootball/.rss",
       "ok": true,
-      "matched": 1
+      "matched": 0
     },
     {
       "id": "pro-football-rumors",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Tre Tucker is trending in Sleeper adds",
-      "snippet": "Top-9 add over the last 24 hours (43,998 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-09-03T00:19:31.899Z",
+      "snippet": "Top-7 add over the last 24 hours (40,656 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-09-03T14:36:30.226Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,8 +99,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-23 add over the last 24 hours (18,657 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-09-03T00:19:31.899Z",
+      "snippet": "Top-23 add over the last 24 hours (16,128 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-09-03T14:36:30.226Z",
       "trust": 0.75,
       "matches": [
         {
@@ -116,36 +116,14 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-26 add over the last 24 hours (16,513 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-09-03T00:19:31.899Z",
+      "snippet": "Top-26 add over the last 24 hours (15,176 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-09-03T14:36:30.226Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "malik-willis-mia-qb",
           "name": "Malik Willis",
           "delta": 5
-        }
-      ]
-    },
-    {
-      "id": "alpha_11f8ea5ecf15f3b1",
-      "source": "r/fantasyfootball",
-      "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1w5qjri/falcons_hc_kevin_stefanski_on_drake_london_his/",
-      "title": "Falcons HC Kevin Stefanski on Drake London: \"His ability to just play the football in the air...his body control is elite.\"",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/Question7NWantAnswer\"> /u/Question7NWantAnswer </a> <br/> <span><a href=\"https://www.si.com/nfl/falcons/onsi/kevin-stefanski-reacts-to-falcons-wr-drake-londons-viral-julio-jones-like-catch\">",
-      "publishedAt": "2026-09-02T23:17:51.000Z",
-      "trust": 0.65,
-      "matches": [
-        {
-          "playerId": "drake-london-atl-wr",
-          "name": "Drake London",
-          "delta": 6,
-          "injury": {
-            "status": "Questionable",
-            "note": "Falcons HC Kevin Stefanski on Drake London: \"His ability to just play the football in the air...his body control is elite.\"",
-            "sourceUpdatedAt": 1788391071000
-          }
         }
       ]
     },
