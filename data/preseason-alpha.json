@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-04T00:08:28.406Z",
+  "generatedAt": "2026-09-04T14:23:42.668Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -9,7 +9,7 @@
       "name": "Sleeper Trends",
       "url": "https://api.sleeper.app/v1/players/nfl/trending/add?lookback_hours=24&limit=50",
       "ok": true,
-      "matched": 3
+      "matched": 4
     },
     {
       "id": "espn-nfl",
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 2
+      "matched": 0
     },
     {
       "id": "cbs-nfl",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Tre Tucker is trending in Sleeper adds",
-      "snippet": "Top-7 add over the last 24 hours (39,246 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-09-04T00:08:28.406Z",
+      "snippet": "Top-8 add over the last 24 hours (36,402 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-09-04T14:23:42.668Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,8 +99,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-25 add over the last 24 hours (14,973 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-09-04T00:08:28.406Z",
+      "snippet": "Top-25 add over the last 24 hours (14,287 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-09-04T14:23:42.668Z",
       "trust": 0.75,
       "matches": [
         {
@@ -116,13 +116,30 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-26 add over the last 24 hours (14,841 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-09-04T00:08:28.406Z",
+      "snippet": "Top-27 add over the last 24 hours (13,500 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-09-04T14:23:42.668Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "keaton-mitchell-lac-rb",
           "name": "Keaton Mitchell",
+          "delta": 5
+        }
+      ]
+    },
+    {
+      "id": "alpha_70f584dca9cd6403",
+      "source": "Sleeper Trends",
+      "publisher": "Sleeper",
+      "sourceUrl": "https://sleeper.com/",
+      "title": "Khalil Shakir is trending in Sleeper adds",
+      "snippet": "Top-29 add over the last 24 hours (12,096 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-09-04T14:23:42.668Z",
+      "trust": 0.75,
+      "matches": [
+        {
+          "playerId": "khalil-shakir-buf-wr",
+          "name": "Khalil Shakir",
           "delta": 5
         }
       ]
@@ -157,45 +174,6 @@
         {
           "playerId": "cam-skattebo-nyg-rb",
           "name": "Cam Skattebo",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_c2ad662421685de7",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/bears-rome-odunze-dandre-swift-220508743.html",
-      "title": "Bears' Rome Odunze, D'Andre Swift hurt at practice. Injury updates, what to know",
-      "snippet": "The Bears saw both Rome Odunze and D'Andre Swift suffer injuries at practice Wednesday. Here's what to know about their statuses.",
-      "publishedAt": "2026-09-03T22:05:08.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "d-andre-swift-chi-rb",
-          "name": "D'Andre Swift",
-          "delta": -6
-        },
-        {
-          "playerId": "rome-odunze-chi-wr",
-          "name": "Rome Odunze",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_d5c419ffd4fe45e7",
-      "source": "Yahoo Sports NFL",
-      "publisher": "Yahoo Sports",
-      "sourceUrl": "https://sports.yahoo.com/articles/treveyon-henderson-remains-patriots-practice-192800669.html",
-      "title": "TreVeyon Henderson remains out of Patriots practice",
-      "snippet": "The Patriots were still without one of their top offensive players at practice on Thursday.",
-      "publishedAt": "2026-09-03T19:28:00.000Z",
-      "trust": 1,
-      "matches": [
-        {
-          "playerId": "treveyon-henderson-ne-rb",
-          "name": "TreVeyon Henderson",
           "delta": -6
         }
       ]
