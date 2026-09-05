@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-05T00:09:01.190Z",
+  "generatedAt": "2026-09-05T13:28:01.492Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -23,7 +23,7 @@
       "name": "Yahoo Sports NFL",
       "url": "https://sports.yahoo.com/nfl/rss.xml",
       "ok": true,
-      "matched": 0
+      "matched": 2
     },
     {
       "id": "cbs-nfl",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Tre Tucker is trending in Sleeper adds",
-      "snippet": "Top-9 add over the last 24 hours (29,130 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-09-05T00:09:01.190Z",
+      "snippet": "Top-11 add over the last 24 hours (18,840 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-09-05T13:28:01.492Z",
       "trust": 0.75,
       "matches": [
         {
@@ -99,8 +99,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Josh Jacobs is trending in Sleeper adds",
-      "snippet": "Top-21 add over the last 24 hours (13,965 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-09-05T00:09:01.190Z",
+      "snippet": "Top-12 add over the last 24 hours (18,465 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-09-05T13:28:01.492Z",
       "trust": 0.75,
       "matches": [
         {
@@ -116,8 +116,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-23 add over the last 24 hours (13,783 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-09-05T00:09:01.190Z",
+      "snippet": "Top-21 add over the last 24 hours (12,565 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-09-05T13:28:01.492Z",
       "trust": 0.75,
       "matches": [
         {
@@ -133,14 +133,58 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-27 add over the last 24 hours (12,645 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-09-05T00:09:01.190Z",
+      "snippet": "Top-25 add over the last 24 hours (11,484 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-09-05T13:28:01.492Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "keaton-mitchell-lac-rb",
           "name": "Keaton Mitchell",
           "delta": 5
+        }
+      ]
+    },
+    {
+      "id": "alpha_759ba777e5669a65",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/chiefs-news-sean-payton-not-131000253.html",
+      "title": "Chiefs News: Sean Payton not expecting Patrick Mahomes to be limited",
+      "snippet": "The latest Chiefs news, brought fresh to you every morning!",
+      "publishedAt": "2026-09-05T13:10:00.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "patrick-mahomes-kc-qb",
+          "name": "Patrick Mahomes",
+          "delta": -6,
+          "injury": {
+            "status": "Questionable",
+            "note": "Chiefs News: Sean Payton not expecting Patrick Mahomes to be limited",
+            "sourceUpdatedAt": 1788613800000
+          }
+        }
+      ]
+    },
+    {
+      "id": "alpha_3215f2d7cf2ea13c",
+      "source": "Yahoo Sports NFL",
+      "publisher": "Yahoo Sports",
+      "sourceUrl": "https://sports.yahoo.com/articles/chiefs-news-sean-payton-not-130000776.html",
+      "title": "Chiefs News: Sean Payton not expecting Patrick Mahomes to be limited",
+      "snippet": "The latest Chiefs news, brought fresh to you every morning!",
+      "publishedAt": "2026-09-05T13:00:00.000Z",
+      "trust": 1,
+      "matches": [
+        {
+          "playerId": "patrick-mahomes-kc-qb",
+          "name": "Patrick Mahomes",
+          "delta": -6,
+          "injury": {
+            "status": "Questionable",
+            "note": "Chiefs News: Sean Payton not expecting Patrick Mahomes to be limited",
+            "sourceUpdatedAt": 1788613200000
+          }
         }
       ]
     },
