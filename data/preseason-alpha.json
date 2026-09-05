@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-04T14:23:42.668Z",
+  "generatedAt": "2026-09-05T00:09:01.190Z",
   "maxAgeDays": 45,
   "methodology": "Strict full-name match plus deterministic bullish/bearish phrase. Source trust and freshness are applied in the app.",
   "sources": [
@@ -51,14 +51,14 @@
       "name": "r/fantasyfootball",
       "url": "https://www.reddit.com/r/fantasyfootball/.rss",
       "ok": true,
-      "matched": 1
+      "matched": 0
     },
     {
       "id": "pro-football-rumors",
       "name": "Pro Football Rumors",
       "url": "https://www.profootballrumors.com/feed",
       "ok": true,
-      "matched": 1
+      "matched": 0
     },
     {
       "id": "establish-the-run",
@@ -82,8 +82,8 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Tre Tucker is trending in Sleeper adds",
-      "snippet": "Top-8 add over the last 24 hours (36,402 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-09-04T14:23:42.668Z",
+      "snippet": "Top-9 add over the last 24 hours (29,130 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-09-05T00:09:01.190Z",
       "trust": 0.75,
       "matches": [
         {
@@ -94,13 +94,30 @@
       ]
     },
     {
+      "id": "alpha_b5007df8e8789b62",
+      "source": "Sleeper Trends",
+      "publisher": "Sleeper",
+      "sourceUrl": "https://sleeper.com/",
+      "title": "Josh Jacobs is trending in Sleeper adds",
+      "snippet": "Top-21 add over the last 24 hours (13,965 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-09-05T00:09:01.190Z",
+      "trust": 0.75,
+      "matches": [
+        {
+          "playerId": "josh-jacobs-gb-rb",
+          "name": "Josh Jacobs",
+          "delta": 5
+        }
+      ]
+    },
+    {
       "id": "alpha_9e25aba50d28296e",
       "source": "Sleeper Trends",
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Malik Willis is trending in Sleeper adds",
-      "snippet": "Top-25 add over the last 24 hours (14,287 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-09-04T14:23:42.668Z",
+      "snippet": "Top-23 add over the last 24 hours (13,783 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-09-05T00:09:01.190Z",
       "trust": 0.75,
       "matches": [
         {
@@ -116,30 +133,13 @@
       "publisher": "Sleeper",
       "sourceUrl": "https://sleeper.com/",
       "title": "Keaton Mitchell is trending in Sleeper adds",
-      "snippet": "Top-27 add over the last 24 hours (13,500 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-09-04T14:23:42.668Z",
+      "snippet": "Top-27 add over the last 24 hours (12,645 adds). Treat as market momentum, not a confirmed role change.",
+      "publishedAt": "2026-09-05T00:09:01.190Z",
       "trust": 0.75,
       "matches": [
         {
           "playerId": "keaton-mitchell-lac-rb",
           "name": "Keaton Mitchell",
-          "delta": 5
-        }
-      ]
-    },
-    {
-      "id": "alpha_70f584dca9cd6403",
-      "source": "Sleeper Trends",
-      "publisher": "Sleeper",
-      "sourceUrl": "https://sleeper.com/",
-      "title": "Khalil Shakir is trending in Sleeper adds",
-      "snippet": "Top-29 add over the last 24 hours (12,096 adds). Treat as market momentum, not a confirmed role change.",
-      "publishedAt": "2026-09-04T14:23:42.668Z",
-      "trust": 0.75,
-      "matches": [
-        {
-          "playerId": "khalil-shakir-buf-wr",
-          "name": "Khalil Shakir",
           "delta": 5
         }
       ]
@@ -157,45 +157,6 @@
         {
           "playerId": "cam-skattebo-nyg-rb",
           "name": "Cam Skattebo",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_e31b382dba690454",
-      "source": "Pro Football Rumors",
-      "publisher": "Pro Football Rumors",
-      "sourceUrl": "https://www.profootballrumors.com/2026/09/giants-rb-cam-skattebo-considered-retiring-after-2025-injury",
-      "title": "Giants RB Cam Skattebo Considered Retiring After 2025 Injury",
-      "snippet": "Giants running back Cam Skattebo revealed on the Up & Adams Show that he considered retiring after suffering a gruesome injury to his right leg last season. “Yeah, definitely,” Skattebo said when asked if he thought about walking away from ",
-      "publishedAt": "2026-09-03T22:43:40.000Z",
-      "trust": 0.9,
-      "matches": [
-        {
-          "playerId": "cam-skattebo-nyg-rb",
-          "name": "Cam Skattebo",
-          "delta": -6
-        }
-      ]
-    },
-    {
-      "id": "alpha_1ee030b62ea59c16",
-      "source": "r/fantasyfootball",
-      "publisher": "Reddit",
-      "sourceUrl": "https://www.reddit.com/r/fantasyfootball/comments/1w6bqxb/having_recovered_from_a_hamstring_injury_and/",
-      "title": "Having recovered from a hamstring injury and fractured fibula, the 31-year-old Calvin Ridley is in contention for a starting role on the outside opposite Carnell Tate, with Wan'Dal",
-      "snippet": "submitted by <a href=\"https://www.reddit.com/user/DanceHallRiddem\"> /u/DanceHallRiddem </a> <br/> <span><a href=\"https://www.cbssports.com/fantasy/football/news/titans-calvin-ridley-experienced-option-in-young-wr-room/\">[link]</a></span> <s",
-      "publishedAt": "2026-09-03T16:08:51.000Z",
-      "trust": 0.65,
-      "matches": [
-        {
-          "playerId": "wan-dale-robinson-ten-wr",
-          "name": "Wan'Dale Robinson",
-          "delta": -6
-        },
-        {
-          "playerId": "carnell-tate-ten-wr",
-          "name": "Carnell Tate",
           "delta": -6
         }
       ]
